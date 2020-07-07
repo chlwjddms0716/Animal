@@ -53,6 +53,8 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             OnLoadButtonClicked((int)luAnimalshelter.EditValue, (SpeciesType)cbbSpecies.SelectedValue, (Genders)rdgSex.EditValue
                 , dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime);
 
+           
+
             
             Cursor = Cursors.Arrow;
 
@@ -119,9 +121,5 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
         }
         #endregion
 
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
