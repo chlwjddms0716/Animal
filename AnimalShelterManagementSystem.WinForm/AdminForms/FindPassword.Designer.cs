@@ -32,10 +32,10 @@
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.btnFindPassword = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSendNumber = new DevExpress.XtraEditors.SimpleButton();
             this.txePhoneNumber = new DevExpress.XtraEditors.TextEdit();
-            this.txeName = new DevExpress.XtraEditors.TextEdit();
-            this.txePhoneNumber1 = new DevExpress.XtraEditors.TextEdit();
+            this.txeId = new DevExpress.XtraEditors.TextEdit();
+            this.txeNumber = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -55,8 +55,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txePhoneNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txePhoneNumber1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -93,70 +93,73 @@
             this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl2);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Size = new System.Drawing.Size(364, 196);
-            this.splitContainerControl1.SplitterPosition = 162;
+            this.splitContainerControl1.SplitterPosition = 191;
             this.splitContainerControl1.TabIndex = 4;
             // 
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.label1);
             this.layoutControl2.Controls.Add(this.btnFindPassword);
-            this.layoutControl2.Controls.Add(this.simpleButton1);
+            this.layoutControl2.Controls.Add(this.btnSendNumber);
             this.layoutControl2.Controls.Add(this.txePhoneNumber);
-            this.layoutControl2.Controls.Add(this.txeName);
-            this.layoutControl2.Controls.Add(this.txePhoneNumber1);
+            this.layoutControl2.Controls.Add(this.txeId);
+            this.layoutControl2.Controls.Add(this.txeNumber);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 0, 812, 500);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(364, 162);
+            this.layoutControl2.Size = new System.Drawing.Size(364, 191);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // btnFindPassword
             // 
-            this.btnFindPassword.Location = new System.Drawing.Point(173, 123);
+            this.btnFindPassword.Location = new System.Drawing.Point(183, 127);
             this.btnFindPassword.Name = "btnFindPassword";
-            this.btnFindPassword.Size = new System.Drawing.Size(158, 27);
+            this.btnFindPassword.Size = new System.Drawing.Size(169, 27);
             this.btnFindPassword.StyleController = this.layoutControl2;
             this.btnFindPassword.TabIndex = 7;
             this.btnFindPassword.Text = "비밀번호 찾기";
+            this.btnFindPassword.Click += new System.EventHandler(this.btnFindPassword_Click);
             // 
-            // simpleButton1
+            // btnSendNumber
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(173, 66);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(158, 25);
-            this.simpleButton1.StyleController = this.layoutControl2;
-            this.simpleButton1.TabIndex = 6;
+            this.btnSendNumber.Location = new System.Drawing.Point(183, 68);
+            this.btnSendNumber.Name = "btnSendNumber";
+            this.btnSendNumber.Size = new System.Drawing.Size(169, 27);
+            this.btnSendNumber.StyleController = this.layoutControl2;
+            this.btnSendNumber.TabIndex = 6;
+            this.btnSendNumber.Text = "인증번호 보내기";
+            this.btnSendNumber.Click += new System.EventHandler(this.btnSendNumber_Click);
             // 
             // txePhoneNumber
             // 
-            this.txePhoneNumber.Location = new System.Drawing.Point(95, 38);
+            this.txePhoneNumber.Location = new System.Drawing.Point(95, 40);
             this.txePhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txePhoneNumber.Name = "txePhoneNumber";
-            this.txePhoneNumber.Size = new System.Drawing.Size(236, 24);
+            this.txePhoneNumber.Size = new System.Drawing.Size(257, 24);
             this.txePhoneNumber.StyleController = this.layoutControl2;
             this.txePhoneNumber.TabIndex = 5;
             // 
-            // txeName
+            // txeId
             // 
-            this.txeName.Location = new System.Drawing.Point(95, 10);
-            this.txeName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txeName.Name = "txeName";
-            this.txeName.Size = new System.Drawing.Size(236, 24);
-            this.txeName.StyleController = this.layoutControl2;
-            this.txeName.TabIndex = 4;
+            this.txeId.Location = new System.Drawing.Point(95, 12);
+            this.txeId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txeId.Name = "txeId";
+            this.txeId.Size = new System.Drawing.Size(257, 24);
+            this.txeId.StyleController = this.layoutControl2;
+            this.txeId.TabIndex = 4;
             // 
-            // txePhoneNumber1
+            // txeNumber
             // 
-            this.txePhoneNumber1.Location = new System.Drawing.Point(95, 95);
-            this.txePhoneNumber1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txePhoneNumber1.Name = "txePhoneNumber1";
-            this.txePhoneNumber1.Size = new System.Drawing.Size(236, 24);
-            this.txePhoneNumber1.StyleController = this.layoutControl2;
-            this.txePhoneNumber1.TabIndex = 5;
+            this.txeNumber.Location = new System.Drawing.Point(95, 99);
+            this.txeNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txeNumber.Name = "txeNumber";
+            this.txeNumber.Size = new System.Drawing.Size(257, 24);
+            this.txeNumber.StyleController = this.layoutControl2;
+            this.txeNumber.TabIndex = 5;
             // 
             // layoutControlGroup1
             // 
@@ -171,15 +174,15 @@
             this.layoutControlItem6,
             this.layoutControlItem8});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(343, 164);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(364, 191);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.txeName;
+            this.layoutControlItem1.Control = this.txeId;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(323, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(344, 28);
             this.layoutControlItem1.Text = "아이디 : ";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(80, 18);
             // 
@@ -188,7 +191,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 56);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(161, 29);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(171, 31);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -196,36 +199,36 @@
             this.layoutControlItem2.Control = this.txePhoneNumber;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(323, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(344, 28);
             this.layoutControlItem2.Text = "휴대폰 번호: ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(80, 18);
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.simpleButton1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(161, 56);
+            this.layoutControlItem3.Control = this.btnSendNumber;
+            this.layoutControlItem3.Location = new System.Drawing.Point(171, 56);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(162, 29);
+            this.layoutControlItem3.Size = new System.Drawing.Size(173, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.txePhoneNumber1;
+            this.layoutControlItem5.Control = this.txeNumber;
             this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem5.CustomizationFormText = "인증번호:";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 85);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 87);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(323, 28);
+            this.layoutControlItem5.Size = new System.Drawing.Size(344, 28);
             this.layoutControlItem5.Text = "인증번호:";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(80, 18);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnFindPassword;
-            this.layoutControlItem6.Location = new System.Drawing.Point(161, 113);
+            this.layoutControlItem6.Location = new System.Drawing.Point(171, 115);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(162, 31);
+            this.layoutControlItem6.Size = new System.Drawing.Size(173, 56);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -257,18 +260,18 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 123);
+            this.label1.Location = new System.Drawing.Point(12, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 27);
+            this.label1.Size = new System.Drawing.Size(167, 52);
             this.label1.TabIndex = 8;
             this.label1.Text = " ";
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.label1;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 113);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 115);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(161, 31);
+            this.layoutControlItem8.Size = new System.Drawing.Size(171, 56);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -287,8 +290,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txePhoneNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txePhoneNumber1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -312,10 +315,10 @@
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
         private DevExpress.XtraEditors.SimpleButton btnFindPassword;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnSendNumber;
         private DevExpress.XtraEditors.TextEdit txePhoneNumber;
-        private DevExpress.XtraEditors.TextEdit txeName;
-        private DevExpress.XtraEditors.TextEdit txePhoneNumber1;
+        private DevExpress.XtraEditors.TextEdit txeId;
+        private DevExpress.XtraEditors.TextEdit txeNumber;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;

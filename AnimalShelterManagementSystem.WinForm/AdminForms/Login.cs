@@ -63,5 +63,11 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             FindId findId = new FindId();
             findId.ShowDialog();
         }
+
+        private void btnFindPassword_Click(object sender, EventArgs e)
+        {
+            FindPassword findPassword = new FindPassword();
+            findPassword.ShowDialog();
+        }
     }
 }

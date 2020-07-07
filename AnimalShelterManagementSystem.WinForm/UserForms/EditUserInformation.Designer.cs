@@ -49,8 +49,8 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
-            this.UserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.UserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -71,8 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -280,10 +280,6 @@
             this.btnSignup.Text = "수정";
             this.btnSignup.Click += new System.EventHandler(this.btnEdit_Clicked);
             // 
-            // UserBindingSource
-            // 
-            this.UserBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnSignup;
@@ -295,6 +291,10 @@
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
+            // 
+            // UserBindingSource
+            // 
+            this.UserBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
             // 
             // EditUserInformation
             // 
@@ -325,8 +325,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
