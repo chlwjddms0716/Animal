@@ -50,7 +50,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
                     animalShelterlId = 1;
             }
 
-            OnLoadButtonClicked((int)luAnimalshelter.EditValue, (int)luSpecies.EditValue, (Genders)rdgSex.EditValue
+            OnLoadButtonClicked((int)luAnimalshelter.EditValue, (int)cbbSpecies.SelectedValue, (Genders)rdgSex.EditValue
                 , dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime);
 
             
@@ -63,16 +63,17 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             if (DesignMode)
                 return;
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
-            
-            foreach(string gender in Enum.GetValues(typeof(Genders)))
-            {
-                return 
-            }
 
+
+            cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+
+
+            
         }
 
         private void dateTimeChartRangeControlClient1_CustomizeSeries(object sender, DevExpress.XtraEditors.ClientDataSourceProviderCustomizeSeriesEventArgs e)
         {
+            
 
         }
 
