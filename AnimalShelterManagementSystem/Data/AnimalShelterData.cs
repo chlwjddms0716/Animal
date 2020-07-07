@@ -47,5 +47,20 @@ namespace AnimalShelterManagementSystem
 
             return query.FirstOrDefault();
         }
+
+        public List<AnimalShelter> GetbyShelterId(int shelterId)
+        {
+            AnimalShelterManagementEntities context = CreateContext();
+            List<AnimalShelter> animalShelters = new List<AnimalShelter>();
+
+            foreach (AnimalShelter animalShelter in context.AnimalShelters)
+            {
+                if (animalShelter.AnimalShelterId == shelterId)
+                    animalShelters.Add(animalShelter);
+            }
+           
+            return animalShelters;
+
+        }
     }
 }
