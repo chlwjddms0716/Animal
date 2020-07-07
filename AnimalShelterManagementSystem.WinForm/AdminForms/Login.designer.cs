@@ -121,6 +121,7 @@
             this.txePassword.Location = new System.Drawing.Point(77, 40);
             this.txePassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txePassword.Name = "txePassword";
+            this.txePassword.Properties.PasswordChar = '*';
             this.txePassword.Size = new System.Drawing.Size(290, 24);
             this.txePassword.StyleController = this.layoutControl1;
             this.txePassword.TabIndex = 5;
