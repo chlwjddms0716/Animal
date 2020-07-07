@@ -61,6 +61,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.파일FToolStripMenuItem,
@@ -68,7 +69,6 @@
             this.도움말HToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1027, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -78,13 +78,13 @@
             this.파일FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.종료XToolStripMenuItem});
             this.파일FToolStripMenuItem.Name = "파일FToolStripMenuItem";
-            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
             this.파일FToolStripMenuItem.Text = "파일(&F)";
             // 
             // 종료XToolStripMenuItem
             // 
             this.종료XToolStripMenuItem.Name = "종료XToolStripMenuItem";
-            this.종료XToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.종료XToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
             this.종료XToolStripMenuItem.Text = "종료(&X)";
             this.종료XToolStripMenuItem.Click += new System.EventHandler(this.종료XToolStripMenuItem_Click);
             // 
@@ -94,20 +94,20 @@
             this.추가IToolStripMenuItem,
             this.삭제DToolStripMenuItem});
             this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
-            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
             this.편집EToolStripMenuItem.Text = "편집(&E)";
             // 
             // 추가IToolStripMenuItem
             // 
             this.추가IToolStripMenuItem.Name = "추가IToolStripMenuItem";
-            this.추가IToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.추가IToolStripMenuItem.Size = new System.Drawing.Size(173, 34);
             this.추가IToolStripMenuItem.Text = "추가(&I)";
             this.추가IToolStripMenuItem.Click += new System.EventHandler(this.추가IToolStripMenuItem_Click);
             // 
             // 삭제DToolStripMenuItem
             // 
             this.삭제DToolStripMenuItem.Name = "삭제DToolStripMenuItem";
-            this.삭제DToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.삭제DToolStripMenuItem.Size = new System.Drawing.Size(173, 34);
             this.삭제DToolStripMenuItem.Text = "삭제(&D)";
             this.삭제DToolStripMenuItem.Click += new System.EventHandler(this.삭제DToolStripMenuItem_Click);
             // 
@@ -118,27 +118,27 @@
             this.toolStripSeparator1,
             this.도움말HToolStripMenuItem1});
             this.도움말HToolStripMenuItem.Name = "도움말HToolStripMenuItem";
-            this.도움말HToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.도움말HToolStripMenuItem.Size = new System.Drawing.Size(105, 29);
             this.도움말HToolStripMenuItem.Text = "도움말(&H)";
             // 
             // 정보AToolStripMenuItem
             // 
             this.정보AToolStripMenuItem.Name = "정보AToolStripMenuItem";
             this.정보AToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.정보AToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.정보AToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.정보AToolStripMenuItem.Text = "정보(&A)";
             this.정보AToolStripMenuItem.Click += new System.EventHandler(this.정보AToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(240, 6);
             // 
             // 도움말HToolStripMenuItem1
             // 
             this.도움말HToolStripMenuItem1.Name = "도움말HToolStripMenuItem1";
             this.도움말HToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.도움말HToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
+            this.도움말HToolStripMenuItem1.Size = new System.Drawing.Size(243, 34);
             this.도움말HToolStripMenuItem1.Text = "도움말(&H)";
             this.도움말HToolStripMenuItem1.Click += new System.EventHandler(this.도움말HToolStripMenuItem1_Click);
             // 
@@ -150,9 +150,9 @@
             this.toolStripButton2,
             this.toolStripButton4,
             this.toolStripButton5});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1027, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1284, 29);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -162,7 +162,7 @@
             this.toolStripButton1.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Close;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(34, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -172,7 +172,7 @@
             this.toolStripButton2.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 24);
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -182,7 +182,7 @@
             this.toolStripButton4.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton4.Size = new System.Drawing.Size(34, 24);
             this.toolStripButton4.Text = "toolStripButton4";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -192,7 +192,7 @@
             this.toolStripButton5.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton5.Size = new System.Drawing.Size(34, 24);
             this.toolStripButton5.Text = "toolStripButton5";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -212,11 +212,12 @@
             this.pictureLinkDataGridViewTextBoxColumn,
             this.featureDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.homelessAnimalBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 220);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 264);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(1023, 327);
+            this.dataGridView1.Size = new System.Drawing.Size(1279, 392);
             this.dataGridView1.TabIndex = 3;
             // 
             // homelessAnimalIdDataGridViewTextBoxColumn
@@ -273,23 +274,26 @@
             // 
             // searchControl1
             // 
-            this.searchControl1.Location = new System.Drawing.Point(4, 59);
-            this.searchControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchControl1.Location = new System.Drawing.Point(5, 71);
+            this.searchControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Size = new System.Drawing.Size(1011, 154);
+            this.searchControl1.Size = new System.Drawing.Size(1264, 185);
             this.searchControl1.TabIndex = 4;
+            this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked);
+            this.searchControl1.Load += new System.EventHandler(this.searchControl1_Load);
             // 
             // HomelessAnimalListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 559);
+            this.ClientSize = new System.Drawing.Size(1284, 671);
             this.Controls.Add(this.searchControl1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomelessAnimalListForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "유기유실동물리스트";

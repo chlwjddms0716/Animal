@@ -53,6 +53,8 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             OnLoadButtonClicked((int)luAnimalshelter.EditValue, (SpeciesType)cbbSpecies.SelectedValue, (Genders)rdgSex.EditValue
                 , dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime);
 
+           
+
             
             Cursor = Cursors.Arrow;
 
@@ -69,11 +71,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             
         }
 
-        private void dateTimeChartRangeControlClient1_CustomizeSeries(object sender, DevExpress.XtraEditors.ClientDataSourceProviderCustomizeSeriesEventArgs e)
-        {
-            
-
-        }
+     
 
         #region LoadButtonClicked event things for C# 3.0
         public event EventHandler<LoadButtonClickedEventArgs> LoadButtonClicked;
@@ -123,9 +121,5 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
         }
         #endregion
 
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
