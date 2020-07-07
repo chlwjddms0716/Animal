@@ -18,8 +18,19 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
         public SearchControl()
         {
             InitializeComponent();
+
+
         }
 
+        public void GetValues()
+        {
+            foreach(string gender in Genders.GetNames(typeof(Genders)))
+            {
+                Console.WriteLine(gender);
+            }
+
+
+        }
       
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -51,8 +62,13 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
         {
             if (DesignMode)
                 return;
-
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
+            
+            foreach(string gender in Enum.GetValues(typeof(Genders)))
+            {
+                return 
+            }
+
         }
 
         private void dateTimeChartRangeControlClient1_CustomizeSeries(object sender, DevExpress.XtraEditors.ClientDataSourceProviderCustomizeSeriesEventArgs e)
@@ -107,5 +123,10 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             }
         }
         #endregion
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
