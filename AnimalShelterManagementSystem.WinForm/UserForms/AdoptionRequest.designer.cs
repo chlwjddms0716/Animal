@@ -317,7 +317,7 @@
             // 
             // speciesDataGridViewTextBoxColumn
             // 
-            this.speciesDataGridViewTextBoxColumn.DataPropertyName = "Species";
+            this.speciesDataGridViewTextBoxColumn.DataPropertyName = "Parse<Species>.String()";
             this.speciesDataGridViewTextBoxColumn.HeaderText = "Species";
             this.speciesDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.speciesDataGridViewTextBoxColumn.Name = "speciesDataGridViewTextBoxColumn";
