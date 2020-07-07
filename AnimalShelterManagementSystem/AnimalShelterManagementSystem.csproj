@@ -58,6 +58,7 @@
     <Compile Include="AnimalShelter.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="DataRepository.cs" />
     <Compile Include="Data\UserData.cs" />
     <Compile Include="Data\AdoptionData.cs" />
