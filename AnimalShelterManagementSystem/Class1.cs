@@ -8,5 +8,6 @@ namespace AnimalShelterManagementSystem
 {
     class Class1
     {//권능 감사
+        // no problem
     }
 }
