@@ -69,8 +69,7 @@
             this.도움말HToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1284, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1027, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -280,6 +279,8 @@
             this.searchControl1.Name = "searchControl1";
             this.searchControl1.Size = new System.Drawing.Size(1264, 185);
             this.searchControl1.TabIndex = 4;
+            this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked);
+            this.searchControl1.Load += new System.EventHandler(this.searchControl1_Load);
             // 
             // HomelessAnimalListForm
             // 

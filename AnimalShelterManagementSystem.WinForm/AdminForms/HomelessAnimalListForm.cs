@@ -118,5 +118,15 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             homelessAnimalBindingSource.Remove(homelessAnimal);
         }
 
+        private void searchControl1_LoadButtonClicked(object sender, UserControls.SearchControl.LoadButtonClickedEventArgs e)
+        {
+            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(e.AnimalShelterId,e.Gender,e.)
+            albumBindingSource.DataSource = albums;
+        }
+
+        private void searchControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
