@@ -109,5 +109,10 @@ namespace AnimalShelterManagementSystem.WinForm
             List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, isMale, isFemale);
             homelessAnimalBindingSource.DataSource = homelessAnimals;
         }
+
+        private void grvHomelessAnimalList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

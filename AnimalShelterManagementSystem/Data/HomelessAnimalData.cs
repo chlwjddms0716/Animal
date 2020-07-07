@@ -68,22 +68,25 @@ namespace AnimalShelterManagementSystem
 
             var query = from x in context.HomelessAnimals
                         where x.Species == speciesCode && x.IsAdopted == false
-                        select new { 
-                            Animal = x, 
-                            PhysicalConditionName = x.PhysicalCondition,
-                            SpeciesName = x.Species
-                        };
+                        select x;
 
             if (isMale)
-                query = query.Where(x => x.Animal.Gender== 1);
+                query = query.Where(x => x.Gender== 1);
 
             if (isFemale)
-                query = query.Where(x => x.Animal.Gender == 2);
+                query = query.Where(x => x.Gender == 2);
 
             var list = query.ToList();
 
+            foreach (var x in list)
+            {
+                x.SpeciesName = ((SpeciesType)x.Species).ToString();
+                x.PhysicalConditionName = ((PhysicalConditionType)x.PhysicalCondition).ToString();
+                x.GenderName = ((Genders)x.Gender).ToString();
+
+            }
           
-            return list.ConvertAll(x => x.Animal);
+            return list;
 
         }
 

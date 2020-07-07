@@ -10,6 +10,8 @@ namespace AnimalShelterManagementSystem
     {
         public string SpeciesName { get; set; }
         public string PhysicalConditionName { get; set; }
+
+        public string GenderName { get; set;}
     }
 
 }

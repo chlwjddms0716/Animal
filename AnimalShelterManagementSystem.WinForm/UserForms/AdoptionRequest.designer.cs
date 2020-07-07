@@ -51,9 +51,10 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SpeciesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.speciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhysicalConditionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PictureLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -122,9 +123,10 @@
             this.grvHomelessAnimalList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvHomelessAnimalList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4,
+            this.SpeciesName,
+            this.GenderName,
             this.dataGridViewTextBoxColumn5,
-            this.speciesDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
+            this.PhysicalConditionName,
             this.dataGridViewTextBoxColumn6,
             this.PictureLink});
             this.grvHomelessAnimalList.DataSource = this.homelessAnimalBindingSource;
@@ -135,6 +137,7 @@
             this.grvHomelessAnimalList.RowTemplate.Height = 27;
             this.grvHomelessAnimalList.Size = new System.Drawing.Size(687, 312);
             this.grvHomelessAnimalList.TabIndex = 10;
+            this.grvHomelessAnimalList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvHomelessAnimalList_CellContentClick);
             this.grvHomelessAnimalList.DoubleClick += new System.EventHandler(this.grvHomelessAnimalList_DoubleClick);
             // 
             // chbFemale
@@ -306,6 +309,24 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
+            // SpeciesName
+            // 
+            this.SpeciesName.DataPropertyName = "SpeciesName";
+            this.SpeciesName.HeaderText = "SpeciesName";
+            this.SpeciesName.MinimumWidth = 6;
+            this.SpeciesName.Name = "SpeciesName";
+            this.SpeciesName.ReadOnly = true;
+            this.SpeciesName.Width = 125;
+            // 
+            // GenderName
+            // 
+            this.GenderName.DataPropertyName = "GenderName";
+            this.GenderName.HeaderText = "GenderName";
+            this.GenderName.MinimumWidth = 6;
+            this.GenderName.Name = "GenderName";
+            this.GenderName.ReadOnly = true;
+            this.GenderName.Width = 125;
+            // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Age";
@@ -315,23 +336,14 @@
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
-            // speciesDataGridViewTextBoxColumn
+            // PhysicalConditionName
             // 
-            this.speciesDataGridViewTextBoxColumn.DataPropertyName = "Parse<Species>.String()";
-            this.speciesDataGridViewTextBoxColumn.HeaderText = "Species";
-            this.speciesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.speciesDataGridViewTextBoxColumn.Name = "speciesDataGridViewTextBoxColumn";
-            this.speciesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.speciesDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.ReadOnly = true;
-            this.genderDataGridViewTextBoxColumn.Width = 125;
+            this.PhysicalConditionName.DataPropertyName = "PhysicalConditionName";
+            this.PhysicalConditionName.HeaderText = "PhysicalConditionName";
+            this.PhysicalConditionName.MinimumWidth = 6;
+            this.PhysicalConditionName.Name = "PhysicalConditionName";
+            this.PhysicalConditionName.ReadOnly = true;
+            this.PhysicalConditionName.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -364,6 +376,7 @@
             this.Load += new System.EventHandler(this.AdoptionRequest_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvHomelessAnimalList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chbFemale.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkuSpecies.Properties)).EndInit();
@@ -410,9 +423,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pictureLinkDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource homelessAnimalBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SpeciesName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GenderName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn speciesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhysicalConditionName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn PictureLink;
     }
