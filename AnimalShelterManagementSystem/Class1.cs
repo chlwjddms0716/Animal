@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace AnimalShelterManagementSystem
 {
     class Class1
-    {
+    {// 정은 감사
     }
 }
