@@ -78,7 +78,7 @@
           <Property Name="AnimalName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="PictureLink" Type="nvarchar(max)" />
-          <Property Name="SpeciesId" Type="int" />
+          <Property Name="Species" Type="int" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -342,7 +342,7 @@
           <Property Name="AnimalName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="PictureLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="SpeciesId" Type="Int32" />
+          <Property Name="Species" Type="Int32" />
           <NavigationProperty Name="User" Relationship="AnimalShelterManagement.FK_LossReport_User" FromRole="LossReport" ToRole="User" />
         </EntityType>
         <EntityType Name="User">
@@ -520,7 +520,7 @@
           <EntitySetMapping Name="LossReports">
             <EntityTypeMapping TypeName="AnimalShelterManagement.LossReport">
               <MappingFragment StoreEntitySet="LossReport">
-                <ScalarProperty Name="SpeciesId" ColumnName="SpeciesId" />
+                <ScalarProperty Name="Species" ColumnName="Species" />
                 <ScalarProperty Name="PictureLink" ColumnName="PictureLink" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="AnimalName" ColumnName="AnimalName" />
