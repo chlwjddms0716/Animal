@@ -13,7 +13,7 @@ namespace AnimalShelterManagementSystem
 {
     public class HomelessAnimalData : EntityData<HomelessAnimal>
     {
-
+        
         public HomelessAnimal Get(int homelessAnimalId)
         {
             AnimalShelterManagementEntities context = CreateContext();
