@@ -31,7 +31,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFindPassword = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txePhoneNumber = new DevExpress.XtraEditors.TextEdit();
             this.txeName = new DevExpress.XtraEditors.TextEdit();
@@ -99,7 +99,7 @@
             // layoutControl2
             // 
             this.layoutControl2.Controls.Add(this.label1);
-            this.layoutControl2.Controls.Add(this.simpleButton2);
+            this.layoutControl2.Controls.Add(this.btnFindPassword);
             this.layoutControl2.Controls.Add(this.simpleButton1);
             this.layoutControl2.Controls.Add(this.txePhoneNumber);
             this.layoutControl2.Controls.Add(this.txeName);
@@ -114,14 +114,14 @@
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // simpleButton2
+            // btnFindPassword
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(173, 123);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(158, 27);
-            this.simpleButton2.StyleController = this.layoutControl2;
-            this.simpleButton2.TabIndex = 7;
-            this.simpleButton2.Text = "비밀번호 찾기";
+            this.btnFindPassword.Location = new System.Drawing.Point(173, 123);
+            this.btnFindPassword.Name = "btnFindPassword";
+            this.btnFindPassword.Size = new System.Drawing.Size(158, 27);
+            this.btnFindPassword.StyleController = this.layoutControl2;
+            this.btnFindPassword.TabIndex = 7;
+            this.btnFindPassword.Text = "비밀번호 찾기";
             // 
             // simpleButton1
             // 
@@ -222,7 +222,7 @@
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.simpleButton2;
+            this.layoutControlItem6.Control = this.btnFindPassword;
             this.layoutControlItem6.Location = new System.Drawing.Point(161, 113);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(162, 31);
@@ -311,7 +311,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnFindPassword;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.TextEdit txePhoneNumber;
         private DevExpress.XtraEditors.TextEdit txeName;
