@@ -69,11 +69,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             
         }
 
-        private void dateTimeChartRangeControlClient1_CustomizeSeries(object sender, DevExpress.XtraEditors.ClientDataSourceProviderCustomizeSeriesEventArgs e)
-        {
-            
-
-        }
+     
 
         #region LoadButtonClicked event things for C# 3.0
         public event EventHandler<LoadButtonClickedEventArgs> LoadButtonClicked;
