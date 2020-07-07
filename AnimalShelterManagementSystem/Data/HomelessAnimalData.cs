@@ -99,10 +99,10 @@ namespace AnimalShelterManagementSystem
 
 
             var query = from x in context.HomelessAnimals
-                        //from y in context.AnimalShelters
+                            //from y in context.AnimalShelters
                         where x.AnimalShelterId == animalShelterId &&
-                        x.Species == speciesCode &&       
-                        x.Gender == gender && 
+                        x.Species == speciesCode &&
+                        x.Gender == gender &&
                                 x.LatestFindingReport >= foundDateFrom && x.LatestFindingReport <= foundDateTo
                         select x;
 
