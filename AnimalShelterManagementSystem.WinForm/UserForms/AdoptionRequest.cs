@@ -23,8 +23,7 @@ namespace AnimalShelterManagementSystem.WinForm
         private int userId;
         Adoption adoption = new Adoption();
         private int SpeciesCode;
-        private bool isMale = false;
-        private bool isFemale = false;
+        private int GenderCode = 0;
         public AdoptionRequest()
         {
             InitializeComponent();
@@ -52,7 +51,7 @@ namespace AnimalShelterManagementSystem.WinForm
 
             List<HomelessAnimal> homelessAnimals = new List<HomelessAnimal>();
             foreach (SpeciesType speciesType in (SpeciesType[])Enum.GetValues(typeof(SpeciesType)))
-                homelessAnimals.AddRange(DataRepository.HomelessAnimal.SearchWithAnimals((int)speciesType, false, false));
+                homelessAnimals.AddRange(DataRepository.HomelessAnimal.SearchWithAnimals((int)speciesType, 0));
             homelessAnimalBindingSource.DataSource = homelessAnimals;
             cbxSpecies.SelectedItem = null;
         }
@@ -88,28 +87,6 @@ namespace AnimalShelterManagementSystem.WinForm
             MessageBox.Show($"{homelessAnimal.Name}을 선택하셨습니다.");
         }
 
-
-
-        private void chbMale_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chbMale.Checked)
-                isMale = true;
-            else
-                isMale = false;
-            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, isMale, isFemale);
-            homelessAnimalBindingSource.DataSource = homelessAnimals;
-        }
-
-        private void chbFemale_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chbFemale.Checked)
-                isFemale = true;
-            else
-                isFemale = false;
-            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, isMale, isFemale);
-            homelessAnimalBindingSource.DataSource = homelessAnimals;
-        }
-
         private void grvHomelessAnimalList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -120,9 +97,16 @@ namespace AnimalShelterManagementSystem.WinForm
             if (cbxSpecies.SelectedItem != null)
             {
                 SpeciesCode = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
-                List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, isMale, isFemale);
+                List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, GenderCode);
                 homelessAnimalBindingSource.DataSource = homelessAnimals;
             }
+        }
+
+        private void rdgSex_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GenderCode = (int)rdgSex.EditValue;
+            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, GenderCode);
+            homelessAnimalBindingSource.DataSource = homelessAnimals;
         }
     }
 }

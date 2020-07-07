@@ -48,7 +48,7 @@ namespace AnimalShelterManagementSystem
             AnimalShelterManagementEntities context = CreateContext();
 
             var query = from x in context.HomelessAnimals
-                        orderby x.HomelessAnimalId 
+                        orderby x.HomelessAnimalId
                         select x.HomelessAnimalId;
 
             return query.FirstOrDefault();
@@ -58,10 +58,10 @@ namespace AnimalShelterManagementSystem
         {
             AnimalShelterManagementEntities context = CreateContext();
 
-           context.HomelessAnimals.FirstOrDefault(a => a.HomelessAnimalId == homelessAnimalId);
+            context.HomelessAnimals.FirstOrDefault(a => a.HomelessAnimalId == homelessAnimalId);
         }
 
-        public List<HomelessAnimal> SearchWithAnimals(int speciesCode, bool isMale, bool isFemale)
+        public List<HomelessAnimal> SearchWithAnimals(int speciesCode, int genderCode)
         {
             AnimalShelterManagementEntities context = CreateContext();
 
@@ -70,10 +70,10 @@ namespace AnimalShelterManagementSystem
                         where x.Species == speciesCode && x.IsAdopted == false
                         select x;
 
-            if (isMale)
-                query = query.Where(x => x.Gender== 1);
+            if (genderCode == 1)
+                query = query.Where(x => x.Gender == 1);
 
-            if (isFemale)
+            if (genderCode == 2)
                 query = query.Where(x => x.Gender == 2);
 
             var list = query.ToList();
@@ -85,18 +85,9 @@ namespace AnimalShelterManagementSystem
                 x.GenderName = ((Genders)x.Gender).ToString();
 
             }
-          
+
             return list;
 
         }
-
-    //    public List<HomelessAnimal> SearchWithAnimals(int speciesCode)
-    //{
-    //    AnimalShelterManagementEntities context = CreateContext();
-    //    var query = from x in context.HomelessAnimals
-    //                where x.SpeciesCode == speciesCode && x.IsAdopted == false
-    //                select x;
-    //    return query.ToList();
-    //}
-}
+    }
 }

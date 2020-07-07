@@ -18,7 +18,6 @@ namespace AnimalShelterManagementSystem
             return context;
         }
 
-
         public List<T> GetAll()
         {
             AnimalShelterManagementEntities context = CreateContext();
