@@ -1,4 +1,5 @@
 ﻿using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.WinForm.AdminForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,6 +55,13 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         {
             SignUp signUp = new SignUp();
             signUp.ShowDialog();
+        }
+
+
+        private void btnFindId_Click(object sender, EventArgs e)
+        {
+            FindId findId = new FindId();
+            findId.ShowDialog();
         }
     }
 }
