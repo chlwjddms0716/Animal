@@ -91,41 +91,5 @@ namespace AnimalShelterManagementSystem
         }
 
 
-
-        public List<HomelessAnimal> SearchWithHomelessAnimal(int animalShelterId, int speciesCode, int gender, DateTime foundDateFrom, DateTime foundDateTo)
-        {
-            AnimalShelterManagementEntities context = CreateContext();
-
-
-            var query = from x in context.HomelessAnimals
-                        where x.Species == speciesCode && x.Gender==(int)gender && x.LatestFindingReport == (DateTime)foundDateFrom == false
-                        select x;
-
-        
-
-            var list = query.ToList();
-
-            foreach (var x in list)
-            {
-                x.Species = ((SpeciesType)x.Species).ToString();
-                x.PhysicalConditionName = ((PhysicalConditionType)x.PhysicalCondition).ToString();
-                x.GenderName = ((Genders)x.Gender).ToString();
-
-            }
-
-            return list;
-
-        }
-
-       
-
-        //    public List<HomelessAnimal> SearchWithAnimals(int speciesCode)
-        //{
-        //    AnimalShelterManagementEntities context = CreateContext();
-        //    var query = from x in context.HomelessAnimals
-        //                where x.SpeciesCode == speciesCode && x.IsAdopted == false
-        //                select x;
-        //    return query.ToList();
-        //}
     }
 }

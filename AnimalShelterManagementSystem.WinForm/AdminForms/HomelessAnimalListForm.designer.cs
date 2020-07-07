@@ -278,6 +278,7 @@
             this.searchControl1.Size = new System.Drawing.Size(1011, 154);
             this.searchControl1.TabIndex = 4;
             this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked);
+            this.searchControl1.Load += new System.EventHandler(this.searchControl1_Load);
             // 
             // HomelessAnimalListForm
             // 
