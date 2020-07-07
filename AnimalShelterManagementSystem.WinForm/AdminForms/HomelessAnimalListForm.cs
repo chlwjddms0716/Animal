@@ -121,7 +121,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void searchControl1_LoadButtonClicked(object sender, UserControls.SearchControl.LoadButtonClickedEventArgs e)
         {
             List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(e.AnimalShelterId,e.Gender,e.)
-            albumBindingSource.DataSource = albums;
+            albumBindingSource.DataSource = albums;ppp
         }
     }
 }
