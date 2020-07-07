@@ -1,4 +1,5 @@
 ﻿using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.Models;
 using DevExpress.Utils.Extensions;
 using System;
 using System.Collections.Generic;
@@ -21,13 +22,14 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
 
         private void FindingReportForm_Load(object sender, EventArgs e)
         {
-
+            cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+            cbxSpecies.SelectedItem = null;
         }
 
         private void btnFindingReport_Click(object sender, EventArgs e)
         {
             string checkinput = "";
-            if (lkuSpecies.EditValue == null)
+            if (cbxSpecies.Text == null)
             {
                 checkinput += "종을 선택해주세요.\n";
             }
@@ -46,6 +48,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 findingReport.Place = txbPlace.Text;
                 findingReport.FindingReportId = DataRepository.FindingReport.GetMaxId() + 1;
                 findingReport.Date = dteDate.DateTime.Date;
+                findingReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
                 DataRepository.FindingReport.Insert(findingReport);
 
                 MessageBox.Show("신고되었습니다.");
@@ -57,6 +60,11 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cbxSpecies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

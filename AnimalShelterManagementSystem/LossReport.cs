@@ -20,7 +20,7 @@ namespace AnimalShelterManagementSystem
         public string AnimalName { get; set; }
         public int UserId { get; set; }
         public string PictureLink { get; set; }
-        public Nullable<int> SpeciesId { get; set; }
+        public Nullable<int> Species { get; set; }
     
         public virtual User User { get; set; }
     }
