@@ -25,7 +25,5 @@ namespace AnimalShelterManagementSystem
 
             Delete(adoption);
         }
-
-
     }
 }

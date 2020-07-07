@@ -1,4 +1,5 @@
 ﻿using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,9 @@ namespace AnimalShelterManagementSystem.WinForm
         public LossReportForm(int UserId) : this()
         {
             userId = UserId;
+            cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+            cbxSpecies.SelectedItem = null;
+            //cbxSpecies.SelectedIndex = "종을 선택해주세요.";
         }
 
         private void LossRequest_Load(object sender, EventArgs e)
@@ -36,7 +40,7 @@ namespace AnimalShelterManagementSystem.WinForm
             {
                 checkinput += "이름, ";
             }
-            if (lkuSpecies.EditValue == null)
+            if (cbxSpecies.Text == null)
             {
                 checkinput += "종, ";
             }
@@ -60,7 +64,7 @@ namespace AnimalShelterManagementSystem.WinForm
                 lossReport.LossReportId = DataRepository.LossReport.GetMaxId() + 1;
                 lossReport.Date = dteDate.DateTime.Date;
                 lossReport.AnimalName = tbxName.Text;
-           
+                lossReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
                 lossReport.PictureLink = txbPictureLink.Text;
 
                 DataRepository.LossReport.Insert(lossReport);
@@ -76,7 +80,5 @@ namespace AnimalShelterManagementSystem.WinForm
         {
             Close();
         }
-
-
     }
 }
