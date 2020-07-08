@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cbbSpecies = new System.Windows.Forms.ComboBox();
             this.txeHomelessAnimalId = new DevExpress.XtraEditors.TextEdit();
             this.dteDate = new DevExpress.XtraEditors.DateEdit();
             this.txeAge = new DevExpress.XtraEditors.TextEdit();
@@ -38,11 +39,8 @@
             this.txeFeature = new DevExpress.XtraEditors.TextEdit();
             this.txePictureLink = new DevExpress.XtraEditors.TextEdit();
             this.txeName = new DevExpress.XtraEditors.TextEdit();
-            this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lueIsMale = new DevExpress.XtraEditors.LookUpEdit();
-            this.sexBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.luePSC = new DevExpress.XtraEditors.LookUpEdit();
-            this.physicalConditionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -55,10 +53,12 @@
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbbSpecies = new System.Windows.Forms.ComboBox();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
+            this.sexBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.physicalConditionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeHomelessAnimalId.Properties)).BeginInit();
@@ -68,11 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txeFeature.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePictureLink.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueIsMale.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.luePSC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.physicalConditionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -85,9 +82,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.physicalConditionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -110,6 +110,14 @@
             this.layoutControl1.Size = new System.Drawing.Size(800, 450);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cbbSpecies
+            // 
+            this.cbbSpecies.FormattingEnabled = true;
+            this.cbbSpecies.Location = new System.Drawing.Point(121, 96);
+            this.cbbSpecies.Name = "cbbSpecies";
+            this.cbbSpecies.Size = new System.Drawing.Size(667, 23);
+            this.cbbSpecies.TabIndex = 14;
             // 
             // txeHomelessAnimalId
             // 
@@ -370,18 +378,6 @@
             this.layoutControlItem8.Text = "유기유실동물Id : ";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(107, 18);
             // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
-            // 
-            // cbbSpecies
-            // 
-            this.cbbSpecies.FormattingEnabled = true;
-            this.cbbSpecies.Location = new System.Drawing.Point(121, 96);
-            this.cbbSpecies.Name = "cbbSpecies";
-            this.cbbSpecies.Size = new System.Drawing.Size(667, 23);
-            this.cbbSpecies.TabIndex = 14;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.cbbSpecies;
@@ -390,6 +386,10 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(780, 30);
             this.layoutControlItem1.Text = "축종코드 :";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(107, 18);
+            // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
             // 
             // HomelessAnimalForm
             // 
@@ -410,11 +410,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txeFeature.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePictureLink.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueIsMale.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.luePSC.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.physicalConditionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -427,9 +424,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.physicalConditionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,5 @@
-﻿using AnimalShelterManagementSystem.WinForm.Forms;
+﻿using AnimalShelterManagementSystem.WinForm.AdminForms;
+using AnimalShelterManagementSystem.WinForm.Forms;
 using AnimalShelterManagementSystem.WinForm.UserForms;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace AnimalShelterManagementSystem.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new ShelterListForm());
         }
     }
 }

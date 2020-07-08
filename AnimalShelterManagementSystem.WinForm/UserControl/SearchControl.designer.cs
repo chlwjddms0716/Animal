@@ -82,7 +82,6 @@
             this.groupControl1.Size = new System.Drawing.Size(733, 414);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "검색";
- 
             // 
             // layoutControl1
             // 

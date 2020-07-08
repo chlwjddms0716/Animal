@@ -51,8 +51,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
                 Close();
             }
-           
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -83,7 +81,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void HomelessAnimalForm_Load(object sender, EventArgs e)
         {
 
-            cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+          //  cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
             txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId);
             homelessAnimalBindingSource.DataSource = DataRepository.HomelessAnimal.GetAll();
 
