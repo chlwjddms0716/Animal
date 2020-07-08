@@ -117,5 +117,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             editUserInformationByAdmin.ShowDialog();
             Cursor = Cursors.Arrow;
         }
+
+        private void tsbRefresh_Click(object sender, EventArgs e)
+        {
+            UserList = DataRepository.User.GetAll();
+            querybyBlacklist();
+        }
     }
 }
