@@ -85,20 +85,20 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             }
             else
             {
-                MessageBox.Show(checkinput+"을(를) 입력해주세요.");
+                MessageBox.Show(checkinput + "을(를) 입력해주세요.");
             }
             Close();
         }
 
-    private void btnClose_Click(object sender, EventArgs e)
-    {
-        Close();
-    }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
         private void ShelterForm_Load(object sender, EventArgs e)
         {
             ReadFromEntity();
-        } 
+        }
     }
-    }
+}
 
