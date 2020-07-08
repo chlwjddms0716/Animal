@@ -66,7 +66,7 @@
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(308, 169);
             this.btnUser.TabIndex = 5;
-            this.btnUser.Text = "유저 정보 관리";
+            this.btnUser.Text = "유저 관리";
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnAnimal

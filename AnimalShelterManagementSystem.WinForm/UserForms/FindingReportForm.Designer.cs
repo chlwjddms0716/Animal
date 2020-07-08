@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbxSpecies = new System.Windows.Forms.ComboBox();
             this.dteDate = new DevExpress.XtraEditors.DateEdit();
             this.lblDate = new DevExpress.XtraEditors.LabelControl();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -43,11 +43,10 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cbxSpecies = new System.Windows.Forms.ComboBox();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -58,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -75,6 +75,16 @@
             this.layoutControl1.Size = new System.Drawing.Size(400, 223);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cbxSpecies
+            // 
+            this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSpecies.FormattingEnabled = true;
+            this.cbxSpecies.Location = new System.Drawing.Point(97, 12);
+            this.cbxSpecies.Name = "cbxSpecies";
+            this.cbxSpecies.Size = new System.Drawing.Size(291, 23);
+            this.cbxSpecies.TabIndex = 16;
+            this.cbxSpecies.SelectedIndexChanged += new System.EventHandler(this.cbxSpecies_SelectedIndexChanged);
             // 
             // dteDate
             // 
@@ -195,16 +205,6 @@
             this.layoutControlItem3.Text = " 발견 장소:   ";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(82, 18);
             // 
-            // cbxSpecies
-            // 
-            this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(97, 12);
-            this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(291, 23);
-            this.cbxSpecies.TabIndex = 16;
-            this.cbxSpecies.SelectedIndexChanged += new System.EventHandler(this.cbxSpecies_SelectedIndexChanged);
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.cbxSpecies;
@@ -226,7 +226,7 @@
             this.Load += new System.EventHandler(this.FindingReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
+            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -237,6 +237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

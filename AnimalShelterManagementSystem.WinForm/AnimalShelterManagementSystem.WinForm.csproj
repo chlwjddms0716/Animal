@@ -177,6 +177,9 @@
     <EmbeddedResource Include="AdminForms\HomelessAnimalListForm.resx">
       <DependentUpon>HomelessAnimalListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>
     </EmbeddedResource>
