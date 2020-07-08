@@ -43,7 +43,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 _homelessAnimal.Age = Convert.ToInt32(txeAge.Text);
                 
                 _homelessAnimal.Feature = txeFeature.Text;
-                _homelessAnimal.LatestFindingReport = dteDate.DateTime.Date;
+                _homelessAnimal.LatestFindingReport = dteLatestFindingReport.DateTime.Date;
                 _homelessAnimal.PictureLink = txePictureLink.Text;
 
 
@@ -60,32 +60,73 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-            try
+            string checkinput = "";
+            if (cbbSpecies.Text == null)
             {
-                WriteToEntity();
-                if (_homelessAnimal.HomelessAnimalId == 0) //Id의 디폴트가0이라 0이면 db에 insert함
-                    DataRepository.HomelessAnimal.Insert(_homelessAnimal);
-                
-                else
-                    DataRepository.HomelessAnimal.Update(_homelessAnimal);
+                checkinput += "종을 선택해주세요.\n";
             }
-            catch (Exception ex)
+            if (cbbGender.Text == null)
             {
-                MessageBox.Show(ex.Message);
+                checkinput += "성별을 선택해주세요.\n";
             }
+            if (cbbPSC.Text == null)
+            {
+                checkinput += "건강상태를 선택해주세요.\n";
+            }
+            if (String.Equals(txeName.Text, "") == true)
+            {
+                checkinput += "이름을 입력해주세요.\n";
+            }
+            if (String.Equals(txeAge.Text, "") == true)
+            {
+                checkinput += "나이를 입력해주세요.\n";
+            }
+            if (String.Equals(txeFeature.Text, "") == true)
+            {
+                checkinput += "특징을 입력해주세요.\n";
+            }
+            if (String.Equals(txePictureLink.Text, "") == true)
+            {
+                checkinput += "사진링크를 입력해주세요.\n";
+            }
+            if (dteLatestFindingReport.EditValue == null)
+            {
+                checkinput += "날짜를 선택해주세요.\n";
+            }
+            if (string.Equals(checkinput, "") == true)
+            {
 
-            Close();
+
+                try
+                {
+                    WriteToEntity();
+                    if (_homelessAnimal.HomelessAnimalId == 0) //Id의 디폴트가0이라 0이면 db에 insert함
+                        DataRepository.HomelessAnimal.Insert(_homelessAnimal);
+
+                    else
+                        DataRepository.HomelessAnimal.Update(_homelessAnimal);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                Close();
+
+            }
+            MessageBox.Show(checkinput);
         }
 
         private void HomelessAnimalForm_Load(object sender, EventArgs e)
         {
 
-          cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
-            txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId);
+           // txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId + 10);
             homelessAnimalBindingSource.DataSource = DataRepository.HomelessAnimal.GetAll();
-
-
+            cbbGender.DataSource = Enum.GetValues(typeof(Genders));
+            cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+            cbbPSC.DataSource = Enum.GetValues(typeof(PhysicalConditionType));
+            dteLatestFindingReport.DateTime = DateTime.Now;
+            
             ReadFromEntity();
         }
 
@@ -95,7 +136,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId + 1);
             txeName.Text = _homelessAnimal.Name;
             txeFeature.Text = _homelessAnimal.Feature;
-            dteDate.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
+            dteLatestFindingReport.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
             txePictureLink.Text = _homelessAnimal.PictureLink;
 
         }

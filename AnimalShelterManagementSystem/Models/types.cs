@@ -12,16 +12,17 @@ namespace AnimalShelterManagementSystem.Models
     ///     
     public enum Genders
     {
-        All = 0,
-        Male,
-        Female
+        
+        Male=1,
+        Female=2,
+        All = 1 | 2,
     }
 
     public enum PhysicalConditionType
     {
-        사망=1,
-        위험,
-        양호
+        양호=1,
+        위험=2,
+        사망 = 3
     }
 
 public enum SpeciesType

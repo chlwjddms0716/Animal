@@ -151,7 +151,7 @@
             this.txbId.Name = "txbId";
             this.txbId.Size = new System.Drawing.Size(706, 25);
             this.txbId.TabIndex = 6;
-            this.txbId.TextChanged += new System.EventHandler(this.txbId_TextChanged);
+       
             // 
             // Root
             // 

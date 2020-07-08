@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AnimalShelterManagementSystem.Data;
 using DevExpress.XtraEditors.Repository;
 using AnimalShelterManagementSystem.Models;
+using DevExpress.XtraEditors.Filtering.Templates;
 
 namespace AnimalShelterManagementSystem.WinForm.UserControls
 {
@@ -35,23 +36,23 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            int? animalShelterlId = null;
-            try
-            {
-                animalShelterlId = Convert.ToInt32(luAnimalshelter.Text);
-            }
-            catch
-            {
+            //int? animalShelterlId = null;
+          //  try
+           // {
+             //   animalShelterlId = Convert.ToInt32(luAnimalshelter.Text);
+           // }
+            //catch
+           // {
+           //
+           // }
+           // finally
+          //  {
+          //      if (animalShelterlId == null || animalShelterlId.Value < 1)
+          //          animalShelterlId = 2;
+          //  }
 
-            }
-            finally
-            {
-                if (animalShelterlId == null || animalShelterlId.Value < 1)
-                    animalShelterlId = 1;
-            }
-
-            OnLoadButtonClicked((int)luAnimalshelter.EditValue, (SpeciesType)cbbSpecies.SelectedValue, (Genders)rdgSex.EditValue
-                , dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime);
+            OnLoadButtonClicked((int)luAnimalshelter.EditValue, (SpeciesType)cbbSpecies.SelectedValue, (Genders)cbbGender.SelectedValue
+                , dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime) ;
 
            
 
@@ -66,9 +67,18 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
                 return;
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
             cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+            cbbGender.DataSource = Enum.GetValues(typeof(Genders));
+
+            dteFoundDateTo.DateTime = DateTime.Now;
+
+           
 
 
-            
+
+
+
+
+
         }
 
      

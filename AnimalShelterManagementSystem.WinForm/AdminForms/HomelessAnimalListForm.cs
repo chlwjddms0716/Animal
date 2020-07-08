@@ -23,7 +23,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             InitializeComponent();
         }
 
-      
+
 
         private void 추가IToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -39,16 +39,16 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             ExcuteClose();
         }
 
-        
+
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             ExcuteClose();
         }
 
-        
 
-      
+
+
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
@@ -117,17 +117,20 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             homelessAnimalBindingSource.Remove(homelessAnimal);
         }
 
-        //private void searchControl1_LoadButtonClicked(object sender, UserControls.SearchControl.LoadButtonClickedEventArgs e)
-        //{
-        //    List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(e.AnimalShelterId, e.SpeciesCode, (int)e.Gender, e.FoundDateFrom, e.FoundDateTo);
-        //    // List<AnimalShelter> AnimalShelters = DataRepository.AnimalShelter.GetbyShelterId(e.AnimalShelterId);
+        private void searchControl1_LoadButtonClicked(object sender, UserControls.SearchControl.LoadButtonClickedEventArgs e)
+        {
+            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(e.AnimalShelterId, e.SpeciesCode, (int)e.Gender, e.FoundDateFrom, e.FoundDateTo);
+            //List<AnimalShelter> AnimalShelters = DataRepository.AnimalShelter.GetbyShelterId(e.AnimalShelterId);
 
-        //    homelessAnimalBindingSource.DataSource = homelessAnimals;
-
-
-
-        //}
+            homelessAnimalBindingSource.DataSource = homelessAnimals;
+            // homelessAnimalBindingSource.DataSource = AnimalShelters;
 
 
+
+
+            //}
+
+
+        }
     }
 }
