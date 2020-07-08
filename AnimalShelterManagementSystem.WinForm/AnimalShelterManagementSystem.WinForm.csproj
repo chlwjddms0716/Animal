@@ -76,6 +76,12 @@
     <Compile Include="AdminForms\AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\EditUserInformationByAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\EditUserInformationByAdmin.Designer.cs">
+      <DependentUpon>EditUserInformationByAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\FindId.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     <EmbeddedResource Include="AdminForms\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\EditUserInformationByAdmin.resx">
+      <DependentUpon>EditUserInformationByAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\FindId.resx">
       <DependentUpon>FindId.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +229,7 @@
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.AnimalShelter.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.HomelessAnimal2.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.Species.datasource" />
+    <None Include="Properties\DataSources\AnimalShelterManagementSystem.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
