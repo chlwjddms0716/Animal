@@ -22,6 +22,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void Shelter_Load(object sender, EventArgs e)
         {
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
+            AnimalShelterName.DataSource = DataRepository.AnimalShelter.GetAll();
         }
         private void lkuShelterName_EditValueChanged(object sender, EventArgs e)
         {
@@ -110,11 +111,21 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (animalShelter == null)
                 return;
 
-            DataRepository.HomelessAnimal.Delete(animalShelter.AnimalShelterId);
+
+            DataRepository.AnimalShelter.Delete(animalShelter);
 
             animalShelterBindingSource.Remove(animalShelter);
         }
 
+        private void ExcuteUpdate_Click(object sender, EventArgs e)
+        {
+            AnimalShelter animalShelter = animalShelterBindingSource.Current as AnimalShelter;
 
+            if (animalShelter == null)
+                return;
+
+            ShelterForm shelter = new ShelterForm(animalShelter);
+            shelter.ShowDialog();
+        }
     }
 }
