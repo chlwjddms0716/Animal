@@ -84,5 +84,14 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             BlacklistCode = (int)rdgBlacklist.EditValue;
             querybyBlacklist();
         }
+
+        private void grvUserList_DoubleClick(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            EditUserInformationByAdmin editUserInformationByAdmin = new EditUserInformationByAdmin();
+            userManagement.ShowDialog();
+            Cursor = Cursors.Arrow;
+
+        }
     }
 }

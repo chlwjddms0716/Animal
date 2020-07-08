@@ -108,6 +108,7 @@
             this.grvUserList.RowTemplate.Height = 27;
             this.grvUserList.Size = new System.Drawing.Size(706, 264);
             this.grvUserList.TabIndex = 10;
+            this.grvUserList.DoubleClick += new System.EventHandler(this.grvUserList_DoubleClick);
             // 
             // userIdDataGridViewTextBoxColumn
             // 
