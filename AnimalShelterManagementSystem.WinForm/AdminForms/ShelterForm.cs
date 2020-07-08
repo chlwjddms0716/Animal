@@ -54,31 +54,51 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
             WriteToEntity();
 
-            try
+            string checkinput = "";
+            if (String.Equals(txeName.Text, "") == true)
+                checkinput += "이름, ";
+            if (String.Equals(txeAddress.Text, "") == true)
+                checkinput += "주소, ";
+            if (String.Equals(txeManager.Text, "") == true)
+                checkinput += "담당자이름, ";
+            if (String.Equals(txePhoneNumber.Text, "") == true)
+                checkinput += "전화번호";
+
+            if (string.Equals(checkinput, "") == true)
             {
-                if (_animalShelter.AnimalShelterId == DataRepository.AnimalShelter.GetMaxId() + 1)
+                try
                 {
-                    DataRepository.AnimalShelter.Insert(_animalShelter);   
+                    if (_animalShelter.AnimalShelterId == DataRepository.AnimalShelter.GetMaxId() + 1)
+                    {
+                        DataRepository.AnimalShelter.Insert(_animalShelter);
+                        MessageBox.Show("추가되었습니다");
+                    }
+                    else
+                        DataRepository.AnimalShelter.Update(_animalShelter);
+                    MessageBox.Show("수정되었습니다");
                 }
-                else
-                    DataRepository.AnimalShelter.Update(_animalShelter);
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(checkinput+"을(를) 입력해주세요.");
             }
-
             Close();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+    private void btnClose_Click(object sender, EventArgs e)
+    {
+        Close();
+    }
 
         private void ShelterForm_Load(object sender, EventArgs e)
         {
             ReadFromEntity();
-        }
+        } 
     }
-}
+    }
+
