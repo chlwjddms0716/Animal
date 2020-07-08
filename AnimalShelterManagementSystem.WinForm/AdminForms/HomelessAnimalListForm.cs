@@ -89,17 +89,16 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void ExcuteInsert()
         {
             HomelessAnimal homelessAnimal = new HomelessAnimal();
-
             homelessAnimal.Name = string.Empty;
             homelessAnimal.Age = 0;
             homelessAnimal.Feature = "";
             homelessAnimal.LatestFindingReport = System.DateTime.Now;
             homelessAnimal.PictureLink = string.Empty;
-
             homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId();
 
             HomelessAnimalForm form = new HomelessAnimalForm(homelessAnimal);
             form.ShowDialog();
+
 
 
         }

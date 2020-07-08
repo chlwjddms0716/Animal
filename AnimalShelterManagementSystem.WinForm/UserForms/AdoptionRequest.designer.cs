@@ -228,7 +228,6 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "수컷"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "암컷")});
             this.rdgSex.Size = new System.Drawing.Size(664, 48);
-            this.rdgSex.StyleController = this.layoutControl1;
             this.rdgSex.TabIndex = 11;
             this.rdgSex.SelectedIndexChanged += new System.EventHandler(this.rdgSex_SelectedIndexChanged);
             // 

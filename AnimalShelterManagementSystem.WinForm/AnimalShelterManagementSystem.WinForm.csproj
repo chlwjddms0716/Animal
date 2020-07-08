@@ -112,6 +112,12 @@
     <Compile Include="AdminForms\Shelter.Designer.cs">
       <DependentUpon>Shelter.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\SearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\HomelessAnimalListForm.resx">
       <DependentUpon>HomelessAnimalListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>

@@ -18,7 +18,7 @@ namespace AnimalShelterManagementSystem.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomelessAnimalListForm());
+            Application.Run(new Login());
         }
     }
 }
