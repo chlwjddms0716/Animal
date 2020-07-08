@@ -17,11 +17,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
     {
         private AnimalShelter _animalShelter = new AnimalShelter();
 
-
         public ShelterForm()
         {
             InitializeComponent();
-
         }
 
         public ShelterForm(AnimalShelter animalShelter) : this()
@@ -49,11 +47,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             _animalShelter.AnimalShelterId = _animalShelter.AnimalShelterId;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        string CheckInput()
         {
-
-            WriteToEntity();
-
             string checkinput = "";
             if (String.Equals(txeName.Text, "") == true)
                 checkinput += "이름, ";
@@ -62,9 +57,17 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (String.Equals(txeManager.Text, "") == true)
                 checkinput += "담당자이름, ";
             if (String.Equals(txePhoneNumber.Text, "") == true)
-                checkinput += "전화번호";
+                checkinput += "전화번호,";
 
-            if (string.Equals(checkinput, "") == true)
+            return checkinput.Remove(checkinput.Length - 1);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            WriteToEntity();
+            CheckInput();
+
+            if (string.Equals(CheckInput(), "") == true)
             {
                 try
                 {
@@ -85,7 +88,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             }
             else
             {
-                MessageBox.Show(checkinput + "을(를) 입력해주세요.");
+                MessageBox.Show(CheckInput() + "을(를) 입력해주세요.");
             }
             Close();
         }
