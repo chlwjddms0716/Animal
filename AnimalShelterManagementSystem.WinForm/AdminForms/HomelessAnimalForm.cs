@@ -38,10 +38,14 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             string checkinput = "";
             if (string.Equals(checkinput, "") == true)
             {
-                _homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
+              _homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
+                _homelessAnimal.Name = txeName.Text;
+                _homelessAnimal.Age = Convert.ToInt32(txeAge.Text);
+                
                 _homelessAnimal.Feature = txeFeature.Text;
                 _homelessAnimal.LatestFindingReport = dteDate.DateTime.Date;
                 _homelessAnimal.PictureLink = txePictureLink.Text;
+
 
                 //MessageBox.Show("저장되었습니다.");
 
@@ -58,7 +62,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-       
 
             try
             {
@@ -92,17 +95,10 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         {
 
             txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId + 1);
-
             txeName.Text = _homelessAnimal.Name;
-
-    
             txeFeature.Text = _homelessAnimal.Feature;
             dteDate.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
             txePictureLink.Text = _homelessAnimal.PictureLink;
-
-
-
-
 
         }
     }
