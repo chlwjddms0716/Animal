@@ -46,6 +46,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             ExcuteInsert();
         }
+
         private void 종료XToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExcuteClose();

@@ -60,6 +60,11 @@
             this.정보AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.도움말HToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.종료XtoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.추가XtoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.삭제XtoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.정보XtoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.도움말XtoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -115,6 +120,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -124,6 +130,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton4
             // 
@@ -133,6 +140,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
             // 
@@ -142,6 +150,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // menuStrip1
             // 
@@ -161,18 +170,26 @@
             // 
             // 파일FToolStripMenuItem
             // 
+            this.파일FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.종료XtoolStripMenuItem1});
             this.파일FToolStripMenuItem.Name = "파일FToolStripMenuItem";
             this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 23);
             this.파일FToolStripMenuItem.Text = "파일(&F)";
             // 
             // 편집EToolStripMenuItem
             // 
+            this.편집EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.추가XtoolStripMenuItem2,
+            this.삭제XtoolStripMenuItem3});
             this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
             this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 23);
             this.편집EToolStripMenuItem.Text = "편집(&E)";
             // 
             // 도움말HToolStripMenuItem
             // 
+            this.도움말HToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.정보XtoolStripMenuItem1,
+            this.도움말XtoolStripMenuItem2});
             this.도움말HToolStripMenuItem.Name = "도움말HToolStripMenuItem";
             this.도움말HToolStripMenuItem.Size = new System.Drawing.Size(89, 23);
             this.도움말HToolStripMenuItem.Text = "도움말(&H)";
@@ -371,6 +388,43 @@
             this.도움말HToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
             this.도움말HToolStripMenuItem1.Text = "도움말(&H)";
             // 
+            // 종료XtoolStripMenuItem1
+            // 
+            this.종료XtoolStripMenuItem1.Name = "종료XtoolStripMenuItem1";
+            this.종료XtoolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.종료XtoolStripMenuItem1.Text = "종료(&X)";
+            this.종료XtoolStripMenuItem1.Click += new System.EventHandler(this.종료XToolStripMenuItem_Click);
+            // 
+            // 추가XtoolStripMenuItem2
+            // 
+            this.추가XtoolStripMenuItem2.Name = "추가XtoolStripMenuItem2";
+            this.추가XtoolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.추가XtoolStripMenuItem2.Text = "추가(&I)";
+            this.추가XtoolStripMenuItem2.Click += new System.EventHandler(this.추가IToolStripMenuItem_Click);
+            // 
+            // 삭제XtoolStripMenuItem3
+            // 
+            this.삭제XtoolStripMenuItem3.Name = "삭제XtoolStripMenuItem3";
+            this.삭제XtoolStripMenuItem3.Size = new System.Drawing.Size(224, 26);
+            this.삭제XtoolStripMenuItem3.Text = "삭제(&D)";
+            this.삭제XtoolStripMenuItem3.Click += new System.EventHandler(this.삭제DToolStripMenuItem_Click);
+            // 
+            // 정보XtoolStripMenuItem1
+            // 
+            this.정보XtoolStripMenuItem1.Name = "정보XtoolStripMenuItem1";
+            this.정보XtoolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.정보XtoolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.정보XtoolStripMenuItem1.Text = "정보(&A)";
+            this.정보XtoolStripMenuItem1.Click += new System.EventHandler(this.정보AToolStripMenuItem_Click);
+            // 
+            // 도움말XtoolStripMenuItem2
+            // 
+            this.도움말XtoolStripMenuItem2.Name = "도움말XtoolStripMenuItem2";
+            this.도움말XtoolStripMenuItem2.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.도움말XtoolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.도움말XtoolStripMenuItem2.Text = "도움말(&H)";
+            this.도움말XtoolStripMenuItem2.Click += new System.EventHandler(this.도움말HToolStripMenuItem1_Click);
+            // 
             // ShelterListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -432,5 +486,10 @@
         private System.Windows.Forms.ToolStripMenuItem 정보AToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem 도움말HToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 종료XtoolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 추가XtoolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem 삭제XtoolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem 정보XtoolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 도움말XtoolStripMenuItem2;
     }
 }

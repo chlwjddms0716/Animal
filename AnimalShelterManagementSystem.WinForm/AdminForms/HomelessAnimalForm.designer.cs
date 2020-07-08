@@ -274,15 +274,15 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.lueSpeciesCode;
-            this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem2.CustomizationFormText = "실종장소 :";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(976, 32);
-            this.layoutControlItem2.Text = "축종코드 :";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(152, 22);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(107, 18);
+            //this.layoutControlItem2.Control = this.lueSpeciesCode;
+            //this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            //this.layoutControlItem2.CustomizationFormText = "실종장소 :";
+            //this.layoutControlItem2.Location = new System.Drawing.Point(0, 96);
+            //this.layoutControlItem2.Name = "layoutControlItem2";
+            //this.layoutControlItem2.Size = new System.Drawing.Size(976, 32);
+            //this.layoutControlItem2.Text = "축종코드 :";
+            //this.layoutControlItem2.TextSize = new System.Drawing.Size(152, 22);
+            //this.layoutControlItem3.TextSize = new System.Drawing.Size(107, 18);
             // 
             // layoutControlItem4
             // 

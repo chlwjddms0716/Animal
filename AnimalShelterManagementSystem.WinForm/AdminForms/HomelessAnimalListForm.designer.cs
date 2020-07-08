@@ -279,7 +279,7 @@
             this.searchControl1.Name = "searchControl1";
             this.searchControl1.Size = new System.Drawing.Size(1264, 185);
             this.searchControl1.TabIndex = 4;
-        //    this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked);
+//            this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked);
   
             // 
             // HomelessAnimalListForm
