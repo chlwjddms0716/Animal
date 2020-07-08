@@ -85,6 +85,7 @@
             this.txeShelterId.Cursor = System.Windows.Forms.Cursors.Default;
             this.txeShelterId.Location = new System.Drawing.Point(81, 12);
             this.txeShelterId.Name = "txeShelterId";
+            this.txeShelterId.Properties.ReadOnly = true;
             this.txeShelterId.Size = new System.Drawing.Size(401, 24);
             this.txeShelterId.StyleController = this.layoutControl1;
             this.txeShelterId.TabIndex = 18;
@@ -106,7 +107,7 @@
             this.btnSave.Size = new System.Drawing.Size(233, 34);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
-            this.btnSave.Text = "추가";
+            this.btnSave.Text = "확인";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose

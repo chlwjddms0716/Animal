@@ -22,12 +22,14 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void Shelter_Load(object sender, EventArgs e)
         {
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
+            AnimalShelterName.DataSource = DataRepository.AnimalShelter.GetAll();
         }
         private void lkuShelterName_EditValueChanged(object sender, EventArgs e)
         {
             int shelterId = (int)(lkuShelterName.EditValue);
             List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.GetbyShelterId(shelterId);
             animalShelterBindingSource.DataSource = animalShelters;
+            // TODO : 스크롤에 전체
         }
 
         private void txeAddress_EditValueChanged(object sender, EventArgs e)
@@ -35,56 +37,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             string Address = txeAddress.Text;
             List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.SearchWithAddress(Address);
             animalShelterBindingSource.DataSource = animalShelters;
-        }
-
-        private void 추가IToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExcuteInsert();
-        }
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            ExcuteInsert();
-        }
-
-        private void 종료XToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExcuteClose();
-        }
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            ExcuteClose();
-        }
-
-
-        private void toolStripButton5_Click(object sender, EventArgs e)
-        {
-            ExcuteHelp();
-        }
-        private void 정보AToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExcuteHelp();
-        }
-        private void 도움말HToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            ExcuteHelp();
-        }
-
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            ExecuteDelete();
-        }
-        private void 삭제DToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExecuteDelete();
-        }
-
-        private void ExcuteHelp()
-        {
-            Process.Start("https://kimgwajang.tistory.com/guestbook");
-        }
-        private void ExcuteClose()
-        {
-            Close();
         }
 
         private void ExcuteInsert()
@@ -96,12 +48,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             animalShelter.PhoneNumber = string.Empty;
             animalShelter.ManagerName = string.Empty;
 
-            animalShelter.AnimalShelterId = DataRepository.AnimalShelter.GetMaxId()+1;
+            animalShelter.AnimalShelterId = DataRepository.AnimalShelter.GetMaxId() + 1;
 
             ShelterForm shelter = new ShelterForm(animalShelter);
             shelter.ShowDialog();
         }
-
 
         private void ExecuteDelete()
         {
@@ -110,11 +61,60 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (animalShelter == null)
                 return;
 
-            DataRepository.HomelessAnimal.Delete(animalShelter.AnimalShelterId);
+
+            DataRepository.AnimalShelter.Delete(animalShelter);
 
             animalShelterBindingSource.Remove(animalShelter);
         }
 
+        private void ExecuteEdit()
+        {
+            AnimalShelter animalShelter = animalShelterBindingSource.Current as AnimalShelter;
 
+            if (animalShelter == null)
+                return;
+
+            ShelterForm shelter = new ShelterForm(animalShelter);
+            shelter.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://kimgwajang.tistory.com/guestbook");
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            ExcuteInsert();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            ExecuteEdit();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            ExecuteDelete();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if(txeAddress.Text != string.Empty)
+            {
+                string Address = txeAddress.Text;
+                List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.SearchWithAddress(Address);
+                animalShelterBindingSource.DataSource = animalShelters;
+            }
+            else 
+            {
+                animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
+            }
+        }
     }
 }

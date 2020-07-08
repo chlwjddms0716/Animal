@@ -1,4 +1,5 @@
 ﻿using AnimalShelterManagementSystem.Data;
+using DevExpress.DirectX.Common.Direct2D;
 using DevExpress.XtraExport.Helpers;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void WriteToEntity()
         {
+            txeShelterId.EditValue = _animalShelter.AnimalShelterId;
+
             _animalShelter.Name = txeName.Text;
             _animalShelter.Address = txeAddress.Text;
             _animalShelter.ManagerName = txeManager.Text;
@@ -48,12 +51,15 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             WriteToEntity();
 
             try
             {
-                if (_animalShelter.AnimalShelterId == 0)
-                    DataRepository.AnimalShelter.Insert(_animalShelter);
+                if (_animalShelter.AnimalShelterId == DataRepository.AnimalShelter.GetMaxId() + 1)
+                {
+                    DataRepository.AnimalShelter.Insert(_animalShelter);   
+                }
                 else
                     DataRepository.AnimalShelter.Update(_animalShelter);
             }
