@@ -32,27 +32,27 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.UserId = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.list = new DevExpress.XtraLayout.LayoutControlItem();
             this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.speciesNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.physicalConditionNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adoptionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureLinkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdoptionManagement = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -60,8 +60,8 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.simpleButton2);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
+            this.layoutControl1.Controls.Add(this.btnCancel);
+            this.layoutControl1.Controls.Add(this.btnAdoptionManagement);
             this.layoutControl1.Controls.Add(this.dataGridView1);
             this.layoutControl1.Controls.Add(this.textBox1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -84,23 +84,23 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
+            this.UserId,
             this.emptySpaceItem1,
-            this.layoutControlItem2,
+            this.list,
             this.layoutControlItem3,
             this.layoutControlItem4});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(772, 314);
             this.Root.TextVisible = false;
             // 
-            // layoutControlItem1
+            // UserId
             // 
-            this.layoutControlItem1.Control = this.textBox1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(752, 29);
-            this.layoutControlItem1.Text = " 유저Id:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(50, 18);
+            this.UserId.Control = this.textBox1;
+            this.UserId.Location = new System.Drawing.Point(0, 0);
+            this.UserId.Name = "UserId";
+            this.UserId.Size = new System.Drawing.Size(752, 29);
+            this.UserId.Text = " 유저Id:";
+            this.UserId.TextSize = new System.Drawing.Size(50, 18);
             // 
             // emptySpaceItem1
             // 
@@ -132,14 +132,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(695, 220);
             this.dataGridView1.TabIndex = 5;
             // 
-            // layoutControlItem2
+            // list
             // 
-            this.layoutControlItem2.Control = this.dataGridView1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 29);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(752, 224);
-            this.layoutControlItem2.Text = "리스트";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(50, 18);
+            this.list.Control = this.dataGridView1;
+            this.list.Location = new System.Drawing.Point(0, 29);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(752, 224);
+            this.list.Text = "리스트";
+            this.list.TextSize = new System.Drawing.Size(50, 18);
             // 
             // homelessAnimalBindingSource
             // 
@@ -190,36 +190,36 @@
             this.pictureLinkDataGridViewTextBoxColumn.ReadOnly = true;
             this.pictureLinkDataGridViewTextBoxColumn.Width = 125;
             // 
-            // simpleButton1
+            // btnAdoptionManagement
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(388, 275);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(372, 27);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "확인";
+            this.btnAdoptionManagement.Location = new System.Drawing.Point(388, 275);
+            this.btnAdoptionManagement.Name = "btnAdoptionManagement";
+            this.btnAdoptionManagement.Size = new System.Drawing.Size(372, 27);
+            this.btnAdoptionManagement.StyleController = this.layoutControl1;
+            this.btnAdoptionManagement.TabIndex = 6;
+            this.btnAdoptionManagement.Text = "확인";
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.simpleButton1;
+            this.layoutControlItem3.Control = this.btnAdoptionManagement;
             this.layoutControlItem3.Location = new System.Drawing.Point(376, 263);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(376, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // simpleButton2
+            // btnCancel
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(12, 275);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(372, 27);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 7;
-            this.simpleButton2.Text = "취소";
+            this.btnCancel.Location = new System.Drawing.Point(12, 275);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(372, 27);
+            this.btnCancel.StyleController = this.layoutControl1;
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "취소";
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.simpleButton2;
+            this.layoutControlItem4.Control = this.btnCancel;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 263);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(376, 31);
@@ -237,10 +237,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.list)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -253,10 +253,10 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private System.Windows.Forms.TextBox textBox1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem UserId;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private DevExpress.XtraEditors.SimpleButton btnAdoptionManagement;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn speciesNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderNameDataGridViewTextBoxColumn;
@@ -264,7 +264,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn adoptionsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pictureLinkDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource homelessAnimalBindingSource;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem list;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
