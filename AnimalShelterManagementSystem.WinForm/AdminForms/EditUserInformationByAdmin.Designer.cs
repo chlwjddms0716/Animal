@@ -151,19 +151,20 @@
             this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Appearance.Options.UseFont = true;
             this.btnAdd.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
-            this.btnAdd.Location = new System.Drawing.Point(189, 286);
+            this.btnAdd.Location = new System.Drawing.Point(189, 171);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(151, 70);
             this.btnAdd.StyleController = this.layoutControl3;
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "추가";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Appearance.Options.UseFont = true;
             this.btnEdit.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
-            this.btnEdit.Location = new System.Drawing.Point(361, 286);
+            this.btnEdit.Location = new System.Drawing.Point(361, 171);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(164, 70);
             this.btnEdit.StyleController = this.layoutControl3;
@@ -176,7 +177,7 @@
             this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Appearance.Options.UseFont = true;
             this.btnDelete.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
-            this.btnDelete.Location = new System.Drawing.Point(12, 286);
+            this.btnDelete.Location = new System.Drawing.Point(12, 171);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(154, 70);
             this.btnDelete.StyleController = this.layoutControl3;
@@ -186,7 +187,7 @@
             // 
             // boxId
             // 
-            this.boxId.Location = new System.Drawing.Point(152, 40);
+            this.boxId.Location = new System.Drawing.Point(152, -75);
             this.boxId.Name = "boxId";
             this.boxId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.boxId.Properties.UseReadOnlyAppearance = false;
@@ -196,7 +197,7 @@
             // 
             // boxPassword
             // 
-            this.boxPassword.Location = new System.Drawing.Point(152, 96);
+            this.boxPassword.Location = new System.Drawing.Point(152, -19);
             this.boxPassword.Name = "boxPassword";
             this.boxPassword.Size = new System.Drawing.Size(373, 24);
             this.boxPassword.StyleController = this.layoutControl3;
@@ -204,7 +205,7 @@
             // 
             // boxName
             // 
-            this.boxName.Location = new System.Drawing.Point(152, 68);
+            this.boxName.Location = new System.Drawing.Point(152, -47);
             this.boxName.Name = "boxName";
             this.boxName.Properties.UseReadOnlyAppearance = false;
             this.boxName.Size = new System.Drawing.Size(373, 24);
@@ -213,7 +214,7 @@
             // 
             // boxPhoneNumber
             // 
-            this.boxPhoneNumber.Location = new System.Drawing.Point(152, 124);
+            this.boxPhoneNumber.Location = new System.Drawing.Point(152, 9);
             this.boxPhoneNumber.Name = "boxPhoneNumber";
             this.boxPhoneNumber.Size = new System.Drawing.Size(373, 24);
             this.boxPhoneNumber.StyleController = this.layoutControl3;
@@ -221,7 +222,7 @@
             // 
             // boxAddress
             // 
-            this.boxAddress.Location = new System.Drawing.Point(152, 152);
+            this.boxAddress.Location = new System.Drawing.Point(152, 37);
             this.boxAddress.Name = "boxAddress";
             this.boxAddress.Size = new System.Drawing.Size(373, 24);
             this.boxAddress.StyleController = this.layoutControl3;
@@ -229,7 +230,7 @@
             // 
             // boxBlacklistReason
             // 
-            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 248);
+            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 133);
             this.boxBlacklistReason.Name = "boxBlacklistReason";
             this.boxBlacklistReason.Size = new System.Drawing.Size(373, 24);
             this.boxBlacklistReason.StyleController = this.layoutControl3;
@@ -238,7 +239,7 @@
             // rdgAdmin
             // 
             this.rdgAdmin.EditValue = 0;
-            this.rdgAdmin.Location = new System.Drawing.Point(152, 180);
+            this.rdgAdmin.Location = new System.Drawing.Point(152, 65);
             this.rdgAdmin.Name = "rdgAdmin";
             this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
@@ -250,7 +251,7 @@
             // rdgBlacklist
             // 
             this.rdgBlacklist.EditValue = 0;
-            this.rdgBlacklist.Location = new System.Drawing.Point(152, 214);
+            this.rdgBlacklist.Location = new System.Drawing.Point(152, 99);
             this.rdgBlacklist.Name = "rdgBlacklist";
             this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
@@ -261,7 +262,7 @@
             // 
             // boxUserId
             // 
-            this.boxUserId.Location = new System.Drawing.Point(152, 12);
+            this.boxUserId.Location = new System.Drawing.Point(152, -103);
             this.boxUserId.Name = "boxUserId";
             this.boxUserId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.boxUserId.Properties.UseReadOnlyAppearance = false;
