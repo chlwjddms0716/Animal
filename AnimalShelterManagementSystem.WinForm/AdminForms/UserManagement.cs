@@ -93,5 +93,19 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             Cursor = Cursors.Arrow;
 
         }
+        private void tsbAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void tsbDelete_Click(object sender, EventArgs e)
+        {
+            int userid;
+            if(userBindingSource.Current is null)
+                MessageBox.
+        }
+        private void tsbEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

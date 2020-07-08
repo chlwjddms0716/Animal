@@ -49,9 +49,9 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -82,9 +82,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
@@ -137,7 +137,7 @@
             // 
             // boxId
             // 
-            this.boxId.Location = new System.Drawing.Point(152, -63);
+            this.boxId.Location = new System.Drawing.Point(152, 40);
             this.boxId.Name = "boxId";
             this.boxId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.boxId.Properties.ReadOnly = true;
@@ -147,7 +147,7 @@
             // 
             // boxPassword
             // 
-            this.boxPassword.Location = new System.Drawing.Point(152, -7);
+            this.boxPassword.Location = new System.Drawing.Point(152, 96);
             this.boxPassword.Name = "boxPassword";
             this.boxPassword.Size = new System.Drawing.Size(373, 24);
             this.boxPassword.StyleController = this.layoutControl3;
@@ -155,7 +155,7 @@
             // 
             // boxName
             // 
-            this.boxName.Location = new System.Drawing.Point(152, -35);
+            this.boxName.Location = new System.Drawing.Point(152, 68);
             this.boxName.Name = "boxName";
             this.boxName.Properties.ReadOnly = true;
             this.boxName.Size = new System.Drawing.Size(373, 24);
@@ -164,7 +164,7 @@
             // 
             // boxPhoneNumber
             // 
-            this.boxPhoneNumber.Location = new System.Drawing.Point(152, 21);
+            this.boxPhoneNumber.Location = new System.Drawing.Point(152, 124);
             this.boxPhoneNumber.Name = "boxPhoneNumber";
             this.boxPhoneNumber.Size = new System.Drawing.Size(373, 24);
             this.boxPhoneNumber.StyleController = this.layoutControl3;
@@ -172,7 +172,7 @@
             // 
             // boxAddress
             // 
-            this.boxAddress.Location = new System.Drawing.Point(152, 49);
+            this.boxAddress.Location = new System.Drawing.Point(152, 152);
             this.boxAddress.Name = "boxAddress";
             this.boxAddress.Size = new System.Drawing.Size(373, 24);
             this.boxAddress.StyleController = this.layoutControl3;
@@ -180,7 +180,7 @@
             // 
             // boxBlacklistReason
             // 
-            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 145);
+            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 248);
             this.boxBlacklistReason.Name = "boxBlacklistReason";
             this.boxBlacklistReason.Size = new System.Drawing.Size(373, 24);
             this.boxBlacklistReason.StyleController = this.layoutControl3;
@@ -189,7 +189,7 @@
             // rdgAdmin
             // 
             this.rdgAdmin.EditValue = 0;
-            this.rdgAdmin.Location = new System.Drawing.Point(152, 77);
+            this.rdgAdmin.Location = new System.Drawing.Point(152, 180);
             this.rdgAdmin.Name = "rdgAdmin";
             this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
@@ -201,7 +201,7 @@
             // rdgBlacklist
             // 
             this.rdgBlacklist.EditValue = 0;
-            this.rdgBlacklist.Location = new System.Drawing.Point(152, 111);
+            this.rdgBlacklist.Location = new System.Drawing.Point(152, 214);
             this.rdgBlacklist.Name = "rdgBlacklist";
             this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
@@ -212,7 +212,7 @@
             // 
             // boxUserId
             // 
-            this.boxUserId.Location = new System.Drawing.Point(152, -91);
+            this.boxUserId.Location = new System.Drawing.Point(152, 12);
             this.boxUserId.Name = "boxUserId";
             this.boxUserId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.boxUserId.Properties.ReadOnly = true;
@@ -313,17 +313,6 @@
             this.layoutControlItem9.Text = "관리자";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(137, 18);
             // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.rdgBlacklist;
-            this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem10.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 202);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(517, 34);
-            this.layoutControlItem10.Text = "블랙리스트";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(137, 18);
-            // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.boxBlacklistReason;
@@ -345,6 +334,17 @@
             this.layoutControlItem11.Size = new System.Drawing.Size(517, 28);
             this.layoutControlItem11.Text = "유저 번호 : ";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.rdgBlacklist;
+            this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem10.CustomizationFormText = "블랙리스트";
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 202);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(517, 34);
+            this.layoutControlItem10.Text = "블랙리스트";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(137, 18);
             // 
             // layoutControlGroup2
             // 
@@ -378,7 +378,7 @@
             this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Appearance.Options.UseFont = true;
             this.btnDelete.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
-            this.btnDelete.Location = new System.Drawing.Point(12, 173);
+            this.btnDelete.Location = new System.Drawing.Point(12, 276);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(175, 70);
             this.btnDelete.StyleController = this.layoutControl3;
@@ -391,7 +391,7 @@
             this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Appearance.Options.UseFont = true;
             this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(371, 173);
+            this.btnEdit.Location = new System.Drawing.Point(371, 276);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(154, 43);
             this.btnEdit.StyleController = this.layoutControl3;
@@ -451,9 +451,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
