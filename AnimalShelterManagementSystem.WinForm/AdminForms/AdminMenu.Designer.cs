@@ -45,6 +45,7 @@
             this.btnAdoption.Size = new System.Drawing.Size(308, 169);
             this.btnAdoption.TabIndex = 7;
             this.btnAdoption.Text = "입양 관리";
+            this.btnAdoption.Click += new System.EventHandler(this.btnAdoption_Click);
             // 
             // btnShelter
             // 
