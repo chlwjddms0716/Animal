@@ -19,23 +19,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         {
             InitializeComponent();
         }
-
-        private void btnCheck_Click(object sender, EventArgs e)
-        {
-            if (string.Equals(txeId.Text, "") is true)
-                MessageBox.Show("아이디를 입력해주세요.");
-            else
-            {
-                if (DataRepository.User.GetbyId(txeId.Text) is null)
-                {
-                    MessageBox.Show("사용가능한 아이디입니다.");
-                    checkduplicate = true;
-                }
-                else
-                    MessageBox.Show("이미 존재하는 아이디입니다.");
-            }
-        }
-
         void InsertUser()
         {
             User user = new User();
@@ -67,6 +50,21 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 checkinput += "주소,";
         
             return checkinput.Remove(checkinput.Length-1);
+        }
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            if (string.Equals(txeId.Text, "") is true)
+                MessageBox.Show("아이디를 입력해주세요.");
+            else
+            {
+                if (DataRepository.User.GetbyId(txeId.Text) is null)
+                {
+                    MessageBox.Show("사용가능한 아이디입니다.");
+                    checkduplicate = true;
+                }
+                else
+                    MessageBox.Show("이미 존재하는 아이디입니다.");
+            }
         }
 
         private void btnSignup_Click(object sender, EventArgs e)
