@@ -192,9 +192,9 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.boxId;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 1);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(538, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(538, 27);
             this.layoutControlItem1.Text = "아이디 : ";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(116, 18);
             // 
@@ -277,8 +277,6 @@
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem7});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(582, 279);
             this.Root.TextVisible = false;
@@ -288,7 +286,7 @@
             this.layoutControlItem7.Control = this.layoutControl2;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(562, 259);
+            this.layoutControlItem7.Size = new System.Drawing.Size(538, 1);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
