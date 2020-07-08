@@ -12,9 +12,29 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
     public partial class AdoptionManagement : Form
     {
+        private int userId;
+
         public AdoptionManagement()
         {
             InitializeComponent();
+        }
+
+        public AdoptionManagement(int UserId) : this()
+        {
+            userId = UserId;
+        }
+
+        private void btnAdoptionManagement_Click(object sender, EventArgs e)
+        {
+            if (String.Equals(tebUserId.Text, "") == true)
+            {
+                MessageBox.Show("유저아이디를 입력해주세요");
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

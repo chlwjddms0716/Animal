@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tebUserId = new System.Windows.Forms.TextBox();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.UserId = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -63,7 +63,7 @@
             this.layoutControl1.Controls.Add(this.btnCancel);
             this.layoutControl1.Controls.Add(this.btnAdoptionManagement);
             this.layoutControl1.Controls.Add(this.dataGridView1);
-            this.layoutControl1.Controls.Add(this.textBox1);
+            this.layoutControl1.Controls.Add(this.tebUserId);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -72,12 +72,12 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // textBox1
+            // tebUserId
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(695, 25);
-            this.textBox1.TabIndex = 4;
+            this.tebUserId.Location = new System.Drawing.Point(65, 12);
+            this.tebUserId.Name = "tebUserId";
+            this.tebUserId.Size = new System.Drawing.Size(695, 25);
+            this.tebUserId.TabIndex = 4;
             // 
             // Root
             // 
@@ -95,7 +95,7 @@
             // 
             // UserId
             // 
-            this.UserId.Control = this.textBox1;
+            this.UserId.Control = this.tebUserId;
             this.UserId.Location = new System.Drawing.Point(0, 0);
             this.UserId.Name = "UserId";
             this.UserId.Size = new System.Drawing.Size(752, 29);
@@ -198,6 +198,7 @@
             this.btnAdoptionManagement.StyleController = this.layoutControl1;
             this.btnAdoptionManagement.TabIndex = 6;
             this.btnAdoptionManagement.Text = "확인";
+            this.btnAdoptionManagement.Click += new System.EventHandler(this.btnAdoptionManagement_Click);
             // 
             // layoutControlItem3
             // 
@@ -216,6 +217,7 @@
             this.btnCancel.StyleController = this.layoutControl1;
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "취소";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // layoutControlItem4
             // 
@@ -252,7 +254,7 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tebUserId;
         private DevExpress.XtraLayout.LayoutControlItem UserId;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
