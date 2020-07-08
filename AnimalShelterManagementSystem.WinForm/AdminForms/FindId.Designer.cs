@@ -85,8 +85,8 @@
             // 
             // splitContainerControl1
             // 
-            this.splitContainerControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.splitContainerControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(12, 12);
@@ -94,10 +94,10 @@
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl2);
             this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel2.Location = new System.Drawing.Point(0, 184);
-            this.splitContainerControl1.Panel2.Name = "";
-            this.splitContainerControl1.Panel2.Size = new System.Drawing.Size(402, 3);
-            this.splitContainerControl1.Panel2.TabIndex = 1;
+          //  this.splitContainerControl1.Panel2.Location = new System.Drawing.Point(0, 184);
+          //  this.splitContainerControl1.Panel2.Name = "";
+          //  this.splitContainerControl1.Panel2.Size = new System.Drawing.Size(402, 3);
+//            this.splitContainerControl1.Panel2.TabIndex = 1;
             this.splitContainerControl1.Size = new System.Drawing.Size(402, 187);
             this.splitContainerControl1.SplitterPosition = 179;
             this.splitContainerControl1.TabIndex = 4;

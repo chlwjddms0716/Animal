@@ -14,7 +14,6 @@ namespace AnimalShelterManagementSystem
         public string GenderName { get; set;}
 
         public DateTime LatestFindingReportDate { get; set; }
-        public int AnimalShelterId { get;  set; }
     }
 
 }
