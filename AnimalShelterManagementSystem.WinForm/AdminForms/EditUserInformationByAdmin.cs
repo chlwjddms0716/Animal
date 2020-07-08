@@ -74,7 +74,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 MessageBox.Show("수정되었습니다");
                 Close();
             }
-            MessageBox.Show(checkinput);
+            MessageBox.Show(checkinput + "을(를) 입력해주세요.");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 MessageBox.Show("새로운 유저가 추가되었습니다.");
                 Close();
             }
-            MessageBox.Show(checkinput);
+            MessageBox.Show(checkinput + "을(를) 입력해주세요.");
         }
     }
 }
