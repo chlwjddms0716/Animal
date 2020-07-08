@@ -32,7 +32,10 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 {
                     if (user.IsAdministrator is true)
                     {
-                        MessageBox.Show("관리자 구현중");
+                        AdminMenu adminMenu = new AdminMenu();
+                        adminMenu.ShowDialog();
+                        Cursor = Cursors.Arrow;
+                        Close();
                     }
                     else
                     {

@@ -76,6 +76,12 @@
     <Compile Include="AdminForms\AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\AdoptionManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\AdoptionManagement.Designer.cs">
+      <DependentUpon>AdoptionManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\FindId.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="AdminForms\ShelterListForm.Designer.cs">
       <DependentUpon>ShelterListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\SearchControl.cs">
       <SubType>UserControl</SubType>
@@ -164,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="AdminForms\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\AdoptionManagement.resx">
+      <DependentUpon>AdoptionManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\FindId.resx">
       <DependentUpon>FindId.cs</DependentUpon>
@@ -220,9 +235,11 @@
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\AnimalShelterManagementSystem.Adoption.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.AnimalShelter.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.HomelessAnimal2.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.Species.datasource" />
+    <None Include="Properties\DataSources\AnimalShelterManagementSystem.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
