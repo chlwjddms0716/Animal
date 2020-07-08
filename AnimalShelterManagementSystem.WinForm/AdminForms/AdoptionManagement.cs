@@ -69,5 +69,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
 
         }
+
+        private void AdoptionManagement_Load(object sender, EventArgs e)
+        {
+            homelessAnimalBindingSource.DataSource = DataRepository.Adoption.GetAll();
+        }
     }
 }

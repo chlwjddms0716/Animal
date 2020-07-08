@@ -67,7 +67,7 @@ namespace AnimalShelterManagementSystem
 
 
             var query = from x in context.HomelessAnimals
-                        where x.Species == speciesCode && x.IsAdopted == false 
+                        where x.Species == speciesCode && x.AdoptionStatus == 0 
                         select x;
 
             if (genderCode == 1)

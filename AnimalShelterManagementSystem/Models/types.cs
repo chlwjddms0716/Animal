@@ -25,6 +25,12 @@ namespace AnimalShelterManagementSystem.Models
         사망 = 3
     }
 
+    public enum AdoptionStatusType
+    {
+     보호중,
+    처리중,
+    입양,
+    }
 public enum SpeciesType
     {
         개 = 1,
