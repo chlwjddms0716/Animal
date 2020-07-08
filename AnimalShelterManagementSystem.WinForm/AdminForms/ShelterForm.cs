@@ -69,5 +69,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             Close();
         }
+
+        private void ShelterForm_Load(object sender, EventArgs e)
+        {
+            ReadFromEntity();
+        }
     }
 }
