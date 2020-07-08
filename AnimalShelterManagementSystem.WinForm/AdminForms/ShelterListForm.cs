@@ -38,56 +38,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             animalShelterBindingSource.DataSource = animalShelters;
         }
 
-        private void 추가IToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExcuteInsert();
-        }
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            ExcuteInsert();
-        }
-
-        private void 종료XToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExcuteClose();
-        }
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            ExcuteClose();
-        }
-
-
-        private void toolStripButton5_Click(object sender, EventArgs e)
-        {
-            ExcuteHelp();
-        }
-        private void 정보AToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExcuteHelp();
-        }
-        private void 도움말HToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            ExcuteHelp();
-        }
-
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            ExecuteDelete();
-        }
-        private void 삭제DToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExecuteDelete();
-        }
-
-        private void ExcuteHelp()
-        {
-            Process.Start("https://kimgwajang.tistory.com/guestbook");
-        }
-        private void ExcuteClose()
-        {
-            Close();
-        }
-
         private void ExcuteInsert()
         {
             AnimalShelter animalShelter = new AnimalShelter();
@@ -97,12 +47,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             animalShelter.PhoneNumber = string.Empty;
             animalShelter.ManagerName = string.Empty;
 
-            animalShelter.AnimalShelterId = DataRepository.AnimalShelter.GetMaxId()+1;
+            animalShelter.AnimalShelterId = DataRepository.AnimalShelter.GetMaxId() + 1;
 
             ShelterForm shelter = new ShelterForm(animalShelter);
             shelter.ShowDialog();
         }
-
 
         private void ExecuteDelete()
         {
@@ -117,7 +66,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             animalShelterBindingSource.Remove(animalShelter);
         }
 
-        private void ExcuteUpdate_Click(object sender, EventArgs e)
+        private void ExecuteEdit()
         {
             AnimalShelter animalShelter = animalShelterBindingSource.Current as AnimalShelter;
 
@@ -126,6 +75,37 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
             ShelterForm shelter = new ShelterForm(animalShelter);
             shelter.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://kimgwajang.tistory.com/guestbook");
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            ExcuteInsert();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            ExecuteEdit();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            ExecuteDelete();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
+            AnimalShelterName.DataSource = DataRepository.AnimalShelter.GetAll();
         }
     }
 }
