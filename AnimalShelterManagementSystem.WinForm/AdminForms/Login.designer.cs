@@ -34,20 +34,20 @@
             this.l = new System.Windows.Forms.Label();
             this.btnFindPassword = new DevExpress.XtraEditors.SimpleButton();
             this.btnFindId = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.txePassword = new DevExpress.XtraEditors.TextEdit();
             this.txeId = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -58,11 +58,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -71,13 +71,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(41, 20);
+            this.splitContainerControl1.Location = new System.Drawing.Point(46, 20);
             this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(379, 207);
+            this.splitContainerControl1.Size = new System.Drawing.Size(426, 207);
             this.splitContainerControl1.SplitterPosition = 194;
             this.splitContainerControl1.TabIndex = 0;
             // 
@@ -96,23 +96,23 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 0, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(379, 194);
+            this.layoutControl1.Size = new System.Drawing.Size(426, 194);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // l
             // 
-            this.l.Location = new System.Drawing.Point(174, 138);
+            this.l.Location = new System.Drawing.Point(195, 138);
             this.l.Name = "l";
-            this.l.Size = new System.Drawing.Size(25, 44);
+            this.l.Size = new System.Drawing.Size(29, 44);
             this.l.TabIndex = 9;
             this.l.Text = " ";
             // 
             // btnFindPassword
             // 
-            this.btnFindPassword.Location = new System.Drawing.Point(203, 138);
+            this.btnFindPassword.Location = new System.Drawing.Point(228, 138);
             this.btnFindPassword.Name = "btnFindPassword";
-            this.btnFindPassword.Size = new System.Drawing.Size(164, 27);
+            this.btnFindPassword.Size = new System.Drawing.Size(185, 27);
             this.btnFindPassword.StyleController = this.layoutControl1;
             this.btnFindPassword.TabIndex = 8;
             this.btnFindPassword.Text = "비밀번호 찾기";
@@ -120,30 +120,58 @@
             // 
             // btnFindId
             // 
-            this.btnFindId.Location = new System.Drawing.Point(12, 138);
+            this.btnFindId.Location = new System.Drawing.Point(13, 138);
             this.btnFindId.Name = "btnFindId";
-            this.btnFindId.Size = new System.Drawing.Size(158, 27);
+            this.btnFindId.Size = new System.Drawing.Size(178, 27);
             this.btnFindId.StyleController = this.layoutControl1;
             this.btnFindId.TabIndex = 7;
             this.btnFindId.Text = "아이디 찾기";
             this.btnFindId.Click += new System.EventHandler(this.btnFindId_Click);
             // 
+            // btnSignup
+            // 
+            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSignup.Appearance.Options.UseFont = true;
+            this.btnSignup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSignup.ImageOptions.Image")));
+            this.btnSignup.Location = new System.Drawing.Point(228, 68);
+            this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSignup.Name = "btnSignup";
+            this.btnSignup.Size = new System.Drawing.Size(185, 66);
+            this.btnSignup.StyleController = this.layoutControl1;
+            this.btnSignup.TabIndex = 1;
+            this.btnSignup.Text = "회원가입";
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Appearance.Options.UseFont = true;
+            this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
+            this.btnLogin.Location = new System.Drawing.Point(13, 68);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(191, 66);
+            this.btnLogin.StyleController = this.layoutControl1;
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "로그인";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // txePassword
             // 
-            this.txePassword.Location = new System.Drawing.Point(77, 40);
+            this.txePassword.Location = new System.Drawing.Point(78, 40);
             this.txePassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txePassword.Name = "txePassword";
             this.txePassword.Properties.PasswordChar = '*';
-            this.txePassword.Size = new System.Drawing.Size(290, 24);
+            this.txePassword.Size = new System.Drawing.Size(335, 24);
             this.txePassword.StyleController = this.layoutControl1;
             this.txePassword.TabIndex = 5;
             // 
             // txeId
             // 
-            this.txeId.Location = new System.Drawing.Point(77, 12);
+            this.txeId.Location = new System.Drawing.Point(78, 12);
             this.txeId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeId.Name = "txeId";
-            this.txeId.Size = new System.Drawing.Size(290, 24);
+            this.txeId.Size = new System.Drawing.Size(335, 24);
             this.txeId.StyleController = this.layoutControl1;
             this.txeId.TabIndex = 4;
             // 
@@ -161,7 +189,7 @@
             this.layoutControlItem6,
             this.layoutControlItem7});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(379, 194);
+            this.Root.Size = new System.Drawing.Size(426, 194);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -169,16 +197,16 @@
             this.layoutControlItem1.Control = this.txeId;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(359, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(404, 28);
             this.layoutControlItem1.Text = "아이디 :";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(62, 18);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(173, 56);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(195, 56);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(18, 70);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(20, 70);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -186,34 +214,58 @@
             this.layoutControlItem2.Control = this.txePassword;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(359, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(404, 28);
             this.layoutControlItem2.Text = "비밀번호 :";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(62, 18);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.btnLogin;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem3.MaxSize = new System.Drawing.Size(195, 70);
+            this.layoutControlItem3.MinSize = new System.Drawing.Size(195, 70);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(195, 70);
+            this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.btnSignup;
+            this.layoutControlItem4.Location = new System.Drawing.Point(215, 56);
+            this.layoutControlItem4.MaxSize = new System.Drawing.Size(189, 70);
+            this.layoutControlItem4.MinSize = new System.Drawing.Size(189, 70);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(189, 70);
+            this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnFindId;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 126);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(162, 48);
+            this.layoutControlItem5.Size = new System.Drawing.Size(182, 48);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnFindPassword;
-            this.layoutControlItem6.Location = new System.Drawing.Point(191, 126);
+            this.layoutControlItem6.Location = new System.Drawing.Point(215, 126);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(168, 48);
+            this.layoutControlItem6.Size = new System.Drawing.Size(189, 48);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.l;
-            this.layoutControlItem7.Location = new System.Drawing.Point(162, 126);
+            this.layoutControlItem7.Location = new System.Drawing.Point(182, 126);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(29, 48);
+            this.layoutControlItem7.Size = new System.Drawing.Size(33, 48);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -222,67 +274,16 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
-            // btnSignup
-            // 
-            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
-            this.btnSignup.Appearance.Options.UseFont = true;
-            this.btnSignup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSignup.ImageOptions.Image")));
-            this.btnSignup.Location = new System.Drawing.Point(203, 68);
-            this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSignup.Name = "btnSignup";
-            this.btnSignup.Size = new System.Drawing.Size(164, 66);
-            this.btnSignup.StyleController = this.layoutControl1;
-            this.btnSignup.TabIndex = 1;
-            this.btnSignup.Text = "회원가입";
-            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.Appearance.Options.UseFont = true;
-            this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
-            this.btnLogin.Location = new System.Drawing.Point(12, 68);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(169, 66);
-            this.btnLogin.StyleController = this.layoutControl1;
-            this.btnLogin.TabIndex = 6;
-            this.btnLogin.Text = "로그인";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.btnLogin;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 56);
-            this.layoutControlItem3.MaxSize = new System.Drawing.Size(173, 70);
-            this.layoutControlItem3.MinSize = new System.Drawing.Size(173, 70);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(173, 70);
-            this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.btnSignup;
-            this.layoutControlItem4.Location = new System.Drawing.Point(191, 56);
-            this.layoutControlItem4.MaxSize = new System.Drawing.Size(168, 70);
-            this.layoutControlItem4.MinSize = new System.Drawing.Size(168, 70);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(168, 70);
-            this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
             // Login
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 247);
+            this.ClientSize = new System.Drawing.Size(498, 247);
             this.Controls.Add(this.splitContainerControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -297,11 +298,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
