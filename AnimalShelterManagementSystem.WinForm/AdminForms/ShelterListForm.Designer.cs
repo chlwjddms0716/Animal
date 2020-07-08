@@ -37,17 +37,17 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.종료XtoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.편집EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.추가XtoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.삭제XtoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.도움말HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.정보XtoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.도움말XtoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.lkuShelterName = new DevExpress.XtraEditors.LookUpEdit();
-            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txeAddress = new DevExpress.XtraEditors.TextEdit();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AnimalShelterId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.managerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -60,12 +60,16 @@
             this.정보AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.도움말HToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.managerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkuShelterName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -74,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -114,7 +119,8 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "종료";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -123,7 +129,8 @@
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Text = "추가";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton4
             // 
@@ -132,7 +139,8 @@
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Text = "삭제";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
             // 
@@ -141,7 +149,8 @@
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Text = "도움말";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // menuStrip1
             // 
@@ -161,21 +170,66 @@
             // 
             // 파일FToolStripMenuItem
             // 
+            this.파일FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.종료XtoolStripMenuItem1});
             this.파일FToolStripMenuItem.Name = "파일FToolStripMenuItem";
             this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 23);
             this.파일FToolStripMenuItem.Text = "파일(&F)";
             // 
+            // 종료XtoolStripMenuItem1
+            // 
+            this.종료XtoolStripMenuItem1.Name = "종료XtoolStripMenuItem1";
+            this.종료XtoolStripMenuItem1.Size = new System.Drawing.Size(141, 26);
+            this.종료XtoolStripMenuItem1.Text = "종료(&X)";
+            this.종료XtoolStripMenuItem1.Click += new System.EventHandler(this.종료XToolStripMenuItem_Click);
+            // 
             // 편집EToolStripMenuItem
             // 
+            this.편집EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.추가XtoolStripMenuItem2,
+            this.삭제XtoolStripMenuItem3});
             this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
             this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 23);
             this.편집EToolStripMenuItem.Text = "편집(&E)";
             // 
+            // 추가XtoolStripMenuItem2
+            // 
+            this.추가XtoolStripMenuItem2.Name = "추가XtoolStripMenuItem2";
+            this.추가XtoolStripMenuItem2.Size = new System.Drawing.Size(143, 26);
+            this.추가XtoolStripMenuItem2.Text = "추가(&I)";
+            this.추가XtoolStripMenuItem2.Click += new System.EventHandler(this.추가IToolStripMenuItem_Click);
+            // 
+            // 삭제XtoolStripMenuItem3
+            // 
+            this.삭제XtoolStripMenuItem3.Name = "삭제XtoolStripMenuItem3";
+            this.삭제XtoolStripMenuItem3.Size = new System.Drawing.Size(143, 26);
+            this.삭제XtoolStripMenuItem3.Text = "삭제(&D)";
+            this.삭제XtoolStripMenuItem3.Click += new System.EventHandler(this.삭제DToolStripMenuItem_Click);
+            // 
             // 도움말HToolStripMenuItem
             // 
+            this.도움말HToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.정보XtoolStripMenuItem1,
+            this.도움말XtoolStripMenuItem2});
             this.도움말HToolStripMenuItem.Name = "도움말HToolStripMenuItem";
             this.도움말HToolStripMenuItem.Size = new System.Drawing.Size(89, 23);
             this.도움말HToolStripMenuItem.Text = "도움말(&H)";
+            // 
+            // 정보XtoolStripMenuItem1
+            // 
+            this.정보XtoolStripMenuItem1.Name = "정보XtoolStripMenuItem1";
+            this.정보XtoolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.정보XtoolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
+            this.정보XtoolStripMenuItem1.Text = "정보(&A)";
+            this.정보XtoolStripMenuItem1.Click += new System.EventHandler(this.정보AToolStripMenuItem_Click);
+            // 
+            // 도움말XtoolStripMenuItem2
+            // 
+            this.도움말XtoolStripMenuItem2.Name = "도움말XtoolStripMenuItem2";
+            this.도움말XtoolStripMenuItem2.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.도움말XtoolStripMenuItem2.Size = new System.Drawing.Size(201, 26);
+            this.도움말XtoolStripMenuItem2.Text = "도움말(&H)";
+            this.도움말XtoolStripMenuItem2.Click += new System.EventHandler(this.도움말HToolStripMenuItem1_Click);
             // 
             // lkuShelterName
             // 
@@ -192,11 +246,7 @@
             this.lkuShelterName.Size = new System.Drawing.Size(802, 24);
             this.lkuShelterName.StyleController = this.layoutControl1;
             this.lkuShelterName.TabIndex = 7;
-            this.lkuShelterName.EditValueChanged += new System.EventHandler(this.lookUpEdit1_EditValueChanged);
-            // 
-            // animalShelterBindingSource
-            // 
-            this.animalShelterBindingSource.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
+            this.lkuShelterName.EditValueChanged += new System.EventHandler(this.lkuShelterName_EditValueChanged);
             // 
             // txeAddress
             // 
@@ -238,42 +288,6 @@
             this.AnimalShelterId.Name = "AnimalShelterId";
             this.AnimalShelterId.ReadOnly = true;
             this.AnimalShelterId.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
-            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "전화번호";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // managerNameDataGridViewTextBoxColumn
-            // 
-            this.managerNameDataGridViewTextBoxColumn.DataPropertyName = "ManagerName";
-            this.managerNameDataGridViewTextBoxColumn.HeaderText = "담당자";
-            this.managerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.managerNameDataGridViewTextBoxColumn.Name = "managerNameDataGridViewTextBoxColumn";
-            this.managerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.managerNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // Root
             // 
@@ -371,6 +385,46 @@
             this.도움말HToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
             this.도움말HToolStripMenuItem1.Text = "도움말(&H)";
             // 
+            // animalShelterBindingSource
+            // 
+            this.animalShelterBindingSource.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
+            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "전화번호";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // managerNameDataGridViewTextBoxColumn
+            // 
+            this.managerNameDataGridViewTextBoxColumn.DataPropertyName = "ManagerName";
+            this.managerNameDataGridViewTextBoxColumn.HeaderText = "담당자";
+            this.managerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.managerNameDataGridViewTextBoxColumn.Name = "managerNameDataGridViewTextBoxColumn";
+            this.managerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.managerNameDataGridViewTextBoxColumn.Width = 125;
+            // 
             // ShelterListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -378,6 +432,7 @@
             this.ClientSize = new System.Drawing.Size(914, 446);
             this.Controls.Add(this.layoutControl1);
             this.Name = "ShelterListForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "보호소목록";
             this.Load += new System.EventHandler(this.Shelter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -387,7 +442,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkuShelterName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -396,6 +450,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -432,5 +487,10 @@
         private System.Windows.Forms.ToolStripMenuItem 정보AToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem 도움말HToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 종료XtoolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 추가XtoolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem 삭제XtoolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem 정보XtoolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 도움말XtoolStripMenuItem2;
     }
 }

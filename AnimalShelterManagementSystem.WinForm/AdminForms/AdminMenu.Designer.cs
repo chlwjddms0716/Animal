@@ -56,6 +56,7 @@
             this.btnShelter.Size = new System.Drawing.Size(308, 169);
             this.btnShelter.TabIndex = 6;
             this.btnShelter.Text = "보호소 관리";
+            this.btnShelter.Click += new System.EventHandler(this.btnShelter_Click);
             // 
             // btnUser
             // 
@@ -90,6 +91,7 @@
             this.Controls.Add(this.btnUser);
             this.Controls.Add(this.btnAnimal);
             this.Name = "AdminMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMenu";
             this.ResumeLayout(false);
 
