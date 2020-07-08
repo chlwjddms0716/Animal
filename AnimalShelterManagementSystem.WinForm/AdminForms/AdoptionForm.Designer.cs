@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txeAnimalName = new DevExpress.XtraEditors.TextEdit();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -43,6 +44,7 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.rdgAdoptionStatus = new DevExpress.XtraEditors.RadioGroup();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeAnimalName.Properties)).BeginInit();
@@ -57,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdoptionStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -82,6 +85,7 @@
             this.txeAnimalName.Size = new System.Drawing.Size(263, 24);
             this.txeAnimalName.StyleController = this.layoutControl1;
             this.txeAnimalName.TabIndex = 15;
+            this.txeAnimalName.EditValueChanged += new System.EventHandler(this.txeAnimalName_EditValueChanged);
             // 
             // btnSave
             // 
@@ -122,10 +126,11 @@
             this.lkuAnimalId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkuAnimalId.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "전체를 보고싶으시면 update버튼을 눌러주세요.")});
-            this.lkuAnimalId.Properties.DisplayMember = "Name";
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HomelessAnimalId", "Name2")});
+            this.lkuAnimalId.Properties.DataSource = this.homelessAnimalBindingSource;
+            this.lkuAnimalId.Properties.DisplayMember = "HomelessAnimalId";
             this.lkuAnimalId.Properties.NullText = "";
-            this.lkuAnimalId.Properties.ValueMember = "AnimalShelterId";
+            this.lkuAnimalId.Properties.ValueMember = "HomelessAnimalId";
             this.lkuAnimalId.Size = new System.Drawing.Size(263, 24);
             this.lkuAnimalId.StyleController = this.layoutControl1;
             this.lkuAnimalId.TabIndex = 2;
@@ -225,6 +230,10 @@
             this.layoutControlItem10.Text = "입양상태: ";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(62, 18);
             // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            // 
             // AdoptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -248,6 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdoptionStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +279,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.RadioGroup rdgAdoptionStatus;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private System.Windows.Forms.BindingSource homelessAnimalBindingSource;
     }
 }

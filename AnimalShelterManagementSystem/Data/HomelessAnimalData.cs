@@ -130,5 +130,16 @@ namespace AnimalShelterManagementSystem
 
         }
 
+        public List<HomelessAnimal> GetByAnimalName(string animalName)
+        {
+            AnimalShelterManagementEntities context = CreateContext();
+
+            var query = from x in context.HomelessAnimals
+                        where x.Name == animalName
+                        orderby x.HomelessAnimalId
+                        select x;
+
+            return query.ToList();
+        }
     }
 }

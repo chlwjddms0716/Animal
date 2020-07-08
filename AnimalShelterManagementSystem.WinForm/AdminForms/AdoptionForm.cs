@@ -106,5 +106,12 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (checkinsert == 0)
                 DataRepository.Adoption.Delete(_adoption);
         }
+
+        private void txeAnimalName_EditValueChanged(object sender, EventArgs e)
+        {
+            string AnimalName = txeAnimalName.Text;
+            List<HomelessAnimal> homelessAnimal = DataRepository.HomelessAnimal.GetByAnimalName(AnimalName);
+            homelessAnimalBindingSource.DataSource = homelessAnimal;
+        }
     }
 }
