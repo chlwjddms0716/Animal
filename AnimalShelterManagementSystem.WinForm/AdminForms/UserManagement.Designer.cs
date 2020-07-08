@@ -286,8 +286,8 @@
             this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRefresh.Name = "tsbRefresh";
             this.tsbRefresh.Size = new System.Drawing.Size(29, 17);
-            this.tsbRefresh.Text = "수정";
-            this.tsbRefresh.Click += new System.EventHandler(this.tsbEdit_Click);
+            this.tsbRefresh.Text = "새로고침";
+            this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
             // tsbEdit
             // 
@@ -296,7 +296,8 @@
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
             this.tsbEdit.Size = new System.Drawing.Size(29, 17);
-            this.tsbEdit.Text = "toolStripButton1";
+            this.tsbEdit.Text = "수정";
+            this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
             // userIdDataGridViewTextBoxColumn
             // 

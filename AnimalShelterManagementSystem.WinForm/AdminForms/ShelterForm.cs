@@ -54,20 +54,39 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
             WriteToEntity();
 
-            try
-            {
-                if (_animalShelter.AnimalShelterId == DataRepository.AnimalShelter.GetMaxId() + 1)
-                {
-                    DataRepository.AnimalShelter.Insert(_animalShelter);   
-                }
-                else
-                    DataRepository.AnimalShelter.Update(_animalShelter);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            string checkinput = "";
+            if (String.Equals(txeName.Text, "") == true)
+                checkinput += "이름, ";
+            if (String.Equals(txeAddress.Text, "") == true)
+                checkinput += "주소, ";
+            if (String.Equals(txeManager.Text, "") == true)
+                checkinput += "담당자이름, ";
+            if (String.Equals(txePhoneNumber.Text, "") == true)
+                checkinput += "전화번호";
 
+            if (string.Equals(checkinput, "") == true)
+            {
+                try
+                {
+                    if (_animalShelter.AnimalShelterId == DataRepository.AnimalShelter.GetMaxId() + 1)
+                    {
+                        DataRepository.AnimalShelter.Insert(_animalShelter);
+                        MessageBox.Show("추가되었습니다");
+                    }
+                    else
+                        DataRepository.AnimalShelter.Update(_animalShelter);
+                    MessageBox.Show("수정되었습니다");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show(checkinput + "을(를) 입력해주세요.");
+            }
             Close();
         }
 
@@ -82,3 +101,4 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         }
     }
 }
+
