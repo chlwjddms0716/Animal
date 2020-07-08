@@ -16,5 +16,13 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             InitializeComponent();
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            UserManagement userManagement = new UserManagement();
+            userManagement.ShowDialog();
+            Cursor = Cursors.Arrow;
+        }
     }
 }

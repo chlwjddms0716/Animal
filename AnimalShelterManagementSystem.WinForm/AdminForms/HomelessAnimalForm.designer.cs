@@ -165,6 +165,7 @@
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Location = new System.Drawing.Point(12, 270);
             this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(484, 40);
             this.btnClose.Size = new System.Drawing.Size(386, 34);
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
@@ -192,6 +193,7 @@
             this.txeName.EditValue = "";
             this.txeName.Location = new System.Drawing.Point(121, 40);
             this.txeName.Name = "txeName";
+            this.txeName.Size = new System.Drawing.Size(818, 28);
             this.txeName.Size = new System.Drawing.Size(667, 24);
             this.txeName.StyleController = this.layoutControl1;
             this.txeName.TabIndex = 6;
@@ -229,10 +231,23 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txeName;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 32);
             this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(976, 32);
             this.layoutControlItem3.Size = new System.Drawing.Size(780, 28);
             this.layoutControlItem3.Text = "이름 :";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(152, 22);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.lueSpeciesCode;
+            this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem2.CustomizationFormText = "실종장소 :";
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 96);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(976, 32);
+            this.layoutControlItem2.Text = "축종코드 :";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(152, 22);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(107, 18);
             // 
             // layoutControlItem9
@@ -240,8 +255,10 @@
             this.layoutControlItem9.Control = this.txePictureLink;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 202);
             this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(976, 32);
             this.layoutControlItem9.Size = new System.Drawing.Size(780, 28);
             this.layoutControlItem9.Text = "사진링크 : ";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(152, 22);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(107, 18);
             // 
             // layoutControlItem10
@@ -274,7 +291,7 @@
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.txeAge;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 64);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(780, 28);
             this.layoutControlItem12.Text = "나이 :";
@@ -347,10 +364,11 @@
             // 
             // HomelessAnimalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1000, 540);
             this.Controls.Add(this.layoutControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomelessAnimalForm";
             this.Text = "유기유실동물관리";
             this.Load += new System.EventHandler(this.HomelessAnimalForm_Load);

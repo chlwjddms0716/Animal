@@ -32,6 +32,7 @@
             this.btnShelter = new DevExpress.XtraEditors.SimpleButton();
             this.btnUser = new DevExpress.XtraEditors.SimpleButton();
             this.btnAnimal = new DevExpress.XtraEditors.SimpleButton();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // btnAdoption
@@ -66,6 +67,7 @@
             this.btnUser.Size = new System.Drawing.Size(308, 169);
             this.btnUser.TabIndex = 5;
             this.btnUser.Text = "유저 관리";
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnAnimal
             // 
@@ -99,5 +101,6 @@
         private DevExpress.XtraEditors.SimpleButton btnShelter;
         private DevExpress.XtraEditors.SimpleButton btnUser;
         private DevExpress.XtraEditors.SimpleButton btnAnimal;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

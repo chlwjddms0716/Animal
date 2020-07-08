@@ -93,22 +93,22 @@ namespace AnimalShelterManagementSystem
 
 
         }
-        public List<HomelessAnimal> SearchWithHomelessAnimal(int animalShelterId, int speciesCode, int gender, DateTime foundDateFrom, DateTime foundDateTo)
-        {
-            AnimalShelterManagementEntities context = CreateContext();
+        //public List<HomelessAnimal> SearchWithHomelessAnimal(int animalShelterId, int speciesCode, int gender, DateTime foundDateFrom, DateTime foundDateTo)
+        //{
+        //    AnimalShelterManagementEntities context = CreateContext();
 
 
-            var query = from x in context.HomelessAnimals
-                            //from y in context.AnimalShelters
-                        where x.AnimalShelterId == animalShelterId &&
-                        x.Species == speciesCode &&
-                        x.Gender == gender &&
-                                x.LatestFindingReport >= foundDateFrom && x.LatestFindingReport <= foundDateTo
-                        select x;
+        //    var query = from x in context.HomelessAnimals
+        //                    //from y in context.AnimalShelters
+        //                where x.AnimalShelterId == animalShelterId &&
+        //                x.Species == speciesCode &&
+        //                x.Gender == gender &&
+        //                        x.LatestFindingReport >= foundDateFrom && x.LatestFindingReport <= foundDateTo
+        //                select x;
 
 
 
-            var list = query.ToList();
+        //    var list = query.ToList();
 
             foreach (var x in list)
             {
@@ -118,9 +118,9 @@ namespace AnimalShelterManagementSystem
                 
             }
 
-            return list;
+        //    return list;
 
-        }
+        //}
 
     }
 }
