@@ -84,5 +84,35 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             BlacklistCode = (int)rdgBlacklist.EditValue;
             querybyBlacklist();
         }
+
+        private void grvUserList_DoubleClick(object sender, EventArgs e)
+        {
+            LoadEditForm(userBindingSource.Current as User);
+        }
+        private void tsbAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void tsbDelete_Click(object sender, EventArgs e)
+        {
+            if (userBindingSource.Current is null)
+                MessageBox.Show("삭제할 유저를 선택해주세요");
+            else
+                LoadEditForm(userBindingSource.Current as User);
+        }
+        private void tsbEdit_Click(object sender, EventArgs e)
+        {
+            if (userBindingSource.Current is null)
+                MessageBox.Show("수정할 유저를 선택해주세요");
+            else
+                LoadEditForm(userBindingSource.Current as User);
+        }
+        private void LoadEditForm(User user)
+        {
+            Cursor = Cursors.WaitCursor;
+            EditUserInformationByAdmin editUserInformationByAdmin = new EditUserInformationByAdmin(user);
+            editUserInformationByAdmin.ShowDialog();
+            Cursor = Cursors.Arrow;
+        }
     }
 }

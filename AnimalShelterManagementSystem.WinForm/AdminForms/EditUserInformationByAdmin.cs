@@ -14,10 +14,16 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
     public partial class EditUserInformationByAdmin : Form
     {
         User user;
-        public EditUserInformationByAdmin(string Id)  
+        public EditUserInformationByAdmin(User user)  
         {
             InitializeComponent();
-            user = DataRepository.User.GetbyId(Id);
+            this.user = user;
+            boxPassword.Text = user.Password;
+            boxPhoneNumber.Text = user.PhoneNumber;
+            boxAddress.Text = user.Address;
+            rdgAdmin.EditValue = user.IsAdministrator ? 1 : 0;
+            rdgBlacklist.EditValue = user.IsBlacklist ? 1 : 0;
+            boxBlacklistReason.Text = user.BlacklistReason;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
