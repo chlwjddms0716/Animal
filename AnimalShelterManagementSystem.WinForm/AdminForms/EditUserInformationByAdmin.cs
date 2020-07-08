@@ -14,10 +14,30 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
     public partial class EditUserInformationByAdmin : Form
     {
         User user;
+        public EditUserInformationByAdmin()
+        {
+            InitializeComponent();
+            
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            user = new User();
+            user.UserId = DataRepository.User.GetMaxId() + 1;
+            boxUserId.Text = user.UserId.ToString();
+            boxUserId.Enabled = false;
+
+        }
         public EditUserInformationByAdmin(User user)  
         {
             InitializeComponent();
+            
+            btnAdd.Enabled = false;
             this.user = user;
+            boxUserId.Text = user.UserId.ToString();
+            boxUserId.Enabled = false;
+            boxName.Text = user.Name;
+            boxName.Enabled = false;
+            boxId.Text = user.Id;
+            boxId.Enabled = false;
             boxPassword.Text = user.Password;
             boxPhoneNumber.Text = user.PhoneNumber;
             boxAddress.Text = user.Address;
@@ -41,6 +61,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             {
                 user.BlacklistReason = boxBlacklistReason.Text;
             }
+            DataRepository.User.Update(user);
+            MessageBox.Show("수정되었습니다");
+            Close();
 
         }
 

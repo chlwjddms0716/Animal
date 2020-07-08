@@ -91,7 +91,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         }
         private void tsbAdd_Click(object sender, EventArgs e)
         {
-
+            Cursor = Cursors.WaitCursor;
+            EditUserInformationByAdmin editUserInformationByAdmin = new EditUserInformationByAdmin();
+            editUserInformationByAdmin.ShowDialog();
+            Cursor = Cursors.Arrow;
         }
         private void tsbDelete_Click(object sender, EventArgs e)
         {
