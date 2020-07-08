@@ -1,4 +1,4 @@
-﻿using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

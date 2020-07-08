@@ -1,4 +1,4 @@
-﻿using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.Data;
 using AnimalShelterManagementSystem.WinForm.AdminForms;
 using DevExpress.XtraEditors.Filtering.Templates;
 using DevExpress.XtraExport.Xls;

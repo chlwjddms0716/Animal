@@ -93,7 +93,7 @@ namespace AnimalShelterManagementSystem
 
 
         }
-        public List<HomelessAnimal> SearchWithHomelessAnimal(int animalShelterId, int speciesCode, int gender, DateTime foundDateFrom, DateTime foundDateTo)
+        public List<HomelessAnimal> SearchWithHomelessAnimal(int animalShelterId, int speciesCode, int? gender, DateTime? foundDateFrom, DateTime? foundDateTo)
         {
             AnimalShelterManagementEntities context = CreateContext();
 
@@ -101,10 +101,18 @@ namespace AnimalShelterManagementSystem
             var query = from x in context.HomelessAnimals
                         //    //from y in context.AnimalShelters
                         where x.AnimalShelterId == animalShelterId &&
-                        x.Species == speciesCode &&
-                        x.Gender == gender &&
-                                x.LatestFindingReport >= foundDateFrom && x.LatestFindingReport <= foundDateTo
+                        x.Species == speciesCode
                         select x;
+
+            if (gender.HasValue)
+                query = query.Where(x => x.Gender == gender);
+
+            if (foundDateFrom.HasValue)
+                query = query.Where(x => x.LatestFindingReport >= foundDateFrom);
+
+            if (foundDateTo.HasValue)
+                query = query.Where(x => x.LatestFindingReport <= foundDateTo);
+
 
 
 

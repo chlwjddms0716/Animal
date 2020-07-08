@@ -21,35 +21,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Cursor = Cursors.WaitCursor;
-            User user = DataRepository.User.GetbyId(txeId.Text);
 
-            if (user is null)
-                MessageBox.Show("존재하지 않는 아이디입니다.");
-            else
-            {
-                if (String.Equals(txePassword.Text, user.Password))
-                {
-                    if (user.IsAdministrator is true)
-                    {
-                        AdminMenu adminMenu = new AdminMenu();
-                        adminMenu.ShowDialog();
-                        Cursor = Cursors.Arrow;
-                        Close();
-                    }
-                    else
-                    {
-                        UserMenu userMenu = new UserMenu(user.UserId);
-                        userMenu.ShowDialog();
-                        Cursor = Cursors.Arrow;
-                        Close();
-                    }
-                }
-                else
-                    MessageBox.Show("비밀번호가 틀렸습니다.");
-            }
-
-            Cursor = Cursors.Arrow;
         }
 
         private void btnSignup_Click(object sender, EventArgs e)
