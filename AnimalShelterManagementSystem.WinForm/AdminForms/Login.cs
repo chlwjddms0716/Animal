@@ -49,9 +49,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                     MessageBox.Show("비밀번호가 틀렸습니다.");
             }
 
-
             Cursor = Cursors.Arrow;
-
         }
 
         private void btnSignup_Click(object sender, EventArgs e)

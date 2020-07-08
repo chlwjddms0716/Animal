@@ -29,7 +29,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             int shelterId = (int)(lkuShelterName.EditValue);
             List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.GetbyShelterId(shelterId);
             animalShelterBindingSource.DataSource = animalShelters;
-            // TODO : 스크롤에 전체
         }
 
         private void txeAddress_EditValueChanged(object sender, EventArgs e)
