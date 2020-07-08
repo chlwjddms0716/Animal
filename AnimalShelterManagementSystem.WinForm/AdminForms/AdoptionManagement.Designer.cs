@@ -30,30 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.tebUserId = new System.Windows.Forms.TextBox();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.UserId = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdoptionManagement = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.list = new DevExpress.XtraLayout.LayoutControlItem();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.speciesNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.physicalConditionNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adoptionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureLinkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAdoptionManagement = new DevExpress.XtraEditors.SimpleButton();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tebUserId = new System.Windows.Forms.TextBox();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.UserId = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.list = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.list)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
@@ -72,43 +72,25 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // tebUserId
+            // btnCancel
             // 
-            this.tebUserId.Location = new System.Drawing.Point(65, 12);
-            this.tebUserId.Name = "tebUserId";
-            this.tebUserId.Size = new System.Drawing.Size(695, 25);
-            this.tebUserId.TabIndex = 4;
+            this.btnCancel.Location = new System.Drawing.Point(12, 275);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(372, 27);
+            this.btnCancel.StyleController = this.layoutControl1;
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "취소";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // Root
+            // btnAdoptionManagement
             // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.UserId,
-            this.emptySpaceItem1,
-            this.list,
-            this.layoutControlItem3,
-            this.layoutControlItem4});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(772, 314);
-            this.Root.TextVisible = false;
-            // 
-            // UserId
-            // 
-            this.UserId.Control = this.tebUserId;
-            this.UserId.Location = new System.Drawing.Point(0, 0);
-            this.UserId.Name = "UserId";
-            this.UserId.Size = new System.Drawing.Size(752, 29);
-            this.UserId.Text = " 유저Id:";
-            this.UserId.TextSize = new System.Drawing.Size(50, 18);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 253);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(752, 10);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.btnAdoptionManagement.Location = new System.Drawing.Point(388, 275);
+            this.btnAdoptionManagement.Name = "btnAdoptionManagement";
+            this.btnAdoptionManagement.Size = new System.Drawing.Size(372, 27);
+            this.btnAdoptionManagement.StyleController = this.layoutControl1;
+            this.btnAdoptionManagement.TabIndex = 6;
+            this.btnAdoptionManagement.Text = "확인";
+            this.btnAdoptionManagement.Click += new System.EventHandler(this.btnAdoptionManagement_Click);
             // 
             // dataGridView1
             // 
@@ -124,26 +106,14 @@
             this.adoptionsDataGridViewTextBoxColumn,
             this.pictureLinkDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.homelessAnimalBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(65, 41);
+            this.dataGridView1.Location = new System.Drawing.Point(60, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(695, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(700, 220);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // list
-            // 
-            this.list.Control = this.dataGridView1;
-            this.list.Location = new System.Drawing.Point(0, 29);
-            this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(752, 224);
-            this.list.Text = "리스트";
-            this.list.TextSize = new System.Drawing.Size(50, 18);
-            // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // speciesNameDataGridViewTextBoxColumn
             // 
@@ -190,15 +160,56 @@
             this.pictureLinkDataGridViewTextBoxColumn.ReadOnly = true;
             this.pictureLinkDataGridViewTextBoxColumn.Width = 125;
             // 
-            // btnAdoptionManagement
+            // homelessAnimalBindingSource
             // 
-            this.btnAdoptionManagement.Location = new System.Drawing.Point(388, 275);
-            this.btnAdoptionManagement.Name = "btnAdoptionManagement";
-            this.btnAdoptionManagement.Size = new System.Drawing.Size(372, 27);
-            this.btnAdoptionManagement.StyleController = this.layoutControl1;
-            this.btnAdoptionManagement.TabIndex = 6;
-            this.btnAdoptionManagement.Text = "확인";
-            this.btnAdoptionManagement.Click += new System.EventHandler(this.btnAdoptionManagement_Click);
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            // 
+            // tebUserId
+            // 
+            this.tebUserId.Location = new System.Drawing.Point(60, 12);
+            this.tebUserId.Name = "tebUserId";
+            this.tebUserId.Size = new System.Drawing.Size(700, 25);
+            this.tebUserId.TabIndex = 4;
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.UserId,
+            this.emptySpaceItem1,
+            this.list,
+            this.layoutControlItem3,
+            this.layoutControlItem4});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(772, 314);
+            this.Root.TextVisible = false;
+            // 
+            // UserId
+            // 
+            this.UserId.Control = this.tebUserId;
+            this.UserId.Location = new System.Drawing.Point(0, 0);
+            this.UserId.Name = "UserId";
+            this.UserId.Size = new System.Drawing.Size(752, 29);
+            this.UserId.Text = " 유저Id:";
+            this.UserId.TextSize = new System.Drawing.Size(45, 18);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 253);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(752, 10);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // list
+            // 
+            this.list.Control = this.dataGridView1;
+            this.list.Location = new System.Drawing.Point(0, 29);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(752, 224);
+            this.list.Text = "리스트";
+            this.list.TextSize = new System.Drawing.Size(45, 18);
             // 
             // layoutControlItem3
             // 
@@ -208,16 +219,6 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(376, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(12, 275);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(372, 27);
-            this.btnCancel.StyleController = this.layoutControl1;
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "취소";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // layoutControlItem4
             // 
@@ -238,12 +239,12 @@
             this.Text = "AdoptionManagement";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.list)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);

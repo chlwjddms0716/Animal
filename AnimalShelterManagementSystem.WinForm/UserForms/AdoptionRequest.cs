@@ -55,6 +55,13 @@ namespace AnimalShelterManagementSystem.WinForm
                 homelessAnimals.AddRange(DataRepository.HomelessAnimal.SearchWithAnimals((int)speciesType, 0));
             homelessAnimalBindingSource.DataSource = homelessAnimals;
             cbxSpecies.SelectedItem = null;
+
+
+
+
+
+
+
         }
 
         private void btnAdoptionRequest_Click(object sender, EventArgs e)
