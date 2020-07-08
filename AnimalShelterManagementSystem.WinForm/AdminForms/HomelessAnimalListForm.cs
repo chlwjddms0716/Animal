@@ -1,5 +1,5 @@
 ﻿using AnimalShelterManagementSystem.Data;
-
+using AnimalShelterManagementSystem.WinForm.AdminForms;
 using DevExpress.XtraEditors.Filtering.Templates;
 using DevExpress.XtraExport.Xls;
 using System;
@@ -18,11 +18,18 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 {
     public partial class HomelessAnimalListForm : Form
     {
+        private int homelessAnimalId;
+
         public HomelessAnimalListForm()
         {
             InitializeComponent();
         }
 
+        public HomelessAnimalListForm(int HomelessAnimalId)
+        {
+            InitializeComponent();
+            homelessAnimalId = HomelessAnimalId;
+        }
 
 
         private void 추가IToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,6 +110,24 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         }
 
+        private void ExcuteUpdate()
+        {
+            Cursor = Cursors.WaitCursor;
+            HomelessAnimal homelessAnimal = homelessAnimalBindingSource.Current as HomelessAnimal;
+
+            if (homelessAnimal == null)
+                return;
+
+            EditHomelessAnimalForm HomelessAnimal = new EditHomelessAnimalForm(homelessAnimal);
+            HomelessAnimal.ShowDialog();
+
+
+           
+            Cursor = Cursors.Arrow;
+        }
+
+        
+
 
         private void ExecuteDelete()
         {
@@ -131,6 +156,16 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             //}
 
 
+        }
+
+        private void 수정UToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcuteUpdate();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            ExcuteUpdate();
         }
     }
 }

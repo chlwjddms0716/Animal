@@ -45,8 +45,6 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchControl1 = new AnimalShelterManagementSystem.WinForm.UserControls.SearchControl();
             this.homelessAnimalIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +56,10 @@
             this.종 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.입양여부 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.보호센터ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchControl1 = new AnimalShelterManagementSystem.WinForm.UserControls.SearchControl();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.수정UToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,7 +99,8 @@
             // 
             this.편집EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.추가IToolStripMenuItem,
-            this.삭제DToolStripMenuItem});
+            this.삭제DToolStripMenuItem,
+            this.수정UToolStripMenuItem});
             this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
             this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.편집EToolStripMenuItem.Text = "편집(&E)";
@@ -153,6 +156,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
+            this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
@@ -203,6 +207,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -224,10 +230,110 @@
             this.dataGridView1.DataSource = this.homelessAnimalBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(4, 220);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(985, 332);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // homelessAnimalIdDataGridViewTextBoxColumn
+            // 
+            this.homelessAnimalIdDataGridViewTextBoxColumn.DataPropertyName = "HomelessAnimalId";
+            this.homelessAnimalIdDataGridViewTextBoxColumn.HeaderText = "유기유실동물ID";
+            this.homelessAnimalIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.homelessAnimalIdDataGridViewTextBoxColumn.Name = "homelessAnimalIdDataGridViewTextBoxColumn";
+            this.homelessAnimalIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.homelessAnimalIdDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "나이";
+            this.ageDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.ageDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ageDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // 성별
+            // 
+            this.성별.DataPropertyName = "Gender";
+            this.성별.HeaderText = "성별";
+            this.성별.MinimumWidth = 6;
+            this.성별.Name = "성별";
+            this.성별.ReadOnly = true;
+            this.성별.Width = 125;
+            // 
+            // featureDataGridViewTextBoxColumn
+            // 
+            this.featureDataGridViewTextBoxColumn.DataPropertyName = "Feature";
+            this.featureDataGridViewTextBoxColumn.HeaderText = "특징";
+            this.featureDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.featureDataGridViewTextBoxColumn.Name = "featureDataGridViewTextBoxColumn";
+            this.featureDataGridViewTextBoxColumn.ReadOnly = true;
+            this.featureDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // latestFindingReportDataGridViewTextBoxColumn
+            // 
+            this.latestFindingReportDataGridViewTextBoxColumn.DataPropertyName = "LatestFindingReport";
+            this.latestFindingReportDataGridViewTextBoxColumn.HeaderText = "최신발견날짜";
+            this.latestFindingReportDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.latestFindingReportDataGridViewTextBoxColumn.Name = "latestFindingReportDataGridViewTextBoxColumn";
+            this.latestFindingReportDataGridViewTextBoxColumn.ReadOnly = true;
+            this.latestFindingReportDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // pictureLinkDataGridViewTextBoxColumn
+            // 
+            this.pictureLinkDataGridViewTextBoxColumn.DataPropertyName = "PictureLink";
+            this.pictureLinkDataGridViewTextBoxColumn.HeaderText = "사진링크";
+            this.pictureLinkDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pictureLinkDataGridViewTextBoxColumn.Name = "pictureLinkDataGridViewTextBoxColumn";
+            this.pictureLinkDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pictureLinkDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // 건강상태
+            // 
+            this.건강상태.DataPropertyName = "PhysicalCondition";
+            this.건강상태.HeaderText = "건강상태";
+            this.건강상태.MinimumWidth = 6;
+            this.건강상태.Name = "건강상태";
+            this.건강상태.ReadOnly = true;
+            this.건강상태.Width = 125;
+            // 
+            // 종
+            // 
+            this.종.DataPropertyName = "Species";
+            this.종.HeaderText = "종";
+            this.종.MinimumWidth = 6;
+            this.종.Name = "종";
+            this.종.ReadOnly = true;
+            this.종.Width = 125;
+            // 
+            // 입양여부
+            // 
+            this.입양여부.DataPropertyName = "IsAdopted";
+            this.입양여부.HeaderText = "입양여부";
+            this.입양여부.MinimumWidth = 6;
+            this.입양여부.Name = "입양여부";
+            this.입양여부.ReadOnly = true;
+            this.입양여부.Width = 125;
+            // 
+            // 보호센터ID
+            // 
+            this.보호센터ID.DataPropertyName = "AnimalShelterId";
+            this.보호센터ID.HeaderText = "보호센터ID";
+            this.보호센터ID.MinimumWidth = 6;
+            this.보호센터ID.Name = "보호센터ID";
+            this.보호센터ID.ReadOnly = true;
+            this.보호센터ID.Width = 125;
             // 
             // homelessAnimalBindingSource
             // 
@@ -242,93 +348,22 @@
             this.searchControl1.TabIndex = 4;
             this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked);
             // 
-            // homelessAnimalIdDataGridViewTextBoxColumn
+            // toolStripButton3
             // 
-            this.homelessAnimalIdDataGridViewTextBoxColumn.DataPropertyName = "HomelessAnimalId";
-            this.homelessAnimalIdDataGridViewTextBoxColumn.HeaderText = "유기유실동물ID";
-            this.homelessAnimalIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.homelessAnimalIdDataGridViewTextBoxColumn.Name = "homelessAnimalIdDataGridViewTextBoxColumn";
-            this.homelessAnimalIdDataGridViewTextBoxColumn.Width = 140;
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
-            // nameDataGridViewTextBoxColumn
+            // 수정UToolStripMenuItem
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "나이";
-            this.ageDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // 성별
-            // 
-            this.성별.DataPropertyName = "Gender";
-            this.성별.HeaderText = "성별";
-            this.성별.MinimumWidth = 6;
-            this.성별.Name = "성별";
-            this.성별.Width = 125;
-            // 
-            // featureDataGridViewTextBoxColumn
-            // 
-            this.featureDataGridViewTextBoxColumn.DataPropertyName = "Feature";
-            this.featureDataGridViewTextBoxColumn.HeaderText = "특징";
-            this.featureDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.featureDataGridViewTextBoxColumn.Name = "featureDataGridViewTextBoxColumn";
-            this.featureDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // latestFindingReportDataGridViewTextBoxColumn
-            // 
-            this.latestFindingReportDataGridViewTextBoxColumn.DataPropertyName = "LatestFindingReport";
-            this.latestFindingReportDataGridViewTextBoxColumn.HeaderText = "최신발견날짜";
-            this.latestFindingReportDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.latestFindingReportDataGridViewTextBoxColumn.Name = "latestFindingReportDataGridViewTextBoxColumn";
-            this.latestFindingReportDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // pictureLinkDataGridViewTextBoxColumn
-            // 
-            this.pictureLinkDataGridViewTextBoxColumn.DataPropertyName = "PictureLink";
-            this.pictureLinkDataGridViewTextBoxColumn.HeaderText = "사진링크";
-            this.pictureLinkDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pictureLinkDataGridViewTextBoxColumn.Name = "pictureLinkDataGridViewTextBoxColumn";
-            this.pictureLinkDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // 건강상태
-            // 
-            this.건강상태.DataPropertyName = "PhysicalCondition";
-            this.건강상태.HeaderText = "건강상태";
-            this.건강상태.MinimumWidth = 6;
-            this.건강상태.Name = "건강상태";
-            this.건강상태.Width = 125;
-            // 
-            // 종
-            // 
-            this.종.DataPropertyName = "Species";
-            this.종.HeaderText = "종";
-            this.종.MinimumWidth = 6;
-            this.종.Name = "종";
-            this.종.Width = 125;
-            // 
-            // 입양여부
-            // 
-            this.입양여부.DataPropertyName = "IsAdopted";
-            this.입양여부.HeaderText = "입양여부";
-            this.입양여부.MinimumWidth = 6;
-            this.입양여부.Name = "입양여부";
-            this.입양여부.Width = 125;
-            // 
-            // 보호센터ID
-            // 
-            this.보호센터ID.DataPropertyName = "AnimalShelterId";
-            this.보호센터ID.HeaderText = "보호센터ID";
-            this.보호센터ID.MinimumWidth = 6;
-            this.보호센터ID.Name = "보호센터ID";
-            this.보호센터ID.Width = 125;
+            this.수정UToolStripMenuItem.Name = "수정UToolStripMenuItem";
+            this.수정UToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.수정UToolStripMenuItem.Text = "수정(&U)";
+            this.수정UToolStripMenuItem.Click += new System.EventHandler(this.수정UToolStripMenuItem_Click);
             // 
             // HomelessAnimalListForm
             // 
@@ -389,5 +424,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 종;
         private System.Windows.Forms.DataGridViewCheckBoxColumn 입양여부;
         private System.Windows.Forms.DataGridViewTextBoxColumn 보호센터ID;
+        private System.Windows.Forms.ToolStripMenuItem 수정UToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }

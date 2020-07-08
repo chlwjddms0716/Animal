@@ -15,7 +15,7 @@ namespace AnimalShelterManagementSystem.Models
         
         Male=1,
         Female=2,
-        All = 1 | 2,
+      
     }
 
     public enum PhysicalConditionType
