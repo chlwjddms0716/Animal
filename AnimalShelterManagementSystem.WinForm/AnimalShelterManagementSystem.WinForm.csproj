@@ -106,6 +106,12 @@
     <Compile Include="AdminForms\Shelter.Designer.cs">
       <DependentUpon>Shelter.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\SearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

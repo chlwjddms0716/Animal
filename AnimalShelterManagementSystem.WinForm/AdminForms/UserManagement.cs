@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class AdminMenu : Form
+    public partial class UserManagement : Form
     {
-        public AdminMenu()
+        public UserManagement()
         {
             InitializeComponent();
-        }
-
-        private void btnUser_Click(object sender, EventArgs e)
-        {
-            Cursor = Cursors.WaitCursor;
-            UserManagement userManagement = new UserManagement();
-            userManagement.ShowDialog();
-            Cursor = Cursors.Arrow;
         }
     }
 }
