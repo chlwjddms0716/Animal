@@ -252,7 +252,6 @@
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.Adoption.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.AnimalShelter.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.HomelessAnimal2.datasource" />
-    <None Include="Properties\DataSources\AnimalShelterManagementSystem.Species.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
