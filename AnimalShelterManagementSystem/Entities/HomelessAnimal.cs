@@ -12,6 +12,8 @@ namespace AnimalShelterManagementSystem
         public string PhysicalConditionName { get; set; }
 
         public string GenderName { get; set;}
+
+        public DateTime LatestFindingReportDate { get; set; }
     }
 
 }
