@@ -46,6 +46,7 @@
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tsbEdit = new System.Windows.Forms.ToolStripButton();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +58,6 @@
             this.isAdministratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.adoptionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tsbEdit = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -289,6 +289,15 @@
             this.tsbRefresh.Text = "수정";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
+            // tsbEdit
+            // 
+            this.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
+            this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEdit.Name = "tsbEdit";
+            this.tsbEdit.Size = new System.Drawing.Size(29, 17);
+            this.tsbEdit.Text = "toolStripButton1";
+            // 
             // userIdDataGridViewTextBoxColumn
             // 
             this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
@@ -382,15 +391,6 @@
             // userBindingSource
             // 
             this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
-            // 
-            // tsbEdit
-            // 
-            this.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
-            this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(29, 17);
-            this.tsbEdit.Text = "toolStripButton1";
             // 
             // UserManagement
             // 
