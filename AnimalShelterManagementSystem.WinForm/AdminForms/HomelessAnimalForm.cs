@@ -118,7 +118,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void HomelessAnimalForm_Load(object sender, EventArgs e)
         {
 
-            (int)txeHomelessAnimalId.Text = Convert.ToString(DataRepository.HomelessAnimal.GetMaxId());
+           // txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId + 10);
             homelessAnimalBindingSource.DataSource = DataRepository.HomelessAnimal.GetAll();
             cbbGender.DataSource = Enum.GetValues(typeof(Genders));
             cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
