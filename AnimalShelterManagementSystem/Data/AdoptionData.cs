@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelterManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,16 +27,37 @@ namespace AnimalShelterManagementSystem
             Delete(adoption);
         }
 
-        public List<HomelessAnimal> GetAnimalsByUserName(string userName)
+        public List<Adoption> GetAnimalsById(string userId)
         {
             AnimalShelterManagementEntities context = CreateContext();
 
             var query = from x in context.Adoptions
-                        where x.User.Name.Contains(userName)
-                        select x.HomelessAnimal;
+                        where x.User.Name.Contains(userId)
+                        select new
+                        {
+                            Adopt = x,
+                            AnimalName = x.HomelessAnimal.Name,
+                            userLoginId = x.User.Id,
+                            AdoptionStatus = x.HomelessAnimal.AdoptionStatus
+                        } ;
 
-            return query.ToList();
+            var list = query.ToList();
+
+            foreach (var x in list)
+            {
+                x.Adopt.AnimalName = x.AnimalName;
+                x.Adopt.userLoginId = x.userLoginId;
+                x.Adopt.AdoptionStatus = (AdoptionStatusType)x.AdoptionStatus;
+            }
+
+            return list.ConvertAll(x => x.Adopt);
+
         }
+
+
+
+
+
 
         //public List<HomelessAnimal> GetAnimalsByUserName2(string userName)
         //{

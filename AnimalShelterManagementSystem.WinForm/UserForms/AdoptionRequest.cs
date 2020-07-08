@@ -68,7 +68,7 @@ namespace AnimalShelterManagementSystem.WinForm
         {
             adoption.UserId = userId;
             adoption.AdoptionDate = DateTime.Now;
-            adoption.
+
             try
             {
                 DataRepository.Adoption.Insert(adoption);
