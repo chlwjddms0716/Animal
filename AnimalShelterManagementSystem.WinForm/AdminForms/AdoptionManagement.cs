@@ -16,30 +16,5 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             InitializeComponent();
         }
-
-        private void grvHomelessAnimalList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancel_Click_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

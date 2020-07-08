@@ -14,7 +14,8 @@ using DevExpress.XtraLayout.Helpers;
 using AnimalShelterManagementSystem.Models;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.ClipboardSource.SpreadsheetML;
-using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.
+    Entity.Core.Metadata.Edm;
 
 namespace AnimalShelterManagementSystem.WinForm
 {
