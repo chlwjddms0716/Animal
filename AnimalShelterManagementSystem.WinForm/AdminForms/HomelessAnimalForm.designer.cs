@@ -240,7 +240,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.lueSpeciesCode;
+   
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "실종장소 :";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 96);
