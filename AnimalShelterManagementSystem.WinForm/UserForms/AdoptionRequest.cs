@@ -14,7 +14,8 @@ using DevExpress.XtraLayout.Helpers;
 using AnimalShelterManagementSystem.Models;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.ClipboardSource.SpreadsheetML;
-using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.
+    Entity.Core.Metadata.Edm;
 
 namespace AnimalShelterManagementSystem.WinForm
 {
@@ -54,6 +55,13 @@ namespace AnimalShelterManagementSystem.WinForm
                 homelessAnimals.AddRange(DataRepository.HomelessAnimal.SearchWithAnimals((int)speciesType, 0));
             homelessAnimalBindingSource.DataSource = homelessAnimals;
             cbxSpecies.SelectedItem = null;
+
+
+
+
+
+
+
         }
 
         private void btnAdoptionRequest_Click(object sender, EventArgs e)
