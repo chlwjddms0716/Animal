@@ -15,6 +15,7 @@ namespace AnimalShelterManagementSystem.WinForm
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+        //안녕
         static void Main()
         {
             Application.EnableVisualStyles();
