@@ -76,13 +76,6 @@
     <Compile Include="AdminForms\AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\EditHomelessAnimal.cs" />
-    <Compile Include="AdminForms\EditHomelessAnimalForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminForms\EditHomelessAnimalForm.Designer.cs">
-      <DependentUpon>EditHomelessAnimalForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminForms\EditUserInformationByAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,9 +176,6 @@
     </Compile>
     <EmbeddedResource Include="AdminForms\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\EditHomelessAnimalForm.resx">
-      <DependentUpon>EditHomelessAnimalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\EditUserInformationByAdmin.resx">
       <DependentUpon>EditUserInformationByAdmin.cs</DependentUpon>

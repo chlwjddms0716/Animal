@@ -203,7 +203,7 @@
             this.btnSave.Size = new System.Drawing.Size(386, 34);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
-            this.btnSave.Text = "추가";
+            this.btnSave.Text = "저장(&S)";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
@@ -216,7 +216,7 @@
             this.btnClose.Size = new System.Drawing.Size(386, 34);
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
-            this.btnClose.Text = "취소";
+            this.btnClose.Text = "취소(&C)";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txeFeature

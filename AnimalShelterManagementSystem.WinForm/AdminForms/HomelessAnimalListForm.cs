@@ -95,35 +95,36 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void ExcuteInsert()
         {
+
+            Cursor = Cursors.WaitCursor;
             HomelessAnimal homelessAnimal = new HomelessAnimal();
+            homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
             homelessAnimal.Name = string.Empty;
             homelessAnimal.Age = 0;
             homelessAnimal.Feature = "";
             homelessAnimal.LatestFindingReport = System.DateTime.Now;
             homelessAnimal.PictureLink = string.Empty;
-            homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId();
+          
 
             HomelessAnimalForm form = new HomelessAnimalForm(homelessAnimal);
             form.ShowDialog();
-
+            Cursor = Cursors.Arrow;
 
 
         }
 
         private void ExcuteUpdate()
         {
-            Cursor = Cursors.WaitCursor;
             HomelessAnimal homelessAnimal = homelessAnimalBindingSource.Current as HomelessAnimal;
 
             if (homelessAnimal == null)
                 return;
 
-            EditHomelessAnimalForm HomelessAnimal = new EditHomelessAnimalForm(homelessAnimal);
-            HomelessAnimal.ShowDialog();
+            HomelessAnimalForm form = new HomelessAnimalForm(homelessAnimal);
+          
+            form.ShowDialog();
 
 
-           
-            Cursor = Cursors.Arrow;
         }
 
         
