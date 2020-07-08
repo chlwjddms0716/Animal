@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchControl));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cbbGender = new System.Windows.Forms.ComboBox();
             this.cbbSpecies = new System.Windows.Forms.ComboBox();
             this.dteFoundDateTo = new DevExpress.XtraEditors.DateEdit();
             this.dteFoundDateFrom = new DevExpress.XtraEditors.DateEdit();
@@ -45,12 +46,11 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sexBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbbGender = new System.Windows.Forms.ComboBox();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -68,9 +68,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +103,14 @@
             this.layoutControl1.Size = new System.Drawing.Size(729, 385);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cbbGender
+            // 
+            this.cbbGender.FormattingEnabled = true;
+            this.cbbGender.Location = new System.Drawing.Point(92, 70);
+            this.cbbGender.Name = "cbbGender";
+            this.cbbGender.Size = new System.Drawing.Size(524, 26);
+            this.cbbGender.TabIndex = 14;
             // 
             // cbbSpecies
             // 
@@ -241,14 +249,6 @@
             this.layoutControlItem8.Text = "        축종";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(77, 18);
             // 
-            // cbbGender
-            // 
-            this.cbbGender.FormattingEnabled = true;
-            this.cbbGender.Location = new System.Drawing.Point(92, 70);
-            this.cbbGender.Name = "cbbGender";
-            this.cbbGender.Size = new System.Drawing.Size(524, 26);
-            this.cbbGender.TabIndex = 14;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cbbGender;
@@ -258,10 +258,6 @@
             this.layoutControlItem2.Text = "        성별";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(77, 18);
             // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
-            // 
             // entityCommand1
             // 
             this.entityCommand1.CommandTimeout = 0;
@@ -269,6 +265,10 @@
             this.entityCommand1.Connection = null;
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
+            // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
             // 
             // SearchControl
             // 
@@ -296,9 +296,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             this.ResumeLayout(false);
 

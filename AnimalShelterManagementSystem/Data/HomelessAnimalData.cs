@@ -37,7 +37,7 @@ namespace AnimalShelterManagementSystem
 
             var query = from x in context.HomelessAnimals
                         orderby x.HomelessAnimalId descending
-                        select x.HomelessAnimalId;
+                        select x.HomelessAnimalId + 1;
 
             return query.FirstOrDefault();
 
