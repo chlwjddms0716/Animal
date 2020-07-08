@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.cbbAnimalShelter = new System.Windows.Forms.ComboBox();
             this.cbbPSC = new System.Windows.Forms.ComboBox();
             this.cbbGender = new System.Windows.Forms.ComboBox();
             this.dteLatestFindingReport = new DevExpress.XtraEditors.DateEdit();
@@ -60,10 +59,15 @@
             this.sexBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
-            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txeHomelessAnimalId = new DevExpress.XtraEditors.TextEdit();
+            this.cbbAnimalShelter = new System.Windows.Forms.ComboBox();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteLatestFindingReport.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteLatestFindingReport.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeHomelessAnimalId.Properties)).BeginInit();
@@ -89,8 +93,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeHomelessAnimalId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -115,17 +122,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(800, 450);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // cbbAnimalShelter
-            // 
-            this.cbbAnimalShelter.DataSource = this.animalShelterBindingSource;
-            this.cbbAnimalShelter.DisplayMember = "Name";
-            this.cbbAnimalShelter.FormattingEnabled = true;
-            this.cbbAnimalShelter.Location = new System.Drawing.Point(121, 270);
-            this.cbbAnimalShelter.Name = "cbbAnimalShelter";
-            this.cbbAnimalShelter.Size = new System.Drawing.Size(667, 23);
-            this.cbbAnimalShelter.TabIndex = 20;
-            this.cbbAnimalShelter.ValueMember = "AnimalShelterId";
             // 
             // cbbPSC
             // 
@@ -199,7 +195,7 @@
             this.btnSave.Size = new System.Drawing.Size(386, 34);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
-            this.btnSave.Text = "추가";
+            this.btnSave.Text = "저장(&S)";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
@@ -212,7 +208,7 @@
             this.btnClose.Size = new System.Drawing.Size(386, 34);
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
-            this.btnClose.Text = "취소";
+            this.btnClose.Text = "취소(&C)";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txeFeature
@@ -384,9 +380,9 @@
             this.layoutControlItem6.Text = "보호센터 :";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(107, 18);
             // 
-            // animalShelterBindingSource
+            // homelessAnimalBindingSource
             // 
-            this.animalShelterBindingSource.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
             // 
             // homelessAnimalBindingSource
             // 
@@ -403,6 +399,7 @@
             this.Load += new System.EventHandler(this.HomelessAnimalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteLatestFindingReport.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteLatestFindingReport.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeHomelessAnimalId.Properties)).EndInit();
