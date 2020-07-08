@@ -79,7 +79,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void HomelessAnimalForm_Load(object sender, EventArgs e)
         {
 
-            lueSpeciesCode.Text = Convert.ToString(_homelessAnimal.Species);
+            cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
             txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId);
             homelessAnimalBindingSource.DataSource = DataRepository.HomelessAnimal.GetAll();
 

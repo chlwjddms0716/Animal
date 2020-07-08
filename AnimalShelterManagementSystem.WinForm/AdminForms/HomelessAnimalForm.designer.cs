@@ -38,7 +38,6 @@
             this.txeFeature = new DevExpress.XtraEditors.TextEdit();
             this.txePictureLink = new DevExpress.XtraEditors.TextEdit();
             this.txeName = new DevExpress.XtraEditors.TextEdit();
-            this.lueSpeciesCode = new DevExpress.XtraEditors.LookUpEdit();
             this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lueIsMale = new DevExpress.XtraEditors.LookUpEdit();
             this.sexBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -47,7 +46,6 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -59,6 +57,8 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
             this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbbSpecies = new System.Windows.Forms.ComboBox();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeHomelessAnimalId.Properties)).BeginInit();
@@ -68,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txeFeature.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePictureLink.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueSpeciesCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueIsMale.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).BeginInit();
@@ -77,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
@@ -89,10 +87,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.cbbSpecies);
             this.layoutControl1.Controls.Add(this.txeHomelessAnimalId);
             this.layoutControl1.Controls.Add(this.dteDate);
             this.layoutControl1.Controls.Add(this.txeAge);
@@ -101,7 +101,6 @@
             this.layoutControl1.Controls.Add(this.txeFeature);
             this.layoutControl1.Controls.Add(this.txePictureLink);
             this.layoutControl1.Controls.Add(this.txeName);
-            this.layoutControl1.Controls.Add(this.lueSpeciesCode);
             this.layoutControl1.Controls.Add(this.lueIsMale);
             this.layoutControl1.Controls.Add(this.luePSC);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -123,7 +122,7 @@
             // dteDate
             // 
             this.dteDate.EditValue = null;
-            this.dteDate.Location = new System.Drawing.Point(121, 180);
+            this.dteDate.Location = new System.Drawing.Point(121, 182);
             this.dteDate.Name = "dteDate";
             this.dteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -145,7 +144,7 @@
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(402, 264);
+            this.btnSave.Location = new System.Drawing.Point(402, 266);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(386, 34);
             this.btnSave.StyleController = this.layoutControl1;
@@ -157,7 +156,7 @@
             // 
             this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.Location = new System.Drawing.Point(12, 264);
+            this.btnClose.Location = new System.Drawing.Point(12, 266);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(386, 34);
             this.btnClose.StyleController = this.layoutControl1;
@@ -167,7 +166,7 @@
             // 
             // txeFeature
             // 
-            this.txeFeature.Location = new System.Drawing.Point(121, 236);
+            this.txeFeature.Location = new System.Drawing.Point(121, 238);
             this.txeFeature.Name = "txeFeature";
             this.txeFeature.Size = new System.Drawing.Size(667, 24);
             this.txeFeature.StyleController = this.layoutControl1;
@@ -175,7 +174,7 @@
             // 
             // txePictureLink
             // 
-            this.txePictureLink.Location = new System.Drawing.Point(121, 208);
+            this.txePictureLink.Location = new System.Drawing.Point(121, 210);
             this.txePictureLink.Name = "txePictureLink";
             this.txePictureLink.Size = new System.Drawing.Size(667, 24);
             this.txePictureLink.StyleController = this.layoutControl1;
@@ -189,24 +188,9 @@
             this.txeName.StyleController = this.layoutControl1;
             this.txeName.TabIndex = 6;
             // 
-            // lueSpeciesCode
-            // 
-            this.lueSpeciesCode.Location = new System.Drawing.Point(121, 96);
-            this.lueSpeciesCode.Name = "lueSpeciesCode";
-            this.lueSpeciesCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueSpeciesCode.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Species1", "Species")});
-            this.lueSpeciesCode.Properties.DataSource = this.speciesBindingSource;
-            this.lueSpeciesCode.Properties.DisplayMember = "Species1";
-            this.lueSpeciesCode.Properties.ValueMember = "SpeciesCode";
-            this.lueSpeciesCode.Size = new System.Drawing.Size(667, 24);
-            this.lueSpeciesCode.StyleController = this.layoutControl1;
-            this.lueSpeciesCode.TabIndex = 8;
-            // 
             // lueIsMale
             // 
-            this.lueIsMale.Location = new System.Drawing.Point(121, 124);
+            this.lueIsMale.Location = new System.Drawing.Point(121, 126);
             this.lueIsMale.Name = "lueIsMale";
             this.lueIsMale.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -221,7 +205,7 @@
             // 
             // luePSC
             // 
-            this.luePSC.Location = new System.Drawing.Point(121, 152);
+            this.luePSC.Location = new System.Drawing.Point(121, 154);
             this.luePSC.Name = "luePSC";
             this.luePSC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -241,7 +225,6 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.emptySpaceItem1,
             this.layoutControlItem3,
-            this.layoutControlItem2,
             this.layoutControlItem4,
             this.layoutControlItem6,
             this.layoutControlItem9,
@@ -250,7 +233,8 @@
             this.layoutControlItem11,
             this.layoutControlItem12,
             this.layoutControlItem5,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem1});
             this.Root.Name = "Root";
             this.Root.OptionsItemText.TextToControlDistance = 2;
             this.Root.Size = new System.Drawing.Size(800, 450);
@@ -259,9 +243,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 290);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 292);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(780, 140);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(780, 138);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -273,23 +257,12 @@
             this.layoutControlItem3.Text = "이름 :";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(107, 18);
             // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.lueSpeciesCode;
-            this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem2.CustomizationFormText = "실종장소 :";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 84);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(780, 28);
-            this.layoutControlItem2.Text = "축종코드 :";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(107, 18);
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.lueIsMale;
             this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem4.CustomizationFormText = "실종장소 :";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 114);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(780, 28);
             this.layoutControlItem4.Text = "성별 :";
@@ -300,7 +273,7 @@
             this.layoutControlItem6.Control = this.luePSC;
             this.layoutControlItem6.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem6.CustomizationFormText = "실종장소 :";
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 140);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 142);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(780, 28);
             this.layoutControlItem6.Text = "건강상태코드 :";
@@ -309,7 +282,7 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txePictureLink;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 196);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 198);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(780, 28);
             this.layoutControlItem9.Text = "사진링크 : ";
@@ -318,7 +291,7 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.txeFeature;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 224);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 226);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(780, 28);
             this.layoutControlItem10.Text = "특징 : ";
@@ -327,7 +300,7 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnClose;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 252);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 254);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(390, 38);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -336,7 +309,7 @@
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnSave;
-            this.layoutControlItem11.Location = new System.Drawing.Point(390, 252);
+            this.layoutControlItem11.Location = new System.Drawing.Point(390, 254);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(390, 38);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
@@ -354,7 +327,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.dteDate;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 168);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 170);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(780, 28);
             this.layoutControlItem5.Text = "최신발견날짜 :";
@@ -372,6 +345,23 @@
             // homelessAnimalBindingSource
             // 
             this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            // 
+            // cbbSpecies
+            // 
+            this.cbbSpecies.FormattingEnabled = true;
+            this.cbbSpecies.Location = new System.Drawing.Point(121, 96);
+            this.cbbSpecies.Name = "cbbSpecies";
+            this.cbbSpecies.Size = new System.Drawing.Size(667, 23);
+            this.cbbSpecies.TabIndex = 14;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.cbbSpecies;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 84);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 30);
+            this.layoutControlItem1.Text = "축종코드 :";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(107, 18);
             // 
             // HomelessAnimalForm
             // 
@@ -391,7 +381,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txeFeature.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePictureLink.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueSpeciesCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueIsMale.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).EndInit();
@@ -400,7 +389,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
@@ -412,6 +400,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -423,8 +412,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.TextEdit txeName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraEditors.LookUpEdit lueSpeciesCode;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.LookUpEdit lueIsMale;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.LookUpEdit luePSC;
@@ -448,5 +435,7 @@
         private DevExpress.XtraEditors.DateTimeChartRangeControlClient dateTimeChartRangeControlClient1;
         private DevExpress.XtraEditors.TextEdit txeHomelessAnimalId;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private System.Windows.Forms.ComboBox cbbSpecies;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }
