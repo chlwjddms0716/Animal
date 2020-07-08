@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
 using AnimalShelterManagementSystem.Models;
+using DevExpress.ClipboardSource.SpreadsheetML;
 
 namespace AnimalShelterManagementSystem.WinForm.Forms
 {
@@ -30,6 +31,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         }
 
 
+        //안녕
 
 
         private void WriteToEntity() //DB에 쓰는거
@@ -38,16 +40,21 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             string checkinput = "";
             if (string.Equals(checkinput, "") == true)
             {
-              _homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
+                _homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
                 _homelessAnimal.Name = txeName.Text;
                 _homelessAnimal.Age = Convert.ToInt32(txeAge.Text);
-                
+                _homelessAnimal.Species = Convert.ToInt32(cbbSpecies.SelectedValue);
                 _homelessAnimal.Feature = txeFeature.Text;
+                _homelessAnimal.Gender = Convert.ToInt32(cbbGender.SelectedValue);
+                _homelessAnimal.PhysicalCondition = Convert.ToInt32(cbbPSC.SelectedValue);
                 _homelessAnimal.LatestFindingReport = dteLatestFindingReport.DateTime.Date;
                 _homelessAnimal.PictureLink = txePictureLink.Text;
+                _homelessAnimal.AnimalShelterId = Convert.ToInt32(cbbAnimalShelter.SelectedValue);
 
 
-                //MessageBox.Show("저장되었습니다.");
+                DataRepository.HomelessAnimal.Insert(_homelessAnimal);
+
+                MessageBox.Show("저장되었습니다.");
 
                 Close();
             }
@@ -96,10 +103,10 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             if (string.Equals(checkinput, "") == true)
             {
 
-
+                WriteToEntity();
                 try
                 {
-                    WriteToEntity();
+                   
                     if (_homelessAnimal.HomelessAnimalId == 0) //Id의 디폴트가0이라 0이면 db에 insert함
                         DataRepository.HomelessAnimal.Insert(_homelessAnimal);
 
@@ -126,19 +133,32 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
             cbbPSC.DataSource = Enum.GetValues(typeof(PhysicalConditionType));
             dteLatestFindingReport.DateTime = DateTime.Now;
-            
+            animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
             ReadFromEntity();
         }
 
         private void ReadFromEntity()
         {
 
-            txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId + 1);
+            txeHomelessAnimalId.Text = Convert.ToString(DataRepository.HomelessAnimal.GetMaxId()+1);
             txeName.Text = _homelessAnimal.Name;
             txeFeature.Text = _homelessAnimal.Feature;
             dteLatestFindingReport.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
             txePictureLink.Text = _homelessAnimal.PictureLink;
 
+        }
+
+       
+
+        private void txeAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))    //숫자와 백스페이스를 제외한 나머지를 바로 처리
+            {
+                e.Handled = true;
+            }
+
+
+          
         }
     }
 

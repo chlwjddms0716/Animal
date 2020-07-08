@@ -31,16 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.grvUserList = new System.Windows.Forms.DataGridView();
-            this.rdgAdmin = new DevExpress.XtraEditors.RadioGroup();
-            this.rdgBlacklist = new DevExpress.XtraEditors.RadioGroup();
-            this.txbName = new System.Windows.Forms.TextBox();
-            this.txbId = new System.Windows.Forms.TextBox();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txbUserName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txbUserId = new DevExpress.XtraLayout.LayoutControlItem();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,9 +42,20 @@
             this.isAdministratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.adoptionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rdgAdmin = new DevExpress.XtraEditors.RadioGroup();
+            this.rdgBlacklist = new DevExpress.XtraEditors.RadioGroup();
+            this.txbName = new System.Windows.Forms.TextBox();
+            this.txbId = new System.Windows.Forms.TextBox();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txbUserName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txbUserId = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvUserList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgBlacklist.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -63,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -108,120 +108,6 @@
             this.grvUserList.RowTemplate.Height = 27;
             this.grvUserList.Size = new System.Drawing.Size(706, 264);
             this.grvUserList.TabIndex = 10;
-            // 
-            // rdgAdmin
-            // 
-            this.rdgAdmin.EditValue = 0;
-            this.rdgAdmin.Location = new System.Drawing.Point(82, 70);
-            this.rdgAdmin.Name = "rdgAdmin";
-            this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgAdmin.Size = new System.Drawing.Size(706, 48);
-            this.rdgAdmin.StyleController = this.layoutControl1;
-            this.rdgAdmin.TabIndex = 11;
-            this.rdgAdmin.SelectedIndexChanged += new System.EventHandler(this.rdgAdmin_SelectedIndexChanged);
-            // 
-            // rdgBlacklist
-            // 
-            this.rdgBlacklist.EditValue = 0;
-            this.rdgBlacklist.Location = new System.Drawing.Point(82, 122);
-            this.rdgBlacklist.Name = "rdgBlacklist";
-            this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgBlacklist.Size = new System.Drawing.Size(706, 48);
-            this.rdgBlacklist.StyleController = this.layoutControl1;
-            this.rdgBlacklist.TabIndex = 11;
-            this.rdgBlacklist.SelectedIndexChanged += new System.EventHandler(this.rdgBlacklist_SelectedIndexChanged);
-            // 
-            // txbName
-            // 
-            this.txbName.Location = new System.Drawing.Point(82, 12);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(706, 25);
-            this.txbName.TabIndex = 6;
-            this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
-            // 
-            // txbId
-            // 
-            this.txbId.Location = new System.Drawing.Point(82, 41);
-            this.txbId.Name = "txbId";
-            this.txbId.Size = new System.Drawing.Size(706, 25);
-            this.txbId.TabIndex = 6;
-       
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem1,
-            this.txbUserName,
-            this.txbUserId});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(800, 450);
-            this.Root.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.grvUserList;
-            this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem2.CustomizationFormText = "l";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 162);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(780, 268);
-            this.layoutControlItem2.Text = "리스트";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.rdgAdmin;
-            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem3.CustomizationFormText = "관리자";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 58);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(780, 52);
-            this.layoutControlItem3.Text = "관리자";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.rdgBlacklist;
-            this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem1.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 110);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(780, 52);
-            this.layoutControlItem1.Text = "블랙리스트";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // txbUserName
-            // 
-            this.txbUserName.Control = this.txbName;
-            this.txbUserName.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.txbUserName.CustomizationFormText = "유저 이름 : ";
-            this.txbUserName.Location = new System.Drawing.Point(0, 0);
-            this.txbUserName.Name = "txbUserName";
-            this.txbUserName.Size = new System.Drawing.Size(780, 29);
-            this.txbUserName.Text = "유저 이름 :";
-            this.txbUserName.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // txbUserId
-            // 
-            this.txbUserId.Control = this.txbId;
-            this.txbUserId.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.txbUserId.CustomizationFormText = "유저 Id : ";
-            this.txbUserId.HighlightFocusedItem = DevExpress.Utils.DefaultBoolean.True;
-            this.txbUserId.Location = new System.Drawing.Point(0, 29);
-            this.txbUserId.Name = "txbUserId";
-            this.txbUserId.Size = new System.Drawing.Size(780, 29);
-            this.txbUserId.Text = "유저 Id :";
-            this.txbUserId.TextSize = new System.Drawing.Size(67, 18);
             // 
             // userIdDataGridViewTextBoxColumn
             // 
@@ -317,6 +203,120 @@
             // 
             this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
             // 
+            // rdgAdmin
+            // 
+            this.rdgAdmin.EditValue = 0;
+            this.rdgAdmin.Location = new System.Drawing.Point(82, 70);
+            this.rdgAdmin.Name = "rdgAdmin";
+            this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
+            this.rdgAdmin.Size = new System.Drawing.Size(706, 48);
+            this.rdgAdmin.StyleController = this.layoutControl1;
+            this.rdgAdmin.TabIndex = 11;
+            this.rdgAdmin.SelectedIndexChanged += new System.EventHandler(this.rdgAdmin_SelectedIndexChanged);
+            // 
+            // rdgBlacklist
+            // 
+            this.rdgBlacklist.EditValue = 0;
+            this.rdgBlacklist.Location = new System.Drawing.Point(82, 122);
+            this.rdgBlacklist.Name = "rdgBlacklist";
+            this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
+            this.rdgBlacklist.Size = new System.Drawing.Size(706, 48);
+            this.rdgBlacklist.StyleController = this.layoutControl1;
+            this.rdgBlacklist.TabIndex = 11;
+            this.rdgBlacklist.SelectedIndexChanged += new System.EventHandler(this.rdgBlacklist_SelectedIndexChanged);
+            // 
+            // txbName
+            // 
+            this.txbName.Location = new System.Drawing.Point(82, 12);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(706, 25);
+            this.txbName.TabIndex = 6;
+            this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
+            // 
+            // txbId
+            // 
+            this.txbId.Location = new System.Drawing.Point(82, 41);
+            this.txbId.Name = "txbId";
+            this.txbId.Size = new System.Drawing.Size(706, 25);
+            this.txbId.TabIndex = 6;
+            this.txbId.TextChanged += new System.EventHandler(this.txbId_TextChanged);
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem1,
+            this.txbUserName,
+            this.txbUserId});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(800, 450);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.grvUserList;
+            this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem2.CustomizationFormText = "l";
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 162);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(780, 268);
+            this.layoutControlItem2.Text = "리스트";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 18);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.rdgAdmin;
+            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem3.CustomizationFormText = "관리자";
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 58);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(780, 52);
+            this.layoutControlItem3.Text = "관리자";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(67, 18);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.rdgBlacklist;
+            this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem1.CustomizationFormText = "블랙리스트";
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 110);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 52);
+            this.layoutControlItem1.Text = "블랙리스트";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(67, 18);
+            // 
+            // txbUserName
+            // 
+            this.txbUserName.Control = this.txbName;
+            this.txbUserName.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.txbUserName.CustomizationFormText = "유저 이름 : ";
+            this.txbUserName.Location = new System.Drawing.Point(0, 0);
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.Size = new System.Drawing.Size(780, 29);
+            this.txbUserName.Text = "유저 이름 :";
+            this.txbUserName.TextSize = new System.Drawing.Size(67, 18);
+            // 
+            // txbUserId
+            // 
+            this.txbUserId.Control = this.txbId;
+            this.txbUserId.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.txbUserId.CustomizationFormText = "유저 Id : ";
+            this.txbUserId.HighlightFocusedItem = DevExpress.Utils.DefaultBoolean.True;
+            this.txbUserId.Location = new System.Drawing.Point(0, 29);
+            this.txbUserId.Name = "txbUserId";
+            this.txbUserId.Size = new System.Drawing.Size(780, 29);
+            this.txbUserId.Text = "유저 Id :";
+            this.txbUserId.TextSize = new System.Drawing.Size(67, 18);
+            // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -329,6 +329,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grvUserList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgBlacklist.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -337,7 +338,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

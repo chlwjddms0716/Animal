@@ -23,8 +23,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
         }
-
-        private void lookUpEdit1_EditValueChanged(object sender, EventArgs e)
+        private void lkuShelterName_EditValueChanged(object sender, EventArgs e)
         {
             int shelterId = (int)(lkuShelterName.EditValue);
             List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.GetbyShelterId(shelterId);
@@ -46,6 +45,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             ExcuteInsert();
         }
+
         private void 종료XToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExcuteClose();
@@ -96,7 +96,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             animalShelter.PhoneNumber = string.Empty;
             animalShelter.ManagerName = string.Empty;
 
-            animalShelter.AnimalShelterId = DataRepository.AnimalShelter.GetMaxId();
+            animalShelter.AnimalShelterId = DataRepository.AnimalShelter.GetMaxId()+1;
 
             ShelterForm shelter = new ShelterForm(animalShelter);
             shelter.ShowDialog();
@@ -110,11 +110,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (animalShelter == null)
                 return;
 
-
             DataRepository.HomelessAnimal.Delete(animalShelter.AnimalShelterId);
 
             animalShelterBindingSource.Remove(animalShelter);
         }
+
 
     }
 }

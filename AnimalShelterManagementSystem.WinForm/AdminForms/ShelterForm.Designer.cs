@@ -35,6 +35,7 @@
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.txeName = new DevExpress.XtraEditors.TextEdit();
             this.txePhoneNumber = new DevExpress.XtraEditors.TextEdit();
+            this.txeManager = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -43,7 +44,6 @@
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txeManager = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -51,6 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txeAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePhoneNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeManager.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -59,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txeManager.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +107,7 @@
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "추가";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -118,6 +119,7 @@
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "취소";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txeName
             // 
@@ -134,6 +136,14 @@
             this.txePhoneNumber.Size = new System.Drawing.Size(401, 24);
             this.txePhoneNumber.StyleController = this.layoutControl1;
             this.txePhoneNumber.TabIndex = 15;
+            // 
+            // txeManager
+            // 
+            this.txeManager.Location = new System.Drawing.Point(81, 124);
+            this.txeManager.Name = "txeManager";
+            this.txeManager.Size = new System.Drawing.Size(401, 24);
+            this.txeManager.StyleController = this.layoutControl1;
+            this.txeManager.TabIndex = 15;
             // 
             // Root
             // 
@@ -217,14 +227,6 @@
             this.layoutControlItem2.Text = "전화번호 : ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 18);
             // 
-            // txeManager
-            // 
-            this.txeManager.Location = new System.Drawing.Point(81, 124);
-            this.txeManager.Name = "txeManager";
-            this.txeManager.Size = new System.Drawing.Size(401, 24);
-            this.txeManager.StyleController = this.layoutControl1;
-            this.txeManager.TabIndex = 15;
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txeManager;
@@ -243,13 +245,16 @@
             this.ClientSize = new System.Drawing.Size(494, 253);
             this.Controls.Add(this.layoutControl1);
             this.Name = "ShelterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "보호소관리";
+            this.Load += new System.EventHandler(this.ShelterForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txeShelterId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePhoneNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txeManager.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -258,7 +263,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txeManager.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
