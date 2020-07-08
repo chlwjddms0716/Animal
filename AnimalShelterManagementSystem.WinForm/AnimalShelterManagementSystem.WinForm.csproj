@@ -78,6 +78,12 @@
     <Compile Include="AdminForms\AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\AdoptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\AdoptionForm.Designer.cs">
+      <DependentUpon>AdoptionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\AdoptionManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </Compile>
     <EmbeddedResource Include="AdminForms\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\AdoptionForm.resx">
+      <DependentUpon>AdoptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdoptionManagement.resx">
       <DependentUpon>AdoptionManagement.cs</DependentUpon>
