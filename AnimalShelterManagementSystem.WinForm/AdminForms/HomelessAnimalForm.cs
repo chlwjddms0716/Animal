@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using AnimalShelterManagementSystem.Models;
 
 namespace AnimalShelterManagementSystem.WinForm.Forms
 {
