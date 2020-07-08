@@ -67,7 +67,7 @@
           <Property Name="PhysicalCondition" Type="int" Nullable="false" />
           <Property Name="Species" Type="int" Nullable="false" />
           <Property Name="IsAdopted" Type="bit" Nullable="false" />
-          <Property Name="AnimalShelterId" Type="int" />
+          <Property Name="AnimalShelterId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="LossReport">
           <Key>
@@ -329,7 +329,7 @@
           <Property Name="PhysicalCondition" Type="Int32" Nullable="false" />
           <Property Name="Species" Type="Int32" Nullable="false" />
           <Property Name="IsAdopted" Type="Boolean" Nullable="false" />
-          <Property Name="AnimalShelterId" Type="Int32" />
+          <Property Name="AnimalShelterId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Adoptions" Relationship="AnimalShelterManagement.FK_입양기록_유실유기_동물" FromRole="HomelessAnimal" ToRole="Adoption" />
           <NavigationProperty Name="FindingReportRecords" Relationship="AnimalShelterManagement.FK_FindingReportRecord_HomelessAnimal" FromRole="HomelessAnimal" ToRole="FindingReportRecord" />
           <NavigationProperty Name="FoundAnimalRecords" Relationship="AnimalShelterManagement.FK_찾은_분실_동물_기록_유실유기_동물" FromRole="HomelessAnimal" ToRole="FoundAnimalRecord" />
