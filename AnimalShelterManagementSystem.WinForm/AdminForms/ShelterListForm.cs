@@ -77,6 +77,20 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             shelter.ShowDialog();
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (txeAddress.Text != string.Empty)
+            {
+                string Address = txeAddress.Text;
+                List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.SearchWithAddress(Address);
+                animalShelterBindingSource.DataSource = animalShelters;
+            }
+            else
+            {
+                animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
+            }
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
@@ -102,18 +116,5 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             ExecuteDelete();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if(txeAddress.Text != string.Empty)
-            {
-                string Address = txeAddress.Text;
-                List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.SearchWithAddress(Address);
-                animalShelterBindingSource.DataSource = animalShelters;
-            }
-            else 
-            {
-                animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
-            }
-        }
     }
 }
