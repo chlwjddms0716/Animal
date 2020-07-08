@@ -28,11 +28,15 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnAdoptionManagement_Click(object sender, EventArgs e)
         {
+            List<HomelessAnimal> animals = DataRepository.Adoption.GetAnimalsByUserName(txeUserName.Text);
 
-            if (String.Equals(tebUserId.Text, "") == true)
-            {
-                MessageBox.Show("유저아이디를 입력해주세요");
-            }
+            homelessAnimalBindingSource.DataSource = animals;
+
+
+            //if (String.Equals(tebUserId.Text, "") == true)
+            //{
+            //    MessageBox.Show("유저아이디를 입력해주세요");
+            //}
             /*
             adoption.UserId = userId;
             DataRepository.Adoption.Insert(adoption);

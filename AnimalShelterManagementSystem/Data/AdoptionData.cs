@@ -25,5 +25,27 @@ namespace AnimalShelterManagementSystem
 
             Delete(adoption);
         }
+
+        public List<HomelessAnimal> GetAnimalsByUserName(string userName)
+        {
+            AnimalShelterManagementEntities context = CreateContext();
+
+            var query = from x in context.Adoptions
+                        where x.User.Name.Contains(userName)
+                        select x.HomelessAnimal;
+
+            return query.ToList();
+        }
+
+        //public List<HomelessAnimal> GetAnimalsByUserName2(string userName)
+        //{
+        //    AnimalShelterManagementEntities context = CreateContext();
+
+        //    var query = from x in context.HomelessAnimals
+        //                where x.Adoptions.Any(a => a.User.Name.Contains(userName))
+        //                select x;
+
+        //    return query.ToList();
+        //}
     }
 }
