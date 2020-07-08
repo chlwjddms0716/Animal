@@ -1,4 +1,4 @@
-﻿namespace AnimalShelterManagementSystem.WinForm.Forms
+namespace AnimalShelterManagementSystem.WinForm.Forms
 {
     partial class HomelessAnimalForm
     {
@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cbbAnimalShelter = new System.Windows.Forms.ComboBox();
+            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbPSC = new System.Windows.Forms.ComboBox();
             this.cbbGender = new System.Windows.Forms.ComboBox();
             this.dteLatestFindingReport = new DevExpress.XtraEditors.DateEdit();
@@ -60,11 +62,6 @@
             this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
             this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txeHomelessAnimalId = new DevExpress.XtraEditors.TextEdit();
-            this.cbbAnimalShelter = new System.Windows.Forms.ComboBox();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
@@ -94,10 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txeHomelessAnimalId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -122,6 +115,21 @@
             this.layoutControl1.Size = new System.Drawing.Size(800, 450);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cbbAnimalShelter
+            // 
+            this.cbbAnimalShelter.DataSource = this.animalShelterBindingSource;
+            this.cbbAnimalShelter.DisplayMember = "Name";
+            this.cbbAnimalShelter.FormattingEnabled = true;
+            this.cbbAnimalShelter.Location = new System.Drawing.Point(121, 270);
+            this.cbbAnimalShelter.Name = "cbbAnimalShelter";
+            this.cbbAnimalShelter.Size = new System.Drawing.Size(667, 23);
+            this.cbbAnimalShelter.TabIndex = 20;
+            this.cbbAnimalShelter.ValueMember = "AnimalShelterId";
+            // 
+            // animalShelterBindingSource
+            // 
+            this.animalShelterBindingSource.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
             // 
             // cbbPSC
             // 
@@ -384,10 +392,6 @@
             // 
             this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
             // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
-            // 
             // HomelessAnimalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -425,7 +429,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             this.ResumeLayout(false);
 

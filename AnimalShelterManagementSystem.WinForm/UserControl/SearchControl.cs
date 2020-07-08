@@ -51,8 +51,11 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
           //          animalShelterlId = 2;
           //  }
 
-            OnLoadButtonClicked((int)luAnimalshelter.EditValue, (SpeciesType)cbbSpecies.SelectedValue, (Genders)cbbGender.SelectedValue
-                , dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime) ;
+            OnLoadButtonClicked(
+                (int?)luAnimalshelter.EditValue, 
+                (SpeciesType)cbbSpecies.SelectedIndex,
+                rdgGender.EditValue == null ? (Genders?)null : (Genders)(int)rdgGender.EditValue
+                , (DateTime?)dteFoundDateFrom.EditValue, dteFoundDateTo.DateTime) ;
 
            
 
@@ -67,7 +70,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
                 return;
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
             cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
-            cbbGender.DataSource = Enum.GetValues(typeof(Genders));
+            //cbbGender.DataSource = Enum.GetValues(typeof(Genders));
 
             dteFoundDateTo.DateTime = DateTime.Now;
 
@@ -81,7 +84,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
 
         }
 
-     
+
 
         #region LoadButtonClicked event things for C# 3.0
         public event EventHandler<LoadButtonClickedEventArgs> LoadButtonClicked;
@@ -92,9 +95,9 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
                 LoadButtonClicked(this, e);
         }
 
-        private LoadButtonClickedEventArgs OnLoadButtonClicked(int animalShelterId, SpeciesType speciesCode, Genders gender, DateTime foundDateFrom, DateTime foundDateTo)
+        private LoadButtonClickedEventArgs OnLoadButtonClicked(int? animalShelterId, int? speciesCode, Genders? gender, DateTime? foundDateFrom, DateTime? foundDateTo)
         {
-            LoadButtonClickedEventArgs args = new LoadButtonClickedEventArgs(animalShelterId, (int)speciesCode, gender, foundDateFrom, foundDateTo);
+            LoadButtonClickedEventArgs args = new LoadButtonClickedEventArgs(animalShelterId, speciesCode, gender, foundDateFrom, foundDateTo);
             OnLoadButtonClicked(args);
 
             return args;
@@ -110,17 +113,17 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
 
         public class LoadButtonClickedEventArgs : EventArgs
         {
-            public int AnimalShelterId { get; set; }
-            public int SpeciesCode { get; set; }
-            public Genders Gender { get; set; }
-            public DateTime FoundDateFrom { get; set; }
-            public DateTime FoundDateTo { get; set; }
+            public int? AnimalShelterId { get; set; }
+            public int? SpeciesCode { get; set; }
+            public Genders? Gender { get; set; }
+            public DateTime? FoundDateFrom { get; set; }
+            public DateTime? FoundDateTo { get; set; }
 
             public LoadButtonClickedEventArgs()
             {
             }
 
-            public LoadButtonClickedEventArgs(int animalShelterId, int speciesCode, Genders gender, DateTime foundDateFrom, DateTime foundDateTo)
+            public LoadButtonClickedEventArgs(int? animalShelterId, int? speciesCode, Genders? gender, DateTime? foundDateFrom, DateTime? foundDateTo)
             {
                 AnimalShelterId = animalShelterId;
                 SpeciesCode = speciesCode;
@@ -130,6 +133,5 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             }
         }
         #endregion
-
     }
 }

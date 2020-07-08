@@ -1,4 +1,4 @@
-﻿namespace AnimalShelterManagementSystem.WinForm.Forms
+namespace AnimalShelterManagementSystem.WinForm.Forms
 {
     partial class HomelessAnimalListForm
     {
