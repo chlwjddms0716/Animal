@@ -102,7 +102,7 @@
             this.layoutControl3.Controls.Add(this.rdgBlacklist);
             this.layoutControl3.Controls.Add(this.boxUserId);
             this.layoutControl3.Controls.Add(this.boxBlacklistReason);
-            this.layoutControl3.Location = new System.Drawing.Point(12, 12);
+            this.layoutControl3.Location = new System.Drawing.Point(3, 0);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1021, 0, 812, 500);
             this.layoutControl3.Padding = new System.Windows.Forms.Padding(50);
@@ -419,7 +419,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 413);
+            this.ClientSize = new System.Drawing.Size(511, 401);
             this.Controls.Add(this.layoutControl3);
             this.Name = "EditUserInformationByAdmin";
             this.Text = "EditUserInformationByAdmin";
