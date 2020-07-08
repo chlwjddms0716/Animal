@@ -37,7 +37,7 @@
             this.dteFoundDateTo = new DevExpress.XtraEditors.DateEdit();
             this.dteFoundDateFrom = new DevExpress.XtraEditors.DateEdit();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
-            this.luAnimalshelter = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueAnimalShelterId = new DevExpress.XtraEditors.LookUpEdit();
             this.bdsAnimalShelter = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -58,7 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luAnimalshelter.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueAnimalShelterId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsAnimalShelter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -91,7 +91,7 @@
             this.layoutControl1.Controls.Add(this.dteFoundDateTo);
             this.layoutControl1.Controls.Add(this.dteFoundDateFrom);
             this.layoutControl1.Controls.Add(this.btnLoad);
-            this.layoutControl1.Controls.Add(this.luAnimalshelter);
+            this.layoutControl1.Controls.Add(this.lueAnimalShelterId);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(2, 27);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -168,24 +168,24 @@
             this.btnLoad.Text = "검색";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // luAnimalshelter
+            // lueAnimalShelterId
             // 
-            this.luAnimalshelter.AllowDrop = true;
-            this.luAnimalshelter.EditValue = 2;
-            this.luAnimalshelter.Location = new System.Drawing.Point(90, 12);
-            this.luAnimalshelter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.luAnimalshelter.Name = "luAnimalshelter";
-            this.luAnimalshelter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lueAnimalShelterId.AllowDrop = true;
+            this.lueAnimalShelterId.EditValue = 2;
+            this.lueAnimalShelterId.Location = new System.Drawing.Point(90, 12);
+            this.lueAnimalShelterId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lueAnimalShelterId.Name = "lueAnimalShelterId";
+            this.lueAnimalShelterId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luAnimalshelter.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.lueAnimalShelterId.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name1")});
-            this.luAnimalshelter.Properties.DataSource = this.bdsAnimalShelter;
-            this.luAnimalshelter.Properties.DisplayMember = "Name";
-            this.luAnimalshelter.Properties.ValueMember = "AnimalShelterId";
-            this.luAnimalshelter.Size = new System.Drawing.Size(605, 24);
-            this.luAnimalshelter.StyleController = this.layoutControl1;
-            this.luAnimalshelter.TabIndex = 4;
-            this.luAnimalshelter.UseWaitCursor = true;
+            this.lueAnimalShelterId.Properties.DataSource = this.bdsAnimalShelter;
+            this.lueAnimalShelterId.Properties.DisplayMember = "Name";
+            this.lueAnimalShelterId.Properties.ValueMember = "AnimalShelterId";
+            this.lueAnimalShelterId.Size = new System.Drawing.Size(605, 24);
+            this.lueAnimalShelterId.StyleController = this.layoutControl1;
+            this.lueAnimalShelterId.TabIndex = 4;
+            this.lueAnimalShelterId.UseWaitCursor = true;
             // 
             // Root
             // 
@@ -205,7 +205,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.luAnimalshelter;
+            this.layoutControlItem1.Control = this.lueAnimalShelterId;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(687, 28);
@@ -291,7 +291,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.luAnimalshelter.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueAnimalShelterId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsAnimalShelter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -310,7 +310,7 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.LookUpEdit luAnimalshelter;
+        private DevExpress.XtraEditors.LookUpEdit lueAnimalShelterId;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;

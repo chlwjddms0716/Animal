@@ -38,11 +38,11 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
         {
 
             OnLoadButtonClicked(
-                  luAnimalshelter.EditValue == null ? (int?)null : (int)luAnimalshelter.EditValue,
-              lueSpecies.EditValue == null ? (SpeciesType?)null : (SpeciesType)(int)lueSpecies.EditValue,
+                  (int)lueAnimalShelterId.EditValue,
+              (SpeciesType?)(int)lueSpecies.EditValue,
                 rdgGender.EditValue == null ? (Genders?)null : (Genders)(int)rdgGender.EditValue,
-                 dteFoundDateFrom.EditValue == null ? (DateTime?)null : (DateTime)dteFoundDateFrom.EditValue,
-                dteFoundDateTo.EditValue == null ? (DateTime?)null : (DateTime)dteFoundDateTo.EditValue);
+                 (DateTime?)dteFoundDateFrom.EditValue,
+                (DateTime?)dteFoundDateTo.EditValue);
 
 
 
@@ -118,5 +118,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             }
         }
         #endregion
+
+        
     }
 }

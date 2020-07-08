@@ -26,6 +26,7 @@ namespace AnimalShelterManagementSystem.Models
 
 public enum SpeciesType
     {
+        
         개 = 1,
 고양이,
 새    ,
