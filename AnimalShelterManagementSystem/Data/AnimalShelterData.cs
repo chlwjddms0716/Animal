@@ -37,6 +37,7 @@ namespace AnimalShelterManagementSystem
             return query.FirstOrDefault();
         }
 
+
         public int GetFirstId()
         {
             AnimalShelterManagementEntities context = CreateContext();
@@ -58,9 +59,21 @@ namespace AnimalShelterManagementSystem
                 if (animalShelter.AnimalShelterId == shelterId)
                     animalShelters.Add(animalShelter);
             }
-           
             return animalShelters;
-
         }
+        public List<AnimalShelter> SearchWithAddress(string address)
+        {
+            AnimalShelterManagementEntities context = CreateContext();
+            List<AnimalShelter> animalShelters = new List<AnimalShelter>();
+
+            foreach (AnimalShelter animalShelter in context.AnimalShelters)
+            {
+                if (animalShelter.Address.Contains(address) == true)
+                    animalShelters.Add(animalShelter);
+            }
+
+            return animalShelters;
+        }
+
     }
 }

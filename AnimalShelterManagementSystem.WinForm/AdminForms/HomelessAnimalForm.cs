@@ -46,8 +46,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
                 Close();
             }
-           
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -58,7 +56,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void btnSave_Click(object sender, EventArgs e)
         {
        
-
             try
             {
                 WriteToEntity();
@@ -79,7 +76,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void HomelessAnimalForm_Load(object sender, EventArgs e)
         {
 
-            cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+          //  cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
             txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId);
             homelessAnimalBindingSource.DataSource = DataRepository.HomelessAnimal.GetAll();
 
@@ -98,11 +95,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             txeFeature.Text = _homelessAnimal.Feature;
             dteDate.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
             txePictureLink.Text = _homelessAnimal.PictureLink;
-
-
-
-
-
         }
     }
 

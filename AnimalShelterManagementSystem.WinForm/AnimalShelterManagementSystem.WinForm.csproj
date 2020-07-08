@@ -100,11 +100,17 @@
     <Compile Include="AdminForms\HomelessAnimalListForm.designer.cs">
       <DependentUpon>HomelessAnimalListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\Shelter.cs">
+    <Compile Include="AdminForms\ShelterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\Shelter.Designer.cs">
-      <DependentUpon>Shelter.cs</DependentUpon>
+    <Compile Include="AdminForms\ShelterForm.Designer.cs">
+      <DependentUpon>ShelterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\ShelterListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\ShelterListForm.Designer.cs">
+      <DependentUpon>ShelterListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl\SearchControl.cs">
       <SubType>UserControl</SubType>
@@ -170,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\HomelessAnimalListForm.resx">
       <DependentUpon>HomelessAnimalListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ShelterForm.resx">
+      <DependentUpon>ShelterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ShelterListForm.resx">
+      <DependentUpon>ShelterListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>
