@@ -43,6 +43,18 @@ namespace AnimalShelterManagementSystem
             return context.Users.FirstOrDefault(a => a.Id == id);
 
         }
+
+        public List <User> GetbyName(string name)
+        {
+            List<User> user = new List<User>();
+            AnimalShelterManagementEntities context = CreateContext();
+            foreach(User userr in context.Users)
+            {
+                if (String.Equals(userr.Name, name) == true)
+                    user.Add(userr);
+            }
+            return user;
+        }
     }
 }
 

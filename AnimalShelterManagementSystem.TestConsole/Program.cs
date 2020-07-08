@@ -12,12 +12,7 @@ namespace AnimalShelterManagementSystem.TestConsole
     {
         static void Main(string[] args)
         {
-            var list = DataRepository.HomelessAnimal.SearchWithAnimals((int)SpeciesType.개, false, false);
-            foreach (var x in list)
-            {
-                Console.WriteLine($"{x.HomelessAnimalId} / {x.Gender}");
-            }
-            Console.ReadLine();
+
         }
     }
 }

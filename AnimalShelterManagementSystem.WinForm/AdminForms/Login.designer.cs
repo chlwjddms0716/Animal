@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.l = new System.Windows.Forms.Label();
+            this.btnFindPassword = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFindId = new DevExpress.XtraEditors.SimpleButton();
             this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.txePassword = new DevExpress.XtraEditors.TextEdit();
@@ -41,6 +44,9 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -54,6 +60,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -69,11 +78,14 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(379, 207);
-            this.splitContainerControl1.SplitterPosition = 161;
+            this.splitContainerControl1.SplitterPosition = 194;
             this.splitContainerControl1.TabIndex = 0;
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.l);
+            this.layoutControl1.Controls.Add(this.btnFindPassword);
+            this.layoutControl1.Controls.Add(this.btnFindId);
             this.layoutControl1.Controls.Add(this.btnSignup);
             this.layoutControl1.Controls.Add(this.btnLogin);
             this.layoutControl1.Controls.Add(this.txePassword);
@@ -84,9 +96,37 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 0, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(379, 161);
+            this.layoutControl1.Size = new System.Drawing.Size(379, 194);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // l
+            // 
+            this.l.Location = new System.Drawing.Point(174, 138);
+            this.l.Name = "l";
+            this.l.Size = new System.Drawing.Size(25, 44);
+            this.l.TabIndex = 9;
+            this.l.Text = " ";
+            // 
+            // btnFindPassword
+            // 
+            this.btnFindPassword.Location = new System.Drawing.Point(203, 138);
+            this.btnFindPassword.Name = "btnFindPassword";
+            this.btnFindPassword.Size = new System.Drawing.Size(164, 27);
+            this.btnFindPassword.StyleController = this.layoutControl1;
+            this.btnFindPassword.TabIndex = 8;
+            this.btnFindPassword.Text = "비밀번호 찾기";
+            this.btnFindPassword.Click += new System.EventHandler(this.btnFindPassword_Click);
+            // 
+            // btnFindId
+            // 
+            this.btnFindId.Location = new System.Drawing.Point(12, 138);
+            this.btnFindId.Name = "btnFindId";
+            this.btnFindId.Size = new System.Drawing.Size(158, 27);
+            this.btnFindId.StyleController = this.layoutControl1;
+            this.btnFindId.TabIndex = 7;
+            this.btnFindId.Text = "아이디 찾기";
+            this.btnFindId.Click += new System.EventHandler(this.btnFindId_Click);
             // 
             // btnSignup
             // 
@@ -144,9 +184,12 @@
             this.emptySpaceItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
-            this.layoutControlItem4});
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem6,
+            this.layoutControlItem7});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(379, 161);
+            this.Root.Size = new System.Drawing.Size(379, 194);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -163,7 +206,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(173, 56);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(18, 85);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(18, 70);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -182,7 +225,7 @@
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(173, 70);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(173, 70);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(173, 85);
+            this.layoutControlItem3.Size = new System.Drawing.Size(173, 70);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
@@ -194,10 +237,37 @@
             this.layoutControlItem4.MaxSize = new System.Drawing.Size(168, 70);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(168, 70);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(168, 85);
+            this.layoutControlItem4.Size = new System.Drawing.Size(168, 70);
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.btnFindId;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 126);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(162, 48);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnFindPassword;
+            this.layoutControlItem6.Location = new System.Drawing.Point(191, 126);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(168, 48);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.l;
+            this.layoutControlItem7.Location = new System.Drawing.Point(162, 126);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(29, 48);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
             // 
             // ribbonPage2
             // 
@@ -229,6 +299,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,5 +321,11 @@
         private DevExpress.XtraEditors.SimpleButton btnSignup;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraEditors.SimpleButton btnFindPassword;
+        private DevExpress.XtraEditors.SimpleButton btnFindId;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private System.Windows.Forms.Label l;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }
