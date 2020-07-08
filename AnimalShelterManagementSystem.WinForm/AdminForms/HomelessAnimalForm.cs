@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using AnimalShelterManagementSystem.Models;
 
 namespace AnimalShelterManagementSystem.WinForm.Forms
 {
@@ -39,7 +40,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             {
                 _homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
                 _homelessAnimal.Feature = txeFeature.Text;
-                _homelessAnimal.LatestFindingReport = dteDate.DateTime.Date;
+                _homelessAnimal.LatestFindingReport = dteLatestFindingReport.DateTime.Date;
                 _homelessAnimal.PictureLink = txePictureLink.Text;
 
                 //MessageBox.Show("저장되었습니다.");
@@ -79,11 +80,14 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void HomelessAnimalForm_Load(object sender, EventArgs e)
         {
 
-            cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+            
             txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId);
             homelessAnimalBindingSource.DataSource = DataRepository.HomelessAnimal.GetAll();
-
-
+            cbbGender.DataSource = Enum.GetValues(typeof(Genders));
+            cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+            dteLatestFindingReport.DateTime = DateTime.Now;
+            txePictureLink.Text = "사진이 들어있는 링크를 작성해주세요";
+            txeFeature.Text = "특징을 작성해주세요";
             ReadFromEntity();
         }
 
@@ -96,7 +100,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
     
             txeFeature.Text = _homelessAnimal.Feature;
-            dteDate.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
+            dteLatestFindingReport.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
             txePictureLink.Text = _homelessAnimal.PictureLink;
 
 

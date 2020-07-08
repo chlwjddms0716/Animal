@@ -116,9 +116,6 @@ namespace AnimalShelterManagementSystem
                 x.GenderName = ((Genders)x.Gender).ToString();
                 x.LatestFindingReportDate = x.LatestFindingReport;
                 
-
-
-
             }
 
             return list;

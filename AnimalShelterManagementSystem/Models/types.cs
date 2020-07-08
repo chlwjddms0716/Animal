@@ -12,9 +12,10 @@ namespace AnimalShelterManagementSystem.Models
     ///     
     public enum Genders
     {
-        All = 0,
-        Male,
-        Female
+        
+        Male=1,
+        Female=2,
+        All = 1 | 2,
     }
 
     public enum PhysicalConditionType

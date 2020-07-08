@@ -121,9 +121,11 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void searchControl1_LoadButtonClicked(object sender, UserControls.SearchControl.LoadButtonClickedEventArgs e)
         {
             List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(e.AnimalShelterId, e.SpeciesCode, (int)e.Gender , e.FoundDateFrom, e.FoundDateTo);
-           // List<AnimalShelter> AnimalShelters = DataRepository.AnimalShelter.GetbyShelterId(e.AnimalShelterId);
+           //List<AnimalShelter> AnimalShelters = DataRepository.AnimalShelter.GetbyShelterId(e.AnimalShelterId);
 
             homelessAnimalBindingSource.DataSource = homelessAnimals;
+           // homelessAnimalBindingSource.DataSource = AnimalShelters;
+           
             
 
 
