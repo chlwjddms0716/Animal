@@ -30,43 +30,43 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.adoptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SpeciesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhysicalConditionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Adoptions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PictureLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnCancel_Click = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdoptionManagement_Click = new DevExpress.XtraEditors.SimpleButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.adoptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.dataGridView1);
-            this.layoutControl1.Controls.Add(this.simpleButton2);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
+            this.layoutControl1.Controls.Add(this.btnCancel_Click);
+            this.layoutControl1.Controls.Add(this.btnAdoptionManagement_Click);
             this.layoutControl1.Controls.Add(this.textBox2);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -75,80 +75,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(798, 460);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.emptySpaceItem1,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem9,
-            this.layoutControlItem2});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(798, 460);
-            this.Root.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 396);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(778, 13);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(66, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(720, 25);
-            this.textBox2.TabIndex = 5;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.textBox2;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(778, 29);
-            this.layoutControlItem2.Text = " 유저Id:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(50, 18);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(341, 421);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(445, 27);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 7;
-            this.simpleButton1.Text = "확인";
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.simpleButton1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(329, 409);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(449, 31);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(12, 421);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(325, 27);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 8;
-            this.simpleButton2.Text = "취소";
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.simpleButton2;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 409);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(329, 31);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
             // 
             // dataGridView1
             // 
@@ -165,35 +91,14 @@
             this.Adoptions,
             this.PictureLink});
             this.dataGridView1.DataSource = this.homelessAnimalBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(66, 41);
+            this.dataGridView1.Location = new System.Drawing.Point(65, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(720, 363);
+            this.dataGridView1.Size = new System.Drawing.Size(721, 363);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.dataGridView1;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 29);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(778, 367);
-            this.layoutControlItem9.Text = "리스트";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(50, 18);
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
-            // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
-            // 
-            // adoptionBindingSource
-            // 
-            this.adoptionBindingSource.DataSource = typeof(AnimalShelterManagementSystem.Adoption);
             // 
             // SpeciesName
             // 
@@ -240,6 +145,104 @@
             this.PictureLink.ReadOnly = true;
             this.PictureLink.Width = 125;
             // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            // 
+            // btnCancel_Click
+            // 
+            this.btnCancel_Click.Location = new System.Drawing.Point(12, 421);
+            this.btnCancel_Click.Name = "btnCancel_Click";
+            this.btnCancel_Click.Size = new System.Drawing.Size(325, 27);
+            this.btnCancel_Click.StyleController = this.layoutControl1;
+            this.btnCancel_Click.TabIndex = 8;
+            this.btnCancel_Click.Text = "취소";
+            this.btnCancel_Click.Click += new System.EventHandler(this.btnCancel_Click_Click);
+            // 
+            // btnAdoptionManagement_Click
+            // 
+            this.btnAdoptionManagement_Click.Location = new System.Drawing.Point(341, 421);
+            this.btnAdoptionManagement_Click.Name = "btnAdoptionManagement_Click";
+            this.btnAdoptionManagement_Click.Size = new System.Drawing.Size(445, 27);
+            this.btnAdoptionManagement_Click.StyleController = this.layoutControl1;
+            this.btnAdoptionManagement_Click.TabIndex = 7;
+            this.btnAdoptionManagement_Click.Text = "확인";
+            this.btnAdoptionManagement_Click.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(65, 12);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(721, 25);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.emptySpaceItem1,
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem9,
+            this.layoutControlItem2});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(798, 460);
+            this.Root.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 396);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(778, 13);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.btnAdoptionManagement_Click;
+            this.layoutControlItem4.Location = new System.Drawing.Point(329, 409);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(449, 31);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.btnCancel_Click;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 409);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(329, 31);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.dataGridView1;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 29);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(778, 367);
+            this.layoutControlItem9.Text = "리스트";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(50, 18);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.textBox2;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(778, 29);
+            this.layoutControlItem2.Text = " 유저Id:";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(50, 18);
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
+            // 
+            // adoptionBindingSource
+            // 
+            this.adoptionBindingSource.DataSource = typeof(AnimalShelterManagementSystem.Adoption);
+            // 
             // AdoptionManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -250,15 +253,15 @@
             this.Text = "입양 관리";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -271,8 +274,8 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private System.Windows.Forms.TextBox textBox2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnCancel_Click;
+        private DevExpress.XtraEditors.SimpleButton btnAdoptionManagement_Click;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private System.Windows.Forms.DataGridView dataGridView1;

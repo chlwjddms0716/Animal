@@ -26,5 +26,20 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

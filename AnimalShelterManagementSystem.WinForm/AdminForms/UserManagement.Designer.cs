@@ -30,24 +30,24 @@
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.grvUserList = new System.Windows.Forms.DataGridView();
+            this.rdgAdmin = new DevExpress.XtraEditors.RadioGroup();
+            this.rdgSex1 = new DevExpress.XtraEditors.RadioGroup();
+            this.txbName = new System.Windows.Forms.TextBox();
+            this.txbId = new System.Windows.Forms.TextBox();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.rdgAdmin = new DevExpress.XtraEditors.RadioGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.rdgSex1 = new DevExpress.XtraEditors.RadioGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txbName = new System.Windows.Forms.TextBox();
             this.txbUserName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txbId = new System.Windows.Forms.TextBox();
             this.txbUserId = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvUserList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdgSex1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdgSex1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserId)).BeginInit();
@@ -83,6 +83,48 @@
             this.grvUserList.Size = new System.Drawing.Size(706, 264);
             this.grvUserList.TabIndex = 10;
             // 
+            // rdgAdmin
+            // 
+            this.rdgAdmin.EditValue = 0;
+            this.rdgAdmin.Location = new System.Drawing.Point(82, 70);
+            this.rdgAdmin.Name = "rdgAdmin";
+            this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
+            this.rdgAdmin.Size = new System.Drawing.Size(706, 48);
+            this.rdgAdmin.StyleController = this.layoutControl1;
+            this.rdgAdmin.TabIndex = 11;
+            this.rdgAdmin.SelectedIndexChanged += new System.EventHandler(this.rdgAdmin_SelectedIndexChanged);
+            // 
+            // rdgSex1
+            // 
+            this.rdgSex1.EditValue = 0;
+            this.rdgSex1.Location = new System.Drawing.Point(82, 122);
+            this.rdgSex1.Name = "rdgSex1";
+            this.rdgSex1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
+            this.rdgSex1.Size = new System.Drawing.Size(706, 48);
+            this.rdgSex1.StyleController = this.layoutControl1;
+            this.rdgSex1.TabIndex = 11;
+            // 
+            // txbName
+            // 
+            this.txbName.Location = new System.Drawing.Point(82, 12);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(706, 25);
+            this.txbName.TabIndex = 6;
+            // 
+            // txbId
+            // 
+            this.txbId.Location = new System.Drawing.Point(82, 41);
+            this.txbId.Name = "txbId";
+            this.txbId.Size = new System.Drawing.Size(706, 25);
+            this.txbId.TabIndex = 6;
+            this.txbId.TextChanged += new System.EventHandler(this.txbId_TextChanged);
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -108,20 +150,6 @@
             this.layoutControlItem2.Text = "리스트";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 18);
             // 
-            // rdgAdmin
-            // 
-            this.rdgAdmin.EditValue = 0;
-            this.rdgAdmin.Location = new System.Drawing.Point(82, 70);
-            this.rdgAdmin.Name = "rdgAdmin";
-            this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgAdmin.Size = new System.Drawing.Size(706, 48);
-            this.rdgAdmin.StyleController = this.layoutControl1;
-            this.rdgAdmin.TabIndex = 11;
-            this.rdgAdmin.SelectedIndexChanged += new System.EventHandler(this.rdgAdmin_SelectedIndexChanged);
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.rdgAdmin;
@@ -132,19 +160,6 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(780, 52);
             this.layoutControlItem3.Text = "성별";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // rdgSex1
-            // 
-            this.rdgSex1.EditValue = 0;
-            this.rdgSex1.Location = new System.Drawing.Point(82, 122);
-            this.rdgSex1.Name = "rdgSex1";
-            this.rdgSex1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgSex1.Size = new System.Drawing.Size(706, 48);
-            this.rdgSex1.StyleController = this.layoutControl1;
-            this.rdgSex1.TabIndex = 11;
             // 
             // layoutControlItem1
             // 
@@ -157,13 +172,6 @@
             this.layoutControlItem1.Text = "성별";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(67, 18);
             // 
-            // txbName
-            // 
-            this.txbName.Location = new System.Drawing.Point(82, 12);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(706, 25);
-            this.txbName.TabIndex = 6;
-            // 
             // txbUserName
             // 
             this.txbUserName.Control = this.txbName;
@@ -174,13 +182,6 @@
             this.txbUserName.Size = new System.Drawing.Size(780, 29);
             this.txbUserName.Text = "유저 이름 :";
             this.txbUserName.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // txbId
-            // 
-            this.txbId.Location = new System.Drawing.Point(82, 41);
-            this.txbId.Name = "txbId";
-            this.txbId.Size = new System.Drawing.Size(706, 25);
-            this.txbId.TabIndex = 6;
             // 
             // txbUserId
             // 
@@ -205,11 +206,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grvUserList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdgSex1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdgSex1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserId)).EndInit();
