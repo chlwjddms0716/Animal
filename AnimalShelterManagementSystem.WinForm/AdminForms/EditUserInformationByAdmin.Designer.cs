@@ -206,7 +206,7 @@
             // 
             // boxBlacklistReason
             // 
-            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 111);
+            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 145);
             this.boxBlacklistReason.Name = "boxBlacklistReason";
             this.boxBlacklistReason.Size = new System.Drawing.Size(373, 24);
             this.boxBlacklistReason.StyleController = this.layoutControl3;
@@ -227,7 +227,7 @@
             // rdgBlacklist
             // 
             this.rdgBlacklist.EditValue = 0;
-            this.rdgBlacklist.Location = new System.Drawing.Point(152, 139);
+            this.rdgBlacklist.Location = new System.Drawing.Point(152, 111);
             this.rdgBlacklist.Name = "rdgBlacklist";
             this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
@@ -259,10 +259,10 @@
             this.layoutControlItem6,
             this.layoutControlItem3,
             this.layoutControlItem9,
-            this.layoutControlItem10,
             this.layoutControlItem8,
             this.layoutControlItem11,
-            this.layoutControlItem12});
+            this.layoutControlItem12,
+            this.layoutControlItem10});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(537, 358);
             this.layoutControlGroup1.TextVisible = false;
@@ -356,7 +356,7 @@
             this.layoutControlItem10.Control = this.rdgBlacklist;
             this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem10.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 230);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 202);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(517, 34);
             this.layoutControlItem10.Text = "블랙리스트";
@@ -367,7 +367,7 @@
             this.layoutControlItem8.Control = this.boxBlacklistReason;
             this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 202);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 236);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(517, 28);
             this.layoutControlItem8.Text = "블랙리스트 등록 이유 :";

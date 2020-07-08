@@ -29,55 +29,40 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void querybyName()
         {
             if (String.Equals(txbName.Text, "") == false)
-            {
-                FilteredById = (List<User>)(from x in UserList
-                                            where x.Name.Contains(txbName.Text) == true
-                                            select x);
-            }
+                FilteredByName = UserList.Where(x => x.Name.Contains(txbName.Text) == true).ToList();
             else
-                FilteredById = UserList;
+                FilteredByName = UserList;
         }
         private void querybyId()
         {
             querybyName();
             if (String.Equals(txbId.Text, "") == false)
-            {
-                FilteredByName = (List<User>)(from x in FilteredById
-                                              where x.Id.Contains(txbId.Text) == true
-                                            select x);
-            }
+                FilteredById = FilteredByName.Where(x => x.Id.Contains(txbId.Text) == true).ToList();
+
             else
-                FilteredByName = FilteredById;
+                FilteredById = FilteredByName;
         }
         private void querybyAdmin()
         {
             querybyId();
             if (AdminCode != 2)
-            {
-                FilteredByAdmin = (List<User>)(from x in FilteredByName
-                                               where x.IsAdministrator == Convert.ToBoolean(AdminCode)
-                                               select x);
-            }
+                FilteredByAdmin = FilteredById.Where(x => x.IsAdministrator == Convert.ToBoolean(AdminCode)).ToList();
             else
-                FilteredByAdmin = FilteredByName;
+                FilteredByAdmin = FilteredById;
         }
         private void querybyBlacklist()
         {
             querybyAdmin();
             if (BlacklistCode != 2)
-            {
-                FilteredByBlacklist = (List<User>)(from x in FilteredByAdmin
-                                               where x.IsBlacklist == Convert.ToBoolean(BlacklistCode)
-                                               select x);
-            }
+                FilteredByBlacklist = FilteredByAdmin.Where(x => x.IsBlacklist == Convert.ToBoolean(BlacklistCode)).ToList();
             else
                 FilteredByBlacklist = FilteredByAdmin;
+            userBindingSource.DataSource = FilteredByBlacklist;
         }
         private void UserManagement_Load(object sender, EventArgs e)
         {
             UserList = DataRepository.User.GetAll();
-            querybyBlacklist();
-            userBindingSource.DataSource = FilteredByBlacklist;
+            userBindingSource.DataSource = UserList;
             
         }
         private void txbName_TextChanged(object sender, EventArgs e)
