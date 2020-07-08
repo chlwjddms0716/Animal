@@ -88,8 +88,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void grvUserList_DoubleClick(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            User user = userBindingSource.Current as User;
-            EditUserInformationByAdmin editUserInformationByAdmin = new EditUserInformationByAdmin(user.Id);
+            EditUserInformationByAdmin editUserInformationByAdmin = new EditUserInformationByAdmin(userBindingSource.Current as User);
             editUserInformationByAdmin.ShowDialog();
             Cursor = Cursors.Arrow;
 
