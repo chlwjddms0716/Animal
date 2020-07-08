@@ -47,6 +47,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homelessAnimalIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,9 +57,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.pictureLinkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.건강상태 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.종 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.입양여부 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.보호센터ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchControl1 = new AnimalShelterManagementSystem.WinForm.UserControls.SearchControl();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -76,7 +75,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(989, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(989, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,7 +84,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.파일FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.종료XToolStripMenuItem});
             this.파일FToolStripMenuItem.Name = "파일FToolStripMenuItem";
-            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
+            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.파일FToolStripMenuItem.Text = "파일(&F)";
             // 
             // 종료XToolStripMenuItem
@@ -102,7 +101,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.삭제DToolStripMenuItem,
             this.수정UToolStripMenuItem});
             this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
-            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.편집EToolStripMenuItem.Text = "편집(&E)";
             // 
             // 추가IToolStripMenuItem
@@ -133,7 +132,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripSeparator1,
             this.도움말HToolStripMenuItem1});
             this.도움말HToolStripMenuItem.Name = "도움말HToolStripMenuItem";
-            this.도움말HToolStripMenuItem.Size = new System.Drawing.Size(89, 26);
+            this.도움말HToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.도움말HToolStripMenuItem.Text = "도움말(&H)";
             // 
             // 정보AToolStripMenuItem
@@ -166,9 +165,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripButton5});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(989, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(989, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -178,7 +177,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton1.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Close;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -188,7 +187,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton2.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -198,7 +197,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton3.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton3.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton3.Text = "toolStripButton3";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -208,7 +207,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton4.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton4.Text = "toolStripButton4";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -218,7 +217,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton5.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton5.Text = "toolStripButton5";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -242,7 +241,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.pictureLinkDataGridViewTextBoxColumn,
             this.건강상태,
             this.종,
-            this.입양여부,
             this.보호센터ID});
             this.dataGridView1.DataSource = this.homelessAnimalBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(4, 220);
@@ -253,6 +251,10 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(985, 332);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
             // 
             // homelessAnimalIdDataGridViewTextBoxColumn
             // 
@@ -335,15 +337,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.종.ReadOnly = true;
             this.종.Width = 125;
             // 
-            // 입양여부
-            // 
-            this.입양여부.DataPropertyName = "IsAdopted";
-            this.입양여부.HeaderText = "입양여부";
-            this.입양여부.MinimumWidth = 6;
-            this.입양여부.Name = "입양여부";
-            this.입양여부.ReadOnly = true;
-            this.입양여부.Width = 125;
-            // 
             // 보호센터ID
             // 
             this.보호센터ID.DataPropertyName = "AnimalShelterId";
@@ -353,18 +346,13 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.보호센터ID.ReadOnly = true;
             this.보호센터ID.Width = 125;
             // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
-            // 
             // searchControl1
             // 
-            this.searchControl1.Location = new System.Drawing.Point(4, 59);
+            this.searchControl1.Location = new System.Drawing.Point(12, 73);
             this.searchControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Size = new System.Drawing.Size(1011, 154);
+            this.searchControl1.Size = new System.Drawing.Size(965, 131);
             this.searchControl1.TabIndex = 4;
-            this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked);
             // 
             // HomelessAnimalListForm
             // 
@@ -413,7 +401,8 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn speciesCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isMaleDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn physicalConditionCodeDataGridViewTextBoxColumn;
-        private UserControls.SearchControl searchControl1;
+        private System.Windows.Forms.ToolStripMenuItem 수정UToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.DataGridViewTextBoxColumn homelessAnimalIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
@@ -423,9 +412,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn pictureLinkDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn 건강상태;
         private System.Windows.Forms.DataGridViewTextBoxColumn 종;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn 입양여부;
         private System.Windows.Forms.DataGridViewTextBoxColumn 보호센터ID;
-        private System.Windows.Forms.ToolStripMenuItem 수정UToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private UserControls.SearchControl searchControl1;
     }
 }

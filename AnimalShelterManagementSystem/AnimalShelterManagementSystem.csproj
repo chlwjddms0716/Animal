@@ -110,6 +110,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\GetValues.cs" />
+    <Compile Include="Models\Species.cs" />
     <Compile Include="Models\types.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
