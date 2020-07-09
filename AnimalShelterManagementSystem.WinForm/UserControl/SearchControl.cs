@@ -17,6 +17,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
     
     public partial class SearchControl : DevExpress.XtraEditors.XtraUserControl
     {
+        
         private int GenderCode = 0;
         private int speciesCode;
         private int animalShelterId;
@@ -56,17 +57,15 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             //      if (animalShelterlId == null || animalShelterlId.Value < 1)
             //          animalShelterlId = 2;
             //  }
-            
+
 
 
             OnLoadButtonClicked((int)lueAnimalShelterId.EditValue, (SpeciesType)cbbSpecies.SelectedValue, (int)rdgGender.EditValue
-                , dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime);
+       , dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime);
+
+    
 
 
-
-
-
-            
 
 
             Cursor = Cursors.Arrow;
@@ -144,10 +143,16 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
 
 
 
-        //private void rdgGender_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    GenderCode = (int)rdgGender.EditValue;
-        //List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(animalShelterId, speciesCode, GenderCode, foundDateFrom, foundDateTo);
-        //}
+        private void rdgGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            GenderCode = (int)rdgGender.EditValue;
+            //List<HomelessAnimal> homelessAnimals = new List<HomelessAnimal>();
+
+            //List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(animalShelterId, speciesCode, GenderCode, foundDateFrom, foundDateTo);
+
+
+
+        }
     }
 }

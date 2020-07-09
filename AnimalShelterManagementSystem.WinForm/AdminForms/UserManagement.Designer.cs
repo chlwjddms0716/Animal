@@ -36,17 +36,6 @@
             this.tsbEdit = new System.Windows.Forms.ToolStripButton();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.grvUserList = new System.Windows.Forms.DataGridView();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isBlacklistDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.blacklistReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isAdministratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.adoptionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rdgAdmin = new DevExpress.XtraEditors.RadioGroup();
             this.rdgBlacklist = new DevExpress.XtraEditors.RadioGroup();
             this.txbName = new System.Windows.Forms.TextBox();
@@ -58,11 +47,21 @@
             this.txbUserName = new DevExpress.XtraLayout.LayoutControlItem();
             this.txbUserId = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isBlacklistDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.blacklistReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isAdministratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.adoptionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvUserList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgBlacklist.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -72,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txbUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -174,100 +174,6 @@
             this.grvUserList.Size = new System.Drawing.Size(706, 241);
             this.grvUserList.TabIndex = 10;
             this.grvUserList.DoubleClick += new System.EventHandler(this.grvUserList_DoubleClick);
-            // 
-            // userIdDataGridViewTextBoxColumn
-            // 
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
-            this.userIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            this.passwordDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // isBlacklistDataGridViewCheckBoxColumn
-            // 
-            this.isBlacklistDataGridViewCheckBoxColumn.DataPropertyName = "IsBlacklist";
-            this.isBlacklistDataGridViewCheckBoxColumn.HeaderText = "IsBlacklist";
-            this.isBlacklistDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.isBlacklistDataGridViewCheckBoxColumn.Name = "isBlacklistDataGridViewCheckBoxColumn";
-            this.isBlacklistDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.isBlacklistDataGridViewCheckBoxColumn.Width = 125;
-            // 
-            // blacklistReasonDataGridViewTextBoxColumn
-            // 
-            this.blacklistReasonDataGridViewTextBoxColumn.DataPropertyName = "BlacklistReason";
-            this.blacklistReasonDataGridViewTextBoxColumn.HeaderText = "BlacklistReason";
-            this.blacklistReasonDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.blacklistReasonDataGridViewTextBoxColumn.Name = "blacklistReasonDataGridViewTextBoxColumn";
-            this.blacklistReasonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.blacklistReasonDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // isAdministratorDataGridViewCheckBoxColumn
-            // 
-            this.isAdministratorDataGridViewCheckBoxColumn.DataPropertyName = "IsAdministrator";
-            this.isAdministratorDataGridViewCheckBoxColumn.HeaderText = "IsAdministrator";
-            this.isAdministratorDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.isAdministratorDataGridViewCheckBoxColumn.Name = "isAdministratorDataGridViewCheckBoxColumn";
-            this.isAdministratorDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.isAdministratorDataGridViewCheckBoxColumn.Width = 125;
-            // 
-            // adoptionsDataGridViewTextBoxColumn
-            // 
-            this.adoptionsDataGridViewTextBoxColumn.DataPropertyName = "Adoptions";
-            this.adoptionsDataGridViewTextBoxColumn.HeaderText = "Adoptions";
-            this.adoptionsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adoptionsDataGridViewTextBoxColumn.Name = "adoptionsDataGridViewTextBoxColumn";
-            this.adoptionsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adoptionsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
             // 
             // rdgAdmin
             // 
@@ -393,6 +299,100 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // isBlacklistDataGridViewCheckBoxColumn
+            // 
+            this.isBlacklistDataGridViewCheckBoxColumn.DataPropertyName = "IsBlacklist";
+            this.isBlacklistDataGridViewCheckBoxColumn.HeaderText = "IsBlacklist";
+            this.isBlacklistDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.isBlacklistDataGridViewCheckBoxColumn.Name = "isBlacklistDataGridViewCheckBoxColumn";
+            this.isBlacklistDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.isBlacklistDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // blacklistReasonDataGridViewTextBoxColumn
+            // 
+            this.blacklistReasonDataGridViewTextBoxColumn.DataPropertyName = "BlacklistReason";
+            this.blacklistReasonDataGridViewTextBoxColumn.HeaderText = "BlacklistReason";
+            this.blacklistReasonDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.blacklistReasonDataGridViewTextBoxColumn.Name = "blacklistReasonDataGridViewTextBoxColumn";
+            this.blacklistReasonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.blacklistReasonDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // isAdministratorDataGridViewCheckBoxColumn
+            // 
+            this.isAdministratorDataGridViewCheckBoxColumn.DataPropertyName = "IsAdministrator";
+            this.isAdministratorDataGridViewCheckBoxColumn.HeaderText = "IsAdministrator";
+            this.isAdministratorDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.isAdministratorDataGridViewCheckBoxColumn.Name = "isAdministratorDataGridViewCheckBoxColumn";
+            this.isAdministratorDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.isAdministratorDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // adoptionsDataGridViewTextBoxColumn
+            // 
+            this.adoptionsDataGridViewTextBoxColumn.DataPropertyName = "Adoptions";
+            this.adoptionsDataGridViewTextBoxColumn.HeaderText = "Adoptions";
+            this.adoptionsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.adoptionsDataGridViewTextBoxColumn.Name = "adoptionsDataGridViewTextBoxColumn";
+            this.adoptionsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adoptionsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
+            // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -407,7 +407,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvUserList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgBlacklist.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -417,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txbUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

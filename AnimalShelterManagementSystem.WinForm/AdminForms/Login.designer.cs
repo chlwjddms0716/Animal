@@ -112,6 +112,7 @@
             this.btnSignup.StyleController = this.layoutControl1;
             this.btnSignup.TabIndex = 15;
             this.btnSignup.Text = "회원가입";
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // btnLogin
             // 
