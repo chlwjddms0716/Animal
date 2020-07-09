@@ -8,7 +8,7 @@ namespace AnimalShelterManagementSystem.Models
 {
     public class GetValues
     {
-        enum Genders { All = 0, Male, Female };
+        enum Genders { All =0, Male=1, Female=2 };
         enum PhysicalConditionType
         {
             사망 = 1,

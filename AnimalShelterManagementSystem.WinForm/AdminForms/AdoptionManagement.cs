@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,34 +14,107 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
     public partial class AdoptionManagement : Form
     {
+        List<Adoption> adoptionList = new List<Adoption>();
+        List<Adoption> FilteredById;
+        List<Adoption> FilteredByAdoptionStatus;
+        private string Id;
+        private int currentStatus = 3;
+        Adoption adoption = new Adoption();
+
         public AdoptionManagement()
         {
             InitializeComponent();
         }
-
-        private void grvHomelessAnimalList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void querybyId()
         {
-
+            if (String.Equals(txeId.Text, "") == false)
+                FilteredById = adoptionList.Where(x => x.userLoginId.Contains(txeId.Text) == true).ToList();
+            else
+                FilteredById = adoptionList;
+        }
+        private void querybyAdoptionStatus()
+        {
+            querybyId();
+            if (currentStatus != 3) //전체
+                FilteredByAdoptionStatus = FilteredById.Where(x => x.AdoptionStatus == (AdoptionStatusType)currentStatus).ToList();
+            else
+                FilteredByAdoptionStatus = FilteredById;
+            adoptionBindingSource.DataSource = FilteredByAdoptionStatus;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void AdoptionManagement_Load(object sender, EventArgs e)
         {
-
+            adoptionList = DataRepository.Adoption.GetEvery();
+            //adoptionBindingSource.DataSource = adoptionList;
+            querybyAdoptionStatus();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void tsbAdd_Click(object sender, EventArgs e)
         {
-
+            ExcuteInsert();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void tsbDelete_Click(object sender, EventArgs e)
         {
-            Cursor = Cursors.WaitCursor;
+            ExecuteDelete();
         }
 
-        private void btnCancel_Click_Click(object sender, EventArgs e)
+        private void tsbEdit_Click(object sender, EventArgs e)
         {
+            ExecuteEdit();
+        }
 
+        private void ExcuteInsert()
+        {
+            AdoptionForm form = new AdoptionForm(adoption, 1);
+            form.ShowDialog();
+        }
+
+        private void ExecuteDelete()
+        {
+            Adoption adoption = adoptionBindingSource.Current as Adoption;
+
+            if (adoption == null)
+                return;
+
+
+            DataRepository.Adoption.Delete(adoption);
+
+            adoptionBindingSource.Remove(adoption);
+        }
+
+        private void ExecuteEdit()
+        {
+            Adoption adoption = adoptionBindingSource.Current as Adoption;
+
+            if (adoption == null)
+                return;
+
+            AdoptionForm form = new AdoptionForm(adoption, 0);
+            form.ShowDialog();
+        }
+
+        private void tsbRefresh_Click(object sender, EventArgs e)
+        {
+            adoptionList = DataRepository.Adoption.GetEvery();
+            querybyAdoptionStatus();
+        }
+
+        private void txeId_TextChanged(object sender, EventArgs e)
+        {
+            Id = txeId.Text;
+            querybyAdoptionStatus();
+        }
+
+        private void rdgAdoptionStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            currentStatus = (int)rdgAdoptionStatus.EditValue;
+            querybyAdoptionStatus();
+        }
+
+        private void grvAdoptionList_Click(object sender, EventArgs e)
+        {
+            ExecuteEdit();
         }
     }
 }

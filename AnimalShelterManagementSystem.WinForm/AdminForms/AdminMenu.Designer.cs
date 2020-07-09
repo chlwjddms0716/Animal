@@ -45,6 +45,7 @@
             this.btnAdoption.Size = new System.Drawing.Size(308, 169);
             this.btnAdoption.TabIndex = 7;
             this.btnAdoption.Text = "입양 관리";
+            this.btnAdoption.Click += new System.EventHandler(this.btnAdoption_Click);
             // 
             // btnShelter
             // 
@@ -56,6 +57,7 @@
             this.btnShelter.Size = new System.Drawing.Size(308, 169);
             this.btnShelter.TabIndex = 6;
             this.btnShelter.Text = "보호소 관리";
+            this.btnShelter.Click += new System.EventHandler(this.btnShelter_Click);
             // 
             // btnUser
             // 
@@ -90,7 +92,8 @@
             this.Controls.Add(this.btnUser);
             this.Controls.Add(this.btnAnimal);
             this.Name = "AdminMenu";
-            this.Text = "AdminMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "관리자메뉴";
             this.ResumeLayout(false);
 
         }

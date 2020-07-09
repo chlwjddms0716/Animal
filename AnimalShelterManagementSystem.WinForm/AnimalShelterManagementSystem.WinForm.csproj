@@ -43,7 +43,9 @@
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -76,11 +78,23 @@
     <Compile Include="AdminForms\AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\AdoptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\AdoptionForm.Designer.cs">
+      <DependentUpon>AdoptionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\AdoptionManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForms\AdoptionManagement.Designer.cs">
       <DependentUpon>AdoptionManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\EditUserInformationByAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\EditUserInformationByAdmin.Designer.cs">
+      <DependentUpon>EditUserInformationByAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\FindId.cs">
       <SubType>Form</SubType>
@@ -106,11 +120,17 @@
     <Compile Include="AdminForms\HomelessAnimalListForm.designer.cs">
       <DependentUpon>HomelessAnimalListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\Shelter.cs">
+    <Compile Include="AdminForms\ShelterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\Shelter.Designer.cs">
-      <DependentUpon>Shelter.cs</DependentUpon>
+    <Compile Include="AdminForms\ShelterForm.Designer.cs">
+      <DependentUpon>ShelterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\ShelterListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\ShelterListForm.Designer.cs">
+      <DependentUpon>ShelterListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\UserManagement.cs">
       <SubType>Form</SubType>
@@ -171,8 +191,14 @@
     <EmbeddedResource Include="AdminForms\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\AdoptionForm.resx">
+      <DependentUpon>AdoptionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdoptionManagement.resx">
       <DependentUpon>AdoptionManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\EditUserInformationByAdmin.resx">
+      <DependentUpon>EditUserInformationByAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\FindId.resx">
       <DependentUpon>FindId.cs</DependentUpon>
@@ -185,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\HomelessAnimalListForm.resx">
       <DependentUpon>HomelessAnimalListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ShelterForm.resx">
+      <DependentUpon>ShelterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ShelterListForm.resx">
+      <DependentUpon>ShelterListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
@@ -229,7 +261,7 @@
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.Adoption.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.AnimalShelter.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.HomelessAnimal2.datasource" />
-    <None Include="Properties\DataSources\AnimalShelterManagementSystem.Species.datasource" />
+    <None Include="Properties\DataSources\AnimalShelterManagementSystem.Models.Species.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -258,6 +290,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
