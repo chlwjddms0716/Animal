@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class AdminMenu : Form
+    public partial class AdminMenu : DevExpress.XtraEditors.XtraForm
     {
         public AdminMenu()
         {

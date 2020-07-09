@@ -91,7 +91,7 @@
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(165, 130);
+            this.btnSave.Location = new System.Drawing.Point(165, 138);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(174, 34);
             this.btnSave.StyleController = this.layoutControl1;
@@ -103,7 +103,7 @@
             // 
             this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.Location = new System.Drawing.Point(12, 130);
+            this.btnClose.Location = new System.Drawing.Point(12, 138);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(149, 34);
             this.btnClose.StyleController = this.layoutControl1;
@@ -130,6 +130,7 @@
             this.lkuAnimalId.Properties.DataSource = this.homelessAnimalBindingSource;
             this.lkuAnimalId.Properties.DisplayMember = "HomelessAnimalId";
             this.lkuAnimalId.Properties.NullText = "";
+            this.lkuAnimalId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lkuAnimalId.Properties.ValueMember = "HomelessAnimalId";
             this.lkuAnimalId.Size = new System.Drawing.Size(263, 24);
             this.lkuAnimalId.StyleController = this.layoutControl1;
@@ -147,7 +148,7 @@
             this.rdgAdoptionStatus.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "처리중"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "입양됨")});
-            this.rdgAdoptionStatus.Size = new System.Drawing.Size(263, 30);
+            this.rdgAdoptionStatus.Size = new System.Drawing.Size(263, 38);
             this.rdgAdoptionStatus.StyleController = this.layoutControl1;
             this.rdgAdoptionStatus.TabIndex = 11;
             // 
@@ -171,9 +172,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 156);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 164);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(331, 18);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(331, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -188,7 +189,7 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnClose;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 118);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 126);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(153, 38);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -197,7 +198,7 @@
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnSave;
-            this.layoutControlItem11.Location = new System.Drawing.Point(153, 118);
+            this.layoutControlItem11.Location = new System.Drawing.Point(153, 126);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(178, 38);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
@@ -230,7 +231,7 @@
             this.layoutControlItem10.CustomizationFormText = "블랙리스트";
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(331, 34);
+            this.layoutControlItem10.Size = new System.Drawing.Size(331, 42);
             this.layoutControlItem10.Text = "입양상태: ";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(62, 18);
             // 

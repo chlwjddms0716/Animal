@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class FindPassword : Form
+    public partial class FindPassword : DevExpress.XtraEditors.XtraForm
     {
         private int CheckNumber = 8888;
         private User user = new User();

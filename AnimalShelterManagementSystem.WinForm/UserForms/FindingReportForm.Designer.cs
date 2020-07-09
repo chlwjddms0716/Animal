@@ -70,9 +70,10 @@
             this.layoutControl1.Controls.Add(this.txbPlace);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(400, 223);
+            this.layoutControl1.Size = new System.Drawing.Size(400, 213);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -80,9 +81,10 @@
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(97, 12);
+            this.cbxSpecies.Location = new System.Drawing.Point(97, 14);
+            this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(291, 23);
+            this.cbxSpecies.Size = new System.Drawing.Size(291, 26);
             this.cbxSpecies.TabIndex = 16;
             this.cbxSpecies.SelectedIndexChanged += new System.EventHandler(this.cbxSpecies_SelectedIndexChanged);
             // 
@@ -90,7 +92,8 @@
             // 
             this.dteDate.EditValue = null;
             this.dteDate.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dteDate.Location = new System.Drawing.Point(98, 42);
+            this.dteDate.Location = new System.Drawing.Point(98, 44);
+            this.dteDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dteDate.Name = "dteDate";
             this.dteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -102,7 +105,8 @@
             // 
             // lblDate
             // 
-            this.lblDate.Location = new System.Drawing.Point(12, 42);
+            this.lblDate.Location = new System.Drawing.Point(12, 44);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(82, 18);
             this.lblDate.StyleController = this.layoutControl1;
@@ -111,7 +115,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(12, 184);
+            this.btnCancel.Location = new System.Drawing.Point(12, 172);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(186, 27);
             this.btnCancel.StyleController = this.layoutControl1;
@@ -121,7 +126,8 @@
             // 
             // btnFindingReport
             // 
-            this.btnFindingReport.Location = new System.Drawing.Point(202, 184);
+            this.btnFindingReport.Location = new System.Drawing.Point(202, 172);
+            this.btnFindingReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFindingReport.Name = "btnFindingReport";
             this.btnFindingReport.Size = new System.Drawing.Size(186, 27);
             this.btnFindingReport.StyleController = this.layoutControl1;
@@ -131,7 +137,8 @@
             // 
             // txbPlace
             // 
-            this.txbPlace.Location = new System.Drawing.Point(97, 70);
+            this.txbPlace.Location = new System.Drawing.Point(97, 72);
+            this.txbPlace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPlace.Name = "txbPlace";
             this.txbPlace.Size = new System.Drawing.Size(291, 25);
             this.txbPlace.TabIndex = 6;
@@ -149,7 +156,7 @@
             this.layoutControlItem3,
             this.layoutControlItem9});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(400, 223);
+            this.Root.Size = new System.Drawing.Size(400, 213);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -157,13 +164,13 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 87);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(380, 85);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(380, 71);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnFindingReport;
-            this.layoutControlItem4.Location = new System.Drawing.Point(190, 172);
+            this.layoutControlItem4.Location = new System.Drawing.Point(190, 158);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(190, 31);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -172,7 +179,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnCancel;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 172);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 158);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(190, 31);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -216,17 +223,17 @@
             // 
             // FindingReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 223);
+            this.ClientSize = new System.Drawing.Size(400, 213);
             this.Controls.Add(this.layoutControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FindingReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "발견신고";
             this.Load += new System.EventHandler(this.FindingReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();

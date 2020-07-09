@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class EditUserInformationByAdmin : Form
+    public partial class EditUserInformationByAdmin : DevExpress.XtraEditors.XtraForm
     {
         User user = new User();
         public EditUserInformationByAdmin()

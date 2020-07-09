@@ -95,6 +95,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Appearance.ControlFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.layoutControl1.Appearance.ControlFocused.BackColor2 = System.Drawing.Color.Lime;
+            this.layoutControl1.Appearance.ControlFocused.Options.UseBackColor = true;
             this.layoutControl1.Controls.Add(this.cbbAnimalShelter);
             this.layoutControl1.Controls.Add(this.cbbPSC);
             this.layoutControl1.Controls.Add(this.cbbGender);
@@ -121,10 +124,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.cbbAnimalShelter.DataSource = this.animalShelterBindingSource;
             this.cbbAnimalShelter.DisplayMember = "Name";
             this.cbbAnimalShelter.FormattingEnabled = true;
-            this.cbbAnimalShelter.Location = new System.Drawing.Point(127, 309);
-            this.cbbAnimalShelter.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbAnimalShelter.Location = new System.Drawing.Point(121, 270);
             this.cbbAnimalShelter.Name = "cbbAnimalShelter";
-            this.cbbAnimalShelter.Size = new System.Drawing.Size(861, 26);
+            this.cbbAnimalShelter.Size = new System.Drawing.Size(667, 23);
             this.cbbAnimalShelter.TabIndex = 20;
             this.cbbAnimalShelter.ValueMember = "AnimalShelterId";
             // 
@@ -135,25 +137,25 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // cbbPSC
             // 
             this.cbbPSC.FormattingEnabled = true;
-            this.cbbPSC.Location = new System.Drawing.Point(127, 178);
+            this.cbbPSC.Location = new System.Drawing.Point(121, 156);
             this.cbbPSC.Margin = new System.Windows.Forms.Padding(2);
             this.cbbPSC.Name = "cbbPSC";
-            this.cbbPSC.Size = new System.Drawing.Size(861, 26);
+            this.cbbPSC.Size = new System.Drawing.Size(667, 23);
             this.cbbPSC.TabIndex = 19;
             // 
             // cbbGender
             // 
             this.cbbGender.FormattingEnabled = true;
-            this.cbbGender.Location = new System.Drawing.Point(127, 143);
+            this.cbbGender.Location = new System.Drawing.Point(121, 126);
             this.cbbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGender.Name = "cbbGender";
-            this.cbbGender.Size = new System.Drawing.Size(861, 26);
+            this.cbbGender.Size = new System.Drawing.Size(667, 23);
             this.cbbGender.TabIndex = 15;
             // 
             // dteLatestFindingReport
             // 
             this.dteLatestFindingReport.EditValue = null;
-            this.dteLatestFindingReport.Location = new System.Drawing.Point(127, 213);
+            this.dteLatestFindingReport.Location = new System.Drawing.Point(121, 186);
             this.dteLatestFindingReport.Margin = new System.Windows.Forms.Padding(2);
             this.dteLatestFindingReport.Name = "dteLatestFindingReport";
             this.dteLatestFindingReport.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -169,15 +171,15 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // cbbSpecies
             // 
             this.cbbSpecies.FormattingEnabled = true;
-            this.cbbSpecies.Location = new System.Drawing.Point(127, 108);
+            this.cbbSpecies.Location = new System.Drawing.Point(121, 96);
             this.cbbSpecies.Margin = new System.Windows.Forms.Padding(2);
             this.cbbSpecies.Name = "cbbSpecies";
-            this.cbbSpecies.Size = new System.Drawing.Size(861, 26);
+            this.cbbSpecies.Size = new System.Drawing.Size(667, 23);
             this.cbbSpecies.TabIndex = 14;
             // 
             // txeHomelessAnimalId
             // 
-            this.txeHomelessAnimalId.Location = new System.Drawing.Point(127, 12);
+            this.txeHomelessAnimalId.Location = new System.Drawing.Point(121, 12);
             this.txeHomelessAnimalId.Margin = new System.Windows.Forms.Padding(2);
             this.txeHomelessAnimalId.Name = "txeHomelessAnimalId";
             this.txeHomelessAnimalId.Properties.ReadOnly = true;
@@ -188,7 +190,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // txeAge
             // 
             this.txeAge.EditValue = "";
-            this.txeAge.Location = new System.Drawing.Point(127, 76);
+            this.txeAge.Location = new System.Drawing.Point(121, 68);
             this.txeAge.Margin = new System.Windows.Forms.Padding(2);
             this.txeAge.Name = "txeAge";
             this.txeAge.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -202,7 +204,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(502, 344);
+            this.btnSave.Location = new System.Drawing.Point(402, 300);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(486, 36);
@@ -215,7 +217,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.Location = new System.Drawing.Point(12, 344);
+            this.btnClose.Location = new System.Drawing.Point(12, 300);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(486, 36);
@@ -226,7 +228,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // txeFeature
             // 
-            this.txeFeature.Location = new System.Drawing.Point(127, 277);
+            this.txeFeature.Location = new System.Drawing.Point(121, 242);
             this.txeFeature.Margin = new System.Windows.Forms.Padding(2);
             this.txeFeature.Name = "txeFeature";
             this.txeFeature.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -237,7 +239,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // txePictureLink
             // 
-            this.txePictureLink.Location = new System.Drawing.Point(127, 245);
+            this.txePictureLink.Location = new System.Drawing.Point(121, 214);
             this.txePictureLink.Margin = new System.Windows.Forms.Padding(2);
             this.txePictureLink.Name = "txePictureLink";
             this.txePictureLink.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -249,7 +251,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // txeName
             // 
             this.txeName.EditValue = "";
-            this.txeName.Location = new System.Drawing.Point(127, 44);
+            this.txeName.Location = new System.Drawing.Point(121, 40);
             this.txeName.Margin = new System.Windows.Forms.Padding(2);
             this.txeName.Name = "txeName";
             this.txeName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -278,7 +280,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem6});
             this.Root.Name = "Root";
             this.Root.OptionsItemText.TextToControlDistance = 2;
-            this.Root.Size = new System.Drawing.Size(1000, 540);
+            this.Root.Size = new System.Drawing.Size(800, 450);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -286,7 +288,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 372);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(980, 148);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(780, 106);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -386,9 +388,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem5.Control = this.cbbPSC;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 166);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(980, 35);
+            this.layoutControlItem5.Size = new System.Drawing.Size(780, 30);
             this.layoutControlItem5.Text = "건강상태코드 : ";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(113, 22);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(107, 18);
             // 
             // layoutControlItem6
             // 
@@ -405,11 +407,10 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // HomelessAnimalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 540);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.layoutControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomelessAnimalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "유기유실동물관리";
