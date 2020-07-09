@@ -42,8 +42,7 @@ namespace AnimalShelterManagementSystem
             return query.FirstOrDefault();
 
         }
-
-        public int GetFirstId()
+                public int GetFirstId()
         {
             AnimalShelterManagementEntities context = CreateContext();
 
