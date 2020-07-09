@@ -93,7 +93,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(545, 282);
+            this.layoutControl1.Size = new System.Drawing.Size(545, 259);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -101,7 +101,7 @@
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(108, 43);
+            this.cbxSpecies.Location = new System.Drawing.Point(108, 41);
             this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxSpecies.Name = "cbxSpecies";
             this.cbxSpecies.Size = new System.Drawing.Size(425, 26);
@@ -109,7 +109,7 @@
             // 
             // btnCancle
             // 
-            this.btnCancle.Location = new System.Drawing.Point(12, 241);
+            this.btnCancle.Location = new System.Drawing.Point(12, 220);
             this.btnCancle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancle.Name = "btnCancle";
             this.btnCancle.Size = new System.Drawing.Size(258, 27);
@@ -120,7 +120,7 @@
             // 
             // btnLossRequest
             // 
-            this.btnLossRequest.Location = new System.Drawing.Point(274, 241);
+            this.btnLossRequest.Location = new System.Drawing.Point(274, 220);
             this.btnLossRequest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLossRequest.Name = "btnLossRequest";
             this.btnLossRequest.Size = new System.Drawing.Size(259, 27);
@@ -132,7 +132,7 @@
             // txbPictureLink
             // 
             this.txbPictureLink.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txbPictureLink.Location = new System.Drawing.Point(108, 130);
+            this.txbPictureLink.Location = new System.Drawing.Point(108, 128);
             this.txbPictureLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPictureLink.Name = "txbPictureLink";
             this.txbPictureLink.Size = new System.Drawing.Size(425, 25);
@@ -142,7 +142,7 @@
             // dteDate
             // 
             this.dteDate.EditValue = null;
-            this.dteDate.Location = new System.Drawing.Point(109, 73);
+            this.dteDate.Location = new System.Drawing.Point(109, 71);
             this.dteDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dteDate.Name = "dteDate";
             this.dteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -155,7 +155,7 @@
             // 
             // txbPlace
             // 
-            this.txbPlace.Location = new System.Drawing.Point(109, 101);
+            this.txbPlace.Location = new System.Drawing.Point(109, 99);
             this.txbPlace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPlace.Name = "txbPlace";
             this.txbPlace.Size = new System.Drawing.Size(424, 25);
@@ -163,7 +163,7 @@
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(108, 14);
+            this.tbxName.Location = new System.Drawing.Point(108, 12);
             this.tbxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxName.Name = "tbxName";
             this.tbxName.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -172,7 +172,7 @@
             // 
             // lblName
             // 
-            this.lblName.Location = new System.Drawing.Point(12, 14);
+            this.lblName.Location = new System.Drawing.Point(12, 12);
             this.lblName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(92, 18);
@@ -182,7 +182,7 @@
             // 
             // lbPictureLink
             // 
-            this.lbPictureLink.Location = new System.Drawing.Point(12, 130);
+            this.lbPictureLink.Location = new System.Drawing.Point(12, 128);
             this.lbPictureLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbPictureLink.Name = "lbPictureLink";
             this.lbPictureLink.Size = new System.Drawing.Size(92, 18);
@@ -192,7 +192,7 @@
             // 
             // lblPlace
             // 
-            this.lblPlace.Location = new System.Drawing.Point(12, 101);
+            this.lblPlace.Location = new System.Drawing.Point(12, 99);
             this.lblPlace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblPlace.Name = "lblPlace";
             this.lblPlace.Size = new System.Drawing.Size(93, 18);
@@ -202,7 +202,7 @@
             // 
             // lblDate
             // 
-            this.lblDate.Location = new System.Drawing.Point(12, 73);
+            this.lblDate.Location = new System.Drawing.Point(12, 71);
             this.lblDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(93, 18);
@@ -228,7 +228,7 @@
             this.layoutControlItem11,
             this.layoutControlItem12});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(545, 282);
+            this.Root.Size = new System.Drawing.Size(545, 259);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -245,7 +245,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 145);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(525, 82);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(525, 63);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
@@ -323,7 +323,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnLossRequest;
-            this.layoutControlItem3.Location = new System.Drawing.Point(262, 227);
+            this.layoutControlItem3.Location = new System.Drawing.Point(262, 208);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(263, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -332,7 +332,7 @@
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnCancle;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 227);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 208);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(262, 31);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
@@ -351,8 +351,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 282);
+            this.ClientSize = new System.Drawing.Size(545, 259);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LossReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

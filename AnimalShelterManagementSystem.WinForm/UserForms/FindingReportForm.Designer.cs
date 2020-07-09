@@ -73,7 +73,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(400, 213);
+            this.layoutControl1.Size = new System.Drawing.Size(400, 177);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -81,7 +81,7 @@
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(97, 14);
+            this.cbxSpecies.Location = new System.Drawing.Point(97, 12);
             this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxSpecies.Name = "cbxSpecies";
             this.cbxSpecies.Size = new System.Drawing.Size(291, 26);
@@ -92,7 +92,7 @@
             // 
             this.dteDate.EditValue = null;
             this.dteDate.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dteDate.Location = new System.Drawing.Point(98, 44);
+            this.dteDate.Location = new System.Drawing.Point(98, 42);
             this.dteDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dteDate.Name = "dteDate";
             this.dteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -105,7 +105,7 @@
             // 
             // lblDate
             // 
-            this.lblDate.Location = new System.Drawing.Point(12, 44);
+            this.lblDate.Location = new System.Drawing.Point(12, 42);
             this.lblDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(82, 18);
@@ -115,7 +115,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(12, 172);
+            this.btnCancel.Location = new System.Drawing.Point(12, 138);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(186, 27);
@@ -126,7 +126,7 @@
             // 
             // btnFindingReport
             // 
-            this.btnFindingReport.Location = new System.Drawing.Point(202, 172);
+            this.btnFindingReport.Location = new System.Drawing.Point(202, 138);
             this.btnFindingReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFindingReport.Name = "btnFindingReport";
             this.btnFindingReport.Size = new System.Drawing.Size(186, 27);
@@ -137,7 +137,7 @@
             // 
             // txbPlace
             // 
-            this.txbPlace.Location = new System.Drawing.Point(97, 72);
+            this.txbPlace.Location = new System.Drawing.Point(97, 70);
             this.txbPlace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPlace.Name = "txbPlace";
             this.txbPlace.Size = new System.Drawing.Size(291, 25);
@@ -156,7 +156,7 @@
             this.layoutControlItem3,
             this.layoutControlItem9});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(400, 213);
+            this.Root.Size = new System.Drawing.Size(400, 177);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -164,13 +164,13 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 87);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(380, 71);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(380, 39);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnFindingReport;
-            this.layoutControlItem4.Location = new System.Drawing.Point(190, 158);
+            this.layoutControlItem4.Location = new System.Drawing.Point(190, 126);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(190, 31);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -179,7 +179,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnCancel;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 158);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 126);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(190, 31);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -225,8 +225,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 213);
+            this.ClientSize = new System.Drawing.Size(400, 177);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FindingReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

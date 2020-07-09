@@ -91,6 +91,7 @@
             this.Controls.Add(this.btnLossReport);
             this.Controls.Add(this.btnUserInfo);
             this.Controls.Add(this.btnAdoption);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Name = "UserMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "유저메뉴";

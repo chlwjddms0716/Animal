@@ -63,6 +63,16 @@ namespace AnimalShelterManagementSystem.WinForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BlackPuppy {
+            get {
+                object obj = ResourceManager.GetObject("BlackPuppy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close {
             get {
                 object obj = ResourceManager.GetObject("Close", resourceCulture);
@@ -167,6 +177,16 @@ namespace AnimalShelterManagementSystem.WinForm.Properties {
             get {
                 object obj = ResourceManager.GetObject("Male", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Puppy {
+            get {
+                object obj = ResourceManager.GetObject("Puppy", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
