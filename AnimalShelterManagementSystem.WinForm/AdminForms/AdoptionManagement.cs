@@ -34,7 +34,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-
+            Cursor = Cursors.WaitCursor;
         }
 
         private void btnCancel_Click_Click(object sender, EventArgs e)
