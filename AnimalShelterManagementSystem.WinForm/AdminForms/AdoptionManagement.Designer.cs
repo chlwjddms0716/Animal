@@ -76,7 +76,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(641, 374);
+            this.layoutControl1.Size = new System.Drawing.Size(639, 378);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -92,7 +92,7 @@
             this.tsbRefresh});
             this.toolStrip1.Location = new System.Drawing.Point(12, 82);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(617, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(615, 32);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -140,7 +140,7 @@
             // 
             this.txeId.Location = new System.Drawing.Point(82, 12);
             this.txeId.Name = "txeId";
-            this.txeId.Size = new System.Drawing.Size(547, 24);
+            this.txeId.Size = new System.Drawing.Size(545, 24);
             this.txeId.StyleController = this.layoutControl1;
             this.txeId.TabIndex = 8;
             this.txeId.TextChanged += new System.EventHandler(this.txeId_TextChanged);
@@ -158,12 +158,12 @@
             this.AdoptionDate,
             this.AdoptionStatus});
             this.grvAdoptionList.DataSource = this.adoptionBindingSource;
-            this.grvAdoptionList.Location = new System.Drawing.Point(82, 117);
+            this.grvAdoptionList.Location = new System.Drawing.Point(82, 118);
             this.grvAdoptionList.Name = "grvAdoptionList";
             this.grvAdoptionList.ReadOnly = true;
             this.grvAdoptionList.RowHeadersWidth = 51;
             this.grvAdoptionList.RowTemplate.Height = 27;
-            this.grvAdoptionList.Size = new System.Drawing.Size(547, 245);
+            this.grvAdoptionList.Size = new System.Drawing.Size(545, 248);
             this.grvAdoptionList.TabIndex = 5;
             this.grvAdoptionList.Click += new System.EventHandler(this.grvAdoptionList_Click);
             // 
@@ -180,7 +180,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "전체", true, null, ""),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "처리중"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "입양됨")});
-            this.rdgAdoptionStatus.Size = new System.Drawing.Size(547, 38);
+            this.rdgAdoptionStatus.Size = new System.Drawing.Size(545, 38);
             this.rdgAdoptionStatus.StyleController = this.layoutControl1;
             this.rdgAdoptionStatus.TabIndex = 11;
             this.rdgAdoptionStatus.SelectedIndexChanged += new System.EventHandler(this.rdgAdoptionStatus_SelectedIndexChanged);
@@ -195,15 +195,15 @@
             this.layoutControlItem10,
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(641, 374);
+            this.Root.Size = new System.Drawing.Size(639, 378);
             this.Root.TextVisible = false;
             // 
             // list
             // 
             this.list.Control = this.grvAdoptionList;
-            this.list.Location = new System.Drawing.Point(0, 105);
+            this.list.Location = new System.Drawing.Point(0, 106);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(621, 249);
+            this.list.Size = new System.Drawing.Size(619, 252);
             this.list.Text = "리스트";
             this.list.TextSize = new System.Drawing.Size(67, 18);
             // 
@@ -212,7 +212,7 @@
             this.layoutControlItem1.Control = this.txeId;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(621, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(619, 28);
             this.layoutControlItem1.Text = " 유저이름:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(67, 18);
             // 
@@ -223,7 +223,7 @@
             this.layoutControlItem10.CustomizationFormText = "블랙리스트";
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(621, 42);
+            this.layoutControlItem10.Size = new System.Drawing.Size(619, 42);
             this.layoutControlItem10.Text = " 입양상태: ";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(67, 18);
             // 
@@ -232,7 +232,7 @@
             this.layoutControlItem2.Control = this.toolStrip1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 70);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(621, 35);
+            this.layoutControlItem2.Size = new System.Drawing.Size(619, 36);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -284,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 374);
+            this.ClientSize = new System.Drawing.Size(639, 378);
             this.Controls.Add(this.layoutControl1);
             this.Name = "AdoptionManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
