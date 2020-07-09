@@ -75,7 +75,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1019, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1019, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -165,9 +165,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripButton5});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1019, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1019, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -258,7 +258,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // searchControl1
             // 
             this.searchControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchControl1.Location = new System.Drawing.Point(0, 61);
+            this.searchControl1.Location = new System.Drawing.Point(0, 55);
             this.searchControl1.Margin = new System.Windows.Forms.Padding(10);
             this.searchControl1.Name = "searchControl1";
             this.searchControl1.Size = new System.Drawing.Size(1019, 195);
