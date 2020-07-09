@@ -287,6 +287,7 @@
             this.ClientSize = new System.Drawing.Size(641, 374);
             this.Controls.Add(this.layoutControl1);
             this.Name = "AdoptionManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "입양리스트";
             this.Load += new System.EventHandler(this.AdoptionManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
