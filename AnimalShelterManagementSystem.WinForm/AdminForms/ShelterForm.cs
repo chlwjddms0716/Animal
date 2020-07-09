@@ -77,8 +77,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                         MessageBox.Show("추가되었습니다");
                     }
                     else
+                    {    
                         DataRepository.AnimalShelter.Update(_animalShelter);
-                    MessageBox.Show("수정되었습니다");
+                        MessageBox.Show("수정되었습니다");
+                    }
+                     
                 }
                 catch (Exception ex)
                 {

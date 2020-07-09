@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnClose = new System.Windows.Forms.ToolStripButton();
-            this.btnInsert = new System.Windows.Forms.ToolStripButton();
-            this.btnEdit = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
-            this.btnUpdate = new System.Windows.Forms.ToolStripButton();
-            this.btnHelp = new System.Windows.Forms.ToolStripButton();
             this.lkuShelterName = new DevExpress.XtraEditors.LookUpEdit();
             this.txeAddress = new DevExpress.XtraEditors.TextEdit();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,6 +46,12 @@
             this.정보AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.도움말HToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClose = new System.Windows.Forms.ToolStripButton();
+            this.btnInsert = new System.Windows.Forms.ToolStripButton();
+            this.btnEdit = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.btnUpdate = new System.Windows.Forms.ToolStripButton();
+            this.btnHelp = new System.Windows.Forms.ToolStripButton();
             this.AnimalShelterName = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,6 +104,150 @@
             this.toolStrip1.Size = new System.Drawing.Size(863, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // lkuShelterName
+            // 
+            this.lkuShelterName.Location = new System.Drawing.Point(100, 71);
+            this.lkuShelterName.Name = "lkuShelterName";
+            this.lkuShelterName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkuShelterName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "전체를 보고싶으시면 update버튼을 눌러주세요.")});
+            this.lkuShelterName.Properties.DataSource = this.AnimalShelterName;
+            this.lkuShelterName.Properties.DisplayMember = "Name";
+            this.lkuShelterName.Properties.NullText = "보호소를 선택해주세요.";
+            this.lkuShelterName.Properties.ValueMember = "AnimalShelterId";
+            this.lkuShelterName.Size = new System.Drawing.Size(775, 24);
+            this.lkuShelterName.StyleController = this.layoutControl1;
+            this.lkuShelterName.TabIndex = 2;
+            this.lkuShelterName.EditValueChanged += new System.EventHandler(this.lkuShelterName_EditValueChanged);
+            // 
+            // txeAddress
+            // 
+            this.txeAddress.Location = new System.Drawing.Point(100, 43);
+            this.txeAddress.Name = "txeAddress";
+            this.txeAddress.Properties.NullText = "주소를 입력해주세요.";
+            this.txeAddress.Size = new System.Drawing.Size(775, 24);
+            this.txeAddress.StyleController = this.layoutControl1;
+            this.txeAddress.TabIndex = 0;
+            this.txeAddress.EditValueChanged += new System.EventHandler(this.txeAddress_EditValueChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AnimalShelterId,
+            this.nameDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.managerNameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.animalShelterBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(100, 99);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(775, 335);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // AnimalShelterId
+            // 
+            this.AnimalShelterId.DataPropertyName = "AnimalShelterId";
+            this.AnimalShelterId.HeaderText = "보호소Id";
+            this.AnimalShelterId.MinimumWidth = 6;
+            this.AnimalShelterId.Name = "AnimalShelterId";
+            this.AnimalShelterId.ReadOnly = true;
+            this.AnimalShelterId.Width = 125;
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem5});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(887, 446);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.dataGridView1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 87);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(867, 339);
+            this.layoutControlItem1.Text = "   리스트";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(85, 18);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.txeAddress;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 31);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(867, 28);
+            this.layoutControlItem3.Text = " 주소 : ";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(85, 18);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.lkuShelterName;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 59);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(867, 28);
+            this.layoutControlItem4.Text = " 보호소 이름 :";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(85, 18);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.toolStrip1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(867, 31);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // 종료XToolStripMenuItem
+            // 
+            this.종료XToolStripMenuItem.Name = "종료XToolStripMenuItem";
+            this.종료XToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.종료XToolStripMenuItem.Text = "종료(&X)";
+            // 
+            // 추가IToolStripMenuItem
+            // 
+            this.추가IToolStripMenuItem.Name = "추가IToolStripMenuItem";
+            this.추가IToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.추가IToolStripMenuItem.Text = "추가(&I)";
+            // 
+            // 삭제DToolStripMenuItem
+            // 
+            this.삭제DToolStripMenuItem.Name = "삭제DToolStripMenuItem";
+            this.삭제DToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.삭제DToolStripMenuItem.Text = "삭제(&D)";
+            // 
+            // 정보AToolStripMenuItem
+            // 
+            this.정보AToolStripMenuItem.Name = "정보AToolStripMenuItem";
+            this.정보AToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.정보AToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.정보AToolStripMenuItem.Text = "정보(&A)";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
+            // 
+            // 도움말HToolStripMenuItem1
+            // 
+            this.도움말HToolStripMenuItem1.Name = "도움말HToolStripMenuItem1";
+            this.도움말HToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.도움말HToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
+            this.도움말HToolStripMenuItem1.Text = "도움말(&H)";
             // 
             // btnClose
             // 
@@ -164,150 +308,6 @@
             this.btnHelp.Size = new System.Drawing.Size(29, 24);
             this.btnHelp.Text = "도움말";
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
-            // 
-            // lkuShelterName
-            // 
-            this.lkuShelterName.Location = new System.Drawing.Point(96, 71);
-            this.lkuShelterName.Name = "lkuShelterName";
-            this.lkuShelterName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkuShelterName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "전체를 보고싶으시면 update버튼을 눌러주세요.")});
-            this.lkuShelterName.Properties.DataSource = this.AnimalShelterName;
-            this.lkuShelterName.Properties.DisplayMember = "Name";
-            this.lkuShelterName.Properties.NullText = "보호소를 선택해주세요.";
-            this.lkuShelterName.Properties.ValueMember = "AnimalShelterId";
-            this.lkuShelterName.Size = new System.Drawing.Size(779, 24);
-            this.lkuShelterName.StyleController = this.layoutControl1;
-            this.lkuShelterName.TabIndex = 2;
-            this.lkuShelterName.EditValueChanged += new System.EventHandler(this.lkuShelterName_EditValueChanged);
-            // 
-            // txeAddress
-            // 
-            this.txeAddress.Location = new System.Drawing.Point(96, 43);
-            this.txeAddress.Name = "txeAddress";
-            this.txeAddress.Properties.NullText = "주소를 입력해주세요.";
-            this.txeAddress.Size = new System.Drawing.Size(779, 24);
-            this.txeAddress.StyleController = this.layoutControl1;
-            this.txeAddress.TabIndex = 0;
-            this.txeAddress.EditValueChanged += new System.EventHandler(this.txeAddress_EditValueChanged);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AnimalShelterId,
-            this.nameDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn,
-            this.managerNameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.animalShelterBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(96, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(779, 335);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // AnimalShelterId
-            // 
-            this.AnimalShelterId.DataPropertyName = "AnimalShelterId";
-            this.AnimalShelterId.HeaderText = "보호소Id";
-            this.AnimalShelterId.MinimumWidth = 6;
-            this.AnimalShelterId.Name = "AnimalShelterId";
-            this.AnimalShelterId.ReadOnly = true;
-            this.AnimalShelterId.Width = 125;
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(887, 446);
-            this.Root.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.dataGridView1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 87);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(867, 339);
-            this.layoutControlItem1.Text = "   리스트";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(81, 18);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.txeAddress;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 31);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(867, 28);
-            this.layoutControlItem3.Text = " 주소 : ";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(81, 18);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.lkuShelterName;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 59);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(867, 28);
-            this.layoutControlItem4.Text = " 보호소 이름 :";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(81, 18);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.toolStrip1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(867, 31);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // 종료XToolStripMenuItem
-            // 
-            this.종료XToolStripMenuItem.Name = "종료XToolStripMenuItem";
-            this.종료XToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
-            this.종료XToolStripMenuItem.Text = "종료(&X)";
-            // 
-            // 추가IToolStripMenuItem
-            // 
-            this.추가IToolStripMenuItem.Name = "추가IToolStripMenuItem";
-            this.추가IToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
-            this.추가IToolStripMenuItem.Text = "추가(&I)";
-            // 
-            // 삭제DToolStripMenuItem
-            // 
-            this.삭제DToolStripMenuItem.Name = "삭제DToolStripMenuItem";
-            this.삭제DToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
-            this.삭제DToolStripMenuItem.Text = "삭제(&D)";
-            // 
-            // 정보AToolStripMenuItem
-            // 
-            this.정보AToolStripMenuItem.Name = "정보AToolStripMenuItem";
-            this.정보AToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.정보AToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
-            this.정보AToolStripMenuItem.Text = "정보(&A)";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
-            // 
-            // 도움말HToolStripMenuItem1
-            // 
-            this.도움말HToolStripMenuItem1.Name = "도움말HToolStripMenuItem1";
-            this.도움말HToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.도움말HToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
-            this.도움말HToolStripMenuItem1.Text = "도움말(&H)";
             // 
             // AnimalShelterName
             // 

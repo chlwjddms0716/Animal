@@ -251,6 +251,18 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnSignup;
+            this.layoutControlItem6.Location = new System.Drawing.Point(380, 168);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(158, 47);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(158, 47);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(158, 67);
+            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.boxPasswordCheck;

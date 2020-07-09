@@ -68,12 +68,13 @@ namespace AnimalShelterManagementSystem.WinForm
         {
             adoption.UserId = userId;
             adoption.AdoptionDate = DateTime.Now;
+
             try
             {
                 DataRepository.Adoption.Insert(adoption);
                 HomelessAnimal homelessAnimal = new HomelessAnimal();
                 homelessAnimal = DataRepository.HomelessAnimal.Get(adoption.HomelessAnimalId);
-                homelessAnimal.IsAdopted = true;
+                homelessAnimal.AdoptionStatus = 1;
                 DataRepository.HomelessAnimal.Update(homelessAnimal);
                 MessageBox.Show("입양 신청 되었습니다.");
             }

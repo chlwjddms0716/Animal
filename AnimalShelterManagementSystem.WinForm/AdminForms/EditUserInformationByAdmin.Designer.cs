@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.boxId = new DevExpress.XtraEditors.TextEdit();
             this.boxPassword = new DevExpress.XtraEditors.TextEdit();
             this.boxName = new DevExpress.XtraEditors.TextEdit();
@@ -50,14 +47,17 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boxId.Properties)).BeginInit();
@@ -78,14 +78,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl3
@@ -110,6 +110,244 @@
             this.layoutControl3.Size = new System.Drawing.Size(508, 401);
             this.layoutControl3.TabIndex = 4;
             this.layoutControl3.Text = "layoutControl1";
+            // 
+            // boxId
+            // 
+            this.boxId.Location = new System.Drawing.Point(152, 40);
+            this.boxId.Name = "boxId";
+            this.boxId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.boxId.Properties.UseReadOnlyAppearance = false;
+            this.boxId.Size = new System.Drawing.Size(344, 24);
+            this.boxId.StyleController = this.layoutControl3;
+            this.boxId.TabIndex = 4;
+            // 
+            // boxPassword
+            // 
+            this.boxPassword.Location = new System.Drawing.Point(152, 96);
+            this.boxPassword.Name = "boxPassword";
+            this.boxPassword.Size = new System.Drawing.Size(344, 24);
+            this.boxPassword.StyleController = this.layoutControl3;
+            this.boxPassword.TabIndex = 4;
+            // 
+            // boxName
+            // 
+            this.boxName.Location = new System.Drawing.Point(152, 68);
+            this.boxName.Name = "boxName";
+            this.boxName.Properties.UseReadOnlyAppearance = false;
+            this.boxName.Size = new System.Drawing.Size(344, 24);
+            this.boxName.StyleController = this.layoutControl3;
+            this.boxName.TabIndex = 4;
+            // 
+            // boxPhoneNumber
+            // 
+            this.boxPhoneNumber.Location = new System.Drawing.Point(152, 124);
+            this.boxPhoneNumber.Name = "boxPhoneNumber";
+            this.boxPhoneNumber.Size = new System.Drawing.Size(344, 24);
+            this.boxPhoneNumber.StyleController = this.layoutControl3;
+            this.boxPhoneNumber.TabIndex = 4;
+            // 
+            // boxAddress
+            // 
+            this.boxAddress.Location = new System.Drawing.Point(152, 152);
+            this.boxAddress.Name = "boxAddress";
+            this.boxAddress.Size = new System.Drawing.Size(344, 24);
+            this.boxAddress.StyleController = this.layoutControl3;
+            this.boxAddress.TabIndex = 4;
+            // 
+            // rdgAdmin
+            // 
+            this.rdgAdmin.EditValue = 0;
+            this.rdgAdmin.Location = new System.Drawing.Point(152, 180);
+            this.rdgAdmin.Name = "rdgAdmin";
+            this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
+            this.rdgAdmin.Size = new System.Drawing.Size(344, 36);
+            this.rdgAdmin.StyleController = this.layoutControl3;
+            this.rdgAdmin.TabIndex = 11;
+            // 
+            // rdgBlacklist
+            // 
+            this.rdgBlacklist.EditValue = 0;
+            this.rdgBlacklist.Location = new System.Drawing.Point(152, 220);
+            this.rdgBlacklist.Name = "rdgBlacklist";
+            this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
+            this.rdgBlacklist.Size = new System.Drawing.Size(344, 36);
+            this.rdgBlacklist.StyleController = this.layoutControl3;
+            this.rdgBlacklist.TabIndex = 11;
+            // 
+            // boxUserId
+            // 
+            this.boxUserId.Location = new System.Drawing.Point(152, 12);
+            this.boxUserId.Name = "boxUserId";
+            this.boxUserId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.boxUserId.Properties.UseReadOnlyAppearance = false;
+            this.boxUserId.Size = new System.Drawing.Size(344, 24);
+            this.boxUserId.StyleController = this.layoutControl3;
+            this.boxUserId.TabIndex = 4;
+            // 
+            // boxBlacklistReason
+            // 
+            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 260);
+            this.boxBlacklistReason.Name = "boxBlacklistReason";
+            this.boxBlacklistReason.Size = new System.Drawing.Size(344, 24);
+            this.boxBlacklistReason.StyleController = this.layoutControl3;
+            this.boxBlacklistReason.TabIndex = 4;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem3,
+            this.layoutControlItem9,
+            this.layoutControlItem8,
+            this.layoutControlItem11,
+            this.layoutControlItem12,
+            this.layoutControlItem10,
+            this.simpleSeparator1,
+            this.emptySpaceItem2,
+            this.layoutControlItem13,
+            this.layoutControlItem6,
+            this.emptySpaceItem1,
+            this.emptySpaceItem3});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(508, 401);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.boxId;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(488, 28);
+            this.layoutControlItem1.Text = "아이디 : ";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.boxPassword;
+            this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem2.CustomizationFormText = "layoutControlItem1";
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 84);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(488, 28);
+            this.layoutControlItem2.Text = "비밀번호 :    ";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.boxPhoneNumber;
+            this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem4.CustomizationFormText = "layoutControlItem1";
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(488, 28);
+            this.layoutControlItem4.Text = "핸드폰 번호 :";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.boxAddress;
+            this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem5.CustomizationFormText = "layoutControlItem1";
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 140);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(488, 28);
+            this.layoutControlItem5.Text = "주소 :";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.boxName;
+            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem3.CustomizationFormText = "layoutControlItem1";
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(488, 28);
+            this.layoutControlItem3.Text = "이름 :";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.rdgAdmin;
+            this.layoutControlItem9.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem9.CustomizationFormText = "관리자";
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 168);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(488, 40);
+            this.layoutControlItem9.Text = "관리자";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.boxBlacklistReason;
+            this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem8.CustomizationFormText = "layoutControlItem1";
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 248);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(488, 28);
+            this.layoutControlItem8.Text = "블랙리스트 등록 이유 :";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.boxUserId;
+            this.layoutControlItem11.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem11.CustomizationFormText = "유저 번호 : ";
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(488, 28);
+            this.layoutControlItem11.Text = "유저 번호 : ";
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.rdgBlacklist;
+            this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem10.CustomizationFormText = "블랙리스트";
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 208);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(488, 40);
+            this.layoutControlItem10.Text = "블랙리스트";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(137, 18);
+            // 
+            // simpleSeparator1
+            // 
+            this.simpleSeparator1.AllowHotTrack = false;
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 379);
+            this.simpleSeparator1.Name = "simpleSeparator1";
+            this.simpleSeparator1.Size = new System.Drawing.Size(488, 2);
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(313, 305);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(16, 74);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(149, 305);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(18, 74);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 276);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(488, 29);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // btnAdd
             // 
@@ -150,202 +388,6 @@
             this.btnDelete.Text = "삭제";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // boxId
-            // 
-            this.boxId.Location = new System.Drawing.Point(148, 40);
-            this.boxId.Name = "boxId";
-            this.boxId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.boxId.Properties.UseReadOnlyAppearance = false;
-            this.boxId.Size = new System.Drawing.Size(348, 24);
-            this.boxId.StyleController = this.layoutControl3;
-            this.boxId.TabIndex = 4;
-            // 
-            // boxPassword
-            // 
-            this.boxPassword.Location = new System.Drawing.Point(148, 96);
-            this.boxPassword.Name = "boxPassword";
-            this.boxPassword.Size = new System.Drawing.Size(348, 24);
-            this.boxPassword.StyleController = this.layoutControl3;
-            this.boxPassword.TabIndex = 4;
-            // 
-            // boxName
-            // 
-            this.boxName.Location = new System.Drawing.Point(148, 68);
-            this.boxName.Name = "boxName";
-            this.boxName.Properties.UseReadOnlyAppearance = false;
-            this.boxName.Size = new System.Drawing.Size(348, 24);
-            this.boxName.StyleController = this.layoutControl3;
-            this.boxName.TabIndex = 4;
-            // 
-            // boxPhoneNumber
-            // 
-            this.boxPhoneNumber.Location = new System.Drawing.Point(148, 124);
-            this.boxPhoneNumber.Name = "boxPhoneNumber";
-            this.boxPhoneNumber.Size = new System.Drawing.Size(348, 24);
-            this.boxPhoneNumber.StyleController = this.layoutControl3;
-            this.boxPhoneNumber.TabIndex = 4;
-            // 
-            // boxAddress
-            // 
-            this.boxAddress.Location = new System.Drawing.Point(148, 152);
-            this.boxAddress.Name = "boxAddress";
-            this.boxAddress.Size = new System.Drawing.Size(348, 24);
-            this.boxAddress.StyleController = this.layoutControl3;
-            this.boxAddress.TabIndex = 4;
-            // 
-            // rdgAdmin
-            // 
-            this.rdgAdmin.EditValue = 0;
-            this.rdgAdmin.Location = new System.Drawing.Point(148, 180);
-            this.rdgAdmin.Name = "rdgAdmin";
-            this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgAdmin.Size = new System.Drawing.Size(348, 36);
-            this.rdgAdmin.StyleController = this.layoutControl3;
-            this.rdgAdmin.TabIndex = 11;
-            // 
-            // rdgBlacklist
-            // 
-            this.rdgBlacklist.EditValue = 0;
-            this.rdgBlacklist.Location = new System.Drawing.Point(148, 220);
-            this.rdgBlacklist.Name = "rdgBlacklist";
-            this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgBlacklist.Size = new System.Drawing.Size(348, 36);
-            this.rdgBlacklist.StyleController = this.layoutControl3;
-            this.rdgBlacklist.TabIndex = 11;
-            // 
-            // boxUserId
-            // 
-            this.boxUserId.Location = new System.Drawing.Point(148, 12);
-            this.boxUserId.Name = "boxUserId";
-            this.boxUserId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.boxUserId.Properties.UseReadOnlyAppearance = false;
-            this.boxUserId.Size = new System.Drawing.Size(348, 24);
-            this.boxUserId.StyleController = this.layoutControl3;
-            this.boxUserId.TabIndex = 4;
-            // 
-            // boxBlacklistReason
-            // 
-            this.boxBlacklistReason.Location = new System.Drawing.Point(148, 260);
-            this.boxBlacklistReason.Name = "boxBlacklistReason";
-            this.boxBlacklistReason.Size = new System.Drawing.Size(348, 24);
-            this.boxBlacklistReason.StyleController = this.layoutControl3;
-            this.boxBlacklistReason.TabIndex = 4;
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem3,
-            this.layoutControlItem9,
-            this.layoutControlItem8,
-            this.layoutControlItem11,
-            this.layoutControlItem12,
-            this.layoutControlItem10,
-            this.simpleSeparator1,
-            this.emptySpaceItem2,
-            this.layoutControlItem13,
-            this.layoutControlItem6,
-            this.emptySpaceItem1,
-            this.emptySpaceItem3});
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(508, 401);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.boxId;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 28);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(488, 28);
-            this.layoutControlItem1.Text = "아이디 : ";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(133, 18);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.boxPassword;
-            this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem2.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 84);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(488, 28);
-            this.layoutControlItem2.Text = "비밀번호 :    ";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(133, 18);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.boxPhoneNumber;
-            this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem4.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 112);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(488, 28);
-            this.layoutControlItem4.Text = "핸드폰 번호 :";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(133, 18);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.boxAddress;
-            this.layoutControlItem5.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem5.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 140);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(488, 28);
-            this.layoutControlItem5.Text = "주소 :";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(133, 18);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.boxName;
-            this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem3.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 56);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(488, 28);
-            this.layoutControlItem3.Text = "이름 :";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(133, 18);
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.rdgAdmin;
-            this.layoutControlItem9.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem9.CustomizationFormText = "관리자";
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 168);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(488, 40);
-            this.layoutControlItem9.Text = "관리자";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(133, 18);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.boxBlacklistReason;
-            this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem8.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 248);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(488, 28);
-            this.layoutControlItem8.Text = "블랙리스트 등록 이유 :";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(133, 18);
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.boxUserId;
-            this.layoutControlItem11.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem11.CustomizationFormText = "유저 번호 : ";
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(488, 28);
-            this.layoutControlItem11.Text = "유저 번호 : ";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(133, 18);
-            // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.btnDelete;
@@ -354,32 +396,6 @@
             this.layoutControlItem12.Size = new System.Drawing.Size(149, 74);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.rdgBlacklist;
-            this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem10.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 208);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(488, 40);
-            this.layoutControlItem10.Text = "블랙리스트";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(133, 18);
-            // 
-            // simpleSeparator1
-            // 
-            this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.Location = new System.Drawing.Point(0, 379);
-            this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(488, 2);
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(313, 305);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(16, 74);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem13
             // 
@@ -398,22 +414,6 @@
             this.layoutControlItem6.Size = new System.Drawing.Size(146, 74);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(149, 305);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(18, 74);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 276);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(488, 29);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // EditUserInformationByAdmin
             // 
@@ -443,14 +443,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
