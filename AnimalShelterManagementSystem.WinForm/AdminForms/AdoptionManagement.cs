@@ -18,17 +18,12 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         List<Adoption> FilteredById;
         List<Adoption> FilteredByAdoptionStatus;
         private string Id;
-        private int currentStatus;
+        private int currentStatus = 3;
         Adoption adoption = new Adoption();
 
         public AdoptionManagement()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
         private void querybyId()
         {
@@ -40,16 +35,17 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void querybyAdoptionStatus()
         {
             querybyId();
-            if (currentStatus != 2)
+            if (currentStatus != 3) //전체
                 FilteredByAdoptionStatus = FilteredById.Where(x => x.AdoptionStatus == (AdoptionStatusType)currentStatus).ToList();
             else
                 FilteredByAdoptionStatus = FilteredById;
-            homelessAnimalBindingSource.DataSource = FilteredByAdoptionStatus;
+            adoptionBindingSource.DataSource = FilteredByAdoptionStatus;
         }
 
         private void AdoptionManagement_Load(object sender, EventArgs e)
         {
             adoptionList = DataRepository.Adoption.GetEvery();
+            //adoptionBindingSource.DataSource = adoptionList;
             querybyAdoptionStatus();
         }
 
@@ -91,7 +87,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             Adoption adoption = adoptionBindingSource.Current as Adoption;
 
-            if(adoption == null)
+            if (adoption == null)
                 return;
 
             AdoptionForm form = new AdoptionForm(adoption, 0);
@@ -114,6 +110,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             currentStatus = (int)rdgAdoptionStatus.EditValue;
             querybyAdoptionStatus();
+        }
+
+        private void grvAdoptionList_Click(object sender, EventArgs e)
+        {
+            ExecuteEdit();
         }
     }
 }
