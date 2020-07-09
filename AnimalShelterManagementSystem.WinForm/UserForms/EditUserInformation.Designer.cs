@@ -32,7 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUserInformation));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
             this.boxId = new DevExpress.XtraEditors.TextEdit();
+            this.UserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boxPassword = new DevExpress.XtraEditors.TextEdit();
             this.boxName = new DevExpress.XtraEditors.TextEdit();
             this.boxPhoneNumber = new DevExpress.XtraEditors.TextEdit();
@@ -44,18 +46,17 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
-            this.UserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.boxId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxPhoneNumber.Properties)).BeginInit();
@@ -67,12 +68,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -106,6 +106,20 @@
             this.layoutControl2.TabIndex = 4;
             this.layoutControl2.Text = "layoutControl1";
             // 
+            // btnSignup
+            // 
+            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSignup.Appearance.Options.UseFont = true;
+            this.btnSignup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSignup.ImageOptions.Image")));
+            this.btnSignup.Location = new System.Drawing.Point(392, 180);
+            this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSignup.Name = "btnSignup";
+            this.btnSignup.Size = new System.Drawing.Size(154, 162);
+            this.btnSignup.StyleController = this.layoutControl2;
+            this.btnSignup.TabIndex = 5;
+            this.btnSignup.Text = "수정";
+            this.btnSignup.Click += new System.EventHandler(this.btnEdit_Clicked);
+            // 
             // boxId
             // 
             this.boxId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UserBindingSource, "Id", true));
@@ -117,6 +131,10 @@
             this.boxId.Size = new System.Drawing.Size(415, 24);
             this.boxId.StyleController = this.layoutControl2;
             this.boxId.TabIndex = 4;
+            // 
+            // UserBindingSource
+            // 
+            this.UserBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
             // 
             // boxPassword
             // 
@@ -234,6 +252,18 @@
             this.layoutControlItem5.Text = "주소 :";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(116, 18);
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnSignup;
+            this.layoutControlItem6.Location = new System.Drawing.Point(380, 168);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(158, 166);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(158, 166);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(158, 172);
+            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.boxPasswordCheck;
@@ -273,36 +303,6 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
-            // btnSignup
-            // 
-            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
-            this.btnSignup.Appearance.Options.UseFont = true;
-            this.btnSignup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSignup.ImageOptions.Image")));
-            this.btnSignup.Location = new System.Drawing.Point(392, 180);
-            this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSignup.Name = "btnSignup";
-            this.btnSignup.Size = new System.Drawing.Size(154, 162);
-            this.btnSignup.StyleController = this.layoutControl2;
-            this.btnSignup.TabIndex = 5;
-            this.btnSignup.Text = "수정";
-            this.btnSignup.Click += new System.EventHandler(this.btnEdit_Clicked);
-            // 
-            // UserBindingSource
-            // 
-            this.UserBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.btnSignup;
-            this.layoutControlItem6.Location = new System.Drawing.Point(380, 168);
-            this.layoutControlItem6.MaxSize = new System.Drawing.Size(158, 166);
-            this.layoutControlItem6.MinSize = new System.Drawing.Size(158, 166);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(158, 172);
-            this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
             // EditUserInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -319,6 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.boxId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxPhoneNumber.Properties)).EndInit();
@@ -330,12 +331,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
