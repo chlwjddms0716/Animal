@@ -2,6 +2,8 @@ using AnimalShelterManagementSystem.Data;
 using AnimalShelterManagementSystem.WinForm.AdminForms;
 using DevExpress.XtraEditors.Filtering.Templates;
 using DevExpress.XtraExport.Xls;
+using DevExpress.XtraPrinting.Native;
+using AnimalShelterManagementSystem.WinForm.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -135,6 +137,8 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             HomelessAnimal homelessAnimal = homelessAnimalBindingSource.Current as HomelessAnimal;
 
             if (homelessAnimal == null)
+                return;
+            if (Helpers.Helpers.SureToDelete() == false)
                 return;
 
 
