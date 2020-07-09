@@ -93,7 +93,7 @@
             this.Controls.Add(this.btnAdoption);
             this.Name = "UserMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "r";
+            this.Text = "유저메뉴";
             this.ResumeLayout(false);
 
         }
