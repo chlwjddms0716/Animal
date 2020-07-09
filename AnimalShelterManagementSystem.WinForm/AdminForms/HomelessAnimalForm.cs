@@ -14,7 +14,7 @@ using DevExpress.ClipboardSource.SpreadsheetML;
 
 namespace AnimalShelterManagementSystem.WinForm.Forms
 {
-    public partial class HomelessAnimalForm : Form
+    public partial class HomelessAnimalForm : DevExpress.XtraEditors.XtraForm
     {
         private HomelessAnimal _homelessAnimal;
 

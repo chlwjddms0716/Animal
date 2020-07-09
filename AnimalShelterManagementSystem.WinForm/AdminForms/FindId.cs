@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class FindId : Form
+    public partial class FindId : DevExpress.XtraEditors.XtraForm
     {
         public FindId()
         {

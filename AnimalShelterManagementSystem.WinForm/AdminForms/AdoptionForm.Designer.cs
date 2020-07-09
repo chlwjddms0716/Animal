@@ -82,7 +82,7 @@
             // 
             this.txeAnimalName.Location = new System.Drawing.Point(76, 40);
             this.txeAnimalName.Name = "txeAnimalName";
-            this.txeAnimalName.Size = new System.Drawing.Size(242, 24);
+            this.txeAnimalName.Size = new System.Drawing.Size(263, 24);
             this.txeAnimalName.StyleController = this.layoutControl1;
             this.txeAnimalName.TabIndex = 15;
             this.txeAnimalName.EditValueChanged += new System.EventHandler(this.txeAnimalName_EditValueChanged);
@@ -91,9 +91,9 @@
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(155, 142);
+            this.btnSave.Location = new System.Drawing.Point(165, 138);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(163, 32);
+            this.btnSave.Size = new System.Drawing.Size(174, 34);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "확인";
@@ -103,9 +103,9 @@
             // 
             this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.Location = new System.Drawing.Point(12, 142);
+            this.btnClose.Location = new System.Drawing.Point(12, 138);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(139, 32);
+            this.btnClose.Size = new System.Drawing.Size(149, 34);
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "취소";
@@ -115,7 +115,7 @@
             // 
             this.txeUserId.Location = new System.Drawing.Point(76, 12);
             this.txeUserId.Name = "txeUserId";
-            this.txeUserId.Size = new System.Drawing.Size(242, 24);
+            this.txeUserId.Size = new System.Drawing.Size(263, 24);
             this.txeUserId.StyleController = this.layoutControl1;
             this.txeUserId.TabIndex = 6;
             // 
@@ -132,7 +132,7 @@
             this.lkuAnimalId.Properties.NullText = "";
             this.lkuAnimalId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lkuAnimalId.Properties.ValueMember = "HomelessAnimalId";
-            this.lkuAnimalId.Size = new System.Drawing.Size(242, 24);
+            this.lkuAnimalId.Size = new System.Drawing.Size(263, 24);
             this.lkuAnimalId.StyleController = this.layoutControl1;
             this.lkuAnimalId.TabIndex = 2;
             // 
@@ -148,7 +148,7 @@
             this.rdgAdoptionStatus.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "처리중"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "입양됨")});
-            this.rdgAdoptionStatus.Size = new System.Drawing.Size(242, 42);
+            this.rdgAdoptionStatus.Size = new System.Drawing.Size(263, 38);
             this.rdgAdoptionStatus.StyleController = this.layoutControl1;
             this.rdgAdoptionStatus.TabIndex = 11;
             // 
@@ -166,15 +166,15 @@
             this.layoutControlItem10});
             this.Root.Name = "Root";
             this.Root.OptionsItemText.TextToControlDistance = 2;
-            this.Root.Size = new System.Drawing.Size(330, 196);
+            this.Root.Size = new System.Drawing.Size(351, 194);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 166);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 164);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(310, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(331, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -182,25 +182,25 @@
             this.layoutControlItem3.Control = this.txeUserId;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(310, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(331, 28);
             this.layoutControlItem3.Text = "유저Id :";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(62, 18);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnClose;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 130);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 126);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(143, 36);
+            this.layoutControlItem7.Size = new System.Drawing.Size(153, 38);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnSave;
-            this.layoutControlItem11.Location = new System.Drawing.Point(143, 130);
+            this.layoutControlItem11.Location = new System.Drawing.Point(153, 126);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(167, 36);
+            this.layoutControlItem11.Size = new System.Drawing.Size(178, 38);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -209,7 +209,7 @@
             this.layoutControlItem12.Control = this.txeAnimalName;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(310, 28);
+            this.layoutControlItem12.Size = new System.Drawing.Size(331, 28);
             this.layoutControlItem12.Text = "동물이름 :";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(62, 18);
             // 
@@ -220,7 +220,7 @@
             this.layoutControlItem4.CustomizationFormText = " 보호소 이름 :";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(310, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(331, 28);
             this.layoutControlItem4.Text = "동물Id :";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(62, 18);
             // 
@@ -231,7 +231,7 @@
             this.layoutControlItem10.CustomizationFormText = "블랙리스트";
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(310, 46);
+            this.layoutControlItem10.Size = new System.Drawing.Size(331, 42);
             this.layoutControlItem10.Text = "입양상태: ";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(62, 18);
             // 

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class ShelterListForm : Form
+    public partial class ShelterListForm : DevExpress.XtraEditors.XtraForm
     {
         public ShelterListForm()
         {

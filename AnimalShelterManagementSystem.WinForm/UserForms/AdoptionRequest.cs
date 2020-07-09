@@ -19,7 +19,7 @@ using System.Data.
 
 namespace AnimalShelterManagementSystem.WinForm
 {
-    public partial class AdoptionRequest : Form
+    public partial class AdoptionRequest : DevExpress.XtraEditors.XtraForm
     {
         private int userId;
         Adoption adoption = new Adoption();

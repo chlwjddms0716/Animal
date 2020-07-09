@@ -110,7 +110,7 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 0, 812, 500);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(364, 184);
+            this.layoutControl2.Size = new System.Drawing.Size(364, 191);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -118,7 +118,7 @@
             // 
             this.label1.Location = new System.Drawing.Point(12, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 45);
+            this.label1.Size = new System.Drawing.Size(167, 52);
             this.label1.TabIndex = 8;
             this.label1.Text = " ";
             // 
@@ -182,7 +182,7 @@
             this.layoutControlItem6,
             this.layoutControlItem8});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(364, 184);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(364, 191);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -236,7 +236,7 @@
             this.layoutControlItem6.Control = this.btnFindPassword;
             this.layoutControlItem6.Location = new System.Drawing.Point(171, 115);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(173, 49);
+            this.layoutControlItem6.Size = new System.Drawing.Size(173, 56);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -245,7 +245,7 @@
             this.layoutControlItem8.Control = this.label1;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 115);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(171, 49);
+            this.layoutControlItem8.Size = new System.Drawing.Size(171, 56);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 

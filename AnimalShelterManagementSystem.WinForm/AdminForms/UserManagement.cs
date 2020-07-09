@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-   
-    public partial class UserManagement : Form
-    { 
+
+    public partial class UserManagement : DevExpress.XtraEditors.XtraForm
+    {
         private int AdminCode = 2;
         private int BlacklistCode = 2;
         List<User> UserList = new List<User>();
