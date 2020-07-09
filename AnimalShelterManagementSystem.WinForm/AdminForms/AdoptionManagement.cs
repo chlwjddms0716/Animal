@@ -82,7 +82,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
             adoptionBindingSource.Remove(adoption);
         }
-
+        
         private void ExecuteEdit()
         {
             Adoption adoption = adoptionBindingSource.Current as Adoption;
