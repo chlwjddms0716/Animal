@@ -49,7 +49,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             if (String.Equals(txeAddress.Text, "") == true)
                 checkinput += "주소,";
         
-            return checkinput.Remove(checkinput.Length-1);
+            return checkinput;
         }
         private void btnCheck_Click(object sender, EventArgs e)
         {
@@ -84,7 +84,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                     MessageBox.Show("중복된 아이디입니다.");
                 }
             }
-            MessageBox.Show($"{CheckInput()}을(를) 입력해주세요");
+            MessageBox.Show(CheckInput().Remove(CheckInput().Length - 1) + "을(를) 입력해주세요.");
         }
     }
 }
