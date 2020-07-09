@@ -31,7 +31,7 @@ namespace AnimalShelterManagementSystem
         public string PictureLink { get; set; }
         public int PhysicalCondition { get; set; }
         public int Species { get; set; }
-        public bool IsAdopted { get; set; }
+        public int AdoptionStatus { get; set; }
         public int AnimalShelterId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

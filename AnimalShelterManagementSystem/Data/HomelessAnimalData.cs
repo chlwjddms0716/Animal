@@ -67,13 +67,13 @@ namespace AnimalShelterManagementSystem
 
 
             var query = from x in context.HomelessAnimals
-                        where x.Species == speciesCode && x.IsAdopted == false 
+                        where x.Species == speciesCode && x.AdoptionStatus == 0
                         select x;
 
             if (genderCode == 1)
                 query = query.Where(x => x.Gender == 1);
 
-            if (genderCode == 2)
+            else if (genderCode == 2)
                 query = query.Where(x => x.Gender == 2);
 
             var list = query.ToList();
@@ -87,7 +87,7 @@ namespace AnimalShelterManagementSystem
             }
 
             return list;
-
+        }
 
 
 
@@ -99,12 +99,20 @@ namespace AnimalShelterManagementSystem
 
 
             var query = from x in context.HomelessAnimals
-                        //    //from y in context.AnimalShelters
-                        //where x.AnimalShelterId == animalShelterId &&
-                        //x.Species == speciesCode &&
-                        //x.Gender == gender &&
-                        //        x.LatestFindingReport >= foundDateFrom && x.LatestFindingReport <= foundDateTo
+                      //from y in context.AnimalShelters
+                        where x.AnimalShelterId == animalShelterId &&
+                        x.Species == speciesCode &&
+                      //  x.Gender == gender &&
+                                x.LatestFindingReport >= foundDateFrom && x.LatestFindingReport <= foundDateTo
                         select x;
+
+
+            if (gender == 1)
+                query = query.Where(x => x.Gender == 1);
+
+            else if (gender == 2)
+                query = query.Where(x => x.Gender == 2);
+
 
 
 
@@ -115,12 +123,23 @@ namespace AnimalShelterManagementSystem
                 x.SpeciesName = ((SpeciesType)x.Species).ToString();
                 x.GenderName = ((Genders)x.Gender).ToString();
                 x.LatestFindingReportDate = x.LatestFindingReport;
-                
+
             }
 
             return list;
 
         }
 
+        public List<HomelessAnimal> GetByAnimalName(string animalName)
+        {
+            AnimalShelterManagementEntities context = CreateContext();
+
+            var query = from x in context.HomelessAnimals
+                        where x.Name == animalName
+                        orderby x.HomelessAnimalId
+                        select x;
+
+            return query.ToList();
+        }
     }
 }

@@ -38,7 +38,7 @@
             // 
             this.btnAdoption.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdoption.Appearance.Options.UseFont = true;
-            this.btnAdoption.Location = new System.Drawing.Point(149, 104);
+            this.btnAdoption.Location = new System.Drawing.Point(102, 79);
             this.btnAdoption.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdoption.Name = "btnAdoption";
             this.btnAdoption.Size = new System.Drawing.Size(308, 169);
@@ -50,7 +50,7 @@
             // 
             this.btnUserInfo.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserInfo.Appearance.Options.UseFont = true;
-            this.btnUserInfo.Location = new System.Drawing.Point(528, 104);
+            this.btnUserInfo.Location = new System.Drawing.Point(481, 79);
             this.btnUserInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserInfo.Name = "btnUserInfo";
             this.btnUserInfo.Size = new System.Drawing.Size(308, 169);
@@ -62,7 +62,7 @@
             // 
             this.btnLossReport.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLossReport.Appearance.Options.UseFont = true;
-            this.btnLossReport.Location = new System.Drawing.Point(149, 336);
+            this.btnLossReport.Location = new System.Drawing.Point(102, 311);
             this.btnLossReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnLossReport.Name = "btnLossReport";
             this.btnLossReport.Size = new System.Drawing.Size(308, 169);
@@ -74,7 +74,7 @@
             // 
             this.btnFindReport.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFindReport.Appearance.Options.UseFont = true;
-            this.btnFindReport.Location = new System.Drawing.Point(528, 336);
+            this.btnFindReport.Location = new System.Drawing.Point(481, 311);
             this.btnFindReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnFindReport.Name = "btnFindReport";
             this.btnFindReport.Size = new System.Drawing.Size(308, 169);
@@ -86,14 +86,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 552);
+            this.ClientSize = new System.Drawing.Size(913, 549);
             this.Controls.Add(this.btnFindReport);
             this.Controls.Add(this.btnLossReport);
             this.Controls.Add(this.btnUserInfo);
             this.Controls.Add(this.btnAdoption);
             this.Name = "UserMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "r";
+            this.Text = "유저메뉴";
             this.ResumeLayout(false);
 
         }

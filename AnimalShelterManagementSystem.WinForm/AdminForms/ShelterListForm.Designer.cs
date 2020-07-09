@@ -361,7 +361,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "ShelterListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "보호소목록";
+            this.Text = "보호소리스트";
             this.Load += new System.EventHandler(this.Shelter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

@@ -45,6 +45,7 @@
             this.btnAdoption.Size = new System.Drawing.Size(308, 169);
             this.btnAdoption.TabIndex = 7;
             this.btnAdoption.Text = "입양 관리";
+            this.btnAdoption.Click += new System.EventHandler(this.btnAdoption_Click);
             // 
             // btnShelter
             // 
@@ -92,7 +93,7 @@
             this.Controls.Add(this.btnAnimal);
             this.Name = "AdminMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminMenu";
+            this.Text = "관리자메뉴";
             this.ResumeLayout(false);
 
         }

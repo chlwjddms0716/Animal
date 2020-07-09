@@ -18,17 +18,12 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         List<Adoption> FilteredById;
         List<Adoption> FilteredByAdoptionStatus;
         private string Id;
-        private int currentStatus;
+        private int currentStatus = 3;
         Adoption adoption = new Adoption();
 
         public AdoptionManagement()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
         private void querybyId()
         {
@@ -40,16 +35,17 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void querybyAdoptionStatus()
         {
             querybyId();
-            if (currentStatus != 2)
+            if (currentStatus != 3) //전체
                 FilteredByAdoptionStatus = FilteredById.Where(x => x.AdoptionStatus == (AdoptionStatusType)currentStatus).ToList();
             else
                 FilteredByAdoptionStatus = FilteredById;
-            homelessAnimalBindingSource.DataSource = FilteredByAdoptionStatus;
+            adoptionBindingSource.DataSource = FilteredByAdoptionStatus;
         }
 
         private void AdoptionManagement_Load(object sender, EventArgs e)
         {
             adoptionList = DataRepository.Adoption.GetEvery();
+            //adoptionBindingSource.DataSource = adoptionList;
             querybyAdoptionStatus();
         }
 
@@ -76,35 +72,23 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void ExecuteDelete()
         {
-            List<HomelessAnimal> animals = DataRepository.Adoption.GetAnimalsByUserName(txeUserName.Text);
+            Adoption adoption = adoptionBindingSource.Current as Adoption;
 
-            homelessAnimalBindingSource.DataSource = animals;
+            if (adoption == null)
+                return;
 
 
-            //if (String.Equals(tebUserId.Text, "") == true)
-            //{
-            //    MessageBox.Show("유저아이디를 입력해주세요");
-            //}
-            /*
-            adoption.UserId = userId;
-            DataRepository.Adoption.Insert(adoption);
-            HomelessAnimal homelessAnimal = new HomelessAnimal();
-            homelessAnimal = DataRepository.HomelessAnimal.Get(adoption.HomelessAnimalId);
-            homelessAnimal.IsAdopted = true;
-            DataRepository.HomelessAnimal.Update(homelessAnimal);
+            DataRepository.Adoption.Delete(adoption);
 
-            userId = DataRepository.HomelessAnimal.GetMaxId() + 1;
-            userId.Species = Convert.ToInt32(cbbSpecies.SelectedValue);
-            _homelessAnimal.Age = Convert.ToInt32(txeAge.Text);
-            _homelessAnimal.Species = Convert.ToInt32(cbbSpecies.SelectedValue);
-            _homelessAnimal.Feature = txeFeature.Text;
-            _homelessAnimal.Gender = Convert.ToInt32(cbbGender.SelectedValue);
-            _homelessAnimal.PhysicalCondition = Convert.ToInt32(cbbPSC.SelectedValue);
-            _homelessAnimal.LatestFindingReport = dteLatestFindingReport.DateTime.Date;
-            _homelessAnimal.PictureLink = txePictureLink.Text;
-            _homelessAnimal.AnimalShelterId = Convert.ToInt32(cbbAnimalShelter.SelectedValue);
-           
-             */
+            adoptionBindingSource.Remove(adoption);
+        }
+
+        private void ExecuteEdit()
+        {
+            Adoption adoption = adoptionBindingSource.Current as Adoption;
+
+            if (adoption == null)
+                return;
 
             AdoptionForm form = new AdoptionForm(adoption, 0);
             form.ShowDialog();
@@ -126,6 +110,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             currentStatus = (int)rdgAdoptionStatus.EditValue;
             querybyAdoptionStatus();
+        }
+
+        private void grvAdoptionList_Click(object sender, EventArgs e)
+        {
+            ExecuteEdit();
         }
     }
 }

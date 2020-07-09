@@ -32,5 +32,14 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             shelterListForm.ShowDialog();
             Cursor = Cursors.Arrow;
         }
+
+        private void btnAdoption_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            AdoptionManagement adoptionManagement = new AdoptionManagement();
+            adoptionManagement.ShowDialog();
+            Cursor = Cursors.Arrow;
+
+        }
     }
 }

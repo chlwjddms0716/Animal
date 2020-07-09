@@ -19,7 +19,38 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         {
             InitializeComponent();
         }
+        void InsertUser()
+        {
+            User user = new User();
+            user.Address = txeAddress.Text;
+            user.Id = txeId.Text;
+            user.Password = txePassword.Text;
+            user.Name = txeName.Text;
+            user.PhoneNumber = txePhoneNumber.Text;
+            user.UserId = DataRepository.User.GetMaxId() + 1;
+            DataRepository.User.Insert(user);
+        }
 
+        string CheckInput()
+        {
+            string checkinput = "";
+            if (String.Equals(txeId.Text, "") == true)
+                checkinput += "아이디, ";
+
+            if (String.Equals(txePassword.Text, "") == true)
+                checkinput += "비밀번호, ";
+
+            if (String.Equals(txeName.Text, "") == true)
+                checkinput += "이름, ";
+
+            if (String.Equals(txePhoneNumber.Text, "") == true)
+                checkinput += "휴대폰 번호, ";
+
+            if (String.Equals(txeAddress.Text, "") == true)
+                checkinput += "주소,";
+        
+            return checkinput.Remove(checkinput.Length-1);
+        }
         private void btnCheck_Click(object sender, EventArgs e)
         {
             if (string.Equals(txeId.Text, "") is true)
@@ -38,40 +69,12 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            string checkinput = "";
-            if (String.Equals(txeId.Text, "") == true)
-            {
-                checkinput += "아이디, ";
-            }
-            if (String.Equals(txePassword.Text, "") == true)
-            {
-                checkinput += "비밀번호, ";
-            }
-            if (String.Equals(txeName.Text, "") == true)
-            {
-                checkinput += "이름, ";
-            }
-            if (String.Equals(txePhoneNumber.Text, "") == true)
-            {
-                checkinput += "휴대폰 번호, ";
-            }
-            if (String.Equals(txeAddress.Text, "") == true)
-            {
-                checkinput += "주소";
-            }
-
-            if (string.Equals(checkinput, "") == true)
+            if (string.Equals(CheckInput(), "") == true)
             {
                 if (checkduplicate is true)
                 {
-                    User user = new User();
-                    user.Address = txeAddress.Text;
-                    user.Id = txeId.Text;
-                    user.Password = txePassword.Text;
-                    user.Name = txeName.Text;
-                    user.PhoneNumber = txePhoneNumber.Text;
-                    user.UserId = DataRepository.User.GetMaxId() + 1;
-                    DataRepository.User.Insert(user);
+                    InsertUser();
+
                     MessageBox.Show("회원가입이 완료되었습니다.");
                     Close();
                     return;
@@ -81,7 +84,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                     MessageBox.Show("중복된 아이디입니다.");
                 }
             }
-            MessageBox.Show($"{checkinput}을(를) 입력해주세요");
+            MessageBox.Show($"{CheckInput()}을(를) 입력해주세요");
         }
     }
 }

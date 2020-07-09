@@ -1,4 +1,4 @@
-﻿using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 {
     public partial class HomelessAnimalForm : Form
     {
-        private HomelessAnimal _homelessAnimal = new HomelessAnimal();
+        private HomelessAnimal _homelessAnimal;
 
 
         public HomelessAnimalForm()
@@ -40,7 +40,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             string checkinput = "";
             if (string.Equals(checkinput, "") == true)
             {
-                _homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
+               
                 _homelessAnimal.Name = txeName.Text;
                 _homelessAnimal.Age = Convert.ToInt32(txeAge.Text);
                 _homelessAnimal.Species = Convert.ToInt32(cbbSpecies.SelectedValue);
@@ -51,8 +51,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 _homelessAnimal.PictureLink = txePictureLink.Text;
                 _homelessAnimal.AnimalShelterId = Convert.ToInt32(cbbAnimalShelter.SelectedValue);
 
-
-                DataRepository.HomelessAnimal.Insert(_homelessAnimal);
+               
 
                 MessageBox.Show("저장되었습니다.");
 
@@ -67,6 +66,8 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            WriteToEntity();
+
             string checkinput = "";
             if (cbbSpecies.Text == null)
             {
@@ -102,12 +103,12 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             }
             if (string.Equals(checkinput, "") == true)
             {
+               
 
-                WriteToEntity();
                 try
                 {
                    
-                    if (_homelessAnimal.HomelessAnimalId == 0) //Id의 디폴트가0이라 0이면 db에 insert함
+                    if (_homelessAnimal.HomelessAnimalId == DataRepository.HomelessAnimal.GetMaxId() + 1) //Id의 디폴트가0이라 0이면 db에 insert함
                         DataRepository.HomelessAnimal.Insert(_homelessAnimal);
 
                     else
@@ -140,8 +141,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void ReadFromEntity()
         {
 
-            txeHomelessAnimalId.Text = Convert.ToString(DataRepository.HomelessAnimal.GetMaxId()+1);
+            txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId);
             txeName.Text = _homelessAnimal.Name;
+            txeAge.Text = Convert.ToString(_homelessAnimal.Age);
             txeFeature.Text = _homelessAnimal.Feature;
             dteLatestFindingReport.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
             txePictureLink.Text = _homelessAnimal.PictureLink;

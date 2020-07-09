@@ -30,8 +30,8 @@ namespace AnimalShelterManagementSystem
         public virtual DbSet<FindingReport> FindingReports { get; set; }
         public virtual DbSet<FindingReportRecord> FindingReportRecords { get; set; }
         public virtual DbSet<FoundAnimalRecord> FoundAnimalRecords { get; set; }
-        public virtual DbSet<HomelessAnimal> HomelessAnimals { get; set; }
         public virtual DbSet<LossReport> LossReports { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<HomelessAnimal> HomelessAnimals { get; set; }
     }
 }

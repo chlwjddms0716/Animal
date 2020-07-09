@@ -37,16 +37,6 @@ namespace AnimalShelterManagementSystem.WinForm
         }
 
 
-        private void drbSpeciesSelection_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdoptionRequest_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void AdoptionRequest_Load_1(object sender, EventArgs e)
         {
 
@@ -56,24 +46,19 @@ namespace AnimalShelterManagementSystem.WinForm
             homelessAnimalBindingSource.DataSource = homelessAnimals;
             cbxSpecies.SelectedItem = null;
 
-
-
-
-
-
-
         }
 
         private void btnAdoptionRequest_Click(object sender, EventArgs e)
         {
             adoption.UserId = userId;
             adoption.AdoptionDate = DateTime.Now;
+
             try
             {
                 DataRepository.Adoption.Insert(adoption);
                 HomelessAnimal homelessAnimal = new HomelessAnimal();
                 homelessAnimal = DataRepository.HomelessAnimal.Get(adoption.HomelessAnimalId);
-                homelessAnimal.IsAdopted = true;
+                homelessAnimal.AdoptionStatus = 1;
                 DataRepository.HomelessAnimal.Update(homelessAnimal);
                 MessageBox.Show("입양 신청 되었습니다.");
             }
@@ -93,11 +78,6 @@ namespace AnimalShelterManagementSystem.WinForm
 
             adoption.HomelessAnimalId = homelessAnimal.HomelessAnimalId;
             MessageBox.Show($"{homelessAnimal.Name}을 선택하셨습니다.");
-        }
-
-        private void grvHomelessAnimalList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void cbxSpecies_SelectedIndexChanged(object sender, EventArgs e)

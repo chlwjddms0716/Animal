@@ -1,5 +1,5 @@
-﻿using AnimalShelterManagementSystem.Data;
-
+using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.WinForm.AdminForms;
 using DevExpress.XtraEditors.Filtering.Templates;
 using DevExpress.XtraExport.Xls;
 using System;
@@ -18,11 +18,18 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 {
     public partial class HomelessAnimalListForm : Form
     {
+        private int homelessAnimalId;
+
         public HomelessAnimalListForm()
         {
             InitializeComponent();
         }
 
+        public HomelessAnimalListForm(int HomelessAnimalId)
+        {
+            InitializeComponent();
+            homelessAnimalId = HomelessAnimalId;
+        }
 
 
         private void 추가IToolStripMenuItem_Click(object sender, EventArgs e)
@@ -88,20 +95,39 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void ExcuteInsert()
         {
+
+            Cursor = Cursors.WaitCursor;
             HomelessAnimal homelessAnimal = new HomelessAnimal();
+            homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
             homelessAnimal.Name = string.Empty;
             homelessAnimal.Age = 0;
             homelessAnimal.Feature = "";
             homelessAnimal.LatestFindingReport = System.DateTime.Now;
             homelessAnimal.PictureLink = string.Empty;
-            homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId();
+
 
             HomelessAnimalForm form = new HomelessAnimalForm(homelessAnimal);
             form.ShowDialog();
-
+            Cursor = Cursors.Arrow;
 
 
         }
+
+        private void ExcuteUpdate()
+        {
+            HomelessAnimal homelessAnimal = homelessAnimalBindingSource.Current as HomelessAnimal;
+
+            if (homelessAnimal == null)
+                return;
+
+            HomelessAnimalForm form = new HomelessAnimalForm(homelessAnimal);
+
+            form.ShowDialog();
+
+
+        }
+
+
 
 
         private void ExecuteDelete()
@@ -119,7 +145,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void searchControl1_LoadButtonClicked(object sender, UserControls.SearchControl.LoadButtonClickedEventArgs e)
         {
-            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(e.AnimalShelterId, e.SpeciesCode, (int)e.Gender, e.FoundDateFrom, e.FoundDateTo);
+            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(e.AnimalShelterId, (int)e.SpeciesCode, (int)e.Gender, e.FoundDateFrom, e.FoundDateTo);
             //List<AnimalShelter> AnimalShelters = DataRepository.AnimalShelter.GetbyShelterId(e.AnimalShelterId);
 
             homelessAnimalBindingSource.DataSource = homelessAnimals;
@@ -131,6 +157,16 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             //}
 
 
+        }
+
+        private void 수정UToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcuteUpdate();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            ExcuteUpdate();
         }
     }
 }
