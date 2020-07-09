@@ -15,6 +15,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
     public partial class AdoptionForm : Form
     {
         private Adoption _adoption;
+        private Adoption original = new Adoption();
         private int checkinsert;
 
         public AdoptionForm()
@@ -37,11 +38,13 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void WriteToEntity()
         {
-            _adoption.AnimalName = txeAnimalName.Text;
+            _adoption.AdoptionDate = DateTime.Today;
+            //_adoption.AnimalName = txeAnimalName.Text;
             _adoption.HomelessAnimalId = (int)lkuAnimalId.EditValue;
-            _adoption.userLoginId = txeUserId.Text;
+            //_adoption.userLoginId = txeUserId.Text;
             _adoption.UserId = DataRepository.User.GetbyId(txeUserId.Text).UserId;
-            _adoption.AdoptionStatus = (AdoptionStatusType)rdgAdoptionStatus.EditValue;
+            //_adoption.AdoptionStatus = (AdoptionStatusType)rdgAdoptionStatus.EditValue;
+
         }
 
         string CheckInput()
@@ -56,7 +59,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (rdgAdoptionStatus.EditValue is null)
                 checkinput += "입양상태,";
 
-            return checkinput.Remove(checkinput.Length - 1);
+            return checkinput;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -66,7 +69,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
             if (string.Equals(CheckInput(), "") == true)
             {
-                if (DataRepository.Adoption.Get(_adoption.UserId, _adoption.HomelessAnimalId) == null)
+                if ((DataRepository.Adoption.Get(_adoption.UserId, _adoption.HomelessAnimalId) == null))
                 {
                     try
                     {
@@ -86,11 +89,18 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                         MessageBox.Show(ex.Message);
                     }
                 }
+                else if ((_adoption.UserId == original.UserId) && (_adoption.HomelessAnimalId == original.HomelessAnimalId) == true)
+                {
+                    DataRepository.Adoption.Update(_adoption);
+                    MessageBox.Show("수정되었습니다");
+                }
+                else
+                    MessageBox.Show("입양된 기록이 있는 유저&유기동물 기록입니다. 다시 확인해주세요.");
 
             }
             else
             {
-                MessageBox.Show(CheckInput() + "을(를) 입력해주세요.");
+                MessageBox.Show(CheckInput().Remove(CheckInput().Length - 1) + "을(를) 입력해주세요.");
             }
             Close();
         }
@@ -102,9 +112,17 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void AdoptionForm_Load(object sender, EventArgs e)
         {
-            ReadFromEntity();
+
             if (checkinsert == 0)
-                DataRepository.Adoption.Delete(_adoption);
+            {
+                ReadFromEntity();
+                original = _adoption;
+            }
+            else
+            {
+                _adoption = new Adoption();
+
+            }
         }
 
         private void txeAnimalName_EditValueChanged(object sender, EventArgs e)
