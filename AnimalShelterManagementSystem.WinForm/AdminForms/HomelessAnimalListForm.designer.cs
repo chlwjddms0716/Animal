@@ -47,7 +47,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homelessAnimalIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +57,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.건강상태 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.종 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.보호센터ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchControl1 = new AnimalShelterManagementSystem.WinForm.UserControls.SearchControl();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -252,10 +252,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.dataGridView1.Size = new System.Drawing.Size(985, 332);
             this.dataGridView1.TabIndex = 3;
             // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
-            // 
             // homelessAnimalIdDataGridViewTextBoxColumn
             // 
             this.homelessAnimalIdDataGridViewTextBoxColumn.DataPropertyName = "HomelessAnimalId";
@@ -346,6 +342,10 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.보호센터ID.ReadOnly = true;
             this.보호센터ID.Width = 125;
             // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            // 
             // searchControl1
             // 
             this.searchControl1.Location = new System.Drawing.Point(12, 73);
@@ -353,6 +353,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.searchControl1.Name = "searchControl1";
             this.searchControl1.Size = new System.Drawing.Size(965, 131);
             this.searchControl1.TabIndex = 4;
+            this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked_1);
             // 
             // HomelessAnimalListForm
             // 

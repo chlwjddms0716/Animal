@@ -138,6 +138,7 @@
     <Compile Include="AdminForms\UserManagement.Designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="UserControl\SearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

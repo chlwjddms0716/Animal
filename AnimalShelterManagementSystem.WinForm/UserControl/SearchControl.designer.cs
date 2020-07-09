@@ -107,7 +107,7 @@
             this.rdgGender.Name = "rdgGender";
             this.rdgGender.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "전체"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "숫컷"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "수컷"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "암컷")});
             this.rdgGender.Size = new System.Drawing.Size(524, 30);
             this.rdgGender.StyleController = this.layoutControl1;
