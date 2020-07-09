@@ -26,12 +26,13 @@ namespace AnimalShelterManagementSystem.Models
 
     public enum AdoptionStatusType
     {
-     보호중,
+     보호중 ,
     처리중,
     입양,
     }
 public enum SpeciesType
     {
+        
         개 = 1,
 고양이,
 새    ,

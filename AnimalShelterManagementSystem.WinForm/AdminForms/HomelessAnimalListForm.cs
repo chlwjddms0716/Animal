@@ -104,7 +104,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             homelessAnimal.Feature = "";
             homelessAnimal.LatestFindingReport = System.DateTime.Now;
             homelessAnimal.PictureLink = string.Empty;
-          
+
 
             HomelessAnimalForm form = new HomelessAnimalForm(homelessAnimal);
             form.ShowDialog();
@@ -121,13 +121,13 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 return;
 
             HomelessAnimalForm form = new HomelessAnimalForm(homelessAnimal);
-          
+
             form.ShowDialog();
 
 
         }
 
-        
+
 
 
         private void ExecuteDelete()
@@ -145,7 +145,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void searchControl1_LoadButtonClicked(object sender, UserControls.SearchControl.LoadButtonClickedEventArgs e)
         {
-            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(e.AnimalShelterId, e.SpeciesCode, (int)e.Gender, e.FoundDateFrom, e.FoundDateTo);
+            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(e.AnimalShelterId, (int)e.SpeciesCode, (int)e.Gender, e.FoundDateFrom, e.FoundDateTo);
             //List<AnimalShelter> AnimalShelters = DataRepository.AnimalShelter.GetbyShelterId(e.AnimalShelterId);
 
             homelessAnimalBindingSource.DataSource = homelessAnimals;
