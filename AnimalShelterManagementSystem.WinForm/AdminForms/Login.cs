@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace AnimalShelterManagementSystem.WinForm.Forms
 {
@@ -18,7 +17,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         public Login()
         {
             InitializeComponent();
-            FormIconOptions.Default.SvgImage = Properties.Resources.dd;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

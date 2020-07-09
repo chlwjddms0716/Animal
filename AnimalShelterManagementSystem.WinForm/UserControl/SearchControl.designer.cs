@@ -92,11 +92,11 @@
             this.layoutControl1.Controls.Add(this.btnLoad);
             this.layoutControl1.Controls.Add(this.lueAnimalShelterId);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(2, 28);
+            this.layoutControl1.Location = new System.Drawing.Point(2, 27);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(729, 384);
+            this.layoutControl1.Size = new System.Drawing.Size(729, 385);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -179,7 +179,7 @@
             this.layoutControlItem2,
             this.layoutControlItem6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(729, 384);
+            this.Root.Size = new System.Drawing.Size(729, 385);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -196,7 +196,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 132);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(608, 232);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(608, 233);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
@@ -243,7 +243,7 @@
             this.btnLoad.Location = new System.Drawing.Point(620, 12);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(97, 36);
+            this.btnLoad.Size = new System.Drawing.Size(97, 38);
             this.btnLoad.StyleController = this.layoutControl1;
             this.btnLoad.TabIndex = 5;
             this.btnLoad.Text = "검색";
@@ -254,7 +254,7 @@
             this.layoutControlItem3.Control = this.btnLoad;
             this.layoutControlItem3.Location = new System.Drawing.Point(608, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(101, 364);
+            this.layoutControlItem3.Size = new System.Drawing.Size(101, 365);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 

@@ -78,7 +78,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(388, 243);
+            this.layoutControl1.Size = new System.Drawing.Size(388, 217);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -88,12 +88,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(12, 14);
+            this.splitContainerControl1.Location = new System.Drawing.Point(12, 12);
             this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl2);
             this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Size = new System.Drawing.Size(364, 215);
+            this.splitContainerControl1.Size = new System.Drawing.Size(364, 193);
             this.splitContainerControl1.SplitterPosition = 229;
             this.splitContainerControl1.TabIndex = 4;
             // 
@@ -111,21 +111,21 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 0, 812, 500);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(364, 203);
+            this.layoutControl2.Size = new System.Drawing.Size(364, 187);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 129);
+            this.label1.Location = new System.Drawing.Point(12, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 60);
+            this.label1.Size = new System.Drawing.Size(167, 48);
             this.label1.TabIndex = 8;
             this.label1.Text = " ";
             // 
             // btnFindPassword
             // 
-            this.btnFindPassword.Location = new System.Drawing.Point(183, 129);
+            this.btnFindPassword.Location = new System.Drawing.Point(183, 127);
             this.btnFindPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFindPassword.Name = "btnFindPassword";
             this.btnFindPassword.Size = new System.Drawing.Size(169, 27);
@@ -136,7 +136,7 @@
             // 
             // btnSendNumber
             // 
-            this.btnSendNumber.Location = new System.Drawing.Point(183, 70);
+            this.btnSendNumber.Location = new System.Drawing.Point(183, 68);
             this.btnSendNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSendNumber.Name = "btnSendNumber";
             this.btnSendNumber.Size = new System.Drawing.Size(169, 27);
@@ -147,7 +147,7 @@
             // 
             // txePhoneNumber
             // 
-            this.txePhoneNumber.Location = new System.Drawing.Point(95, 42);
+            this.txePhoneNumber.Location = new System.Drawing.Point(95, 40);
             this.txePhoneNumber.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txePhoneNumber.Name = "txePhoneNumber";
             this.txePhoneNumber.Size = new System.Drawing.Size(257, 24);
@@ -156,7 +156,7 @@
             // 
             // txeId
             // 
-            this.txeId.Location = new System.Drawing.Point(95, 14);
+            this.txeId.Location = new System.Drawing.Point(95, 12);
             this.txeId.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txeId.Name = "txeId";
             this.txeId.Size = new System.Drawing.Size(257, 24);
@@ -165,7 +165,7 @@
             // 
             // txeNumber
             // 
-            this.txeNumber.Location = new System.Drawing.Point(95, 101);
+            this.txeNumber.Location = new System.Drawing.Point(95, 99);
             this.txeNumber.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txeNumber.Name = "txeNumber";
             this.txeNumber.Size = new System.Drawing.Size(257, 24);
@@ -185,7 +185,7 @@
             this.layoutControlItem6,
             this.layoutControlItem8});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(364, 203);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(364, 187);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -239,7 +239,7 @@
             this.layoutControlItem6.Control = this.btnFindPassword;
             this.layoutControlItem6.Location = new System.Drawing.Point(171, 115);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(173, 64);
+            this.layoutControlItem6.Size = new System.Drawing.Size(173, 52);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -248,7 +248,7 @@
             this.layoutControlItem8.Control = this.label1;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 115);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(171, 64);
+            this.layoutControlItem8.Size = new System.Drawing.Size(171, 52);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -259,7 +259,7 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem7});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(388, 243);
+            this.Root.Size = new System.Drawing.Size(388, 217);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem7
@@ -267,7 +267,7 @@
             this.layoutControlItem7.Control = this.splitContainerControl1;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(368, 219);
+            this.layoutControlItem7.Size = new System.Drawing.Size(368, 197);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -282,8 +282,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 243);
+            this.ClientSize = new System.Drawing.Size(388, 217);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FindPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

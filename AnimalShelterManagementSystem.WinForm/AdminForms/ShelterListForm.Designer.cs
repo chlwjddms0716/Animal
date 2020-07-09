@@ -100,7 +100,7 @@
             this.btnDelete,
             this.btnUpdate,
             this.btnHelp});
-            this.toolStrip1.Location = new System.Drawing.Point(12, 14);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 12);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(863, 33);
             this.toolStrip1.TabIndex = 1;
@@ -108,7 +108,7 @@
             // 
             // lkuShelterName
             // 
-            this.lkuShelterName.Location = new System.Drawing.Point(100, 79);
+            this.lkuShelterName.Location = new System.Drawing.Point(100, 77);
             this.lkuShelterName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lkuShelterName.Name = "lkuShelterName";
             this.lkuShelterName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -126,7 +126,7 @@
             // 
             // txeAddress
             // 
-            this.txeAddress.Location = new System.Drawing.Point(100, 51);
+            this.txeAddress.Location = new System.Drawing.Point(100, 49);
             this.txeAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeAddress.Name = "txeAddress";
             this.txeAddress.Properties.NullText = "주소를 입력해주세요.";
@@ -149,13 +149,13 @@
             this.phoneNumberDataGridViewTextBoxColumn,
             this.managerNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.animalShelterBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(100, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(100, 105);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(775, 414);
+            this.dataGridView1.Size = new System.Drawing.Size(775, 418);
             this.dataGridView1.TabIndex = 3;
             // 
             // AnimalShelterId
@@ -185,7 +185,7 @@
             this.layoutControlItem1.Control = this.dataGridView1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 93);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(867, 418);
+            this.layoutControlItem1.Size = new System.Drawing.Size(867, 422);
             this.layoutControlItem1.Text = "   리스트";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(85, 18);
             // 
@@ -363,6 +363,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 535);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ShelterListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

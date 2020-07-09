@@ -101,7 +101,7 @@
             this.tsbDelete,
             this.tsbEdit,
             this.tsbRefresh});
-            this.toolStrip1.Location = new System.Drawing.Point(12, 199);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 198);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(776, 26);
             this.toolStrip1.TabIndex = 10;
@@ -127,27 +127,27 @@
             this.isAdministratorDataGridViewCheckBoxColumn,
             this.adoptionsDataGridViewTextBoxColumn});
             this.grvUserList.DataSource = this.userBindingSource;
-            this.grvUserList.Location = new System.Drawing.Point(82, 229);
+            this.grvUserList.Location = new System.Drawing.Point(82, 228);
             this.grvUserList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grvUserList.Name = "grvUserList";
             this.grvUserList.ReadOnly = true;
             this.grvUserList.RowHeadersWidth = 51;
             this.grvUserList.RowTemplate.Height = 27;
-            this.grvUserList.Size = new System.Drawing.Size(706, 297);
+            this.grvUserList.Size = new System.Drawing.Size(706, 300);
             this.grvUserList.TabIndex = 10;
             this.grvUserList.DoubleClick += new System.EventHandler(this.grvUserList_DoubleClick);
             // 
             // rdgAdmin
             // 
             this.rdgAdmin.EditValue = 0;
-            this.rdgAdmin.Location = new System.Drawing.Point(82, 72);
+            this.rdgAdmin.Location = new System.Drawing.Point(82, 70);
             this.rdgAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdgAdmin.Name = "rdgAdmin";
             this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgAdmin.Size = new System.Drawing.Size(706, 60);
+            this.rdgAdmin.Size = new System.Drawing.Size(706, 61);
             this.rdgAdmin.StyleController = this.layoutControl1;
             this.rdgAdmin.TabIndex = 11;
             this.rdgAdmin.SelectedIndexChanged += new System.EventHandler(this.rdgAdmin_SelectedIndexChanged);
@@ -155,7 +155,7 @@
             // rdgBlacklist
             // 
             this.rdgBlacklist.EditValue = 0;
-            this.rdgBlacklist.Location = new System.Drawing.Point(82, 136);
+            this.rdgBlacklist.Location = new System.Drawing.Point(82, 135);
             this.rdgBlacklist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdgBlacklist.Name = "rdgBlacklist";
             this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
@@ -169,7 +169,7 @@
             // 
             // txbName
             // 
-            this.txbName.Location = new System.Drawing.Point(82, 14);
+            this.txbName.Location = new System.Drawing.Point(82, 12);
             this.txbName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(706, 25);
@@ -178,7 +178,7 @@
             // 
             // txbId
             // 
-            this.txbId.Location = new System.Drawing.Point(82, 43);
+            this.txbId.Location = new System.Drawing.Point(82, 41);
             this.txbId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbId.Name = "txbId";
             this.txbId.Size = new System.Drawing.Size(706, 25);
@@ -205,9 +205,9 @@
             this.layoutControlItem2.Control = this.grvUserList;
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "l";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 215);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 216);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(780, 301);
+            this.layoutControlItem2.Size = new System.Drawing.Size(780, 304);
             this.layoutControlItem2.Text = "리스트";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 18);
             // 
@@ -218,7 +218,7 @@
             this.layoutControlItem3.CustomizationFormText = "관리자";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 58);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(780, 64);
+            this.layoutControlItem3.Size = new System.Drawing.Size(780, 65);
             this.layoutControlItem3.Text = "관리자";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(67, 18);
             // 
@@ -227,7 +227,7 @@
             this.layoutControlItem1.Control = this.rdgBlacklist;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem1.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 122);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 123);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(780, 63);
             this.layoutControlItem1.Text = "블랙리스트";
@@ -259,7 +259,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.toolStrip1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 185);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 186);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(780, 30);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -405,6 +405,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 540);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

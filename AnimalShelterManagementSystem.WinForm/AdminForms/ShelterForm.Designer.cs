@@ -77,14 +77,14 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(494, 279);
+            this.layoutControl1.Size = new System.Drawing.Size(494, 248);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // txeShelterId
             // 
             this.txeShelterId.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txeShelterId.Location = new System.Drawing.Point(81, 14);
+            this.txeShelterId.Location = new System.Drawing.Point(81, 12);
             this.txeShelterId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeShelterId.Name = "txeShelterId";
             this.txeShelterId.Properties.ReadOnly = true;
@@ -94,7 +94,7 @@
             // 
             // txeAddress
             // 
-            this.txeAddress.Location = new System.Drawing.Point(81, 70);
+            this.txeAddress.Location = new System.Drawing.Point(81, 68);
             this.txeAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeAddress.Name = "txeAddress";
             this.txeAddress.Size = new System.Drawing.Size(401, 24);
@@ -105,10 +105,10 @@
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(249, 154);
+            this.btnSave.Location = new System.Drawing.Point(249, 152);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(233, 32);
+            this.btnSave.Size = new System.Drawing.Size(233, 34);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "확인";
@@ -118,10 +118,10 @@
             // 
             this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.Location = new System.Drawing.Point(12, 154);
+            this.btnClose.Location = new System.Drawing.Point(12, 152);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(233, 32);
+            this.btnClose.Size = new System.Drawing.Size(233, 34);
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "취소";
@@ -129,7 +129,7 @@
             // 
             // txeName
             // 
-            this.txeName.Location = new System.Drawing.Point(81, 42);
+            this.txeName.Location = new System.Drawing.Point(81, 40);
             this.txeName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeName.Name = "txeName";
             this.txeName.Size = new System.Drawing.Size(401, 24);
@@ -138,7 +138,7 @@
             // 
             // txePhoneNumber
             // 
-            this.txePhoneNumber.Location = new System.Drawing.Point(81, 98);
+            this.txePhoneNumber.Location = new System.Drawing.Point(81, 96);
             this.txePhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txePhoneNumber.Name = "txePhoneNumber";
             this.txePhoneNumber.Size = new System.Drawing.Size(401, 24);
@@ -147,7 +147,7 @@
             // 
             // txeManager
             // 
-            this.txeManager.Location = new System.Drawing.Point(81, 126);
+            this.txeManager.Location = new System.Drawing.Point(81, 124);
             this.txeManager.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeManager.Name = "txeManager";
             this.txeManager.Size = new System.Drawing.Size(401, 24);
@@ -169,15 +169,15 @@
             this.layoutControlItem1});
             this.Root.Name = "Root";
             this.Root.OptionsItemText.TextToControlDistance = 2;
-            this.Root.Size = new System.Drawing.Size(494, 279);
+            this.Root.Size = new System.Drawing.Size(494, 248);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 176);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 178);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(474, 79);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(474, 50);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -194,7 +194,7 @@
             this.layoutControlItem7.Control = this.btnClose;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 140);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(237, 36);
+            this.layoutControlItem7.Size = new System.Drawing.Size(237, 38);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -203,7 +203,7 @@
             this.layoutControlItem11.Control = this.btnSave;
             this.layoutControlItem11.Location = new System.Drawing.Point(237, 140);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(237, 36);
+            this.layoutControlItem11.Size = new System.Drawing.Size(237, 38);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -251,8 +251,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 279);
+            this.ClientSize = new System.Drawing.Size(494, 248);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ShelterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
