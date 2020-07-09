@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class AdoptionForm : Form
+    public partial class AdoptionForm : DevExpress.XtraEditors.XtraForm
     {
         private Adoption _adoption;
         private Adoption original = new Adoption();

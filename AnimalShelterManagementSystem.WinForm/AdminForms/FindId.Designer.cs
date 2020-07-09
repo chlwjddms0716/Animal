@@ -99,19 +99,19 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 0, 812, 500);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(402, 175);
+            this.layoutControl2.Size = new System.Drawing.Size(402, 179);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(12, 107);
+            this.splitContainer1.Location = new System.Drawing.Point(12, 109);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btnFindId);
-            this.splitContainer1.Size = new System.Drawing.Size(378, 56);
+            this.splitContainer1.Size = new System.Drawing.Size(378, 58);
             this.splitContainer1.SplitterDistance = 126;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -120,7 +120,7 @@
             this.btnFindId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnFindId.Location = new System.Drawing.Point(0, 0);
             this.btnFindId.Name = "btnFindId";
-            this.btnFindId.Size = new System.Drawing.Size(248, 56);
+            this.btnFindId.Size = new System.Drawing.Size(248, 58);
             this.btnFindId.TabIndex = 0;
             this.btnFindId.Text = "아이디 찾기";
             this.btnFindId.Click += new System.EventHandler(this.btnFindId_Click);
@@ -153,7 +153,7 @@
             this.layoutControlItem2,
             this.layoutControlItem4});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(402, 175);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(402, 179);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -170,7 +170,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 56);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(382, 39);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(382, 41);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -185,9 +185,9 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.splitContainer1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 95);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 97);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(382, 60);
+            this.layoutControlItem4.Size = new System.Drawing.Size(382, 62);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 

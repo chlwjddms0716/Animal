@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class ShelterForm : Form
+    public partial class ShelterForm : DevExpress.XtraEditors.XtraForm
     {
         private AnimalShelter _animalShelter = new AnimalShelter();
 

@@ -119,6 +119,7 @@ namespace AnimalShelterManagementSystem
                 x.SpeciesName = ((SpeciesType)x.Species).ToString();
                 x.GenderName = ((Genders)x.Gender).ToString();
                 x.LatestFindingReportDate = x.LatestFindingReport;
+                x.PhysicalConditionName = ((PhysicalConditionType)x.PhysicalCondition).ToString();
 
             }
 

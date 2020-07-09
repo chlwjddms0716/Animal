@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class AdoptionManagement : Form
+    public partial class AdoptionManagement : DevExpress.XtraEditors.XtraForm
     {
         List<Adoption> adoptionList = new List<Adoption>();
         List<Adoption> FilteredById;

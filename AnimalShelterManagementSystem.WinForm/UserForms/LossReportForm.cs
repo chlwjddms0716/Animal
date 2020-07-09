@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm
 {
-    public partial class LossReportForm : Form
+    public partial class LossReportForm : DevExpress.XtraEditors.XtraForm
     {
         private int userId;
         public LossReportForm()

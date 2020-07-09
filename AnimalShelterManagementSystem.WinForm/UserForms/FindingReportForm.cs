@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.UserForms
 {
-    public partial class FindingReportForm : Form
+    public partial class FindingReportForm : DevExpress.XtraEditors.XtraForm
     {
         public FindingReportForm()
         {

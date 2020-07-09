@@ -18,7 +18,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.Forms
 {
-    public partial class HomelessAnimalListForm : Form
+    public partial class HomelessAnimalListForm : DevExpress.XtraEditors.XtraForm
     {
         private int homelessAnimalId;
 
