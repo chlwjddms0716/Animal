@@ -108,7 +108,7 @@
             this.btnSignup.Location = new System.Drawing.Point(12, 68);
             this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSignup.Name = "btnSignup";
-            this.btnSignup.Size = new System.Drawing.Size(123, 38);
+            this.btnSignup.Size = new System.Drawing.Size(123, 36);
             this.btnSignup.StyleController = this.layoutControl1;
             this.btnSignup.TabIndex = 15;
             this.btnSignup.Text = "회원가입";
@@ -122,7 +122,7 @@
             this.btnLogin.Location = new System.Drawing.Point(151, 68);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(119, 38);
+            this.btnLogin.Size = new System.Drawing.Size(119, 36);
             this.btnLogin.StyleController = this.layoutControl1;
             this.btnLogin.TabIndex = 13;
             this.btnLogin.Text = "로그인";
@@ -208,7 +208,7 @@
             this.layoutControlItem3.Control = this.btnLogin;
             this.layoutControlItem3.Location = new System.Drawing.Point(139, 56);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(123, 42);
+            this.layoutControlItem3.Size = new System.Drawing.Size(123, 40);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -225,16 +225,16 @@
             this.layoutControlItem4.Control = this.btnSignup;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(127, 42);
+            this.layoutControlItem4.Size = new System.Drawing.Size(127, 40);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 98);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 96);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(127, 11);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(127, 13);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
@@ -258,9 +258,9 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(139, 98);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(139, 96);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(123, 11);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(123, 13);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ribbonPage2
@@ -277,6 +277,7 @@
             this.ClientSize = new System.Drawing.Size(279, 180);
             this.Controls.Add(this.splitContainerControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.dogg;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

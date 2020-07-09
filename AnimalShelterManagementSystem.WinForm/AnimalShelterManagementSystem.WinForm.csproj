@@ -295,5 +295,17 @@
   <ItemGroup>
     <None Include="Resources\Edit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dogg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dogfoot.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dd.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

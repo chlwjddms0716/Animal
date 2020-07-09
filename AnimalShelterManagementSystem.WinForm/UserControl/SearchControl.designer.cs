@@ -36,17 +36,17 @@
             this.cbbSpecies = new System.Windows.Forms.ComboBox();
             this.dteFoundDateTo = new DevExpress.XtraEditors.DateEdit();
             this.dteFoundDateFrom = new DevExpress.XtraEditors.DateEdit();
-            this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.lueAnimalShelterId = new DevExpress.XtraEditors.LookUpEdit();
-            this.bdsAnimalShelter = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
+            this.bdsAnimalShelter = new System.Windows.Forms.BindingSource(this.components);
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bdsSpecies = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -58,15 +58,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueAnimalShelterId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsAnimalShelter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsAnimalShelter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSpecies)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +92,11 @@
             this.layoutControl1.Controls.Add(this.btnLoad);
             this.layoutControl1.Controls.Add(this.lueAnimalShelterId);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(2, 27);
+            this.layoutControl1.Location = new System.Drawing.Point(2, 28);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(729, 385);
+            this.layoutControl1.Size = new System.Drawing.Size(729, 384);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -109,14 +109,14 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "전체"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "수컷"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "암컷")});
-            this.rdgGender.Size = new System.Drawing.Size(524, 30);
+            this.rdgGender.Size = new System.Drawing.Size(524, 42);
             this.rdgGender.StyleController = this.layoutControl1;
             this.rdgGender.TabIndex = 19;
             // 
             // cbbSpecies
             // 
             this.cbbSpecies.FormattingEnabled = true;
-            this.cbbSpecies.Location = new System.Drawing.Point(92, 74);
+            this.cbbSpecies.Location = new System.Drawing.Point(92, 86);
             this.cbbSpecies.Name = "cbbSpecies";
             this.cbbSpecies.Size = new System.Drawing.Size(524, 26);
             this.cbbSpecies.TabIndex = 18;
@@ -124,7 +124,7 @@
             // dteFoundDateTo
             // 
             this.dteFoundDateTo.EditValue = "";
-            this.dteFoundDateTo.Location = new System.Drawing.Point(395, 104);
+            this.dteFoundDateTo.Location = new System.Drawing.Point(395, 116);
             this.dteFoundDateTo.Name = "dteFoundDateTo";
             this.dteFoundDateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -137,7 +137,7 @@
             // dteFoundDateFrom
             // 
             this.dteFoundDateFrom.EditValue = null;
-            this.dteFoundDateFrom.Location = new System.Drawing.Point(92, 104);
+            this.dteFoundDateFrom.Location = new System.Drawing.Point(92, 116);
             this.dteFoundDateFrom.Name = "dteFoundDateFrom";
             this.dteFoundDateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -146,20 +146,6 @@
             this.dteFoundDateFrom.Size = new System.Drawing.Size(219, 24);
             this.dteFoundDateFrom.StyleController = this.layoutControl1;
             this.dteFoundDateFrom.TabIndex = 9;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
-            this.btnLoad.Appearance.Options.UseFont = true;
-            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
-            this.btnLoad.Location = new System.Drawing.Point(620, 12);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(97, 38);
-            this.btnLoad.StyleController = this.layoutControl1;
-            this.btnLoad.TabIndex = 5;
-            this.btnLoad.Text = "검색";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // lueAnimalShelterId
             // 
@@ -193,7 +179,7 @@
             this.layoutControlItem2,
             this.layoutControlItem6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(729, 385);
+            this.Root.Size = new System.Drawing.Size(729, 384);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -208,24 +194,15 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 120);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 132);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(608, 245);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(608, 232);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.btnLoad;
-            this.layoutControlItem3.Location = new System.Drawing.Point(608, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(101, 365);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.dteFoundDateFrom;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 92);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 104);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(303, 28);
             this.layoutControlItem4.Text = "신고일(부터)";
@@ -234,7 +211,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.dteFoundDateTo;
-            this.layoutControlItem5.Location = new System.Drawing.Point(303, 92);
+            this.layoutControlItem5.Location = new System.Drawing.Point(303, 104);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(305, 28);
             this.layoutControlItem5.Text = "신고일(까지)";
@@ -243,7 +220,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.cbbSpecies;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 62);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 74);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(608, 30);
             this.layoutControlItem2.Text = "  축종";
@@ -254,9 +231,32 @@
             this.layoutControlItem6.Control = this.rdgGender;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(608, 34);
+            this.layoutControlItem6.Size = new System.Drawing.Size(608, 46);
             this.layoutControlItem6.Text = "    성별";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(77, 18);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.btnLoad.Appearance.Options.UseFont = true;
+            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
+            this.btnLoad.Location = new System.Drawing.Point(620, 12);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(97, 36);
+            this.btnLoad.StyleController = this.layoutControl1;
+            this.btnLoad.TabIndex = 5;
+            this.btnLoad.Text = "검색";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.btnLoad;
+            this.layoutControlItem3.Location = new System.Drawing.Point(608, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(101, 364);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // bdsSpecies
             // 
@@ -281,15 +281,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lueAnimalShelterId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsAnimalShelter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsAnimalShelter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSpecies)).EndInit();
             this.ResumeLayout(false);
 
