@@ -20,7 +20,7 @@ namespace AnimalShelterManagementSystem.WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdoptionManagement());
+            Application.Run(new AdoptionRequest());
         }
     }
 }

@@ -148,7 +148,6 @@
             this.grvHomelessAnimalList.RowTemplate.Height = 27;
             this.grvHomelessAnimalList.Size = new System.Drawing.Size(664, 295);
             this.grvHomelessAnimalList.TabIndex = 10;
-            this.grvHomelessAnimalList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvHomelessAnimalList_CellContentClick);
             this.grvHomelessAnimalList.DoubleClick += new System.EventHandler(this.grvHomelessAnimalList_DoubleClick);
             // 
             // SpeciesName

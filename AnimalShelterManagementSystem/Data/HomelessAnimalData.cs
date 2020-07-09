@@ -73,7 +73,7 @@ namespace AnimalShelterManagementSystem
             if (genderCode == 1)
                 query = query.Where(x => x.Gender == 1);
 
-            if (genderCode == 2)
+            else if (genderCode == 2)
                 query = query.Where(x => x.Gender == 2);
 
             var list = query.ToList();
