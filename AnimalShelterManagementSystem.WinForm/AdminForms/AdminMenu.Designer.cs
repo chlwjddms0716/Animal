@@ -81,6 +81,7 @@
             this.btnAnimal.Size = new System.Drawing.Size(308, 169);
             this.btnAnimal.TabIndex = 4;
             this.btnAnimal.Text = "유기 동물 관리";
+            this.btnAnimal.Click += new System.EventHandler(this.btnAnimal_Click);
             // 
             // AdminMenu
             // 
