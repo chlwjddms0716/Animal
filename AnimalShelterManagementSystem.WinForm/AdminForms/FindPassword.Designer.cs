@@ -31,6 +31,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnFindPassword = new DevExpress.XtraEditors.SimpleButton();
             this.btnSendNumber = new DevExpress.XtraEditors.SimpleButton();
             this.txePhoneNumber = new DevExpress.XtraEditors.TextEdit();
@@ -43,11 +44,10 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -64,10 +64,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -113,6 +113,14 @@
             this.layoutControl2.Size = new System.Drawing.Size(364, 191);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(12, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 52);
+            this.label1.TabIndex = 8;
+            this.label1.Text = " ";
             // 
             // btnFindPassword
             // 
@@ -232,6 +240,15 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.label1;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 115);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(171, 56);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -258,23 +275,6 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(344, 44);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(124, 18);
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(12, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 52);
-            this.label1.TabIndex = 8;
-            this.label1.Text = " ";
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.label1;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 115);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(171, 56);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextVisible = false;
-            // 
             // FindPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -282,7 +282,7 @@
             this.ClientSize = new System.Drawing.Size(388, 220);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FindPassword";
-            this.Text = "FindPassword";
+            this.Text = "비밀번호찾기";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
@@ -299,10 +299,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
 
         }

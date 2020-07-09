@@ -93,7 +93,7 @@
             this.Controls.Add(this.btnAnimal);
             this.Name = "AdminMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminMenu";
+            this.Text = "유저메뉴";
             this.ResumeLayout(false);
 
         }
