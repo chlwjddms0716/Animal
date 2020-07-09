@@ -75,7 +75,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1197, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1197, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,7 +84,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.파일FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.종료XToolStripMenuItem});
             this.파일FToolStripMenuItem.Name = "파일FToolStripMenuItem";
-            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
+            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.파일FToolStripMenuItem.Text = "파일(&F)";
             // 
             // 종료XToolStripMenuItem
@@ -101,7 +101,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.삭제DToolStripMenuItem,
             this.수정UToolStripMenuItem});
             this.편집EToolStripMenuItem.Name = "편집EToolStripMenuItem";
-            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.편집EToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.편집EToolStripMenuItem.Text = "편집(&E)";
             // 
             // 추가IToolStripMenuItem
@@ -132,7 +132,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripSeparator1,
             this.도움말HToolStripMenuItem1});
             this.도움말HToolStripMenuItem.Name = "도움말HToolStripMenuItem";
-            this.도움말HToolStripMenuItem.Size = new System.Drawing.Size(89, 26);
+            this.도움말HToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.도움말HToolStripMenuItem.Text = "도움말(&H)";
             // 
             // 정보AToolStripMenuItem
@@ -165,9 +165,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripButton5});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1197, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1197, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -177,7 +177,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton1.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Close;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -187,7 +187,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton2.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -197,7 +197,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton3.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton3.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton3.Text = "toolStripButton3";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -207,7 +207,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton4.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton4.Text = "toolStripButton4";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -217,7 +217,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton5.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton5.Text = "toolStripButton5";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -370,6 +370,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "HomelessAnimalListForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "유기유실동물리스트";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

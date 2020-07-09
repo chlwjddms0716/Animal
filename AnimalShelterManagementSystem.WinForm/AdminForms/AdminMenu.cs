@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelterManagementSystem.WinForm.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,6 +41,14 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             adoptionManagement.ShowDialog();
             Cursor = Cursors.Arrow;
 
+        }
+
+        private void btnAnimal_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            HomelessAnimalListForm homelessAnimalListForm = new HomelessAnimalListForm();
+            homelessAnimalListForm.ShowDialog();
+            Cursor = Cursors.Arrow;
         }
     }
 }

@@ -116,9 +116,9 @@
             this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Appearance.Options.UseFont = true;
             this.btnAdd.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
-            this.btnAdd.Location = new System.Drawing.Point(179, 317);
+            this.btnAdd.Location = new System.Drawing.Point(179, 320);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(142, 70);
+            this.btnAdd.Size = new System.Drawing.Size(142, 68);
             this.btnAdd.StyleController = this.layoutControl3;
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "추가";
@@ -129,9 +129,9 @@
             this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Appearance.Options.UseFont = true;
             this.btnEdit.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
-            this.btnEdit.Location = new System.Drawing.Point(341, 317);
+            this.btnEdit.Location = new System.Drawing.Point(341, 320);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(155, 70);
+            this.btnEdit.Size = new System.Drawing.Size(155, 68);
             this.btnEdit.StyleController = this.layoutControl3;
             this.btnEdit.TabIndex = 13;
             this.btnEdit.Text = "수정";
@@ -142,9 +142,9 @@
             this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Appearance.Options.UseFont = true;
             this.btnDelete.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
-            this.btnDelete.Location = new System.Drawing.Point(12, 317);
+            this.btnDelete.Location = new System.Drawing.Point(12, 320);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(145, 70);
+            this.btnDelete.Size = new System.Drawing.Size(145, 68);
             this.btnDelete.StyleController = this.layoutControl3;
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "삭제";
@@ -201,19 +201,19 @@
             this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgAdmin.Size = new System.Drawing.Size(344, 36);
+            this.rdgAdmin.Size = new System.Drawing.Size(344, 42);
             this.rdgAdmin.StyleController = this.layoutControl3;
             this.rdgAdmin.TabIndex = 11;
             // 
             // rdgBlacklist
             // 
             this.rdgBlacklist.EditValue = 0;
-            this.rdgBlacklist.Location = new System.Drawing.Point(152, 220);
+            this.rdgBlacklist.Location = new System.Drawing.Point(152, 226);
             this.rdgBlacklist.Name = "rdgBlacklist";
             this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgBlacklist.Size = new System.Drawing.Size(344, 36);
+            this.rdgBlacklist.Size = new System.Drawing.Size(344, 42);
             this.rdgBlacklist.StyleController = this.layoutControl3;
             this.rdgBlacklist.TabIndex = 11;
             // 
@@ -229,7 +229,7 @@
             // 
             // boxBlacklistReason
             // 
-            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 260);
+            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 272);
             this.boxBlacklistReason.Name = "boxBlacklistReason";
             this.boxBlacklistReason.Size = new System.Drawing.Size(344, 24);
             this.boxBlacklistReason.StyleController = this.layoutControl3;
@@ -320,7 +320,7 @@
             this.layoutControlItem9.CustomizationFormText = "관리자";
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(488, 40);
+            this.layoutControlItem9.Size = new System.Drawing.Size(488, 46);
             this.layoutControlItem9.Text = "관리자";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(137, 18);
             // 
@@ -329,7 +329,7 @@
             this.layoutControlItem8.Control = this.boxBlacklistReason;
             this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 248);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 260);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(488, 28);
             this.layoutControlItem8.Text = "블랙리스트 등록 이유 :";
@@ -349,9 +349,9 @@
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.btnDelete;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 305);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 308);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(149, 74);
+            this.layoutControlItem12.Size = new System.Drawing.Size(149, 72);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
@@ -360,59 +360,59 @@
             this.layoutControlItem10.Control = this.rdgBlacklist;
             this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem10.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 208);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 214);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(488, 40);
+            this.layoutControlItem10.Size = new System.Drawing.Size(488, 46);
             this.layoutControlItem10.Text = "블랙리스트";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(137, 18);
             // 
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.Location = new System.Drawing.Point(0, 379);
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 380);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(488, 2);
+            this.simpleSeparator1.Size = new System.Drawing.Size(488, 1);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(313, 305);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(313, 308);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(16, 74);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(16, 72);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.btnEdit;
-            this.layoutControlItem13.Location = new System.Drawing.Point(329, 305);
+            this.layoutControlItem13.Location = new System.Drawing.Point(329, 308);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(159, 74);
+            this.layoutControlItem13.Size = new System.Drawing.Size(159, 72);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnAdd;
-            this.layoutControlItem6.Location = new System.Drawing.Point(167, 305);
+            this.layoutControlItem6.Location = new System.Drawing.Point(167, 308);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(146, 74);
+            this.layoutControlItem6.Size = new System.Drawing.Size(146, 72);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(149, 305);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(149, 308);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(18, 74);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(18, 72);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 276);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 288);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(488, 29);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(488, 20);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // EditUserInformationByAdmin
@@ -422,6 +422,7 @@
             this.ClientSize = new System.Drawing.Size(511, 401);
             this.Controls.Add(this.layoutControl3);
             this.Name = "EditUserInformationByAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "유저정보수정";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);

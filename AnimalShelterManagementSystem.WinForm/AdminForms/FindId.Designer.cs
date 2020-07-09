@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnFindId = new DevExpress.XtraEditors.SimpleButton();
             this.txePhoneNumber = new DevExpress.XtraEditors.TextEdit();
             this.txeName = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnFindId = new DevExpress.XtraEditors.SimpleButton();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txePhoneNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -73,20 +73,10 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem7});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(426, 211);
-            this.Root.TextVisible = false;
-            // 
             // splitContainerControl1
             // 
-            this.splitContainerControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.splitContainerControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(12, 12);
@@ -94,10 +84,6 @@
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl2);
             this.splitContainerControl1.Panel1.Text = "Panel1";
-          //  this.splitContainerControl1.Panel2.Location = new System.Drawing.Point(0, 184);
-          //  this.splitContainerControl1.Panel2.Name = "";
-          //  this.splitContainerControl1.Panel2.Size = new System.Drawing.Size(402, 3);
-//            this.splitContainerControl1.Panel2.TabIndex = 1;
             this.splitContainerControl1.Size = new System.Drawing.Size(402, 187);
             this.splitContainerControl1.SplitterPosition = 179;
             this.splitContainerControl1.TabIndex = 4;
@@ -113,9 +99,31 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 0, 812, 500);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(402, 179);
+            this.layoutControl2.Size = new System.Drawing.Size(402, 175);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(12, 107);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.btnFindId);
+            this.splitContainer1.Size = new System.Drawing.Size(378, 56);
+            this.splitContainer1.SplitterDistance = 126;
+            this.splitContainer1.TabIndex = 7;
+            // 
+            // btnFindId
+            // 
+            this.btnFindId.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFindId.Location = new System.Drawing.Point(0, 0);
+            this.btnFindId.Name = "btnFindId";
+            this.btnFindId.Size = new System.Drawing.Size(248, 56);
+            this.btnFindId.TabIndex = 0;
+            this.btnFindId.Text = "아이디 찾기";
+            this.btnFindId.Click += new System.EventHandler(this.btnFindId_Click);
             // 
             // txePhoneNumber
             // 
@@ -145,7 +153,7 @@
             this.layoutControlItem2,
             this.layoutControlItem4});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(402, 179);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(402, 175);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -162,7 +170,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 56);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(382, 41);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(382, 39);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -174,6 +182,25 @@
             this.layoutControlItem2.Text = "휴대폰 번호: ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(80, 18);
             // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.splitContainer1;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 95);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(382, 60);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem7});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(426, 211);
+            this.Root.TextVisible = false;
+            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.splitContainerControl1;
@@ -183,37 +210,6 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(12, 128);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.btnFindId);
-            this.splitContainer1.Size = new System.Drawing.Size(378, 39);
-            this.splitContainer1.SplitterDistance = 126;
-            this.splitContainer1.TabIndex = 7;
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.splitContainer1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 116);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(382, 43);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // btnFindId
-            // 
-            this.btnFindId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFindId.Location = new System.Drawing.Point(0, 0);
-            this.btnFindId.Name = "btnFindId";
-            this.btnFindId.Size = new System.Drawing.Size(248, 39);
-            this.btnFindId.TabIndex = 0;
-            this.btnFindId.Text = "아이디 찾기";
-            this.btnFindId.Click += new System.EventHandler(this.btnFindId_Click);
-            // 
             // FindId
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -221,25 +217,26 @@
             this.ClientSize = new System.Drawing.Size(426, 211);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FindId";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "아이디찾기";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txePhoneNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
