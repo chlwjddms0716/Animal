@@ -143,21 +143,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             homelessAnimalBindingSource.Remove(homelessAnimal);
         }
 
-        private void searchControl1_LoadButtonClicked(object sender, UserControls.SearchControl.LoadButtonClickedEventArgs e)
-        {
-            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(e.AnimalShelterId, (int)e.SpeciesCode, (int)e.Gender, e.FoundDateFrom, e.FoundDateTo);
-            //List<AnimalShelter> AnimalShelters = DataRepository.AnimalShelter.GetbyShelterId(e.AnimalShelterId);
-
-            homelessAnimalBindingSource.DataSource = homelessAnimals;
-            // homelessAnimalBindingSource.DataSource = AnimalShelters;
-
-
-
-
-            //}
-
-
-        }
+       
 
         private void 수정UToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -167,6 +153,15 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             ExcuteUpdate();
+        }
+
+        private void searchControl1_LoadButtonClicked_1(object sender, UserControls.SearchControl.LoadButtonClickedEventArgs e)
+        {
+            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(e.AnimalShelterId, (int)e.SpeciesCode, e.Gender, e.FoundDateFrom, e.FoundDateTo);
+            //List<AnimalShelter> AnimalShelters = DataRepository.AnimalShelter.GetbyShelterId(e.AnimalShelterId);
+            
+
+            homelessAnimalBindingSource.DataSource = homelessAnimals;
         }
     }
 }
