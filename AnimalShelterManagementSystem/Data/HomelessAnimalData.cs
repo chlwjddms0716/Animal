@@ -67,7 +67,7 @@ namespace AnimalShelterManagementSystem
 
 
             var query = from x in context.HomelessAnimals
-                        where x.Species == speciesCode && x.IsAdopted == false 
+                        where x.Species == speciesCode && x.AdoptionStatus == 0
                         select x;
 
             if (genderCode == 1)
@@ -93,25 +93,25 @@ namespace AnimalShelterManagementSystem
 
 
         }
-        public List<HomelessAnimal> SearchWithHomelessAnimal(int animalShelterId, int speciesCode, int? gender, DateTime? foundDateFrom, DateTime? foundDateTo)
+        public List<HomelessAnimal> SearchWithHomelessAnimal(int animalShelterId, int speciesCode, int gender, DateTime foundDateFrom, DateTime foundDateTo)
         {
             AnimalShelterManagementEntities context = CreateContext();
 
 
             var query = from x in context.HomelessAnimals
-                        //    //from y in context.AnimalShelters
+                      //from y in context.AnimalShelters
                         where x.AnimalShelterId == animalShelterId &&
-                        x.Species == speciesCode 
+                        x.Species == speciesCode &&
+                      //  x.Gender == gender &&
+                                x.LatestFindingReport >= foundDateFrom && x.LatestFindingReport <= foundDateTo
                         select x;
 
-            if (gender.HasValue)
-                query = query.Where(x => x.Gender == gender);
 
-            if (foundDateFrom.HasValue)
-                query = query.Where(x => x.LatestFindingReport >= foundDateFrom);
+            if (gender == 1)
+                query = query.Where(x => x.Gender == 1);
 
-            if (foundDateTo.HasValue)
-                query = query.Where(x => x.LatestFindingReport <= foundDateTo);
+            else if (gender == 2)
+                query = query.Where(x => x.Gender == 2);
 
 
 
@@ -123,7 +123,7 @@ namespace AnimalShelterManagementSystem
                 x.SpeciesName = ((SpeciesType)x.Species).ToString();
                 x.GenderName = ((Genders)x.Gender).ToString();
                 x.LatestFindingReportDate = x.LatestFindingReport;
-                
+
             }
 
             return list;

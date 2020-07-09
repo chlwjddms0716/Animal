@@ -40,21 +40,18 @@
             this.userLoginId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AnimalName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AdoptionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.homelessAnimalIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adoptionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.homelessAnimalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userLoginIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.animalNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adoptionStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adoptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rdgAdoptionStatus = new DevExpress.XtraEditors.RadioGroup();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.list = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homelessAnimalIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adoptionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homelessAnimalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adoptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -62,13 +59,13 @@
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.r)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdoptionStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -167,10 +164,7 @@
             this.homelessAnimalIdDataGridViewTextBoxColumn,
             this.adoptionDateDataGridViewTextBoxColumn,
             this.userDataGridViewTextBoxColumn,
-            this.homelessAnimalDataGridViewTextBoxColumn,
-            this.userLoginIdDataGridViewTextBoxColumn,
-            this.animalNameDataGridViewTextBoxColumn,
-            this.adoptionStatusDataGridViewTextBoxColumn});
+            this.homelessAnimalDataGridViewTextBoxColumn});
             this.r.DataSource = this.adoptionBindingSource;
             this.r.Location = new System.Drawing.Point(82, 103);
             this.r.Name = "r";
@@ -207,82 +201,6 @@
             this.AdoptionDate.Name = "AdoptionDate";
             this.AdoptionDate.ReadOnly = true;
             this.AdoptionDate.Width = 125;
-            // 
-            // userIdDataGridViewTextBoxColumn
-            // 
-            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
-            this.userIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // homelessAnimalIdDataGridViewTextBoxColumn
-            // 
-            this.homelessAnimalIdDataGridViewTextBoxColumn.DataPropertyName = "HomelessAnimalId";
-            this.homelessAnimalIdDataGridViewTextBoxColumn.HeaderText = "HomelessAnimalId";
-            this.homelessAnimalIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.homelessAnimalIdDataGridViewTextBoxColumn.Name = "homelessAnimalIdDataGridViewTextBoxColumn";
-            this.homelessAnimalIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.homelessAnimalIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // adoptionDateDataGridViewTextBoxColumn
-            // 
-            this.adoptionDateDataGridViewTextBoxColumn.DataPropertyName = "AdoptionDate";
-            this.adoptionDateDataGridViewTextBoxColumn.HeaderText = "AdoptionDate";
-            this.adoptionDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adoptionDateDataGridViewTextBoxColumn.Name = "adoptionDateDataGridViewTextBoxColumn";
-            this.adoptionDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adoptionDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userDataGridViewTextBoxColumn
-            // 
-            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
-            this.userDataGridViewTextBoxColumn.HeaderText = "User";
-            this.userDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
-            this.userDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // homelessAnimalDataGridViewTextBoxColumn
-            // 
-            this.homelessAnimalDataGridViewTextBoxColumn.DataPropertyName = "HomelessAnimal";
-            this.homelessAnimalDataGridViewTextBoxColumn.HeaderText = "HomelessAnimal";
-            this.homelessAnimalDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.homelessAnimalDataGridViewTextBoxColumn.Name = "homelessAnimalDataGridViewTextBoxColumn";
-            this.homelessAnimalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.homelessAnimalDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userLoginIdDataGridViewTextBoxColumn
-            // 
-            this.userLoginIdDataGridViewTextBoxColumn.DataPropertyName = "userLoginId";
-            this.userLoginIdDataGridViewTextBoxColumn.HeaderText = "userLoginId";
-            this.userLoginIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userLoginIdDataGridViewTextBoxColumn.Name = "userLoginIdDataGridViewTextBoxColumn";
-            this.userLoginIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userLoginIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // animalNameDataGridViewTextBoxColumn
-            // 
-            this.animalNameDataGridViewTextBoxColumn.DataPropertyName = "AnimalName";
-            this.animalNameDataGridViewTextBoxColumn.HeaderText = "AnimalName";
-            this.animalNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.animalNameDataGridViewTextBoxColumn.Name = "animalNameDataGridViewTextBoxColumn";
-            this.animalNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.animalNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // adoptionStatusDataGridViewTextBoxColumn
-            // 
-            this.adoptionStatusDataGridViewTextBoxColumn.DataPropertyName = "AdoptionStatus";
-            this.adoptionStatusDataGridViewTextBoxColumn.HeaderText = "AdoptionStatus";
-            this.adoptionStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adoptionStatusDataGridViewTextBoxColumn.Name = "adoptionStatusDataGridViewTextBoxColumn";
-            this.adoptionStatusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adoptionStatusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // adoptionBindingSource
-            // 
-            this.adoptionBindingSource.DataSource = typeof(AnimalShelterManagementSystem.Adoption);
             // 
             // rdgAdoptionStatus
             // 
@@ -349,6 +267,55 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // homelessAnimalIdDataGridViewTextBoxColumn
+            // 
+            this.homelessAnimalIdDataGridViewTextBoxColumn.DataPropertyName = "HomelessAnimalId";
+            this.homelessAnimalIdDataGridViewTextBoxColumn.HeaderText = "HomelessAnimalId";
+            this.homelessAnimalIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.homelessAnimalIdDataGridViewTextBoxColumn.Name = "homelessAnimalIdDataGridViewTextBoxColumn";
+            this.homelessAnimalIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.homelessAnimalIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // adoptionDateDataGridViewTextBoxColumn
+            // 
+            this.adoptionDateDataGridViewTextBoxColumn.DataPropertyName = "AdoptionDate";
+            this.adoptionDateDataGridViewTextBoxColumn.HeaderText = "AdoptionDate";
+            this.adoptionDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.adoptionDateDataGridViewTextBoxColumn.Name = "adoptionDateDataGridViewTextBoxColumn";
+            this.adoptionDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adoptionDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // userDataGridViewTextBoxColumn
+            // 
+            this.userDataGridViewTextBoxColumn.DataPropertyName = "User";
+            this.userDataGridViewTextBoxColumn.HeaderText = "User";
+            this.userDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userDataGridViewTextBoxColumn.Name = "userDataGridViewTextBoxColumn";
+            this.userDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // homelessAnimalDataGridViewTextBoxColumn
+            // 
+            this.homelessAnimalDataGridViewTextBoxColumn.DataPropertyName = "HomelessAnimal";
+            this.homelessAnimalDataGridViewTextBoxColumn.HeaderText = "HomelessAnimal";
+            this.homelessAnimalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.homelessAnimalDataGridViewTextBoxColumn.Name = "homelessAnimalDataGridViewTextBoxColumn";
+            this.homelessAnimalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.homelessAnimalDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // adoptionBindingSource
+            // 
+            this.adoptionBindingSource.DataSource = typeof(AnimalShelterManagementSystem.Adoption);
+            // 
             // homelessAnimalBindingSource
             // 
             this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
@@ -372,13 +339,13 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.r)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdoptionStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.list)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);

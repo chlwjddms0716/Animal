@@ -108,7 +108,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(12, 393);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(440, 18);
+            this.labelControl2.Size = new System.Drawing.Size(550, 18);
             this.labelControl2.StyleController = this.layoutControl1;
             this.labelControl2.TabIndex = 12;
             this.labelControl2.Text = "                                                                                 " +
@@ -116,9 +116,9 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(456, 393);
+            this.simpleButton1.Location = new System.Drawing.Point(566, 393);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(262, 27);
+            this.simpleButton1.Size = new System.Drawing.Size(152, 27);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 11;
             this.simpleButton1.Text = "입양 신청";
@@ -229,9 +229,9 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.simpleButton1;
-            this.layoutControlItem6.Location = new System.Drawing.Point(444, 381);
+            this.layoutControlItem6.Location = new System.Drawing.Point(554, 381);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(266, 31);
+            this.layoutControlItem6.Size = new System.Drawing.Size(156, 31);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -240,7 +240,7 @@
             this.layoutControlItem7.Control = this.labelControl2;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 381);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(444, 31);
+            this.layoutControlItem7.Size = new System.Drawing.Size(554, 31);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 

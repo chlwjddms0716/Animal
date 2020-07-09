@@ -14,8 +14,14 @@ using DevExpress.XtraEditors.Filtering.Templates;
 
 namespace AnimalShelterManagementSystem.WinForm.UserControls
 {
+    
     public partial class SearchControl : DevExpress.XtraEditors.XtraUserControl
     {
+        private int GenderCode = 0;
+        private int speciesCode;
+        private int animalShelterId;
+        private DateTime foundDateFrom;
+        private DateTime foundDateTo;
         public SearchControl()
         {
             InitializeComponent();
@@ -25,26 +31,42 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
 
         public void GetValues()
         {
-            foreach(string gender in Genders.GetNames(typeof(Genders)))
+            foreach (string gender in Genders.GetNames(typeof(Genders)))
             {
                 Console.WriteLine(gender);
             }
 
 
         }
-      
+
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
+            //int? animalShelterlId = null;
+            //  try
+            // {
+            //   animalShelterlId = Convert.ToInt32(luAnimalshelter.Text);
+            // }
+            //catch
+            // {
+            //
+            // }
+            // finally
+            //  {
+            //      if (animalShelterlId == null || animalShelterlId.Value < 1)
+            //          animalShelterlId = 2;
+            //  }
+            
 
-            OnLoadButtonClicked(
-                  (int)lueAnimalShelterId.EditValue,
-              (SpeciesType?)(int)lueSpecies.EditValue,
-                rdgGender.EditValue == null ? (Genders?)null : (Genders)(int)rdgGender.EditValue,
-                 (DateTime?)dteFoundDateFrom.EditValue,
-                (DateTime?)dteFoundDateTo.EditValue);
+
+            OnLoadButtonClicked((int)lueAnimalShelterId.EditValue, (SpeciesType)cbbSpecies.SelectedValue, (int)rdgGender.EditValue
+                , dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime);
 
 
+
+
+
+            
 
 
             Cursor = Cursors.Arrow;
@@ -56,10 +78,12 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             if (DesignMode)
                 return;
             bdsAnimalShelter.DataSource = DataRepository.AnimalShelter.GetAll();
-            bdsSpecies.DataSource = Species.Load();
+            cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+          
+
             dteFoundDateTo.DateTime = DateTime.Now;
 
-           
+
 
 
 
@@ -68,8 +92,6 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
 
 
         }
-
-
 
         #region LoadButtonClicked event things for C# 3.0
         public event EventHandler<LoadButtonClickedEventArgs> LoadButtonClicked;
@@ -80,7 +102,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
                 LoadButtonClicked(this, e);
         }
 
-        private LoadButtonClickedEventArgs OnLoadButtonClicked(int? animalShelterId, SpeciesType? speciesCode, Genders? gender, DateTime? foundDateFrom, DateTime? foundDateTo)
+        private LoadButtonClickedEventArgs OnLoadButtonClicked(int animalShelterId, SpeciesType speciesCode, int gender, DateTime foundDateFrom, DateTime foundDateTo)
         {
             LoadButtonClickedEventArgs args = new LoadButtonClickedEventArgs(animalShelterId, speciesCode, gender, foundDateFrom, foundDateTo);
             OnLoadButtonClicked(args);
@@ -98,17 +120,17 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
 
         public class LoadButtonClickedEventArgs : EventArgs
         {
-            public int? AnimalShelterId { get; set; }
-            public SpeciesType? SpeciesCode { get; set; }
-            public Genders? Gender { get; set; }
-            public DateTime? FoundDateFrom { get; set; }
-            public DateTime? FoundDateTo { get; set; }
+            public int AnimalShelterId { get; set; }
+            public SpeciesType SpeciesCode { get; set; }
+            public int Gender { get; set; }
+            public DateTime FoundDateFrom { get; set; }
+            public DateTime FoundDateTo { get; set; }
 
             public LoadButtonClickedEventArgs()
             {
             }
 
-            public LoadButtonClickedEventArgs(int? animalShelterId, SpeciesType? speciesCode, Genders? gender, DateTime? foundDateFrom, DateTime? foundDateTo)
+            public LoadButtonClickedEventArgs(int animalShelterId, SpeciesType speciesCode, int gender, DateTime foundDateFrom, DateTime foundDateTo)
             {
                 AnimalShelterId = animalShelterId;
                 SpeciesCode = speciesCode;
@@ -117,8 +139,15 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
                 FoundDateTo = foundDateTo;
             }
         }
+
         #endregion
 
-        
+
+
+        //private void rdgGender_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    GenderCode = (int)rdgGender.EditValue;
+        //List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithHomelessAnimal(animalShelterId, speciesCode, GenderCode, foundDateFrom, foundDateTo);
+        //}
     }
 }
