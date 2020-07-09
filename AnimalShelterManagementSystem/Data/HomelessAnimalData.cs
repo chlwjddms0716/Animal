@@ -87,12 +87,8 @@ namespace AnimalShelterManagementSystem
             }
 
             return list;
-
-
-
-
-
         }
+
         public List<HomelessAnimal> SearchWithHomelessAnimal(int animalShelterId, int speciesCode, int? gender, DateTime? foundDateFrom, DateTime? foundDateTo)
         {
             AnimalShelterManagementEntities context = CreateContext();
