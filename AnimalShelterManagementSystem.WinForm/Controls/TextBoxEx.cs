@@ -20,12 +20,6 @@ namespace AnimalShelterManagementSystem.WinForm.Controls
             Leave += TextBoxEx_Leave;
         }
 
-        public TextBoxEx(IContainer container)
-        {
-            container.Add(this);
-
-            InitializeComponent();
-        }
         [Category("포커스 색상")]
         public Color ColorOnEnter { get; set; } = Color.Beige; //기본값설정
 
