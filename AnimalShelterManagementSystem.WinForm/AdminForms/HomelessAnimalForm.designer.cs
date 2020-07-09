@@ -376,7 +376,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(780, 30);
-            this.layoutControlItem5.Text = "건강상태코드 : ";
+            this.layoutControlItem5.Text = "건강상태 : ";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(107, 18);
             // 
             // layoutControlItem6
