@@ -8,5 +8,8 @@ namespace AnimalShelterManagementSystem
 {
     partial class LossReport
     {
+
+        public string SpeciesName { get; set; }
+        public string userLoginId { get; set; }
     }
 }

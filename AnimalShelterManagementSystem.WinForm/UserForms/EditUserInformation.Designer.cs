@@ -33,7 +33,6 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
             this.boxId = new DevExpress.XtraEditors.TextEdit();
             this.boxPassword = new DevExpress.XtraEditors.TextEdit();
             this.boxName = new DevExpress.XtraEditors.TextEdit();
@@ -48,11 +47,12 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
             this.UserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -71,12 +71,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -111,20 +111,6 @@
             this.layoutControl2.Size = new System.Drawing.Size(558, 256);
             this.layoutControl2.TabIndex = 4;
             this.layoutControl2.Text = "layoutControl1";
-            // 
-            // btnSignup
-            // 
-            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
-            this.btnSignup.Appearance.Options.UseFont = true;
-            this.btnSignup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSignup.ImageOptions.Image")));
-            this.btnSignup.Location = new System.Drawing.Point(281, 178);
-            this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSignup.Name = "btnSignup";
-            this.btnSignup.Size = new System.Drawing.Size(267, 38);
-            this.btnSignup.StyleController = this.layoutControl2;
-            this.btnSignup.TabIndex = 5;
-            this.btnSignup.Text = "수정";
-            this.btnSignup.Click += new System.EventHandler(this.btnEdit_Clicked);
             // 
             // boxId
             // 
@@ -275,15 +261,6 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(271, 72);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.btnSignup;
-            this.layoutControlItem6.Location = new System.Drawing.Point(271, 168);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(271, 72);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -314,9 +291,32 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // btnSignup
+            // 
+            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.btnSignup.Appearance.Options.UseFont = true;
+            this.btnSignup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSignup.ImageOptions.Image")));
+            this.btnSignup.Location = new System.Drawing.Point(281, 178);
+            this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSignup.Name = "btnSignup";
+            this.btnSignup.Size = new System.Drawing.Size(267, 38);
+            this.btnSignup.StyleController = this.layoutControl2;
+            this.btnSignup.TabIndex = 5;
+            this.btnSignup.Text = "수정";
+            this.btnSignup.Click += new System.EventHandler(this.btnEdit_Clicked);
+            // 
             // UserBindingSource
             // 
             this.UserBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnSignup;
+            this.layoutControlItem6.Location = new System.Drawing.Point(271, 168);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(271, 72);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // EditUserInformation
             // 
@@ -347,12 +347,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UserBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }

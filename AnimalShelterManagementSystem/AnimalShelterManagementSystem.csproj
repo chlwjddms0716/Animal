@@ -71,6 +71,7 @@
     <Compile Include="Data\FoundAnimalRecordData.cs" />
     <Compile Include="Data\HomelessAnimalData.cs" />
     <Compile Include="Data\LossReportData.cs" />
+    <Compile Include="DevKiller\ProcessKiller.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\Adoption.cs" />
     <Compile Include="Entities\AnimalShelter.cs" />
@@ -124,6 +125,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DevKiller\DevExpressKiller.csproj" />
+    <None Include="Documents\Readme.md" />
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -134,6 +137,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Documents\DB.PNG" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
