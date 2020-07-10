@@ -96,6 +96,12 @@
     <Compile Include="AdminForms\FindingManagementForm.Designer.cs">
       <DependentUpon>FindingManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\LossReportAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\LossReportAdminForm.Designer.cs">
+      <DependentUpon>LossReportAdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\LossReportListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdoptionListForm.resx">
       <DependentUpon>AdoptionListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\LossReportAdminForm.resx">
+      <DependentUpon>LossReportAdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\LossReportListForm.resx">
       <DependentUpon>LossReportListForm.cs</DependentUpon>

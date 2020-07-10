@@ -101,10 +101,10 @@
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(108, 41);
+            this.cbxSpecies.Location = new System.Drawing.Point(103, 41);
             this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(379, 26);
+            this.cbxSpecies.Size = new System.Drawing.Size(384, 26);
             this.cbxSpecies.TabIndex = 18;
             // 
             // btnCancle
@@ -344,8 +344,8 @@
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 29);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(479, 30);
-            this.layoutControlItem12.Text = " 종 :             ";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(93, 18);
+            this.layoutControlItem12.Text = "종 :             ";
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(88, 18);
             // 
             // LossReportForm
             // 
