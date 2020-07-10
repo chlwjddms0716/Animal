@@ -45,7 +45,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             boxBlacklistReason.Text = user.BlacklistReason;
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+         string Checkinput()
         {
             string checkinput = "";
             if (String.Equals(boxPassword.Text, "") == true)
@@ -53,9 +53,17 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (String.Equals(boxPhoneNumber.Text, "") == true)
                 checkinput += "전화번호, ";
             if (String.Equals(boxAddress.Text, "") == true)
-                checkinput += "주소, ";
+                checkinput += "주소,";
 
-            if (string.Equals(checkinput, "") == true)
+            return checkinput;
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            
+
+            if (string.Equals(Checkinput(), "") == true)
             {
                 user.Password = boxPassword.Text;
                 user.PhoneNumber = boxPhoneNumber.Text;
@@ -74,7 +82,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 MessageBox.Show("수정되었습니다");
                 Close();
             }
-            MessageBox.Show(checkinput + "을(를) 입력해주세요.");
+            MessageBox.Show($"{Checkinput().Remove(Checkinput().Length,-3)}을(를) 입력해주세요.");
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
