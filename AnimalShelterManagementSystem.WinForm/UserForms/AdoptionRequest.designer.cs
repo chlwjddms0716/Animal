@@ -78,21 +78,20 @@
             this.layoutControl1.Controls.Add(this.rdgSex);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(947, 130, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(912, 629);
+            this.layoutControl1.Size = new System.Drawing.Size(730, 515);
             this.layoutControl1.TabIndex = 6;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // lblSpecies
             // 
             this.lblSpecies.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.lblSpecies.Location = new System.Drawing.Point(14, 14);
-            this.lblSpecies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSpecies.Location = new System.Drawing.Point(10, 10);
             this.lblSpecies.Name = "lblSpecies";
-            this.lblSpecies.Size = new System.Drawing.Size(46, 31);
+            this.lblSpecies.Size = new System.Drawing.Size(36, 26);
             this.lblSpecies.TabIndex = 15;
             this.lblSpecies.Text = " 종   ";
             // 
@@ -100,19 +99,19 @@
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(64, 14);
-            this.cbxSpecies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxSpecies.Location = new System.Drawing.Point(50, 10);
+            this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(834, 30);
+            this.cbxSpecies.Size = new System.Drawing.Size(670, 26);
             this.cbxSpecies.TabIndex = 14;
             this.cbxSpecies.SelectedIndexChanged += new System.EventHandler(this.cbxSpecies_SelectedIndexChanged);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(14, 543);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelControl2.Location = new System.Drawing.Point(10, 435);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(660, 22);
+            this.labelControl2.Size = new System.Drawing.Size(550, 18);
             this.labelControl2.StyleController = this.layoutControl1;
             this.labelControl2.TabIndex = 12;
             this.labelControl2.Text = "                                                                                 " +
@@ -121,10 +120,10 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.dogg;
-            this.simpleButton1.Location = new System.Drawing.Point(678, 543);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.simpleButton1.Location = new System.Drawing.Point(564, 435);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(220, 72);
+            this.simpleButton1.Size = new System.Drawing.Size(156, 70);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 11;
             this.simpleButton1.Text = "입양 신청";
@@ -149,8 +148,8 @@
             this.dataGridViewTextBoxColumn6,
             this.PictureLink});
             this.grvHomelessAnimalList.DataSource = this.homelessAnimalBindingSource;
-            this.grvHomelessAnimalList.Location = new System.Drawing.Point(57, 126);
-            this.grvHomelessAnimalList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grvHomelessAnimalList.Location = new System.Drawing.Point(51, 103);
+            this.grvHomelessAnimalList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grvHomelessAnimalList.Name = "grvHomelessAnimalList";
             this.grvHomelessAnimalList.ReadOnly = true;
             this.grvHomelessAnimalList.RowHeadersVisible = false;
@@ -158,7 +157,7 @@
             this.grvHomelessAnimalList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grvHomelessAnimalList.RowTemplate.Height = 27;
             this.grvHomelessAnimalList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvHomelessAnimalList.Size = new System.Drawing.Size(841, 413);
+            this.grvHomelessAnimalList.Size = new System.Drawing.Size(669, 328);
             this.grvHomelessAnimalList.TabIndex = 10;
             this.grvHomelessAnimalList.Click += new System.EventHandler(this.grvHomelessAnimalList_DoubleClick);
             // 
@@ -169,14 +168,14 @@
             // rdgSex
             // 
             this.rdgSex.EditValue = 0;
-            this.rdgSex.Location = new System.Drawing.Point(57, 49);
-            this.rdgSex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdgSex.Location = new System.Drawing.Point(51, 40);
+            this.rdgSex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdgSex.Name = "rdgSex";
             this.rdgSex.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "전체"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "수컷"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "암컷")});
-            this.rdgSex.Size = new System.Drawing.Size(841, 73);
+            this.rdgSex.Size = new System.Drawing.Size(669, 59);
             this.rdgSex.StyleController = this.layoutControl1;
             this.rdgSex.TabIndex = 11;
             this.rdgSex.SelectedIndexChanged += new System.EventHandler(this.rdgSex_SelectedIndexChanged);
@@ -193,43 +192,43 @@
             this.layoutControlItem1,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(912, 629);
+            this.Root.Size = new System.Drawing.Size(730, 515);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.grvHomelessAnimalList;
             this.layoutControlItem2.CustomizationFormText = "l";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 93);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(888, 417);
+            this.layoutControlItem2.Size = new System.Drawing.Size(714, 332);
             this.layoutControlItem2.Text = "리스트";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(39, 22);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(39, 18);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.simpleButton1;
-            this.layoutControlItem6.Location = new System.Drawing.Point(664, 529);
+            this.layoutControlItem6.Location = new System.Drawing.Point(554, 425);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(224, 76);
+            this.layoutControlItem6.Size = new System.Drawing.Size(160, 74);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.labelControl2;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 529);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 425);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(664, 76);
+            this.layoutControlItem7.Size = new System.Drawing.Size(554, 74);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // 종
             // 
             this.종.Control = this.cbxSpecies;
-            this.종.Location = new System.Drawing.Point(50, 0);
+            this.종.Location = new System.Drawing.Point(40, 0);
             this.종.Name = "종";
-            this.종.Size = new System.Drawing.Size(838, 35);
+            this.종.Size = new System.Drawing.Size(674, 30);
             this.종.TextSize = new System.Drawing.Size(0, 0);
             this.종.TextVisible = false;
             // 
@@ -238,7 +237,7 @@
             this.layoutControlItem1.Control = this.lblSpecies;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(50, 35);
+            this.layoutControlItem1.Size = new System.Drawing.Size(40, 30);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -247,11 +246,11 @@
             this.layoutControlItem3.Control = this.rdgSex;
             this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem3.CustomizationFormText = "성별";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 35);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(888, 77);
+            this.layoutControlItem3.Size = new System.Drawing.Size(714, 63);
             this.layoutControlItem3.Text = "성별";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(39, 22);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(39, 18);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -329,7 +328,7 @@
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 120;
+            this.dataGridViewTextBoxColumn6.Width = 250;
             // 
             // PictureLink
             // 
@@ -342,13 +341,13 @@
             // 
             // AdoptionRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(912, 629);
+            this.ClientSize = new System.Drawing.Size(730, 515);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AdoptionRequest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "입양신청";
