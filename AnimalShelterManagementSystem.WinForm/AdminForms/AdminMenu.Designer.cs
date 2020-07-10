@@ -92,7 +92,6 @@
             this.Controls.Add(this.btnShelter);
             this.Controls.Add(this.btnUser);
             this.Controls.Add(this.btnAnimal);
-            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AdminMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

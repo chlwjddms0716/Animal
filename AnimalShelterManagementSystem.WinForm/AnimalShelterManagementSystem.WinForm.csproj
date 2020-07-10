@@ -299,22 +299,22 @@
     <None Include="Resources\ddoogg.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Puppy.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackPuppy.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\dddoogg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\User.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\shelter.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\handshake.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Puppy.svg" />
+    <None Include="Resources\shelter.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BlackPuppy.png" />
+    <None Include="Resources\User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
