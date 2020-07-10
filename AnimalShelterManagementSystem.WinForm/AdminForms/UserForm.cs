@@ -89,7 +89,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (Helpers.Helpers.SureToDelete() == false)
+                return;
             DataRepository.User.Delete(user.UserId);
+
             Close();
             return;
         }
@@ -132,6 +135,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 DataRepository.User.Insert(user);
                 MessageBox.Show("새로운 유저가 추가되었습니다.");
                 Close();
+                return;
             }
             MessageBox.Show($"{Checkinput().Remove(Checkinput().Length - 2)}을(를) 입력해주세요.");
         }

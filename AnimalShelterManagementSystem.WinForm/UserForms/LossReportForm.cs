@@ -78,6 +78,7 @@ namespace AnimalShelterManagementSystem.WinForm
                     MessageBox.Show("사진 링크를 입력하지 않으셨습니다.\n");
                 MessageBox.Show("신고되었습니다.");
                 Close();
+                return;
             }
             MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
         }
