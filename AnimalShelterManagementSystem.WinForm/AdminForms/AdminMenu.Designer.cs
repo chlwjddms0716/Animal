@@ -28,27 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.imageSlider1 = new DevExpress.XtraEditors.Controls.ImageSlider();
             this.btnAdoption = new DevExpress.XtraEditors.SimpleButton();
             this.btnShelter = new DevExpress.XtraEditors.SimpleButton();
             this.btnUser = new DevExpress.XtraEditors.SimpleButton();
             this.btnAnimal = new DevExpress.XtraEditors.SimpleButton();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.btnFindReportManagement = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLossReportManagement = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
-            // 
-            // imageSlider1
-            // 
-            this.imageSlider1.AnimationTime = 1000;
-            this.imageSlider1.CurrentImageIndex = 0;
-            this.imageSlider1.Images.Add(((System.Drawing.Image)(resources.GetObject("imageSlider1.Images"))));
-            this.imageSlider1.Images.Add(((System.Drawing.Image)(resources.GetObject("imageSlider1.Images1"))));
-            this.imageSlider1.Location = new System.Drawing.Point(793, 5);
-            this.imageSlider1.Name = "imageSlider1";
-            this.imageSlider1.Size = new System.Drawing.Size(467, 561);
-            this.imageSlider1.TabIndex = 8;
-            this.imageSlider1.Text = "imageSlider1";
             // 
             // btnAdoption
             // 
@@ -132,7 +119,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 571);
+            this.ClientSize = new System.Drawing.Size(1188, 571);
+            this.Controls.Add(this.btnFindReportManagement);
+            this.Controls.Add(this.btnLossReportManagement);
             this.Controls.Add(this.btnAdoption);
             this.Controls.Add(this.btnShelter);
             this.Controls.Add(this.btnUser);
@@ -142,7 +131,6 @@
             this.Name = "AdminMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "관리자메뉴";
-            ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +142,7 @@
         private DevExpress.XtraEditors.SimpleButton btnUser;
         private DevExpress.XtraEditors.SimpleButton btnAnimal;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private DevExpress.XtraEditors.SimpleButton btnFindReportManagement;
+        private DevExpress.XtraEditors.SimpleButton btnLossReportManagement;
     }
 }

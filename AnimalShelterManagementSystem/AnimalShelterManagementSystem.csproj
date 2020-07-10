@@ -71,6 +71,7 @@
     <Compile Include="Data\FoundAnimalRecordData.cs" />
     <Compile Include="Data\HomelessAnimalData.cs" />
     <Compile Include="Data\LossReportData.cs" />
+    <Compile Include="DevKiller\ProcessKiller.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\Adoption.cs" />
     <Compile Include="Entities\AnimalShelter.cs" />
@@ -124,6 +125,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DevKiller\DevExpressKiller.csproj" />
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
