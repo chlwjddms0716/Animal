@@ -60,7 +60,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
-        {
+        {  
+            string test = Checkinput();
             if (string.Equals(Checkinput(), "") == true)
             {
                 user.Password = boxPassword.Text;
@@ -79,7 +80,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 DataRepository.User.Update(user);
                 MessageBox.Show("수정되었습니다");
                 Close();
+                return;
             }
+          
             MessageBox.Show($"{Checkinput().Remove(Checkinput().Length-2)}을(를) 입력해주세요.");
 
         }
@@ -88,6 +91,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             DataRepository.User.Delete(user.UserId);
             Close();
+            return;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
