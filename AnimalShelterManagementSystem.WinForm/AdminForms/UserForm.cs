@@ -47,6 +47,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
          string Checkinput()
         {
             string checkinput = "";
+            if (String.Equals(boxName.Text, "") == true)
+                checkinput += "이름, ";
             if (String.Equals(boxPassword.Text, "") == true)
                 checkinput += "비밀번호, ";
             if (String.Equals(boxPhoneNumber.Text, "") == true)
@@ -63,6 +65,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             string test = Checkinput();
             if (string.Equals(Checkinput(), "") == true)
             {
+                user.Name = boxName.Text;
                 user.Password = boxPassword.Text;
                 user.PhoneNumber = boxPhoneNumber.Text;
                 user.Address = boxAddress.Text;
