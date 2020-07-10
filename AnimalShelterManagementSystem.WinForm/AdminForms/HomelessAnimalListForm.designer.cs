@@ -75,7 +75,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1028, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1028, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -165,9 +165,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripButton5});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1028, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1028, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -228,6 +228,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -261,7 +262,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.homelessAnimalIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.homelessAnimalIdDataGridViewTextBoxColumn.Name = "homelessAnimalIdDataGridViewTextBoxColumn";
             this.homelessAnimalIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.homelessAnimalIdDataGridViewTextBoxColumn.Width = 70;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -270,7 +270,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 70;
             // 
             // 종
             // 
@@ -279,7 +278,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.종.MinimumWidth = 6;
             this.종.Name = "종";
             this.종.ReadOnly = true;
-            this.종.Width = 70;
             // 
             // ageDataGridViewTextBoxColumn
             // 
@@ -288,7 +286,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.ageDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
             this.ageDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ageDataGridViewTextBoxColumn.Width = 60;
             // 
             // 성별
             // 
@@ -297,7 +294,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.성별.MinimumWidth = 6;
             this.성별.Name = "성별";
             this.성별.ReadOnly = true;
-            this.성별.Width = 60;
             // 
             // featureDataGridViewTextBoxColumn
             // 
@@ -306,7 +302,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.featureDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.featureDataGridViewTextBoxColumn.Name = "featureDataGridViewTextBoxColumn";
             this.featureDataGridViewTextBoxColumn.ReadOnly = true;
-            this.featureDataGridViewTextBoxColumn.Width = 125;
             // 
             // 건강상태
             // 
@@ -315,7 +310,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.건강상태.MinimumWidth = 6;
             this.건강상태.Name = "건강상태";
             this.건강상태.ReadOnly = true;
-            this.건강상태.Width = 90;
             // 
             // 보호센터ID
             // 
@@ -324,7 +318,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.보호센터ID.MinimumWidth = 6;
             this.보호센터ID.Name = "보호센터ID";
             this.보호센터ID.ReadOnly = true;
-            this.보호센터ID.Width = 90;
             // 
             // latestFindingReportDataGridViewTextBoxColumn
             // 
@@ -333,7 +326,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.latestFindingReportDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.latestFindingReportDataGridViewTextBoxColumn.Name = "latestFindingReportDataGridViewTextBoxColumn";
             this.latestFindingReportDataGridViewTextBoxColumn.ReadOnly = true;
-            this.latestFindingReportDataGridViewTextBoxColumn.Width = 140;
             // 
             // pictureLinkDataGridViewTextBoxColumn
             // 
@@ -342,7 +334,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.pictureLinkDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pictureLinkDataGridViewTextBoxColumn.Name = "pictureLinkDataGridViewTextBoxColumn";
             this.pictureLinkDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pictureLinkDataGridViewTextBoxColumn.Width = 125;
             // 
             // homelessAnimalBindingSource
             // 
@@ -351,7 +342,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // searchControl1
             // 
             this.searchControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchControl1.Location = new System.Drawing.Point(0, 61);
+            this.searchControl1.Location = new System.Drawing.Point(0, 55);
             this.searchControl1.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.searchControl1.Name = "searchControl1";
             this.searchControl1.Size = new System.Drawing.Size(1028, 196);
