@@ -26,14 +26,14 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
             cbxSpecies.SelectedItem = null;
         }
 
-        private void btnFindingReport_Click(object sender, EventArgs e)
+        string CheckInput()
         {
             string checkinput = "";
             if (cbxSpecies.Text == null)
             {
                 checkinput += "종, ";
             }
-            if (String.Equals(txbPlace.Text,"") == true )
+            if (String.Equals(txbPlace.Text, "") == true)
             {
                 checkinput += "장소, ";
             }
@@ -42,7 +42,12 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 checkinput += "날짜, ";
             }
 
-            if (string.Equals(checkinput, "") == true)
+            return checkinput;
+        }
+        private void btnFindingReport_Click(object sender, EventArgs e)
+        {
+
+            if (string.Equals(CheckInput(), "") == true)
             {
                 FindingReport findingReport = new FindingReport();
                 findingReport.Place = txbPlace.Text;
@@ -54,7 +59,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 MessageBox.Show("신고되었습니다.");
                 Close();
             }
-            MessageBox.Show(checkinput + "를(을) 입력해주세요.");
+            MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

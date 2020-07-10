@@ -32,8 +32,7 @@ namespace AnimalShelterManagementSystem.WinForm
         {
 
         }
-
-        private void btnLossRequest_Click(object sender, EventArgs e)
+        string CheckInput()
         {
             string checkinput = "";
             if (String.Equals(txbPlace.Name, "") == true)
@@ -56,8 +55,14 @@ namespace AnimalShelterManagementSystem.WinForm
             {
                 checkinput += "사진 링크";
             }
+            return checkinput;
+        }
 
-            if (string.Equals(checkinput, "") == true || String.Equals(checkinput, "사진 링크") == true)
+        private void btnLossRequest_Click(object sender, EventArgs e)
+        {
+            
+
+            if (string.Equals(CheckInput(), "") == true || String.Equals(CheckInput(), "사진 링크") == true)
             {
                 LossReport lossReport = new LossReport();
                 lossReport.UserId = userId;
@@ -74,7 +79,7 @@ namespace AnimalShelterManagementSystem.WinForm
                 MessageBox.Show("신고되었습니다.");
                 Close();
             }
-            MessageBox.Show($"{checkinput}을(를) 입력해주세요");
+            MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
         }
 
         private void btnCancle_Click(object sender, EventArgs e)

@@ -53,7 +53,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (String.Equals(boxPhoneNumber.Text, "") == true)
                 checkinput += "전화번호, ";
             if (String.Equals(boxAddress.Text, "") == true)
-                checkinput += "주소,";
+                checkinput += "주소, ";
 
             return checkinput;
 
@@ -61,8 +61,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            
-
             if (string.Equals(Checkinput(), "") == true)
             {
                 user.Password = boxPassword.Text;
@@ -82,7 +80,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 MessageBox.Show("수정되었습니다");
                 Close();
             }
-            MessageBox.Show($"{Checkinput().Remove(Checkinput().Length,-3)}을(를) 입력해주세요.");
+            MessageBox.Show($"{Checkinput().Remove(Checkinput().Length-2)}을(를) 입력해주세요.");
 
         }
 
@@ -108,14 +106,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             }
             if (String.Equals(boxName.Text, "") == true)
                 checkinput += "이름, ";
-            if (String.Equals(boxPassword.Text, "") == true)
-                checkinput += "비밀번호, ";
-            if (String.Equals(boxPhoneNumber.Text, "") == true)
-                checkinput += "전화번호, ";
-            if (String.Equals(boxAddress.Text, "") == true)
-                checkinput += "주소, ";
+            checkinput += Checkinput();
 
-            if (string.Equals(checkinput, "") == true)
+            if (string.Equals(Checkinput(), "") == true)
             {
                 user.Id = boxId.Text;
                 user.Name = boxName.Text;
@@ -136,7 +129,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 MessageBox.Show("새로운 유저가 추가되었습니다.");
                 Close();
             }
-            MessageBox.Show(checkinput + "을(를) 입력해주세요.");
+            MessageBox.Show($"{Checkinput().Remove(Checkinput().Length - 2)}을(를) 입력해주세요.");
         }
     }
 }

@@ -57,9 +57,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (String.Equals(txeManager.Text, "") == true)
                 checkinput += "담당자이름, ";
             if (String.Equals(txePhoneNumber.Text, "") == true)
-                checkinput += "전화번호,";
+                checkinput += "전화번호, ";
 
-            return checkinput.Remove(checkinput.Length - 1);
+            return checkinput;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             }
             else
             {
-                MessageBox.Show(CheckInput() + "을(를) 입력해주세요.");
+                MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
             }
             Close();
         }

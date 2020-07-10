@@ -58,6 +58,44 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 Close();
             }
         }
+      
+        string CheckInput()
+        {
+            string checkinput = "";
+            if (cbbSpecies.Text == null)
+            {
+                checkinput += "종, ";
+            }
+            if (cbbGender.Text == null)
+            {
+                checkinput += "성별,";
+            }
+            if (cbbPSC.Text == null)
+            {
+                checkinput += "건강상태, ";
+            }
+            if (String.Equals(txeName.Text, "") == true)
+            {
+                checkinput += "이름, ";
+            }
+            if (String.Equals(txeAge.Text, "") == true)
+            {
+                checkinput += "나이, ";
+            }
+            if (String.Equals(txeFeature.Text, "") == true)
+            {
+                checkinput += "특징, ";
+            }
+            if (String.Equals(txePictureLink.Text, "") == true)
+            {
+                checkinput += "사진링크, ";
+            }
+            if (dteLatestFindingReport.EditValue == null)
+            {
+                checkinput += "날짜, ";
+            }
+            return checkinput;
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -68,40 +106,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         {
             WriteToEntity();
 
-            string checkinput = "";
-            if (cbbSpecies.Text == null)
-            {
-                checkinput += "종을 선택해주세요.\n";
-            }
-            if (cbbGender.Text == null)
-            {
-                checkinput += "성별을 선택해주세요.\n";
-            }
-            if (cbbPSC.Text == null)
-            {
-                checkinput += "건강상태를 선택해주세요.\n";
-            }
-            if (String.Equals(txeName.Text, "") == true)
-            {
-                checkinput += "이름을 입력해주세요.\n";
-            }
-            if (String.Equals(txeAge.Text, "") == true)
-            {
-                checkinput += "나이를 입력해주세요.\n";
-            }
-            if (String.Equals(txeFeature.Text, "") == true)
-            {
-                checkinput += "특징을 입력해주세요.\n";
-            }
-            if (String.Equals(txePictureLink.Text, "") == true)
-            {
-                checkinput += "사진링크를 입력해주세요.\n";
-            }
-            if (dteLatestFindingReport.EditValue == null)
-            {
-                checkinput += "날짜를 선택해주세요.\n";
-            }
-            if (string.Equals(checkinput, "") == true)
+            if (string.Equals(CheckInput(), "") == true)
             {
                
 
@@ -122,7 +127,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 Close();
 
             }
-            MessageBox.Show(checkinput);
+            MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
         }
 
         private void HomelessAnimalForm_Load(object sender, EventArgs e)

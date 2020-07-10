@@ -60,7 +60,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (lkuAnimalId.EditValue is null)
                 checkinput += "동물Id, ";
             if (rdgAdoptionStatus.EditValue is null)
-                checkinput += "입양상태,";
+                checkinput += "입양상태, ";
 
             return checkinput;
         }
@@ -103,7 +103,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             }
             else
             {
-                MessageBox.Show(CheckInput().Remove(CheckInput().Length - 1) + "을(를) 입력해주세요.");
+                MessageBox.Show(CheckInput().Remove(CheckInput().Length - 2) + "을(를) 입력해주세요.");
             }
             Close();
         }
