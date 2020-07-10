@@ -106,7 +106,7 @@
             this.tsbDelete,
             this.tsbEdit,
             this.tsbRefresh});
-            this.toolStrip1.Location = new System.Drawing.Point(12, 101);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 99);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(776, 26);
             this.toolStrip1.TabIndex = 17;
@@ -156,7 +156,7 @@
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(102, 14);
+            this.cbxSpecies.Location = new System.Drawing.Point(102, 12);
             this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cbxSpecies.Name = "cbxSpecies";
             this.cbxSpecies.Size = new System.Drawing.Size(686, 26);
@@ -165,7 +165,7 @@
             // 
             // btnFindingReport
             // 
-            this.btnFindingReport.Location = new System.Drawing.Point(496, 499);
+            this.btnFindingReport.Location = new System.Drawing.Point(496, 501);
             this.btnFindingReport.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnFindingReport.Name = "btnFindingReport";
             this.btnFindingReport.Size = new System.Drawing.Size(292, 27);
@@ -175,7 +175,7 @@
             // 
             // txbPlace
             // 
-            this.txbPlace.Location = new System.Drawing.Point(102, 72);
+            this.txbPlace.Location = new System.Drawing.Point(102, 70);
             this.txbPlace.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txbPlace.Name = "txbPlace";
             this.txbPlace.Size = new System.Drawing.Size(686, 25);
@@ -185,7 +185,7 @@
             // dteFoundDateFrom
             // 
             this.dteFoundDateFrom.EditValue = null;
-            this.dteFoundDateFrom.Location = new System.Drawing.Point(102, 44);
+            this.dteFoundDateFrom.Location = new System.Drawing.Point(102, 42);
             this.dteFoundDateFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dteFoundDateFrom.Name = "dteFoundDateFrom";
             this.dteFoundDateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -200,7 +200,7 @@
             // dteFoundDateTo
             // 
             this.dteFoundDateTo.EditValue = "";
-            this.dteFoundDateTo.Location = new System.Drawing.Point(425, 44);
+            this.dteFoundDateTo.Location = new System.Drawing.Point(425, 42);
             this.dteFoundDateTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dteFoundDateTo.Name = "dteFoundDateTo";
             this.dteFoundDateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -226,7 +226,7 @@
             this.dateDataGridViewTextBoxColumn,
             this.isInShelterDataGridViewCheckBoxColumn});
             this.grvAdoptionList.DataSource = this.findingReportBindingSource;
-            this.grvAdoptionList.Location = new System.Drawing.Point(102, 131);
+            this.grvAdoptionList.Location = new System.Drawing.Point(102, 129);
             this.grvAdoptionList.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.grvAdoptionList.Name = "grvAdoptionList";
             this.grvAdoptionList.ReadOnly = true;
@@ -234,7 +234,7 @@
             this.grvAdoptionList.RowHeadersWidth = 51;
             this.grvAdoptionList.RowTemplate.Height = 27;
             this.grvAdoptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvAdoptionList.Size = new System.Drawing.Size(686, 344);
+            this.grvAdoptionList.Size = new System.Drawing.Size(686, 347);
             this.grvAdoptionList.TabIndex = 5;
             // 
             // speciesDataGridViewTextBoxColumn
@@ -335,7 +335,7 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 485);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 489);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(484, 31);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -343,7 +343,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnFindingReport;
-            this.layoutControlItem4.Location = new System.Drawing.Point(484, 485);
+            this.layoutControlItem4.Location = new System.Drawing.Point(484, 489);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(296, 31);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -356,16 +356,16 @@
             this.list.CustomizationFormText = "리스트";
             this.list.Location = new System.Drawing.Point(0, 117);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(780, 348);
+            this.list.Size = new System.Drawing.Size(780, 351);
             this.list.Text = "리스트";
             this.list.TextSize = new System.Drawing.Size(87, 18);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 465);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 468);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(780, 20);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(780, 21);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
@@ -423,7 +423,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private DevExpress.XtraEditors.DateEdit dteFoundDateFrom;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.DateEdit dteFoundDateTo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
@@ -441,5 +440,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn placeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isInShelterDataGridViewCheckBoxColumn;
+        private DevExpress.XtraEditors.DateEdit dteFoundDateFrom;
     }
 }
