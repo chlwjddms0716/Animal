@@ -84,17 +84,17 @@
     <Compile Include="AdminForms\AdoptionForm.Designer.cs">
       <DependentUpon>AdoptionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\AdoptionManagement.cs">
+    <Compile Include="AdminForms\AdoptionListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\AdoptionManagement.Designer.cs">
-      <DependentUpon>AdoptionManagement.cs</DependentUpon>
+    <Compile Include="AdminForms\AdoptionListForm.Designer.cs">
+      <DependentUpon>AdoptionListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\EditUserInformationByAdmin.cs">
+    <Compile Include="AdminForms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\EditUserInformationByAdmin.Designer.cs">
-      <DependentUpon>EditUserInformationByAdmin.cs</DependentUpon>
+    <Compile Include="AdminForms\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\FindId.cs">
       <SubType>Form</SubType>
@@ -132,11 +132,11 @@
     <Compile Include="AdminForms\ShelterListForm.Designer.cs">
       <DependentUpon>ShelterListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\UserManagement.cs">
+    <Compile Include="AdminForms\UserListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\UserManagement.Designer.cs">
-      <DependentUpon>UserManagement.cs</DependentUpon>
+    <Compile Include="AdminForms\UserListForm.Designer.cs">
+      <DependentUpon>UserListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\DataGridViewEx.cs">
       <SubType>Component</SubType>
@@ -207,11 +207,11 @@
     <EmbeddedResource Include="AdminForms\AdoptionForm.resx">
       <DependentUpon>AdoptionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\AdoptionManagement.resx">
-      <DependentUpon>AdoptionManagement.cs</DependentUpon>
+    <EmbeddedResource Include="AdminForms\AdoptionListForm.resx">
+      <DependentUpon>AdoptionListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\EditUserInformationByAdmin.resx">
-      <DependentUpon>EditUserInformationByAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="AdminForms\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\FindId.resx">
       <DependentUpon>FindId.cs</DependentUpon>
@@ -231,8 +231,8 @@
     <EmbeddedResource Include="AdminForms\ShelterListForm.resx">
       <DependentUpon>ShelterListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\UserManagement.resx">
-      <DependentUpon>UserManagement.cs</DependentUpon>
+    <EmbeddedResource Include="AdminForms\UserListForm.resx">
+      <DependentUpon>UserListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>
@@ -308,28 +308,31 @@
     <None Include="Resources\Edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dog.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dogg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dogfoot.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dd.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\puppy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\purplepuppy.png" />
+    <None Include="Resources\ddoogg.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Puppy.svg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BlackPuppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dddoogg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handshake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shelter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discovery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -104,7 +104,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             homelessAnimal.Name = string.Empty;
             homelessAnimal.Age = 0;
             homelessAnimal.Feature = "";
-            homelessAnimal.LatestFindingReport = System.DateTime.Now;
+            homelessAnimal.LatestFindingReport = System.DateTime.Today;
             homelessAnimal.PictureLink = string.Empty;
 
 
@@ -171,6 +171,16 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             ExcuteUpdate();
+        }
+
+        private void HomelessAnimalListForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

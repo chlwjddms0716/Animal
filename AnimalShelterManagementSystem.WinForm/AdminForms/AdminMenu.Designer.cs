@@ -39,7 +39,8 @@
             // 
             this.btnAdoption.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdoption.Appearance.Options.UseFont = true;
-            this.btnAdoption.Location = new System.Drawing.Point(464, 364);
+            this.btnAdoption.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.handshake;
+            this.btnAdoption.Location = new System.Drawing.Point(444, 323);
             this.btnAdoption.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdoption.Name = "btnAdoption";
             this.btnAdoption.Size = new System.Drawing.Size(308, 203);
@@ -51,7 +52,8 @@
             // 
             this.btnShelter.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShelter.Appearance.Options.UseFont = true;
-            this.btnShelter.Location = new System.Drawing.Point(85, 364);
+            this.btnShelter.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.shelter;
+            this.btnShelter.Location = new System.Drawing.Point(65, 323);
             this.btnShelter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnShelter.Name = "btnShelter";
             this.btnShelter.Size = new System.Drawing.Size(308, 203);
@@ -63,7 +65,8 @@
             // 
             this.btnUser.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.Appearance.Options.UseFont = true;
-            this.btnUser.Location = new System.Drawing.Point(464, 85);
+            this.btnUser.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.User;
+            this.btnUser.Location = new System.Drawing.Point(444, 44);
             this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(308, 203);
@@ -75,7 +78,8 @@
             // 
             this.btnAnimal.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnimal.Appearance.Options.UseFont = true;
-            this.btnAnimal.Location = new System.Drawing.Point(85, 85);
+            this.btnAnimal.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.dddoogg;
+            this.btnAnimal.Location = new System.Drawing.Point(65, 44);
             this.btnAnimal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAnimal.Name = "btnAnimal";
             this.btnAnimal.Size = new System.Drawing.Size(308, 203);
@@ -87,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 635);
+            this.ClientSize = new System.Drawing.Size(823, 571);
             this.Controls.Add(this.btnAdoption);
             this.Controls.Add(this.btnShelter);
             this.Controls.Add(this.btnUser);

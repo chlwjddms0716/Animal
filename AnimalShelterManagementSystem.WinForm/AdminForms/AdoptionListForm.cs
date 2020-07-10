@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class AdoptionManagement : DevExpress.XtraEditors.XtraForm
+    public partial class AdoptionListForm : DevExpress.XtraEditors.XtraForm
     {
         List<Adoption> adoptionList = new List<Adoption>();
         List<Adoption> FilteredById;
@@ -20,7 +20,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private int currentStatus = 3;
         Adoption adoption = new Adoption();
 
-        public AdoptionManagement()
+        public AdoptionListForm()
         {
             InitializeComponent();
         }
@@ -81,7 +81,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
             adoptionBindingSource.Remove(adoption);
         }
-
+        
         private void ExecuteEdit()
         {
             Adoption adoption = adoptionBindingSource.Current as Adoption;
@@ -110,7 +110,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             querybyAdoptionStatus();
         }
 
-        private void grvAdoptionList_Click(object sender, EventArgs e)
+        private void grvAdoptionList_DoubleClick(object sender, EventArgs e)
         {
             ExecuteEdit();
         }

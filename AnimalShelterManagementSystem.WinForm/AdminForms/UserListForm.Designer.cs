@@ -1,6 +1,6 @@
 ﻿namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    partial class UserManagement
+    partial class UserListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,6 @@
             this.isBlacklistDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.blacklistReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAdministratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.adoptionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rdgAdmin = new DevExpress.XtraEditors.RadioGroup();
             this.rdgBlacklist = new DevExpress.XtraEditors.RadioGroup();
@@ -84,10 +83,10 @@
             this.layoutControl1.Controls.Add(this.txbId);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1000, 660);
+            this.layoutControl1.Size = new System.Drawing.Size(800, 540);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -101,9 +100,9 @@
             this.tsbDelete,
             this.tsbEdit,
             this.tsbRefresh});
-            this.toolStrip1.Location = new System.Drawing.Point(14, 246);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 198);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(972, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(776, 26);
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -113,7 +112,7 @@
             this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(34, 26);
+            this.tsbAdd.Size = new System.Drawing.Size(29, 23);
             this.tsbAdd.Text = "추가";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -123,7 +122,7 @@
             this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(34, 26);
+            this.tsbDelete.Size = new System.Drawing.Size(29, 23);
             this.tsbDelete.Text = "삭제";
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
@@ -133,7 +132,7 @@
             this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(34, 26);
+            this.tsbEdit.Size = new System.Drawing.Size(29, 23);
             this.tsbEdit.Text = "수정";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
@@ -143,7 +142,7 @@
             this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(34, 26);
+            this.tsbRefresh.Size = new System.Drawing.Size(29, 23);
             this.tsbRefresh.Text = "새로고침";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
@@ -164,29 +163,28 @@
             this.phoneNumberDataGridViewTextBoxColumn,
             this.isBlacklistDataGridViewCheckBoxColumn,
             this.blacklistReasonDataGridViewTextBoxColumn,
-            this.isAdministratorDataGridViewCheckBoxColumn,
-            this.adoptionsDataGridViewTextBoxColumn});
+            this.isAdministratorDataGridViewCheckBoxColumn});
             this.grvUserList.DataSource = this.userBindingSource;
-            this.grvUserList.Location = new System.Drawing.Point(88, 283);
-            this.grvUserList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grvUserList.Location = new System.Drawing.Point(82, 228);
+            this.grvUserList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grvUserList.Name = "grvUserList";
             this.grvUserList.ReadOnly = true;
             this.grvUserList.RowHeadersVisible = false;
             this.grvUserList.RowHeadersWidth = 51;
             this.grvUserList.RowTemplate.Height = 27;
             this.grvUserList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvUserList.Size = new System.Drawing.Size(898, 359);
+            this.grvUserList.Size = new System.Drawing.Size(706, 300);
             this.grvUserList.TabIndex = 10;
             this.grvUserList.DoubleClick += new System.EventHandler(this.grvUserList_DoubleClick);
             // 
             // userIdDataGridViewTextBoxColumn
             // 
             this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "유저Id";
             this.userIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
             this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userIdDataGridViewTextBoxColumn.Width = 125;
+            this.userIdDataGridViewTextBoxColumn.Width = 80;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -200,7 +198,7 @@
             // passwordDataGridViewTextBoxColumn
             // 
             this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "비밀번호";
             this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
@@ -209,7 +207,7 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -218,7 +216,7 @@
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
             this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
@@ -227,7 +225,7 @@
             // phoneNumberDataGridViewTextBoxColumn
             // 
             this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "전화번호";
             this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
             this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
@@ -236,7 +234,7 @@
             // isBlacklistDataGridViewCheckBoxColumn
             // 
             this.isBlacklistDataGridViewCheckBoxColumn.DataPropertyName = "IsBlacklist";
-            this.isBlacklistDataGridViewCheckBoxColumn.HeaderText = "IsBlacklist";
+            this.isBlacklistDataGridViewCheckBoxColumn.HeaderText = "블랙리스트여부";
             this.isBlacklistDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.isBlacklistDataGridViewCheckBoxColumn.Name = "isBlacklistDataGridViewCheckBoxColumn";
             this.isBlacklistDataGridViewCheckBoxColumn.ReadOnly = true;
@@ -245,7 +243,7 @@
             // blacklistReasonDataGridViewTextBoxColumn
             // 
             this.blacklistReasonDataGridViewTextBoxColumn.DataPropertyName = "BlacklistReason";
-            this.blacklistReasonDataGridViewTextBoxColumn.HeaderText = "BlacklistReason";
+            this.blacklistReasonDataGridViewTextBoxColumn.HeaderText = "블랙리스트이유";
             this.blacklistReasonDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.blacklistReasonDataGridViewTextBoxColumn.Name = "blacklistReasonDataGridViewTextBoxColumn";
             this.blacklistReasonDataGridViewTextBoxColumn.ReadOnly = true;
@@ -254,20 +252,11 @@
             // isAdministratorDataGridViewCheckBoxColumn
             // 
             this.isAdministratorDataGridViewCheckBoxColumn.DataPropertyName = "IsAdministrator";
-            this.isAdministratorDataGridViewCheckBoxColumn.HeaderText = "IsAdministrator";
+            this.isAdministratorDataGridViewCheckBoxColumn.HeaderText = "관리자여부";
             this.isAdministratorDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.isAdministratorDataGridViewCheckBoxColumn.Name = "isAdministratorDataGridViewCheckBoxColumn";
             this.isAdministratorDataGridViewCheckBoxColumn.ReadOnly = true;
             this.isAdministratorDataGridViewCheckBoxColumn.Width = 125;
-            // 
-            // adoptionsDataGridViewTextBoxColumn
-            // 
-            this.adoptionsDataGridViewTextBoxColumn.DataPropertyName = "Adoptions";
-            this.adoptionsDataGridViewTextBoxColumn.HeaderText = "Adoptions";
-            this.adoptionsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adoptionsDataGridViewTextBoxColumn.Name = "adoptionsDataGridViewTextBoxColumn";
-            this.adoptionsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adoptionsDataGridViewTextBoxColumn.Width = 125;
             // 
             // userBindingSource
             // 
@@ -276,14 +265,14 @@
             // rdgAdmin
             // 
             this.rdgAdmin.EditValue = 0;
-            this.rdgAdmin.Location = new System.Drawing.Point(88, 90);
-            this.rdgAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdgAdmin.Location = new System.Drawing.Point(82, 70);
+            this.rdgAdmin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdgAdmin.Name = "rdgAdmin";
             this.rdgAdmin.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "관리자"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgAdmin.Size = new System.Drawing.Size(898, 73);
+            this.rdgAdmin.Size = new System.Drawing.Size(706, 61);
             this.rdgAdmin.StyleController = this.layoutControl1;
             this.rdgAdmin.TabIndex = 11;
             this.rdgAdmin.SelectedIndexChanged += new System.EventHandler(this.rdgAdmin_SelectedIndexChanged);
@@ -291,33 +280,33 @@
             // rdgBlacklist
             // 
             this.rdgBlacklist.EditValue = 0;
-            this.rdgBlacklist.Location = new System.Drawing.Point(88, 169);
-            this.rdgBlacklist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdgBlacklist.Location = new System.Drawing.Point(82, 135);
+            this.rdgBlacklist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdgBlacklist.Name = "rdgBlacklist";
             this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "전체"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgBlacklist.Size = new System.Drawing.Size(898, 71);
+            this.rdgBlacklist.Size = new System.Drawing.Size(706, 59);
             this.rdgBlacklist.StyleController = this.layoutControl1;
             this.rdgBlacklist.TabIndex = 11;
             this.rdgBlacklist.SelectedIndexChanged += new System.EventHandler(this.rdgBlacklist_SelectedIndexChanged);
             // 
             // txbName
             // 
-            this.txbName.Location = new System.Drawing.Point(88, 18);
-            this.txbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbName.Location = new System.Drawing.Point(82, 12);
+            this.txbName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(898, 30);
+            this.txbName.Size = new System.Drawing.Size(706, 25);
             this.txbName.TabIndex = 6;
             this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
             // txbId
             // 
-            this.txbId.Location = new System.Drawing.Point(88, 54);
-            this.txbId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbId.Location = new System.Drawing.Point(82, 41);
+            this.txbId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbId.Name = "txbId";
-            this.txbId.Size = new System.Drawing.Size(898, 30);
+            this.txbId.Size = new System.Drawing.Size(706, 25);
             this.txbId.TabIndex = 6;
             this.txbId.TextChanged += new System.EventHandler(this.txbId_TextChanged);
             // 
@@ -333,7 +322,7 @@
             this.txbUserId,
             this.layoutControlItem4});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1000, 660);
+            this.Root.Size = new System.Drawing.Size(800, 540);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
@@ -341,33 +330,33 @@
             this.layoutControlItem2.Control = this.grvUserList;
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "l";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 265);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 216);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(976, 365);
+            this.layoutControlItem2.Size = new System.Drawing.Size(780, 304);
             this.layoutControlItem2.Text = "리스트";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(70, 22);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 18);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.rdgAdmin;
             this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem3.CustomizationFormText = "관리자";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 58);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(976, 79);
+            this.layoutControlItem3.Size = new System.Drawing.Size(780, 65);
             this.layoutControlItem3.Text = "관리자";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(70, 22);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(67, 18);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.rdgBlacklist;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem1.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 151);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 123);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(976, 77);
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 63);
             this.layoutControlItem1.Text = "블랙리스트";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(70, 22);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(67, 18);
             // 
             // txbUserName
             // 
@@ -376,9 +365,9 @@
             this.txbUserName.CustomizationFormText = "유저 이름 : ";
             this.txbUserName.Location = new System.Drawing.Point(0, 0);
             this.txbUserName.Name = "txbUserName";
-            this.txbUserName.Size = new System.Drawing.Size(976, 36);
+            this.txbUserName.Size = new System.Drawing.Size(780, 29);
             this.txbUserName.Text = "유저 이름 :";
-            this.txbUserName.TextSize = new System.Drawing.Size(70, 22);
+            this.txbUserName.TextSize = new System.Drawing.Size(67, 18);
             // 
             // txbUserId
             // 
@@ -386,29 +375,30 @@
             this.txbUserId.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.txbUserId.CustomizationFormText = "유저 Id : ";
             this.txbUserId.HighlightFocusedItem = DevExpress.Utils.DefaultBoolean.True;
-            this.txbUserId.Location = new System.Drawing.Point(0, 36);
+            this.txbUserId.Location = new System.Drawing.Point(0, 29);
             this.txbUserId.Name = "txbUserId";
-            this.txbUserId.Size = new System.Drawing.Size(976, 36);
+            this.txbUserId.Size = new System.Drawing.Size(780, 29);
             this.txbUserId.Text = "유저 Id :";
-            this.txbUserId.TextSize = new System.Drawing.Size(70, 22);
+            this.txbUserId.TextSize = new System.Drawing.Size(67, 18);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.toolStrip1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 228);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 186);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(976, 37);
+            this.layoutControlItem4.Size = new System.Drawing.Size(780, 30);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // UserManagement
+            // UserListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 660);
+            this.ClientSize = new System.Drawing.Size(800, 540);
             this.Controls.Add(this.layoutControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "UserManagement";
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "UserListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "유저리스트";
             this.Load += new System.EventHandler(this.UserManagement_Load);
@@ -461,6 +451,5 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn isBlacklistDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn blacklistReasonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isAdministratorDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adoptionsDataGridViewTextBoxColumn;
     }
 }

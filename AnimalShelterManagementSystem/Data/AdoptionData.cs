@@ -81,10 +81,6 @@ namespace AnimalShelterManagementSystem
         }
 
 
-
-
-
-
         //public List<HomelessAnimal> GetAnimalsByUserName2(string userName)
         //{
         //    AnimalShelterManagementEntities context = CreateContext();
