@@ -33,6 +33,8 @@
             this.btnUser = new DevExpress.XtraEditors.SimpleButton();
             this.btnAnimal = new DevExpress.XtraEditors.SimpleButton();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.btnFindReportManagement = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLossReportManagement = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // btnAdoption
@@ -87,11 +89,39 @@
             this.btnAnimal.Text = "유기 동물 관리";
             this.btnAnimal.Click += new System.EventHandler(this.btnAnimal_Click);
             // 
+            // btnFindReportManagement
+            // 
+            this.btnFindReportManagement.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindReportManagement.Appearance.Options.UseFont = true;
+            this.btnFindReportManagement.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.discovery;
+            this.btnFindReportManagement.Location = new System.Drawing.Point(801, 48);
+            this.btnFindReportManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFindReportManagement.Name = "btnFindReportManagement";
+            this.btnFindReportManagement.Size = new System.Drawing.Size(356, 230);
+            this.btnFindReportManagement.TabIndex = 9;
+            this.btnFindReportManagement.Text = "발견 신고 관리";
+            this.btnFindReportManagement.Click += new System.EventHandler(this.btnFindReportManagement_Click);
+            // 
+            // btnLossReportManagement
+            // 
+            this.btnLossReportManagement.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLossReportManagement.Appearance.Options.UseFont = true;
+            this.btnLossReportManagement.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.time;
+            this.btnLossReportManagement.Location = new System.Drawing.Point(801, 300);
+            this.btnLossReportManagement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLossReportManagement.Name = "btnLossReportManagement";
+            this.btnLossReportManagement.Size = new System.Drawing.Size(356, 230);
+            this.btnLossReportManagement.TabIndex = 8;
+            this.btnLossReportManagement.Text = "실종 신고 관리";
+            this.btnLossReportManagement.Click += new System.EventHandler(this.btnLossReportManagement_Click);
+            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 571);
+            this.ClientSize = new System.Drawing.Size(1188, 571);
+            this.Controls.Add(this.btnFindReportManagement);
+            this.Controls.Add(this.btnLossReportManagement);
             this.Controls.Add(this.btnAdoption);
             this.Controls.Add(this.btnShelter);
             this.Controls.Add(this.btnUser);
@@ -112,5 +142,7 @@
         private DevExpress.XtraEditors.SimpleButton btnUser;
         private DevExpress.XtraEditors.SimpleButton btnAnimal;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private DevExpress.XtraEditors.SimpleButton btnFindReportManagement;
+        private DevExpress.XtraEditors.SimpleButton btnLossReportManagement;
     }
 }
