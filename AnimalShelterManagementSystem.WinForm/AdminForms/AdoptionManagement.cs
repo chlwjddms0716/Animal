@@ -114,5 +114,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             ExecuteEdit();
         }
+
+        private void grvAdoptionList_DoubleClick(object sender, EventArgs e)
+        {
+            ExecuteEdit();
+        }
     }
 }

@@ -167,5 +167,10 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
             homelessAnimalBindingSource.DataSource = homelessAnimals;
         }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            ExcuteUpdate();
+        }
     }
 }

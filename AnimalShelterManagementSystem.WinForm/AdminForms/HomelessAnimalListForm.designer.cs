@@ -47,7 +47,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homelessAnimalIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.종 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +57,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.보호센터ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.latestFindingReportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureLinkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchControl1 = new AnimalShelterManagementSystem.WinForm.UserControls.SearchControl();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -241,7 +241,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.latestFindingReportDataGridViewTextBoxColumn,
             this.pictureLinkDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.homelessAnimalBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 383);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 291);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(12, 15, 12, 15);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -250,12 +250,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1285, 923);
+            this.dataGridView1.Size = new System.Drawing.Size(1285, 1015);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // homelessAnimalIdDataGridViewTextBoxColumn
             // 
@@ -338,13 +335,17 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.pictureLinkDataGridViewTextBoxColumn.ReadOnly = true;
             this.pictureLinkDataGridViewTextBoxColumn.ToolTipText = "링크를 복사(Ctrl+C)하고 웹에 접속하여 확인바랍니다.";
             // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            // 
             // searchControl1
             // 
             this.searchControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchControl1.Location = new System.Drawing.Point(0, 62);
             this.searchControl1.Margin = new System.Windows.Forms.Padding(12, 15, 12, 15);
             this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Size = new System.Drawing.Size(1285, 286);
+            this.searchControl1.Size = new System.Drawing.Size(1285, 226);
             this.searchControl1.TabIndex = 4;
             this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked_1);
             // 

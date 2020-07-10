@@ -41,6 +41,11 @@
             this.AnimalShelterName = new System.Windows.Forms.BindingSource(this.components);
             this.txeAddress = new DevExpress.XtraEditors.TextEdit();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AnimalShelterId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.managerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -53,11 +58,6 @@
             this.정보AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.도움말HToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.AnimalShelterId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.managerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -224,6 +224,62 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(993, 520);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // AnimalShelterId
+            // 
+            this.AnimalShelterId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.AnimalShelterId.DataPropertyName = "AnimalShelterId";
+            this.AnimalShelterId.FillWeight = 227.2727F;
+            this.AnimalShelterId.HeaderText = "보호소Id";
+            this.AnimalShelterId.MinimumWidth = 8;
+            this.AnimalShelterId.Name = "AnimalShelterId";
+            this.AnimalShelterId.ReadOnly = true;
+            this.AnimalShelterId.Width = 80;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.FillWeight = 33.56643F;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.FillWeight = 4.006397F;
+            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
+            this.addressDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.FillWeight = 204.2176F;
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "전화번호";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // managerNameDataGridViewTextBoxColumn
+            // 
+            this.managerNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.managerNameDataGridViewTextBoxColumn.DataPropertyName = "ManagerName";
+            this.managerNameDataGridViewTextBoxColumn.FillWeight = 30.93678F;
+            this.managerNameDataGridViewTextBoxColumn.HeaderText = "담당자";
+            this.managerNameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.managerNameDataGridViewTextBoxColumn.Name = "managerNameDataGridViewTextBoxColumn";
+            this.managerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.managerNameDataGridViewTextBoxColumn.Width = 150;
             // 
             // animalShelterBindingSource
             // 
@@ -314,59 +370,6 @@
             this.도움말HToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.도움말HToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
             this.도움말HToolStripMenuItem1.Text = "도움말(&H)";
-            // 
-            // AnimalShelterId
-            // 
-            this.AnimalShelterId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.AnimalShelterId.DataPropertyName = "AnimalShelterId";
-            this.AnimalShelterId.FillWeight = 227.2727F;
-            this.AnimalShelterId.HeaderText = "보호소Id";
-            this.AnimalShelterId.MinimumWidth = 8;
-            this.AnimalShelterId.Name = "AnimalShelterId";
-            this.AnimalShelterId.ReadOnly = true;
-            this.AnimalShelterId.Width = 80;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.FillWeight = 33.56643F;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.FillWeight = 4.006397F;
-            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
-            this.addressDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addressDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.FillWeight = 204.2176F;
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "전화번호";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // managerNameDataGridViewTextBoxColumn
-            // 
-            this.managerNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.managerNameDataGridViewTextBoxColumn.DataPropertyName = "ManagerName";
-            this.managerNameDataGridViewTextBoxColumn.FillWeight = 30.93678F;
-            this.managerNameDataGridViewTextBoxColumn.HeaderText = "담당자";
-            this.managerNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.managerNameDataGridViewTextBoxColumn.Name = "managerNameDataGridViewTextBoxColumn";
-            this.managerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ShelterListForm
             // 

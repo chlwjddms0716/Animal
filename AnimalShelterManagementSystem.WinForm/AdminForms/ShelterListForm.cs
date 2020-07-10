@@ -116,5 +116,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             ExecuteDelete();
         }
 
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            ExecuteEdit();
+        }
     }
 }
