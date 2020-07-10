@@ -39,7 +39,7 @@
             this.btnLossReport.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLossReport.Appearance.Options.UseFont = true;
             this.btnLossReport.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.time;
-            this.btnLossReport.Location = new System.Drawing.Point(102, 311);
+            this.btnLossReport.Location = new System.Drawing.Point(67, 280);
             this.btnLossReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnLossReport.Name = "btnLossReport";
             this.btnLossReport.Size = new System.Drawing.Size(308, 169);
@@ -52,7 +52,7 @@
             this.btnFindReport.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFindReport.Appearance.Options.UseFont = true;
             this.btnFindReport.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.discovery;
-            this.btnFindReport.Location = new System.Drawing.Point(481, 311);
+            this.btnFindReport.Location = new System.Drawing.Point(446, 280);
             this.btnFindReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnFindReport.Name = "btnFindReport";
             this.btnFindReport.Size = new System.Drawing.Size(308, 169);
@@ -65,7 +65,7 @@
             this.btnUserInfo.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserInfo.Appearance.Options.UseFont = true;
             this.btnUserInfo.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.User;
-            this.btnUserInfo.Location = new System.Drawing.Point(481, 79);
+            this.btnUserInfo.Location = new System.Drawing.Point(446, 48);
             this.btnUserInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btnUserInfo.Name = "btnUserInfo";
             this.btnUserInfo.Size = new System.Drawing.Size(308, 169);
@@ -78,7 +78,7 @@
             this.btnAdoption.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdoption.Appearance.Options.UseFont = true;
             this.btnAdoption.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.handshake;
-            this.btnAdoption.Location = new System.Drawing.Point(102, 79);
+            this.btnAdoption.Location = new System.Drawing.Point(67, 48);
             this.btnAdoption.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdoption.Name = "btnAdoption";
             this.btnAdoption.Size = new System.Drawing.Size(308, 169);
@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 549);
+            this.ClientSize = new System.Drawing.Size(821, 508);
             this.Controls.Add(this.btnFindReport);
             this.Controls.Add(this.btnLossReport);
             this.Controls.Add(this.btnUserInfo);
