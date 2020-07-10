@@ -34,7 +34,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             boxUserId.Text = user.UserId.ToString();
             boxUserId.Enabled = false;
             boxName.Text = user.Name;
-            boxName.Enabled = false;
             boxId.Text = user.Id;
             boxId.Enabled = false;
             boxPassword.Text = user.Password;
