@@ -96,7 +96,9 @@
     <Compile Include="AdminForms\FindingForm.Designer.cs">
       <DependentUpon>FindingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\FindingManagementForm.cs" />
+    <Compile Include="AdminForms\FindingManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminForms\FindingManagementForm.designer.cs">
       <DependentUpon>FindingManagementForm.cs</DependentUpon>
     </Compile>
