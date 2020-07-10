@@ -28,40 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAdoption = new DevExpress.XtraEditors.SimpleButton();
-            this.btnUserInfo = new DevExpress.XtraEditors.SimpleButton();
             this.btnLossReport = new DevExpress.XtraEditors.SimpleButton();
             this.btnFindReport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUserInfo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdoption = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
-            // 
-            // btnAdoption
-            // 
-            this.btnAdoption.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdoption.Appearance.Options.UseFont = true;
-            this.btnAdoption.Location = new System.Drawing.Point(102, 79);
-            this.btnAdoption.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdoption.Name = "btnAdoption";
-            this.btnAdoption.Size = new System.Drawing.Size(308, 169);
-            this.btnAdoption.TabIndex = 0;
-            this.btnAdoption.Text = "입양 신청";
-            this.btnAdoption.Click += new System.EventHandler(this.btnAdoption_Click);
-            // 
-            // btnUserInfo
-            // 
-            this.btnUserInfo.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserInfo.Appearance.Options.UseFont = true;
-            this.btnUserInfo.Location = new System.Drawing.Point(481, 79);
-            this.btnUserInfo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUserInfo.Name = "btnUserInfo";
-            this.btnUserInfo.Size = new System.Drawing.Size(308, 169);
-            this.btnUserInfo.TabIndex = 1;
-            this.btnUserInfo.Text = "유저 정보 수정";
-            this.btnUserInfo.Click += new System.EventHandler(this.btnEditUserInformation_Click);
             // 
             // btnLossReport
             // 
             this.btnLossReport.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLossReport.Appearance.Options.UseFont = true;
+            this.btnLossReport.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.time;
             this.btnLossReport.Location = new System.Drawing.Point(102, 311);
             this.btnLossReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnLossReport.Name = "btnLossReport";
@@ -74,6 +51,7 @@
             // 
             this.btnFindReport.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFindReport.Appearance.Options.UseFont = true;
+            this.btnFindReport.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.discovery;
             this.btnFindReport.Location = new System.Drawing.Point(481, 311);
             this.btnFindReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnFindReport.Name = "btnFindReport";
@@ -81,6 +59,32 @@
             this.btnFindReport.TabIndex = 3;
             this.btnFindReport.Text = "발견 신고";
             this.btnFindReport.Click += new System.EventHandler(this.btnFindReport_Click);
+            // 
+            // btnUserInfo
+            // 
+            this.btnUserInfo.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserInfo.Appearance.Options.UseFont = true;
+            this.btnUserInfo.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.User;
+            this.btnUserInfo.Location = new System.Drawing.Point(481, 79);
+            this.btnUserInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUserInfo.Name = "btnUserInfo";
+            this.btnUserInfo.Size = new System.Drawing.Size(308, 169);
+            this.btnUserInfo.TabIndex = 1;
+            this.btnUserInfo.Text = "유저 정보 수정";
+            this.btnUserInfo.Click += new System.EventHandler(this.btnEditUserInformation_Click);
+            // 
+            // btnAdoption
+            // 
+            this.btnAdoption.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdoption.Appearance.Options.UseFont = true;
+            this.btnAdoption.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.handshake;
+            this.btnAdoption.Location = new System.Drawing.Point(102, 79);
+            this.btnAdoption.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdoption.Name = "btnAdoption";
+            this.btnAdoption.Size = new System.Drawing.Size(308, 169);
+            this.btnAdoption.TabIndex = 0;
+            this.btnAdoption.Text = "입양 신청";
+            this.btnAdoption.Click += new System.EventHandler(this.btnAdoption_Click);
             // 
             // UserMenu
             // 
