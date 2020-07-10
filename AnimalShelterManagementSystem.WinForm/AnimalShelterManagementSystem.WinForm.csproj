@@ -307,5 +307,29 @@
   <ItemGroup>
     <None Include="Resources\Edit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dogg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dogfoot.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dd.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purplepuppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Puppy.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackPuppy.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

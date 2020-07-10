@@ -83,7 +83,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(579, 324);
+            this.layoutControl1.Size = new System.Drawing.Size(584, 401);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -102,7 +102,7 @@
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1021, 0, 812, 500);
             this.layoutControl2.Padding = new System.Windows.Forms.Padding(50, 60, 50, 60);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(558, 306);
+            this.layoutControl2.Size = new System.Drawing.Size(558, 360);
             this.layoutControl2.TabIndex = 4;
             this.layoutControl2.Text = "layoutControl1";
             // 
@@ -111,10 +111,10 @@
             this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnSignup.Appearance.Options.UseFont = true;
             this.btnSignup.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSignup.ImageOptions.Image")));
-            this.btnSignup.Location = new System.Drawing.Point(392, 182);
+            this.btnSignup.Location = new System.Drawing.Point(392, 180);
             this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSignup.Name = "btnSignup";
-            this.btnSignup.Size = new System.Drawing.Size(154, 52);
+            this.btnSignup.Size = new System.Drawing.Size(154, 162);
             this.btnSignup.StyleController = this.layoutControl2;
             this.btnSignup.TabIndex = 5;
             this.btnSignup.Text = "수정";
@@ -123,7 +123,7 @@
             // boxId
             // 
             this.boxId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UserBindingSource, "Id", true));
-            this.boxId.Location = new System.Drawing.Point(131, 14);
+            this.boxId.Location = new System.Drawing.Point(131, 12);
             this.boxId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxId.Name = "boxId";
             this.boxId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -138,7 +138,7 @@
             // 
             // boxPassword
             // 
-            this.boxPassword.Location = new System.Drawing.Point(131, 70);
+            this.boxPassword.Location = new System.Drawing.Point(131, 68);
             this.boxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxPassword.Name = "boxPassword";
             this.boxPassword.Properties.NullText = "새 비밀번호를 입력해주세요";
@@ -149,7 +149,7 @@
             // 
             // boxName
             // 
-            this.boxName.Location = new System.Drawing.Point(131, 42);
+            this.boxName.Location = new System.Drawing.Point(131, 40);
             this.boxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxName.Name = "boxName";
             this.boxName.Properties.ReadOnly = true;
@@ -159,7 +159,7 @@
             // 
             // boxPhoneNumber
             // 
-            this.boxPhoneNumber.Location = new System.Drawing.Point(131, 126);
+            this.boxPhoneNumber.Location = new System.Drawing.Point(131, 124);
             this.boxPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxPhoneNumber.Name = "boxPhoneNumber";
             this.boxPhoneNumber.Size = new System.Drawing.Size(415, 24);
@@ -168,7 +168,7 @@
             // 
             // boxAddress
             // 
-            this.boxAddress.Location = new System.Drawing.Point(131, 154);
+            this.boxAddress.Location = new System.Drawing.Point(131, 152);
             this.boxAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxAddress.Name = "boxAddress";
             this.boxAddress.Size = new System.Drawing.Size(415, 24);
@@ -177,7 +177,7 @@
             // 
             // boxPasswordCheck
             // 
-            this.boxPasswordCheck.Location = new System.Drawing.Point(131, 98);
+            this.boxPasswordCheck.Location = new System.Drawing.Point(131, 96);
             this.boxPasswordCheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxPasswordCheck.Name = "boxPasswordCheck";
             this.boxPasswordCheck.Properties.NullText = "비밀번호 확인";
@@ -199,7 +199,7 @@
             this.layoutControlItem8,
             this.layoutControlItem3});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(558, 306);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(558, 360);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -216,7 +216,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 168);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(380, 114);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(380, 172);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -256,10 +256,10 @@
             // 
             this.layoutControlItem6.Control = this.btnSignup;
             this.layoutControlItem6.Location = new System.Drawing.Point(380, 168);
-            this.layoutControlItem6.MaxSize = new System.Drawing.Size(158, 56);
-            this.layoutControlItem6.MinSize = new System.Drawing.Size(158, 56);
+            this.layoutControlItem6.MaxSize = new System.Drawing.Size(158, 166);
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(158, 166);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(158, 114);
+            this.layoutControlItem6.Size = new System.Drawing.Size(158, 172);
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
@@ -291,7 +291,7 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(579, 324);
+            this.Root.Size = new System.Drawing.Size(584, 401);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem7
@@ -307,8 +307,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 324);
+            this.ClientSize = new System.Drawing.Size(584, 401);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EditUserInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

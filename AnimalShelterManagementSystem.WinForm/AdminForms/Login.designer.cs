@@ -79,7 +79,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(282, 187);
-            this.splitContainerControl1.SplitterPosition = 160;
+            this.splitContainerControl1.SplitterPosition = 172;
             this.splitContainerControl1.TabIndex = 0;
             // 
             // layoutControl1
@@ -96,7 +96,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 0, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(282, 160);
+            this.layoutControl1.Size = new System.Drawing.Size(282, 172);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -130,7 +130,7 @@
             // 
             // btnFindPassword
             // 
-            this.btnFindPassword.Location = new System.Drawing.Point(151, 121);
+            this.btnFindPassword.Location = new System.Drawing.Point(151, 133);
             this.btnFindPassword.Name = "btnFindPassword";
             this.btnFindPassword.Size = new System.Drawing.Size(119, 27);
             this.btnFindPassword.StyleController = this.layoutControl1;
@@ -140,7 +140,7 @@
             // 
             // btnFindId
             // 
-            this.btnFindId.Location = new System.Drawing.Point(12, 121);
+            this.btnFindId.Location = new System.Drawing.Point(12, 133);
             this.btnFindId.Name = "btnFindId";
             this.btnFindId.Size = new System.Drawing.Size(123, 27);
             this.btnFindId.StyleController = this.layoutControl1;
@@ -182,7 +182,7 @@
             this.layoutControlItem6,
             this.emptySpaceItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(282, 160);
+            this.Root.Size = new System.Drawing.Size(282, 172);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -217,7 +217,7 @@
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.Location = new System.Drawing.Point(127, 56);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(12, 84);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(12, 96);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
@@ -234,13 +234,13 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 98);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(127, 11);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(127, 23);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnFindId;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 109);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 121);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(127, 31);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
@@ -249,7 +249,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnFindPassword;
-            this.layoutControlItem6.Location = new System.Drawing.Point(139, 109);
+            this.layoutControlItem6.Location = new System.Drawing.Point(139, 121);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(123, 31);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
@@ -260,7 +260,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(139, 98);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(123, 11);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(123, 23);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ribbonPage2
@@ -277,6 +277,7 @@
             this.ClientSize = new System.Drawing.Size(279, 180);
             this.Controls.Add(this.splitContainerControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

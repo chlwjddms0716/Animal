@@ -43,6 +43,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             _adoption.HomelessAnimalId = (int)lkuAnimalId.EditValue;
             //_adoption.userLoginId = txeUserId.Text;
             _adoption.UserId = DataRepository.User.GetbyId(txeUserId.Text).UserId;
+            HomelessAnimal homelessAnimal = DataRepository.HomelessAnimal.Get((int)lkuAnimalId.EditValue);
+            homelessAnimal.AdoptionStatus = (int)rdgAdoptionStatus.EditValue;
+            DataRepository.HomelessAnimal.Update(homelessAnimal);
             //_adoption.AdoptionStatus = (AdoptionStatusType)rdgAdoptionStatus.EditValue;
 
         }
