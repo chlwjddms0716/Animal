@@ -187,7 +187,7 @@
             this.grvAdoptionList.Size = new System.Drawing.Size(545, 302);
             this.grvAdoptionList.TabIndex = 5;
             
-            this.grvAdoptionList.DoubleClick += new System.EventHandler(this.grvAdoptionList_DoubleClick);
+        //    this.grvAdoptionList.DoubleClick += new System.EventHandler(this.grvAdoptionList_DoubleClick);
             // 
             // userLoginId
             // 
