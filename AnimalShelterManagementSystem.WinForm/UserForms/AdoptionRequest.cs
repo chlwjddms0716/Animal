@@ -51,7 +51,7 @@ namespace AnimalShelterManagementSystem.WinForm
         private void btnAdoptionRequest_Click(object sender, EventArgs e)
         {
             adoption.UserId = userId;
-            adoption.AdoptionDate = DateTime.Now;
+            adoption.AdoptionDate = DateTime.Today;
 
             try
             {

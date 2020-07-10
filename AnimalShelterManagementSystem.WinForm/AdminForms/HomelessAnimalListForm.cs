@@ -172,5 +172,15 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         {
             ExcuteUpdate();
         }
+
+        private void HomelessAnimalListForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
