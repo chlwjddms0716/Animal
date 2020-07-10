@@ -60,6 +60,7 @@ namespace AnimalShelterManagementSystem.WinForm
             if (string.Equals(checkinput, "") == true || String.Equals(checkinput, "사진 링크") == true)
             {
                 LossReport lossReport = new LossReport();
+                lossReport.UserId = userId;
                 lossReport.Place = txbPlace.Text;
                 lossReport.LossReportId = DataRepository.LossReport.GetMaxId() + 1;
                 lossReport.Date = dteDate.DateTime.Date;
