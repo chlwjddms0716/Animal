@@ -104,7 +104,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             homelessAnimal.Name = string.Empty;
             homelessAnimal.Age = 0;
             homelessAnimal.Feature = "";
-            homelessAnimal.LatestFindingReport = System.DateTime.Now;
+            homelessAnimal.LatestFindingReport = System.DateTime.Today;
             homelessAnimal.PictureLink = string.Empty;
 
 

@@ -80,16 +80,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserControls
             cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
           
 
-            dteFoundDateTo.DateTime = DateTime.Now;
-
-
-
-
-
-
-
-
-
+            dteFoundDateTo.DateTime = DateTime.Today;
         }
 
         #region LoadButtonClicked event things for C# 3.0

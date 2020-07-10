@@ -133,7 +133,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             cbbGender.DataSource = Enum.GetValues(typeof(Genders));
             cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
             cbbPSC.DataSource = Enum.GetValues(typeof(PhysicalConditionType));
-            dteLatestFindingReport.DateTime = DateTime.Now;
+            dteLatestFindingReport.DateTime = DateTime.Today;
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
             ReadFromEntity();
         }
