@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbAdd = new System.Windows.Forms.ToolStripButton();
+            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
+            this.tsbEdit = new System.Windows.Forms.ToolStripButton();
+            this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.grvUserList = new System.Windows.Forms.DataGridView();
             this.rdgAdmin = new DevExpress.XtraEditors.RadioGroup();
             this.rdgBlacklist = new DevExpress.XtraEditors.RadioGroup();
@@ -43,10 +47,7 @@
             this.txbUserName = new DevExpress.XtraLayout.LayoutControlItem();
             this.txbUserId = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tsbAdd = new System.Windows.Forms.ToolStripButton();
-            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
-            this.tsbEdit = new System.Windows.Forms.ToolStripButton();
-            this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +58,6 @@
             this.blacklistReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAdministratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.adoptionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -107,6 +107,46 @@
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // tsbAdd
+            // 
+            this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
+            this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAdd.Name = "tsbAdd";
+            this.tsbAdd.Size = new System.Drawing.Size(29, 23);
+            this.tsbAdd.Text = "추가";
+            this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
+            // 
+            // tsbDelete
+            // 
+            this.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
+            this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDelete.Name = "tsbDelete";
+            this.tsbDelete.Size = new System.Drawing.Size(29, 23);
+            this.tsbDelete.Text = "삭제";
+            this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
+            // 
+            // tsbEdit
+            // 
+            this.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
+            this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEdit.Name = "tsbEdit";
+            this.tsbEdit.Size = new System.Drawing.Size(29, 23);
+            this.tsbEdit.Text = "수정";
+            this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
+            // 
+            // tsbRefresh
+            // 
+            this.tsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
+            this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRefresh.Name = "tsbRefresh";
+            this.tsbRefresh.Size = new System.Drawing.Size(29, 23);
+            this.tsbRefresh.Text = "새로고침";
+            this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
+            // 
             // grvUserList
             // 
             this.grvUserList.AllowUserToAddRows = false;
@@ -131,8 +171,10 @@
             this.grvUserList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grvUserList.Name = "grvUserList";
             this.grvUserList.ReadOnly = true;
+            this.grvUserList.RowHeadersVisible = false;
             this.grvUserList.RowHeadersWidth = 51;
             this.grvUserList.RowTemplate.Height = 27;
+            this.grvUserList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvUserList.Size = new System.Drawing.Size(706, 300);
             this.grvUserList.TabIndex = 10;
             this.grvUserList.DoubleClick += new System.EventHandler(this.grvUserList_DoubleClick);
@@ -265,50 +307,14 @@
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
-            // tsbAdd
+            // userBindingSource
             // 
-            this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
-            this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(29, 23);
-            this.tsbAdd.Text = "추가";
-            this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
-            // 
-            // tsbDelete
-            // 
-            this.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
-            this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(29, 23);
-            this.tsbDelete.Text = "삭제";
-            this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
-            // 
-            // tsbEdit
-            // 
-            this.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
-            this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(29, 23);
-            this.tsbEdit.Text = "수정";
-            this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
-            // 
-            // tsbRefresh
-            // 
-            this.tsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
-            this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(29, 23);
-            this.tsbRefresh.Text = "새로고침";
-            this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
+            this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
             // 
             // userIdDataGridViewTextBoxColumn
             // 
             this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
-            this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "유저Id";
             this.userIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
             this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
@@ -326,7 +332,7 @@
             // passwordDataGridViewTextBoxColumn
             // 
             this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "비밀번호";
             this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
@@ -335,7 +341,7 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -344,7 +350,7 @@
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "주소";
             this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
@@ -353,7 +359,7 @@
             // phoneNumberDataGridViewTextBoxColumn
             // 
             this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "전화번호";
             this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
             this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
@@ -362,7 +368,7 @@
             // isBlacklistDataGridViewCheckBoxColumn
             // 
             this.isBlacklistDataGridViewCheckBoxColumn.DataPropertyName = "IsBlacklist";
-            this.isBlacklistDataGridViewCheckBoxColumn.HeaderText = "IsBlacklist";
+            this.isBlacklistDataGridViewCheckBoxColumn.HeaderText = "블랙리스트여부";
             this.isBlacklistDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.isBlacklistDataGridViewCheckBoxColumn.Name = "isBlacklistDataGridViewCheckBoxColumn";
             this.isBlacklistDataGridViewCheckBoxColumn.ReadOnly = true;
@@ -371,7 +377,7 @@
             // blacklistReasonDataGridViewTextBoxColumn
             // 
             this.blacklistReasonDataGridViewTextBoxColumn.DataPropertyName = "BlacklistReason";
-            this.blacklistReasonDataGridViewTextBoxColumn.HeaderText = "BlacklistReason";
+            this.blacklistReasonDataGridViewTextBoxColumn.HeaderText = "블랙리스트이유";
             this.blacklistReasonDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.blacklistReasonDataGridViewTextBoxColumn.Name = "blacklistReasonDataGridViewTextBoxColumn";
             this.blacklistReasonDataGridViewTextBoxColumn.ReadOnly = true;
@@ -380,7 +386,7 @@
             // isAdministratorDataGridViewCheckBoxColumn
             // 
             this.isAdministratorDataGridViewCheckBoxColumn.DataPropertyName = "IsAdministrator";
-            this.isAdministratorDataGridViewCheckBoxColumn.HeaderText = "IsAdministrator";
+            this.isAdministratorDataGridViewCheckBoxColumn.HeaderText = "관리자여부";
             this.isAdministratorDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.isAdministratorDataGridViewCheckBoxColumn.Name = "isAdministratorDataGridViewCheckBoxColumn";
             this.isAdministratorDataGridViewCheckBoxColumn.ReadOnly = true;
@@ -389,15 +395,11 @@
             // adoptionsDataGridViewTextBoxColumn
             // 
             this.adoptionsDataGridViewTextBoxColumn.DataPropertyName = "Adoptions";
-            this.adoptionsDataGridViewTextBoxColumn.HeaderText = "Adoptions";
+            this.adoptionsDataGridViewTextBoxColumn.HeaderText = "입양";
             this.adoptionsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.adoptionsDataGridViewTextBoxColumn.Name = "adoptionsDataGridViewTextBoxColumn";
             this.adoptionsDataGridViewTextBoxColumn.ReadOnly = true;
             this.adoptionsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
             // 
             // UserManagement
             // 
@@ -442,6 +444,15 @@
         private System.Windows.Forms.TextBox txbId;
         private DevExpress.XtraLayout.LayoutControlItem txbUserName;
         private DevExpress.XtraLayout.LayoutControlItem txbUserId;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tsbRefresh;
+        private System.Windows.Forms.ToolStripButton tsbAdd;
+        private System.Windows.Forms.ToolStripButton tsbDelete;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private System.Windows.Forms.ToolStripButton tsbEdit;
+        private DevExpress.XtraEditors.RadioGroup rdgBlacklist;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
@@ -452,14 +463,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn blacklistReasonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isAdministratorDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adoptionsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource userBindingSource;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tsbRefresh;
-        private System.Windows.Forms.ToolStripButton tsbAdd;
-        private System.Windows.Forms.ToolStripButton tsbDelete;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private System.Windows.Forms.ToolStripButton tsbEdit;
-        private DevExpress.XtraEditors.RadioGroup rdgBlacklist;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }
