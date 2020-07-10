@@ -43,7 +43,6 @@ namespace AnimalShelterManagementSystem
 
 
                 var query = from x in context.LossReports
-                            where x.
                             select x;
 
                 
@@ -55,7 +54,7 @@ namespace AnimalShelterManagementSystem
                 }
 
                 return list;
-            }
+            
         }
     }
 }
