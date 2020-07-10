@@ -23,7 +23,7 @@ namespace AnimalShelterManagementSystem.WinForm
         public EditUserInformation(int UserId) : this()
         {
             userId = UserId;
-            
+
             this.user = DataRepository.User.Get(UserId);
             boxId.Text = user.Id;
             boxName.Text = user.Name;
@@ -35,7 +35,7 @@ namespace AnimalShelterManagementSystem.WinForm
         {
             if (DesignMode)
                 return;
-        
+
         }
 
 
@@ -44,21 +44,42 @@ namespace AnimalShelterManagementSystem.WinForm
 
         }
 
+        string CheckInput()
+        {
+            string checkinput = "";
+            if (boxPassword.Text == null)
+                checkinput += "비밀번호, ";
+
+            if (boxPhoneNumber.Text == null)
+                checkinput += "전화번호, ";
+
+            if (boxAddress.Text == null)
+                checkinput += "주소, ";
+
+
+            return checkinput;
+        }
+
         private void btnEdit_Clicked(object sender, EventArgs e)
         {
-            if (String.Equals(boxPassword.Text, boxPasswordCheck.Text) == true )
+            if (string.Equals(CheckInput(), "") == true)
             {
-                user.PhoneNumber = boxPhoneNumber.Text;
-                user.Address = boxAddress.Text;
-                user.Password = boxPassword.Text;
-                DataRepository.User.Update(user);
-                MessageBox.Show("유저 정보가 수정되었습니다.");
-                Close();
+
+                if (String.Equals(boxPassword.Text, boxPasswordCheck.Text) == true)
+                {
+                    user.PhoneNumber = boxPhoneNumber.Text;
+                    user.Address = boxAddress.Text;
+                    user.Password = boxPassword.Text;
+                    DataRepository.User.Update(user);
+                    MessageBox.Show("유저 정보가 수정되었습니다.");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("비밀번호를 다시 확인하세요");
+                }
             }
-            else
-            {
-                MessageBox.Show("비밀번호를 다시 확인하세요");
-            }
+            MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
         }
     }
 }
