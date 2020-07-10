@@ -113,9 +113,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             querybyAdoptionStatus();
         }
 
-        private void grvAdoptionList_DoubleClick(object sender, EventArgs e)
-        {
-            ExecuteEdit();
-        }
+ 
+
+     
     }
 }
