@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
 
-    public partial class UserManagement : DevExpress.XtraEditors.XtraForm
+    public partial class UserListForm : DevExpress.XtraEditors.XtraForm
     {
         private int AdminCode = 2;
         private int BlacklistCode = 2;
@@ -22,7 +22,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         List<User> FilteredByAdmin = new List<User>();
         List<User> FilteredByBlacklist = new List<User>();
       
-        public UserManagement()
+        public UserListForm()
         {
             InitializeComponent();
         }
@@ -92,7 +92,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void tsbAdd_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            EditUserInformationByAdmin editUserInformationByAdmin = new EditUserInformationByAdmin();
+            UserForm editUserInformationByAdmin = new UserForm();
             editUserInformationByAdmin.ShowDialog();
             Cursor = Cursors.Arrow;
         }
@@ -113,7 +113,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void LoadEditForm(User user)
         {
             Cursor = Cursors.WaitCursor;
-            EditUserInformationByAdmin editUserInformationByAdmin = new EditUserInformationByAdmin(user);
+            UserForm editUserInformationByAdmin = new UserForm(user);
             editUserInformationByAdmin.ShowDialog();
             Cursor = Cursors.Arrow;
         }

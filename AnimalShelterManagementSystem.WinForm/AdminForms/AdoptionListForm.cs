@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class AdoptionManagement : DevExpress.XtraEditors.XtraForm
+    public partial class AdoptionListForm : DevExpress.XtraEditors.XtraForm
     {
         List<Adoption> adoptionList = new List<Adoption>();
         List<Adoption> FilteredById;
@@ -20,7 +20,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private int currentStatus = 3;
         Adoption adoption = new Adoption();
 
-        public AdoptionManagement()
+        public AdoptionListForm()
         {
             InitializeComponent();
         }

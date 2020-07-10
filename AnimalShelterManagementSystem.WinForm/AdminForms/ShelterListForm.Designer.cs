@@ -38,10 +38,9 @@
             this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             this.btnHelp = new System.Windows.Forms.ToolStripButton();
             this.lkuShelterName = new DevExpress.XtraEditors.LookUpEdit();
-            this.AnimalShelterName = new System.Windows.Forms.BindingSource(this.components);
             this.txeAddress = new DevExpress.XtraEditors.TextEdit();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AnimalShelterId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -53,24 +52,25 @@
             this.정보AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.도움말HToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.AnimalShelterId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimalShelterName = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.managerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkuShelterName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AnimalShelterName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnimalShelterName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -112,7 +112,7 @@
             this.btnClose.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Close;
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 30);
+            this.btnClose.Size = new System.Drawing.Size(29, 27);
             this.btnClose.Text = "종료";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -122,7 +122,7 @@
             this.btnInsert.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.btnInsert.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(29, 30);
+            this.btnInsert.Size = new System.Drawing.Size(29, 27);
             this.btnInsert.Text = "추가";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -132,7 +132,7 @@
             this.btnEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(29, 30);
+            this.btnEdit.Size = new System.Drawing.Size(29, 27);
             this.btnEdit.Text = "수정";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -142,7 +142,7 @@
             this.btnDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(29, 30);
+            this.btnDelete.Size = new System.Drawing.Size(29, 27);
             this.btnDelete.Text = "삭제";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -152,7 +152,7 @@
             this.btnUpdate.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(29, 30);
+            this.btnUpdate.Size = new System.Drawing.Size(29, 27);
             this.btnUpdate.Text = "업데이트";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -162,7 +162,7 @@
             this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
             this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(29, 30);
+            this.btnHelp.Size = new System.Drawing.Size(29, 27);
             this.btnHelp.Text = "도움말";
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -183,10 +183,6 @@
             this.lkuShelterName.StyleController = this.layoutControl1;
             this.lkuShelterName.TabIndex = 2;
             this.lkuShelterName.EditValueChanged += new System.EventHandler(this.lkuShelterName_EditValueChanged);
-            // 
-            // AnimalShelterName
-            // 
-            this.AnimalShelterName.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
             // 
             // txeAddress
             // 
@@ -224,9 +220,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(659, 375);
             this.dataGridView1.TabIndex = 3;
             // 
-            // animalShelterBindingSource
+            // AnimalShelterId
             // 
-            this.animalShelterBindingSource.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
+            this.AnimalShelterId.DataPropertyName = "AnimalShelterId";
+            this.AnimalShelterId.HeaderText = "보호소Id";
+            this.AnimalShelterId.MinimumWidth = 6;
+            this.AnimalShelterId.Name = "AnimalShelterId";
+            this.AnimalShelterId.ReadOnly = true;
+            this.AnimalShelterId.Width = 80;
             // 
             // Root
             // 
@@ -314,14 +315,9 @@
             this.도움말HToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
             this.도움말HToolStripMenuItem1.Text = "도움말(&H)";
             // 
-            // AnimalShelterId
+            // AnimalShelterName
             // 
-            this.AnimalShelterId.DataPropertyName = "AnimalShelterId";
-            this.AnimalShelterId.HeaderText = "보호소Id";
-            this.AnimalShelterId.MinimumWidth = 6;
-            this.AnimalShelterId.Name = "AnimalShelterId";
-            this.AnimalShelterId.ReadOnly = true;
-            this.AnimalShelterId.Width = 80;
+            this.AnimalShelterName.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -359,6 +355,10 @@
             this.managerNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.managerNameDataGridViewTextBoxColumn.Width = 125;
             // 
+            // animalShelterBindingSource
+            // 
+            this.animalShelterBindingSource.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
+            // 
             // ShelterListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -376,15 +376,15 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkuShelterName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AnimalShelterName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnimalShelterName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

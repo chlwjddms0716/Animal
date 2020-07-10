@@ -1,6 +1,6 @@
 ﻿namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    partial class UserManagement
+    partial class UserListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,6 @@
             this.tsbEdit = new System.Windows.Forms.ToolStripButton();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.grvUserList = new System.Windows.Forms.DataGridView();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rdgAdmin = new DevExpress.XtraEditors.RadioGroup();
             this.rdgBlacklist = new DevExpress.XtraEditors.RadioGroup();
             this.txbName = new System.Windows.Forms.TextBox();
@@ -57,11 +56,11 @@
             this.isBlacklistDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.blacklistReasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAdministratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvUserList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgBlacklist.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -71,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txbUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -176,10 +176,6 @@
             this.grvUserList.Size = new System.Drawing.Size(706, 300);
             this.grvUserList.TabIndex = 10;
             this.grvUserList.DoubleClick += new System.EventHandler(this.grvUserList_DoubleClick);
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
             // 
             // rdgAdmin
             // 
@@ -325,6 +321,7 @@
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
@@ -333,6 +330,7 @@
             this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.Width = 125;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -341,6 +339,7 @@
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 125;
             // 
             // addressDataGridViewTextBoxColumn
             // 
@@ -387,6 +386,10 @@
             this.isAdministratorDataGridViewCheckBoxColumn.ReadOnly = true;
             this.isAdministratorDataGridViewCheckBoxColumn.Width = 125;
             // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(AnimalShelterManagementSystem.User);
+            // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -404,7 +407,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvUserList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdmin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgBlacklist.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -414,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txbUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUserId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
