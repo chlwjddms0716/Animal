@@ -57,7 +57,9 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 DataRepository.FindingReport.Insert(findingReport);
 
                 MessageBox.Show("신고되었습니다.");
+
                 Close();
+                return;
             }
             MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
         }

@@ -57,8 +57,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             AnimalShelter animalShelter = animalShelterBindingSource.Current as AnimalShelter;
 
+            if (Helpers.Helpers.SureToDelete() == false)
+                return;
             if (animalShelter == null)
                 return;
+
 
 
             DataRepository.AnimalShelter.Delete(animalShelter);
@@ -79,7 +82,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (txeAddress.Text != string.Empty)
+          
+            if (txeAddress.Text != string.Empty && string.Equals("주소를 입력해주세요.", txeAddress.Text) is false)
             {
                 string Address = txeAddress.Text;
                 List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.SearchWithAddress(Address);

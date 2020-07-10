@@ -73,6 +73,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             Adoption adoption = adoptionBindingSource.Current as Adoption;
 
+
+            if (Helpers.Helpers.SureToDelete() == false)
+                return;
             if (adoption == null)
                 return;
 

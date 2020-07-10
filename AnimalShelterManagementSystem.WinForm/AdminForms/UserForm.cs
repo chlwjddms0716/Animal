@@ -34,7 +34,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             boxUserId.Text = user.UserId.ToString();
             boxUserId.Enabled = false;
             boxName.Text = user.Name;
-            boxName.Enabled = false;
             boxId.Text = user.Id;
             boxId.Enabled = false;
             boxPassword.Text = user.Password;
@@ -48,6 +47,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
          string Checkinput()
         {
             string checkinput = "";
+            if (String.Equals(boxName.Text, "") == true)
+                checkinput += "이름, ";
             if (String.Equals(boxPassword.Text, "") == true)
                 checkinput += "비밀번호, ";
             if (String.Equals(boxPhoneNumber.Text, "") == true)
@@ -64,6 +65,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             string test = Checkinput();
             if (string.Equals(Checkinput(), "") == true)
             {
+                user.Name = boxName.Text;
                 user.Password = boxPassword.Text;
                 user.PhoneNumber = boxPhoneNumber.Text;
                 user.Address = boxAddress.Text;
@@ -89,7 +91,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (Helpers.Helpers.SureToDelete() == false)
+                return;
             DataRepository.User.Delete(user.UserId);
+
             Close();
             return;
         }
@@ -132,6 +137,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 DataRepository.User.Insert(user);
                 MessageBox.Show("새로운 유저가 추가되었습니다.");
                 Close();
+                return;
             }
             MessageBox.Show($"{Checkinput().Remove(Checkinput().Length - 2)}을(를) 입력해주세요.");
         }
