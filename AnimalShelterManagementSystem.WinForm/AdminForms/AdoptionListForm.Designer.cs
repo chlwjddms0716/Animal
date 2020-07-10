@@ -186,7 +186,7 @@
             this.grvAdoptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvAdoptionList.Size = new System.Drawing.Size(545, 302);
             this.grvAdoptionList.TabIndex = 5;
-            this.grvAdoptionList.Click += new System.EventHandler(this.grvAdoptionList_Click);
+            
             this.grvAdoptionList.DoubleClick += new System.EventHandler(this.grvAdoptionList_DoubleClick);
             // 
             // userLoginId

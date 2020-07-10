@@ -64,7 +64,8 @@ namespace AnimalShelterManagementSystem.WinForm
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("입양할 동물을 선택해주세요");
+                return;
             }
 
             Close();
