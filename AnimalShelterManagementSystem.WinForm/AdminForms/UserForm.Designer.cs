@@ -428,7 +428,7 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
-            // EditUserInformationByAdmin
+            // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -436,7 +436,7 @@
             this.Controls.Add(this.layoutControl3);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "EditUserInformationByAdmin";
+            this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "유저정보수정";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();

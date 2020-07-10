@@ -100,15 +100,15 @@
             this.btnDelete,
             this.btnUpdate,
             this.btnHelp});
-            this.toolStrip1.Location = new System.Drawing.Point(10, 66);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 68);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(751, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(747, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // lkuShelterName
             // 
-            this.lkuShelterName.Location = new System.Drawing.Point(97, 38);
+            this.lkuShelterName.Location = new System.Drawing.Point(100, 40);
             this.lkuShelterName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lkuShelterName.Name = "lkuShelterName";
             this.lkuShelterName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -119,18 +119,18 @@
             this.lkuShelterName.Properties.DisplayMember = "Name";
             this.lkuShelterName.Properties.NullText = "보호소를 선택해주세요.";
             this.lkuShelterName.Properties.ValueMember = "AnimalShelterId";
-            this.lkuShelterName.Size = new System.Drawing.Size(664, 24);
+            this.lkuShelterName.Size = new System.Drawing.Size(659, 24);
             this.lkuShelterName.StyleController = this.layoutControl1;
             this.lkuShelterName.TabIndex = 2;
             this.lkuShelterName.EditValueChanged += new System.EventHandler(this.lkuShelterName_EditValueChanged);
             // 
             // txeAddress
             // 
-            this.txeAddress.Location = new System.Drawing.Point(97, 10);
+            this.txeAddress.Location = new System.Drawing.Point(100, 12);
             this.txeAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeAddress.Name = "txeAddress";
             this.txeAddress.Properties.NullText = "주소를 입력해주세요.";
-            this.txeAddress.Size = new System.Drawing.Size(664, 24);
+            this.txeAddress.Size = new System.Drawing.Size(659, 24);
             this.txeAddress.StyleController = this.layoutControl1;
             this.txeAddress.TabIndex = 0;
             this.txeAddress.EditValueChanged += new System.EventHandler(this.txeAddress_EditValueChanged);
@@ -150,7 +150,7 @@
             this.phoneNumberDataGridViewTextBoxColumn,
             this.managerNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.animalShelterBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(97, 95);
+            this.dataGridView1.Location = new System.Drawing.Point(100, 97);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -158,7 +158,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(664, 384);
+            this.dataGridView1.Size = new System.Drawing.Size(659, 380);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
@@ -188,7 +188,7 @@
             this.layoutControlItem1.Control = this.dataGridView1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 85);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(755, 388);
+            this.layoutControlItem1.Size = new System.Drawing.Size(751, 384);
             this.layoutControlItem1.Text = "   리스트";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(85, 18);
             // 
@@ -197,7 +197,7 @@
             this.layoutControlItem5.Control = this.toolStrip1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(755, 29);
+            this.layoutControlItem5.Size = new System.Drawing.Size(751, 29);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -206,7 +206,7 @@
             this.layoutControlItem3.Control = this.txeAddress;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(755, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(751, 28);
             this.layoutControlItem3.Text = " 주소 : ";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(85, 18);
             // 
@@ -215,7 +215,7 @@
             this.layoutControlItem4.Control = this.lkuShelterName;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(755, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(751, 28);
             this.layoutControlItem4.Text = " 보호소 이름 :";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(85, 18);
             // 

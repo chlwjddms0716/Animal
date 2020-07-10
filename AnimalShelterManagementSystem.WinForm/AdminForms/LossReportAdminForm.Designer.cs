@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.cbxSpecies = new System.Windows.Forms.ComboBox();
+            this.dteDate = new DevExpress.XtraEditors.DateEdit();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txeId = new DevExpress.XtraEditors.TextEdit();
             this.txeAnimalName = new DevExpress.XtraEditors.TextEdit();
             this.txePlace = new DevExpress.XtraEditors.TextEdit();
@@ -39,16 +43,14 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dteDate = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cbxSpecies = new System.Windows.Forms.ComboBox();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAnimalName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePlace.Properties)).BeginInit();
@@ -61,8 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +84,52 @@
             this.layoutControl1.Size = new System.Drawing.Size(441, 255);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // cbxSpecies
+            // 
+            this.cbxSpecies.FormattingEnabled = true;
+            this.cbxSpecies.Location = new System.Drawing.Point(82, 68);
+            this.cbxSpecies.Name = "cbxSpecies";
+            this.cbxSpecies.Size = new System.Drawing.Size(347, 26);
+            this.cbxSpecies.TabIndex = 16;
+            // 
+            // dteDate
+            // 
+            this.dteDate.EditValue = null;
+            this.dteDate.Location = new System.Drawing.Point(82, 98);
+            this.dteDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dteDate.Name = "dteDate";
+            this.dteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dteDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dteDate.Size = new System.Drawing.Size(347, 24);
+            this.dteDate.StyleController = this.layoutControl1;
+            this.dteDate.TabIndex = 15;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.btnCancel.Appearance.Options.UseFont = true;
+            this.btnCancel.Location = new System.Drawing.Point(12, 182);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(206, 30);
+            this.btnCancel.StyleController = this.layoutControl1;
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "취소";
+            this.btnCancel.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.Location = new System.Drawing.Point(222, 182);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(207, 30);
+            this.btnSave.StyleController = this.layoutControl1;
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "확인";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txeId
             // 
@@ -116,7 +162,6 @@
             this.txePictureLink.Size = new System.Drawing.Size(347, 24);
             this.txePictureLink.StyleController = this.layoutControl1;
             this.txePictureLink.TabIndex = 4;
-            
             // 
             // Root
             // 
@@ -186,18 +231,6 @@
             this.layoutControlItem6.Text = "사진링크 : ";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(67, 18);
             // 
-            // btnSave
-            // 
-            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(222, 182);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(207, 30);
-            this.btnSave.StyleController = this.layoutControl1;
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "확인";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnSave;
@@ -206,18 +239,6 @@
             this.layoutControlItem7.Size = new System.Drawing.Size(211, 34);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.btnCancel.Appearance.Options.UseFont = true;
-            this.btnCancel.Location = new System.Drawing.Point(12, 182);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(206, 30);
-            this.btnCancel.StyleController = this.layoutControl1;
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "취소";
-            this.btnCancel.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // layoutControlItem8
             // 
@@ -228,20 +249,6 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
-            // dteDate
-            // 
-            this.dteDate.EditValue = null;
-            this.dteDate.Location = new System.Drawing.Point(82, 98);
-            this.dteDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dteDate.Name = "dteDate";
-            this.dteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteDate.Size = new System.Drawing.Size(347, 24);
-            this.dteDate.StyleController = this.layoutControl1;
-            this.dteDate.TabIndex = 15;
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.dteDate;
@@ -250,14 +257,6 @@
             this.layoutControlItem9.Size = new System.Drawing.Size(421, 28);
             this.layoutControlItem9.Text = "날짜 : ";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // cbxSpecies
-            // 
-            this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(82, 68);
-            this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(347, 26);
-            this.cbxSpecies.TabIndex = 16;
             // 
             // layoutControlItem3
             // 
@@ -274,12 +273,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 255);
             this.Controls.Add(this.layoutControl1);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Name = "LossReportAdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "신고관리";
             this.Load += new System.EventHandler(this.LossReportAdminForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAnimalName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePlace.Properties)).EndInit();
@@ -292,8 +294,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);

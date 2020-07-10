@@ -53,12 +53,14 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnFindReportManagement_Click(object sender, EventArgs e)
         {
-
+            FindingManagementForm form = new FindingManagementForm();
+            form.ShowDialog();
         }
 
         private void btnLossReportManagement_Click(object sender, EventArgs e)
         {
-
+            LossReportListForm form = new LossReportListForm();
+            form.ShowDialog();
         }
     }
 }
