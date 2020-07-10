@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelterManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,6 +37,7 @@ namespace AnimalShelterManagementSystem
 
             return query.FirstOrDefault();
         }
+       
     }
 
 }
