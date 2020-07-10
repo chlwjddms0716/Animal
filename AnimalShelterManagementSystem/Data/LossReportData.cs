@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelterManagementSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,27 @@ namespace AnimalShelterManagementSystem
                         select x.LossReportId;
 
             return query.FirstOrDefault();
+        }
+
+        public IEnumerable<LossReport> GetbyAnimalName(string AnimalName)
+        {
+                AnimalShelterManagementEntities context = CreateContext();
+
+
+                var query = from x in context.LossReports
+                            where x.
+                            select x;
+
+                
+                var list = query.ToList();
+
+                foreach (var x in list)
+                {
+                    x.SpeciesName = ((SpeciesType)x.Species).ToString();
+                }
+
+                return list;
+            }
         }
     }
 }
