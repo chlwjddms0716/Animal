@@ -50,5 +50,15 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             homelessAnimalListForm.ShowDialog();
             Cursor = Cursors.Arrow;
         }
+
+        private void btnFindReportManagement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLossReportManagement_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
