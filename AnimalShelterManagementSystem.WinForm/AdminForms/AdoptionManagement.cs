@@ -17,7 +17,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         List<Adoption> adoptionList = new List<Adoption>();
         List<Adoption> FilteredById;
         List<Adoption> FilteredByAdoptionStatus;
-        private string Id;
         private int currentStatus = 3;
         Adoption adoption = new Adoption();
 
@@ -39,7 +38,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 FilteredByAdoptionStatus = FilteredById.Where(x => x.AdoptionStatus == (AdoptionStatusType)currentStatus).ToList();
             else
                 FilteredByAdoptionStatus = FilteredById;
-            adoptionBindingSource.DataSource = FilteredByAdoptionStatus;
+            adoptionBindingSource.DataSource = FilteredByAdoptionStatus.Where(x=>x.AdoptionStatus != 0);
         }
 
         private void AdoptionManagement_Load(object sender, EventArgs e)
@@ -102,7 +101,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void txeId_TextChanged(object sender, EventArgs e)
         {
-            Id = txeId.Text;
             querybyAdoptionStatus();
         }
 

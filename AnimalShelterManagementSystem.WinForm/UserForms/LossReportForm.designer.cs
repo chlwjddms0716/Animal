@@ -93,7 +93,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(545, 259);
+            this.layoutControl1.Size = new System.Drawing.Size(499, 259);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -104,7 +104,7 @@
             this.cbxSpecies.Location = new System.Drawing.Point(108, 41);
             this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(425, 26);
+            this.cbxSpecies.Size = new System.Drawing.Size(379, 26);
             this.cbxSpecies.TabIndex = 18;
             // 
             // btnCancle
@@ -112,7 +112,7 @@
             this.btnCancle.Location = new System.Drawing.Point(12, 220);
             this.btnCancle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(258, 27);
+            this.btnCancle.Size = new System.Drawing.Size(235, 27);
             this.btnCancle.StyleController = this.layoutControl1;
             this.btnCancle.TabIndex = 17;
             this.btnCancle.Text = "취소";
@@ -120,10 +120,10 @@
             // 
             // btnLossRequest
             // 
-            this.btnLossRequest.Location = new System.Drawing.Point(274, 220);
+            this.btnLossRequest.Location = new System.Drawing.Point(251, 220);
             this.btnLossRequest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLossRequest.Name = "btnLossRequest";
-            this.btnLossRequest.Size = new System.Drawing.Size(259, 27);
+            this.btnLossRequest.Size = new System.Drawing.Size(236, 27);
             this.btnLossRequest.StyleController = this.layoutControl1;
             this.btnLossRequest.TabIndex = 16;
             this.btnLossRequest.Text = "확인";
@@ -135,7 +135,7 @@
             this.txbPictureLink.Location = new System.Drawing.Point(108, 128);
             this.txbPictureLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPictureLink.Name = "txbPictureLink";
-            this.txbPictureLink.Size = new System.Drawing.Size(425, 25);
+            this.txbPictureLink.Size = new System.Drawing.Size(379, 25);
             this.txbPictureLink.TabIndex = 15;
             this.txbPictureLink.Text = "사진링크를 입력해주세요.";
             // 
@@ -149,7 +149,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteDate.Size = new System.Drawing.Size(424, 24);
+            this.dteDate.Size = new System.Drawing.Size(378, 24);
             this.dteDate.StyleController = this.layoutControl1;
             this.dteDate.TabIndex = 14;
             // 
@@ -158,7 +158,7 @@
             this.txbPlace.Location = new System.Drawing.Point(109, 99);
             this.txbPlace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPlace.Name = "txbPlace";
-            this.txbPlace.Size = new System.Drawing.Size(424, 25);
+            this.txbPlace.Size = new System.Drawing.Size(378, 25);
             this.txbPlace.TabIndex = 13;
             // 
             // tbxName
@@ -167,7 +167,7 @@
             this.tbxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxName.Name = "tbxName";
             this.tbxName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbxName.Size = new System.Drawing.Size(425, 25);
+            this.tbxName.Size = new System.Drawing.Size(379, 25);
             this.tbxName.TabIndex = 11;
             // 
             // lblName
@@ -228,7 +228,7 @@
             this.layoutControlItem11,
             this.layoutControlItem12});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(545, 259);
+            this.Root.Size = new System.Drawing.Size(499, 259);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -245,7 +245,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 145);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(525, 63);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(479, 63);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
@@ -253,7 +253,7 @@
             this.layoutControlItem4.Control = this.tbxName;
             this.layoutControlItem4.Location = new System.Drawing.Point(96, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(429, 29);
+            this.layoutControlItem4.Size = new System.Drawing.Size(383, 29);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -298,7 +298,7 @@
             this.layoutControlItem5.Control = this.txbPlace;
             this.layoutControlItem5.Location = new System.Drawing.Point(97, 87);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(428, 29);
+            this.layoutControlItem5.Size = new System.Drawing.Size(382, 29);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -307,7 +307,7 @@
             this.layoutControlItem6.Control = this.dteDate;
             this.layoutControlItem6.Location = new System.Drawing.Point(97, 59);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(428, 28);
+            this.layoutControlItem6.Size = new System.Drawing.Size(382, 28);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -316,16 +316,16 @@
             this.layoutControlItem2.Control = this.txbPictureLink;
             this.layoutControlItem2.Location = new System.Drawing.Point(96, 116);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(429, 29);
+            this.layoutControlItem2.Size = new System.Drawing.Size(383, 29);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnLossRequest;
-            this.layoutControlItem3.Location = new System.Drawing.Point(262, 208);
+            this.layoutControlItem3.Location = new System.Drawing.Point(239, 208);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(263, 31);
+            this.layoutControlItem3.Size = new System.Drawing.Size(240, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -334,7 +334,7 @@
             this.layoutControlItem11.Control = this.btnCancle;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 208);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(262, 31);
+            this.layoutControlItem11.Size = new System.Drawing.Size(239, 31);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -343,7 +343,7 @@
             this.layoutControlItem12.Control = this.cbxSpecies;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 29);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(525, 30);
+            this.layoutControlItem12.Size = new System.Drawing.Size(479, 30);
             this.layoutControlItem12.Text = " 종 :             ";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(93, 18);
             // 
@@ -351,7 +351,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 259);
+            this.ClientSize = new System.Drawing.Size(499, 259);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -361,7 +361,6 @@
             this.Load += new System.EventHandler(this.LossRequest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
