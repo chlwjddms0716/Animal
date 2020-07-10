@@ -67,6 +67,7 @@ namespace AnimalShelterManagementSystem.WinForm
 
                 if (String.Equals(boxPassword.Text, boxPasswordCheck.Text) == true)
                 {
+                    user.Name = boxName.Text;
                     user.PhoneNumber = boxPhoneNumber.Text;
                     user.Address = boxAddress.Text;
                     user.Password = boxPassword.Text;
@@ -78,6 +79,8 @@ namespace AnimalShelterManagementSystem.WinForm
                 {
                     MessageBox.Show("비밀번호를 다시 확인하세요");
                 }
+
+                return;
             }
             MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
         }
