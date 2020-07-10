@@ -41,7 +41,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                         }
                         else
                         {
-                            UserMenu userMenu = new UserMenu();
+                            UserMenu userMenu = new UserMenu(user.UserId);
                             userMenu.ShowDialog();
                             Close();
                         }
