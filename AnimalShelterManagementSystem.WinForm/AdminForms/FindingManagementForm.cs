@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class FindingManagementForm : Form
+    public partial class FindingManagementForm : DevExpress.XtraEditors.XtraForm
     {
         List<FindingReport> findingReports;
         List<FindingReport> filterBySpecies;
