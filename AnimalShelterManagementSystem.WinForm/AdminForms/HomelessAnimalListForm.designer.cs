@@ -251,6 +251,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1028, 755);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // homelessAnimalIdDataGridViewTextBoxColumn
             // 

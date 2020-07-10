@@ -21,7 +21,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void btnUser_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            UserManagement userManagement = new UserManagement();
+            UserListForm userManagement = new UserListForm();
             userManagement.ShowDialog();
             Cursor = Cursors.Arrow;
         }
@@ -37,7 +37,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void btnAdoption_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            AdoptionManagement adoptionManagement = new AdoptionManagement();
+            AdoptionListForm adoptionManagement = new AdoptionListForm();
             adoptionManagement.ShowDialog();
             Cursor = Cursors.Arrow;
 

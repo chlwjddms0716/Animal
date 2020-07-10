@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class EditUserInformationByAdmin : DevExpress.XtraEditors.XtraForm
+    public partial class UserForm : DevExpress.XtraEditors.XtraForm
     {
         User user = new User();
-        public EditUserInformationByAdmin()
+        public UserForm()
         {
             InitializeComponent();
             
@@ -25,7 +25,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             boxUserId.Enabled = false;
 
         }
-        public EditUserInformationByAdmin(User user)  
+        public UserForm(User user)  
         {
             InitializeComponent();
             

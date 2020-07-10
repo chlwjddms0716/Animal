@@ -1,6 +1,6 @@
 ﻿namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    partial class EditUserInformationByAdmin
+    partial class UserForm
     {
         /// <summary>
         /// Required designer variable.

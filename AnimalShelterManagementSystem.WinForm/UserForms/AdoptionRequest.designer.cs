@@ -35,6 +35,10 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.grvHomelessAnimalList = new System.Windows.Forms.DataGridView();
+            this.SpeciesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhysicalConditionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PictureLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rdgSex = new DevExpress.XtraEditors.RadioGroup();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -46,14 +50,10 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpeciesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhysicalConditionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PictureLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvHomelessAnimalList)).BeginInit();
@@ -159,6 +159,42 @@
             this.grvHomelessAnimalList.Size = new System.Drawing.Size(664, 324);
             this.grvHomelessAnimalList.TabIndex = 10;
             this.grvHomelessAnimalList.DoubleClick += new System.EventHandler(this.grvHomelessAnimalList_DoubleClick);
+            // 
+            // SpeciesName
+            // 
+            this.SpeciesName.DataPropertyName = "SpeciesName";
+            this.SpeciesName.HeaderText = "종";
+            this.SpeciesName.MinimumWidth = 6;
+            this.SpeciesName.Name = "SpeciesName";
+            this.SpeciesName.ReadOnly = true;
+            this.SpeciesName.Width = 80;
+            // 
+            // GenderName
+            // 
+            this.GenderName.DataPropertyName = "GenderName";
+            this.GenderName.HeaderText = "성별";
+            this.GenderName.MinimumWidth = 6;
+            this.GenderName.Name = "GenderName";
+            this.GenderName.ReadOnly = true;
+            this.GenderName.Width = 70;
+            // 
+            // PhysicalConditionName
+            // 
+            this.PhysicalConditionName.DataPropertyName = "PhysicalConditionName";
+            this.PhysicalConditionName.HeaderText = "건강상태";
+            this.PhysicalConditionName.MinimumWidth = 6;
+            this.PhysicalConditionName.Name = "PhysicalConditionName";
+            this.PhysicalConditionName.ReadOnly = true;
+            this.PhysicalConditionName.Width = 125;
+            // 
+            // PictureLink
+            // 
+            this.PictureLink.DataPropertyName = "PictureLink";
+            this.PictureLink.HeaderText = "사진링크";
+            this.PictureLink.MinimumWidth = 6;
+            this.PictureLink.Name = "PictureLink";
+            this.PictureLink.ReadOnly = true;
+            this.PictureLink.Width = 125;
             // 
             // rdgSex
             // 
@@ -271,10 +307,6 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 125;
             // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
-            // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Name";
@@ -282,24 +314,7 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // SpeciesName
-            // 
-            this.SpeciesName.DataPropertyName = "SpeciesName";
-            this.SpeciesName.HeaderText = "종";
-            this.SpeciesName.MinimumWidth = 6;
-            this.SpeciesName.Name = "SpeciesName";
-            this.SpeciesName.ReadOnly = true;
-            this.SpeciesName.Width = 80;
-            // 
-            // GenderName
-            // 
-            this.GenderName.DataPropertyName = "GenderName";
-            this.GenderName.HeaderText = "성별";
-            this.GenderName.MinimumWidth = 6;
-            this.GenderName.Name = "GenderName";
-            this.GenderName.ReadOnly = true;
-            this.GenderName.Width = 70;
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -310,14 +325,6 @@
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 70;
             // 
-            // PhysicalConditionName
-            // 
-            this.PhysicalConditionName.DataPropertyName = "PhysicalConditionName";
-            this.PhysicalConditionName.HeaderText = "건강상태";
-            this.PhysicalConditionName.MinimumWidth = 6;
-            this.PhysicalConditionName.Name = "PhysicalConditionName";
-            this.PhysicalConditionName.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Feature";
@@ -327,14 +334,9 @@
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
-            // PictureLink
+            // homelessAnimalBindingSource
             // 
-            this.PictureLink.DataPropertyName = "PictureLink";
-            this.PictureLink.HeaderText = "사진링크";
-            this.PictureLink.MinimumWidth = 6;
-            this.PictureLink.Name = "PictureLink";
-            this.PictureLink.ReadOnly = true;
-            this.PictureLink.Width = 125;
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
             // 
             // AdoptionRequest
             // 
