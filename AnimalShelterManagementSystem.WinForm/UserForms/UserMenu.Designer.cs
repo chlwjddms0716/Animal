@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 508);
+            this.ClientSize = new System.Drawing.Size(821, 510);
             this.Controls.Add(this.btnFindReport);
             this.Controls.Add(this.btnLossReport);
             this.Controls.Add(this.btnUserInfo);
