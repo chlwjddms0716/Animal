@@ -20,7 +20,7 @@ namespace AnimalShelterManagementSystem.WinForm
         static void Main()
         {
 
-            ProcessKiller.Instance.ShutDown += ProcessKiller_ShutDown;9
+            ProcessKiller.Instance.ShutDown += ProcessKiller_ShutDown;
             ProcessKiller.Instance.Start(interval: 500);
 
             Console.WriteLine("Press Enter to quit");
