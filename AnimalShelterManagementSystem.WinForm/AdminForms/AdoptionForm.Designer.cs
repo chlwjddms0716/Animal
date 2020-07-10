@@ -72,19 +72,19 @@
             this.layoutControl1.Controls.Add(this.rdgAdoptionStatus);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(351, 226);
+            this.layoutControl1.Size = new System.Drawing.Size(439, 276);
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // txeAnimalName
             // 
-            this.txeAnimalName.Location = new System.Drawing.Point(76, 40);
-            this.txeAnimalName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txeAnimalName.Location = new System.Drawing.Point(80, 46);
+            this.txeAnimalName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txeAnimalName.Name = "txeAnimalName";
-            this.txeAnimalName.Size = new System.Drawing.Size(263, 24);
+            this.txeAnimalName.Size = new System.Drawing.Size(345, 28);
             this.txeAnimalName.StyleController = this.layoutControl1;
             this.txeAnimalName.TabIndex = 15;
             this.txeAnimalName.EditValueChanged += new System.EventHandler(this.txeAnimalName_EditValueChanged);
@@ -93,10 +93,10 @@
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(165, 153);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSave.Location = new System.Drawing.Point(206, 183);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(174, 34);
+            this.btnSave.Size = new System.Drawing.Size(219, 40);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "확인";
@@ -106,10 +106,10 @@
             // 
             this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.Location = new System.Drawing.Point(12, 153);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClose.Location = new System.Drawing.Point(14, 183);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(149, 34);
+            this.btnClose.Size = new System.Drawing.Size(188, 40);
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "취소";
@@ -117,17 +117,17 @@
             // 
             // txeUserId
             // 
-            this.txeUserId.Location = new System.Drawing.Point(76, 12);
-            this.txeUserId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txeUserId.Location = new System.Drawing.Point(80, 14);
+            this.txeUserId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txeUserId.Name = "txeUserId";
-            this.txeUserId.Size = new System.Drawing.Size(263, 24);
+            this.txeUserId.Size = new System.Drawing.Size(345, 28);
             this.txeUserId.StyleController = this.layoutControl1;
             this.txeUserId.TabIndex = 6;
             // 
             // lkuAnimalId
             // 
-            this.lkuAnimalId.Location = new System.Drawing.Point(76, 68);
-            this.lkuAnimalId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lkuAnimalId.Location = new System.Drawing.Point(80, 78);
+            this.lkuAnimalId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lkuAnimalId.Name = "lkuAnimalId";
             this.lkuAnimalId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -138,20 +138,20 @@
             this.lkuAnimalId.Properties.NullText = "";
             this.lkuAnimalId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lkuAnimalId.Properties.ValueMember = "HomelessAnimalId";
-            this.lkuAnimalId.Size = new System.Drawing.Size(263, 24);
+            this.lkuAnimalId.Size = new System.Drawing.Size(345, 28);
             this.lkuAnimalId.StyleController = this.layoutControl1;
             this.lkuAnimalId.TabIndex = 2;
             // 
             // rdgAdoptionStatus
             // 
             this.rdgAdoptionStatus.EditValue = 0;
-            this.rdgAdoptionStatus.Location = new System.Drawing.Point(76, 96);
-            this.rdgAdoptionStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rdgAdoptionStatus.Location = new System.Drawing.Point(80, 110);
+            this.rdgAdoptionStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rdgAdoptionStatus.Name = "rdgAdoptionStatus";
             this.rdgAdoptionStatus.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "처리중"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "입양됨")});
-            this.rdgAdoptionStatus.Size = new System.Drawing.Size(263, 53);
+            this.rdgAdoptionStatus.Size = new System.Drawing.Size(345, 69);
             this.rdgAdoptionStatus.StyleController = this.layoutControl1;
             this.rdgAdoptionStatus.TabIndex = 11;
             // 
@@ -169,15 +169,15 @@
             this.layoutControlItem10});
             this.Root.Name = "Root";
             this.Root.OptionsItemText.TextToControlDistance = 2;
-            this.Root.Size = new System.Drawing.Size(351, 226);
+            this.Root.Size = new System.Drawing.Size(439, 276);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 179);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 213);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(331, 27);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(415, 39);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -185,58 +185,58 @@
             this.layoutControlItem3.Control = this.txeUserId;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(331, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(415, 32);
             this.layoutControlItem3.Text = "유저Id :";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(62, 18);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(64, 22);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnClose;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 141);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 169);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(153, 38);
+            this.layoutControlItem7.Size = new System.Drawing.Size(192, 44);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnSave;
-            this.layoutControlItem11.Location = new System.Drawing.Point(153, 141);
+            this.layoutControlItem11.Location = new System.Drawing.Point(192, 169);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(178, 38);
+            this.layoutControlItem11.Size = new System.Drawing.Size(223, 44);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.txeAnimalName;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 32);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(331, 28);
+            this.layoutControlItem12.Size = new System.Drawing.Size(415, 32);
             this.layoutControlItem12.Text = "동물이름 :";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(62, 18);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(64, 22);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.lkuAnimalId;
             this.layoutControlItem4.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem4.CustomizationFormText = " 보호소 이름 :";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 64);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(331, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(415, 32);
             this.layoutControlItem4.Text = "동물Id :";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(62, 18);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(64, 22);
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.rdgAdoptionStatus;
             this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem10.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 84);
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(331, 57);
+            this.layoutControlItem10.Size = new System.Drawing.Size(415, 73);
             this.layoutControlItem10.Text = "입양상태: ";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(62, 18);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(64, 22);
             // 
             // homelessAnimalBindingSource
             // 
@@ -244,12 +244,12 @@
             // 
             // AdoptionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 226);
+            this.ClientSize = new System.Drawing.Size(439, 276);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AdoptionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "입양관리";
