@@ -47,6 +47,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homelessAnimalIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.종 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,7 +58,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.보호센터ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.latestFindingReportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureLinkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchControl1 = new AnimalShelterManagementSystem.WinForm.UserControls.SearchControl();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -67,7 +67,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.파일FToolStripMenuItem,
@@ -75,7 +74,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.도움말HToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1285, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -245,13 +243,19 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.dataGridView1.DataSource = this.homelessAnimalBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 383);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(12, 15, 12, 15);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1285, 923);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
             // 
             // homelessAnimalIdDataGridViewTextBoxColumn
             // 
@@ -332,10 +336,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.pictureLinkDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pictureLinkDataGridViewTextBoxColumn.Name = "pictureLinkDataGridViewTextBoxColumn";
             this.pictureLinkDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            this.pictureLinkDataGridViewTextBoxColumn.ToolTipText = "링크를 복사(Ctrl+C)하고 웹에 접속하여 확인바랍니다.";
             // 
             // searchControl1
             // 
