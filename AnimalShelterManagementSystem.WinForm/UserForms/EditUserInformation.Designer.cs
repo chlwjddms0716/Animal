@@ -127,12 +127,12 @@
             // boxId
             // 
             this.boxId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.UserBindingSource, "Id", true));
-            this.boxId.Location = new System.Drawing.Point(131, 12);
+            this.boxId.Location = new System.Drawing.Point(136, 12);
             this.boxId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxId.Name = "boxId";
             this.boxId.Properties.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.boxId.Properties.ReadOnly = true;
-            this.boxId.Size = new System.Drawing.Size(415, 24);
+            this.boxId.Size = new System.Drawing.Size(410, 24);
             this.boxId.StyleController = this.layoutControl2;
             this.boxId.TabIndex = 4;
             // 
@@ -142,49 +142,49 @@
             // 
             // boxPassword
             // 
-            this.boxPassword.Location = new System.Drawing.Point(131, 68);
+            this.boxPassword.Location = new System.Drawing.Point(136, 68);
             this.boxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxPassword.Name = "boxPassword";
             this.boxPassword.Properties.NullText = "새 비밀번호를 입력해주세요";
-            this.boxPassword.Size = new System.Drawing.Size(415, 24);
+            this.boxPassword.Size = new System.Drawing.Size(410, 24);
             this.boxPassword.StyleController = this.layoutControl2;
             this.boxPassword.TabIndex = 4;
             this.boxPassword.EditValueChanged += new System.EventHandler(this.textEdit11_EditValueChanged);
             // 
             // boxName
             // 
-            this.boxName.Location = new System.Drawing.Point(131, 40);
+            this.boxName.Location = new System.Drawing.Point(136, 40);
             this.boxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxName.Name = "boxName";
-            this.boxName.Size = new System.Drawing.Size(415, 24);
+            this.boxName.Size = new System.Drawing.Size(410, 24);
             this.boxName.StyleController = this.layoutControl2;
             this.boxName.TabIndex = 4;
             // 
             // boxPhoneNumber
             // 
-            this.boxPhoneNumber.Location = new System.Drawing.Point(131, 124);
+            this.boxPhoneNumber.Location = new System.Drawing.Point(136, 124);
             this.boxPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxPhoneNumber.Name = "boxPhoneNumber";
-            this.boxPhoneNumber.Size = new System.Drawing.Size(415, 24);
+            this.boxPhoneNumber.Size = new System.Drawing.Size(410, 24);
             this.boxPhoneNumber.StyleController = this.layoutControl2;
             this.boxPhoneNumber.TabIndex = 4;
             // 
             // boxAddress
             // 
-            this.boxAddress.Location = new System.Drawing.Point(131, 152);
+            this.boxAddress.Location = new System.Drawing.Point(136, 152);
             this.boxAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxAddress.Name = "boxAddress";
-            this.boxAddress.Size = new System.Drawing.Size(415, 24);
+            this.boxAddress.Size = new System.Drawing.Size(410, 24);
             this.boxAddress.StyleController = this.layoutControl2;
             this.boxAddress.TabIndex = 4;
             // 
             // boxPasswordCheck
             // 
-            this.boxPasswordCheck.Location = new System.Drawing.Point(131, 96);
+            this.boxPasswordCheck.Location = new System.Drawing.Point(136, 96);
             this.boxPasswordCheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxPasswordCheck.Name = "boxPasswordCheck";
             this.boxPasswordCheck.Properties.NullText = "비밀번호 확인";
-            this.boxPasswordCheck.Size = new System.Drawing.Size(415, 24);
+            this.boxPasswordCheck.Size = new System.Drawing.Size(410, 24);
             this.boxPasswordCheck.StyleController = this.layoutControl2;
             this.boxPasswordCheck.TabIndex = 4;
             // 
@@ -211,8 +211,8 @@
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(538, 28);
-            this.layoutControlItem1.Text = "아이디 : ";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(116, 18);
+            this.layoutControlItem1.Text = " 아이디 : ";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(121, 18);
             // 
             // layoutControlItem2
             // 
@@ -222,8 +222,8 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(538, 28);
-            this.layoutControlItem2.Text = "새 비밀번호 :    ";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(116, 18);
+            this.layoutControlItem2.Text = " 새 비밀번호 :    ";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(121, 18);
             // 
             // layoutControlItem4
             // 
@@ -233,8 +233,8 @@
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 112);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(538, 28);
-            this.layoutControlItem4.Text = "핸드폰 번호 :";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(116, 18);
+            this.layoutControlItem4.Text = " 핸드폰 번호 :";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(121, 18);
             // 
             // layoutControlItem5
             // 
@@ -244,8 +244,8 @@
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 140);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(538, 28);
-            this.layoutControlItem5.Text = "주소 :";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(116, 18);
+            this.layoutControlItem5.Text = " 주소 :";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(121, 18);
             // 
             // layoutControlItem8
             // 
@@ -255,8 +255,8 @@
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(538, 28);
-            this.layoutControlItem8.Text = "새 비밀번호 확인 : ";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(116, 18);
+            this.layoutControlItem8.Text = " 새 비밀번호 확인 : ";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(121, 18);
             // 
             // layoutControlItem3
             // 
@@ -266,8 +266,8 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(538, 28);
-            this.layoutControlItem3.Text = "이름 :";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(116, 18);
+            this.layoutControlItem3.Text = " 이름 :";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(121, 18);
             // 
             // emptySpaceItem2
             // 

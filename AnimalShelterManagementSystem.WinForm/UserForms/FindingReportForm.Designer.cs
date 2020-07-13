@@ -200,7 +200,7 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 58);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(380, 29);
-            this.layoutControlItem3.Text = " 발견 장소:   ";
+            this.layoutControlItem3.Text = " 발견 장소 :  ";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(82, 18);
             // 
             // layoutControlItem9
@@ -209,7 +209,7 @@
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(380, 30);
-            this.layoutControlItem9.Text = " 종  ";
+            this.layoutControlItem9.Text = " 종 : ";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(82, 18);
             // 
             // emptySpaceItem1
