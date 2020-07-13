@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using AnimalShelterManagementSystem.Models;
 using AnimalShelterManagementSystem.Data;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
@@ -35,7 +37,20 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             cbxSpecies.SelectedItem = _lossReport.SpeciesName;
             dteDate.EditValue = _lossReport.Date;
             txePlace.EditValue = _lossReport.Place;
-            txePictureLink.EditValue = _lossReport.PictureLink;
+            if (_lossReport.Picture != null && _lossReport.Picture.Length > 0)
+            {
+                pcePicture.Image = byteArrayToImage(_lossReport.Picture);
+
+            }
+            pcePicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+        }
+        public Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
         }
 
         private void WriteToEntity()
@@ -46,10 +61,33 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             _lossReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
             _lossReport.Date = dteDate.DateTime.Date;
             _lossReport.Place = txePlace.Text;
-            _lossReport.PictureLink = txePictureLink.Text;
             _lossReport.LossReportId = _lossReport.LossReportId;
+            _lossReport.Picture = ConvertImageToBinary(Image.FromFile(txePictureLink.Text));
             _lossReport.UserId = DataRepository.User.GetbyId(txeId.Text).UserId;
 
+        }
+
+        private byte[] ConvertImageToBinary(Image image)
+        {
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                if (ImageFormat.Jpeg.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Jpeg);
+                }
+                else if (ImageFormat.Png.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Png);
+                }
+                else if (ImageFormat.Gif.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Gif);
+                }
+
+                return memoryStream.ToArray();
+
+            }
         }
 
         string CheckInput()
@@ -66,7 +104,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             if (String.Equals(txePlace.Text, "") == true)
                 checkinput += "장소, ";
             if (String.Equals(txePictureLink.Text, "") == true)
-                checkinput += "사진 링크, ";
+                checkinput += "사진, ";
 
             return checkinput;
 

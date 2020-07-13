@@ -10,16 +10,16 @@
         <EntityTypeShape EntityType="AnimalShelterManagement.FindingReport" Width="1.5" PointX="0.75" PointY="13.125" />
         <EntityTypeShape EntityType="AnimalShelterManagement.FindingReportRecord" Width="1.5" PointX="3" PointY="3.125" />
         <EntityTypeShape EntityType="AnimalShelterManagement.FoundAnimalRecord" Width="1.5" PointX="3" PointY="12.25" />
+        <EntityTypeShape EntityType="AnimalShelterManagement.HomelessAnimal" Width="1.5" PointX="0.75" PointY="5.5" />
         <EntityTypeShape EntityType="AnimalShelterManagement.LossReport" Width="1.5" PointX="3" PointY="15.625" />
         <EntityTypeShape EntityType="AnimalShelterManagement.User" Width="1.5" PointX="0.75" PointY="0.75" />
         <AssociationConnector Association="AnimalShelterManagement.FK_Adoption_User" />
+        <AssociationConnector Association="AnimalShelterManagement.FK_입양기록_유실유기_동물" />
         <AssociationConnector Association="AnimalShelterManagement.FK_FindingReportRecord_AnimalShelter" />
         <AssociationConnector Association="AnimalShelterManagement.FK_FindingReportRecord_FindingReport" />
-        <AssociationConnector Association="AnimalShelterManagement.FK_LossReport_User" />
-        <EntityTypeShape EntityType="AnimalShelterManagement.HomelessAnimal" Width="1.5" PointX="0.75" PointY="5.75" />
-        <AssociationConnector Association="AnimalShelterManagement.FK_입양기록_유실유기_동물" />
         <AssociationConnector Association="AnimalShelterManagement.FK_FindingReportRecord_HomelessAnimal" />
         <AssociationConnector Association="AnimalShelterManagement.FK_찾은_분실_동물_기록_유실유기_동물" />
+        <AssociationConnector Association="AnimalShelterManagement.FK_LossReport_User" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

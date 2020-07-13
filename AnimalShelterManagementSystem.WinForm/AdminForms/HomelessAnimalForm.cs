@@ -212,8 +212,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             }
             pcePicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
 
-            //txePictureLink.Text = _homelessAnimal.PictureLink;
-
         }
         public Image byteArrayToImage(byte[] bytesArr)
         {

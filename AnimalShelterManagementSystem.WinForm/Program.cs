@@ -27,7 +27,7 @@ namespace AnimalShelterManagementSystem.WinForm
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdoptionRequest());
+            Application.Run(new LossReportListForm());
         }
 
 

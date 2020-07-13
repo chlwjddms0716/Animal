@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,7 +55,7 @@ namespace AnimalShelterManagementSystem.WinForm
             }
             if (String.Equals(txbPictureLink.Text, "사진링크를 입력해주세요.") == true)
             {
-                checkinput += "사진 링크, ";
+                checkinput += "사진, ";
             }
             return checkinput;
         }
@@ -71,11 +73,11 @@ namespace AnimalShelterManagementSystem.WinForm
                 lossReport.Date = dteDate.DateTime.Date;
                 lossReport.AnimalName = tbxName.Text;
                 lossReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
-                lossReport.PictureLink = txbPictureLink.Text;
+                //lossReport.Picture = ConvertImageToBinary(Image.FromFile(txePictureLink.Text));
 
                 DataRepository.LossReport.Insert(lossReport);
                 if (String.Equals(txbPictureLink.Text, "") == true)
-                    MessageBox.Show("사진 링크를 입력하지 않으셨습니다.\n");
+                    MessageBox.Show("사진을 추가하지 않으셨습니다.\n");
                 MessageBox.Show("신고되었습니다.");
                 Close();
                 return;
@@ -83,7 +85,30 @@ namespace AnimalShelterManagementSystem.WinForm
             MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
         }
 
-        private void btnCancle_Click(object sender, EventArgs e)
+        private byte[] ConvertImageToBinary(Image image)
+        {
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                if (ImageFormat.Jpeg.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Jpeg);
+                }
+                else if (ImageFormat.Png.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Png);
+                }
+                else if (ImageFormat.Gif.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Gif);
+                }
+
+                return memoryStream.ToArray();
+
+            }
+        }
+
+            private void btnCancle_Click(object sender, EventArgs e)
         {
             Close();
         }
