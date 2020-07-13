@@ -88,21 +88,25 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(263, 175);
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Location = new System.Drawing.Point(263, 173);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(98, 27);
+            this.simpleButton2.Size = new System.Drawing.Size(98, 29);
             this.simpleButton2.StyleController = this.layoutControl1;
             this.simpleButton2.TabIndex = 18;
-            this.simpleButton2.Text = "취소";
+            this.simpleButton2.Text = "취소(&C)";
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(365, 175);
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Location = new System.Drawing.Point(365, 173);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(98, 27);
+            this.simpleButton1.Size = new System.Drawing.Size(98, 29);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 17;
-            this.simpleButton1.Text = "확인";
+            this.simpleButton1.Text = "확인(&S)";
             // 
             // cbxSpecies
             // 
@@ -230,33 +234,33 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 121);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(455, 42);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(455, 40);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.simpleButton1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(353, 163);
+            this.layoutControlItem2.Location = new System.Drawing.Point(353, 161);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(102, 31);
+            this.layoutControlItem2.Size = new System.Drawing.Size(102, 33);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.simpleButton2;
-            this.layoutControlItem4.Location = new System.Drawing.Point(251, 163);
+            this.layoutControlItem4.Location = new System.Drawing.Point(251, 161);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(102, 31);
+            this.layoutControlItem4.Size = new System.Drawing.Size(102, 33);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 163);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 161);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(251, 31);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(251, 33);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // fileSystemWatcher1

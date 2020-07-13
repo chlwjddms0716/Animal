@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnPictureUpload = new DevExpress.XtraEditors.SimpleButton();
+            this.pcePicture = new DevExpress.XtraEditors.PictureEdit();
             this.cbxSpecies = new System.Windows.Forms.ComboBox();
             this.dteDate = new DevExpress.XtraEditors.DateEdit();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -38,23 +40,22 @@
             this.txePlace = new DevExpress.XtraEditors.TextEdit();
             this.txePictureLink = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.pcePicture = new DevExpress.XtraEditors.PictureEdit();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.btnPictureUpload = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcePicture.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).BeginInit();
@@ -62,19 +63,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.txePlace.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePictureLink.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcePicture.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +98,25 @@
             this.layoutControl1.Size = new System.Drawing.Size(579, 271);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnPictureUpload
+            // 
+            this.btnPictureUpload.Location = new System.Drawing.Point(264, 154);
+            this.btnPictureUpload.Name = "btnPictureUpload";
+            this.btnPictureUpload.Size = new System.Drawing.Size(102, 27);
+            this.btnPictureUpload.StyleController = this.layoutControl1;
+            this.btnPictureUpload.TabIndex = 18;
+            this.btnPictureUpload.Text = "사진 업로드";
+            this.btnPictureUpload.Click += new System.EventHandler(this.btnPictureUpload_Click);
+            // 
+            // pcePicture
+            // 
+            this.pcePicture.Location = new System.Drawing.Point(370, 12);
+            this.pcePicture.Name = "pcePicture";
+            this.pcePicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pcePicture.Size = new System.Drawing.Size(197, 197);
+            this.pcePicture.StyleController = this.layoutControl1;
+            this.pcePicture.TabIndex = 17;
             // 
             // cbxSpecies
             // 
@@ -127,22 +146,22 @@
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.Location = new System.Drawing.Point(354, 227);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 32);
+            this.btnCancel.Size = new System.Drawing.Size(108, 32);
             this.btnCancel.StyleController = this.layoutControl1;
             this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "취소";
+            this.btnCancel.Text = "취소(&C)";
             this.btnCancel.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(458, 227);
+            this.btnSave.Location = new System.Drawing.Point(466, 227);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(109, 32);
+            this.btnSave.Size = new System.Drawing.Size(101, 32);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "확인";
+            this.btnSave.Text = "확인(&S)";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txeId
@@ -199,6 +218,31 @@
             this.Root.Size = new System.Drawing.Size(579, 271);
             this.Root.TextVisible = false;
             // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 215);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(342, 36);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.btnSave;
+            this.layoutControlItem7.Location = new System.Drawing.Point(454, 215);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(105, 36);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 173);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(358, 28);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txeId;
@@ -218,6 +262,24 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(358, 28);
             this.layoutControlItem2.Text = "동물이름 :";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 18);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.cbxSpecies;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(358, 30);
+            this.layoutControlItem3.Text = "종 :";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(67, 18);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.dteDate;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 86);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(358, 28);
+            this.layoutControlItem9.Text = "날짜 : ";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(67, 18);
             // 
             // layoutControlItem4
             // 
@@ -241,67 +303,6 @@
             this.layoutControlItem6.Text = "사진링크 : ";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(67, 18);
             // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.dteDate;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 86);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(358, 28);
-            this.layoutControlItem9.Text = "날짜 : ";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.cbxSpecies;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 56);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(358, 30);
-            this.layoutControlItem3.Text = "종 :";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.btnCancel;
-            this.layoutControlItem8.Location = new System.Drawing.Point(342, 215);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(104, 36);
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 215);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(342, 36);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.btnSave;
-            this.layoutControlItem7.Location = new System.Drawing.Point(446, 215);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(113, 36);
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextVisible = false;
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 173);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(358, 28);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // pcePicture
-            // 
-            this.pcePicture.Location = new System.Drawing.Point(370, 12);
-            this.pcePicture.Name = "pcePicture";
-            this.pcePicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pcePicture.Size = new System.Drawing.Size(197, 197);
-            this.pcePicture.StyleController = this.layoutControl1;
-            this.pcePicture.TabIndex = 17;
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.pcePicture;
@@ -319,15 +320,14 @@
             this.emptySpaceItem4.Size = new System.Drawing.Size(559, 14);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // btnPictureUpload
+            // layoutControlItem8
             // 
-            this.btnPictureUpload.Location = new System.Drawing.Point(264, 154);
-            this.btnPictureUpload.Name = "btnPictureUpload";
-            this.btnPictureUpload.Size = new System.Drawing.Size(102, 27);
-            this.btnPictureUpload.StyleController = this.layoutControl1;
-            this.btnPictureUpload.TabIndex = 18;
-            this.btnPictureUpload.Text = "사진 업로드";
-            this.btnPictureUpload.Click += new System.EventHandler(this.btnPictureUpload_Click);
+            this.layoutControlItem8.Control = this.btnCancel;
+            this.layoutControlItem8.Location = new System.Drawing.Point(342, 215);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(112, 36);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
             // 
             // layoutControlItem10
             // 
@@ -351,6 +351,7 @@
             this.Load += new System.EventHandler(this.LossReportAdminForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcePicture.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).EndInit();
@@ -358,19 +359,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.txePlace.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txePictureLink.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcePicture.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
 

@@ -181,12 +181,6 @@
     <Compile Include="Controls\TextBoxEx.Designer.cs">
       <DependentUpon>TextBoxEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="UserControl\SearchControl.cs">
       <SubType>UserControl</SubType>
@@ -244,12 +238,6 @@
     <Compile Include="UserForms\LossReportForm.designer.cs">
       <DependentUpon>LossReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForms\UserMenu1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserForms\UserMenu1.Designer.cs">
-      <DependentUpon>UserMenu1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AdminForms\AdoptionForm.resx">
       <DependentUpon>AdoptionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,9 +283,6 @@
     <EmbeddedResource Include="AdminForms\UserListForm.resx">
       <DependentUpon>UserListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,9 +320,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\LossReportForm.resx">
       <DependentUpon>LossReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserForms\UserMenu1.resx">
-      <DependentUpon>UserMenu1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
