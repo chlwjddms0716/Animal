@@ -20,10 +20,13 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
     {
         private HomelessAnimal homelessAnimal;
         private FindingReport findingReport;
-        private LossReport
+        private LossReport lossReport;
+
         public static string Address { get; set; }
         private int check;
-         public PictureSaveForm()
+        private bool split = true;
+
+        public PictureSaveForm()
         {
             InitializeComponent();
         }
@@ -41,6 +44,24 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
             findingReport = _findingReport;
         }
 
+        public PictureSaveForm(LossReport _lossReport) : this()
+        {
+            check =3;
+            lossReport = _lossReport;
+        }
+
+        public PictureSaveForm(LossReport _lossReport, bool split) : this()
+        {
+            check = 4;
+            split = false;
+            lossReport = _lossReport;
+        }
+
+        public PictureSaveForm(FindingReport _findingReport, bool split) : this()
+        {
+            check = 5;
+            findingReport = _findingReport;
+        }
 
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -59,6 +80,12 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
             if(check==1 )
                 homelessAnimal.Picture = ConvertImageToBinary(peBox.Image);
             else if(check==2)
+                findingReport.Picture = ConvertImageToBinary(peBox.Image);
+            else if (check == 3)
+                lossReport.Picture = ConvertImageToBinary(peBox.Image);
+            else if (check == 4)
+                lossReport.Picture = ConvertImageToBinary(peBox.Image);
+            else if (check == 5)
                 findingReport.Picture = ConvertImageToBinary(peBox.Image);
 
             MessageBox.Show("사진 등록이 완료되었습니다.");

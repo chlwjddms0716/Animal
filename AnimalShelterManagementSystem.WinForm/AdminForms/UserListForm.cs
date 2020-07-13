@@ -20,10 +20,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             InitializeComponent();
         }
 
-        private void UserManagement_Load(object sender, EventArgs e)
-        {
-            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
-        }
+   
 
         private void grvUserList_DoubleClick(object sender, EventArgs e)
         {

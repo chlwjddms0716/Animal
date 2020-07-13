@@ -20,11 +20,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             InitializeComponent();
         }
 
-        private void Shelter_Load(object sender, EventArgs e)
-        {
-            AnimalShelterName.DataSource = DataRepository.AnimalShelter.GetAll();
-            animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.Search(txeAddress.Text, 0);
-        }
+    
         private void lkuShelterName_EditValueChanged(object sender, EventArgs e)
         {
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.Search(txeAddress.Text, (int)(lkuShelterName.EditValue));

@@ -21,10 +21,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             InitializeComponent();
         }
 
-        private void LossReportListForm_Load(object sender, EventArgs e)
-        {
-            lossReportBindingSource.DataSource = DataRepository.LossReport.Search(txeUserId.Text, txeAnimalName.Text);
-        }
+      
 
         private void txeAnimalName_EditValueChanged(object sender, EventArgs e)
         {

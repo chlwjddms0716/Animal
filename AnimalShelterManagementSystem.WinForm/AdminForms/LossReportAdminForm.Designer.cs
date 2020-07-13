@@ -48,6 +48,8 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.btnPictureLink = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -67,10 +69,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnPictureLink);
             this.layoutControl1.Controls.Add(this.cbxSpecies);
             this.layoutControl1.Controls.Add(this.dteDate);
             this.layoutControl1.Controls.Add(this.btnCancel);
@@ -89,23 +93,24 @@
             // 
             // cbxSpecies
             // 
+            this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(82, 68);
+            this.cbxSpecies.Location = new System.Drawing.Point(77, 68);
             this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(347, 26);
+            this.cbxSpecies.Size = new System.Drawing.Size(352, 26);
             this.cbxSpecies.TabIndex = 16;
             // 
             // dteDate
             // 
             this.dteDate.EditValue = null;
-            this.dteDate.Location = new System.Drawing.Point(82, 98);
+            this.dteDate.Location = new System.Drawing.Point(77, 98);
             this.dteDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dteDate.Name = "dteDate";
             this.dteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteDate.Size = new System.Drawing.Size(347, 24);
+            this.dteDate.Size = new System.Drawing.Size(352, 24);
             this.dteDate.StyleController = this.layoutControl1;
             this.dteDate.TabIndex = 15;
             // 
@@ -135,33 +140,33 @@
             // 
             // txeId
             // 
-            this.txeId.Location = new System.Drawing.Point(82, 12);
+            this.txeId.Location = new System.Drawing.Point(77, 12);
             this.txeId.Name = "txeId";
-            this.txeId.Size = new System.Drawing.Size(347, 24);
+            this.txeId.Size = new System.Drawing.Size(352, 24);
             this.txeId.StyleController = this.layoutControl1;
             this.txeId.TabIndex = 4;
             // 
             // txeAnimalName
             // 
-            this.txeAnimalName.Location = new System.Drawing.Point(82, 40);
+            this.txeAnimalName.Location = new System.Drawing.Point(77, 40);
             this.txeAnimalName.Name = "txeAnimalName";
-            this.txeAnimalName.Size = new System.Drawing.Size(347, 24);
+            this.txeAnimalName.Size = new System.Drawing.Size(352, 24);
             this.txeAnimalName.StyleController = this.layoutControl1;
             this.txeAnimalName.TabIndex = 4;
             // 
             // txePlace
             // 
-            this.txePlace.Location = new System.Drawing.Point(82, 126);
+            this.txePlace.Location = new System.Drawing.Point(77, 126);
             this.txePlace.Name = "txePlace";
-            this.txePlace.Size = new System.Drawing.Size(347, 24);
+            this.txePlace.Size = new System.Drawing.Size(352, 24);
             this.txePlace.StyleController = this.layoutControl1;
             this.txePlace.TabIndex = 4;
             // 
             // txePictureLink
             // 
-            this.txePictureLink.Location = new System.Drawing.Point(82, 154);
+            this.txePictureLink.Location = new System.Drawing.Point(77, 154);
             this.txePictureLink.Name = "txePictureLink";
-            this.txePictureLink.Size = new System.Drawing.Size(347, 24);
+            this.txePictureLink.Size = new System.Drawing.Size(221, 24);
             this.txePictureLink.StyleController = this.layoutControl1;
             this.txePictureLink.TabIndex = 4;
             // 
@@ -179,7 +184,8 @@
             this.layoutControlItem8,
             this.emptySpaceItem2,
             this.layoutControlItem7,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlItem5});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(441, 255);
             this.Root.TextVisible = false;
@@ -191,7 +197,7 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(421, 28);
             this.layoutControlItem1.Text = "유저Id :";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(67, 18);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(62, 18);
             // 
             // layoutControlItem2
             // 
@@ -202,7 +208,7 @@
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(421, 28);
             this.layoutControlItem2.Text = "동물이름 :";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 18);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(62, 18);
             // 
             // layoutControlItem4
             // 
@@ -213,7 +219,7 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(421, 28);
             this.layoutControlItem4.Text = "장소 : ";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(67, 18);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(62, 18);
             // 
             // layoutControlItem6
             // 
@@ -222,9 +228,9 @@
             this.layoutControlItem6.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 142);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(421, 28);
-            this.layoutControlItem6.Text = "사진링크 : ";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(67, 18);
+            this.layoutControlItem6.Size = new System.Drawing.Size(290, 31);
+            this.layoutControlItem6.Text = "사진 : ";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(62, 18);
             // 
             // layoutControlItem9
             // 
@@ -233,7 +239,7 @@
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(421, 28);
             this.layoutControlItem9.Text = "날짜 : ";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(67, 18);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(62, 18);
             // 
             // layoutControlItem3
             // 
@@ -242,7 +248,7 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(421, 30);
             this.layoutControlItem3.Text = "종 :";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(67, 18);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(62, 18);
             // 
             // layoutControlItem8
             // 
@@ -273,10 +279,29 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 170);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 173);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(421, 29);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(421, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // btnPictureLink
+            // 
+            this.btnPictureLink.Location = new System.Drawing.Point(302, 154);
+            this.btnPictureLink.Name = "btnPictureLink";
+            this.btnPictureLink.Size = new System.Drawing.Size(127, 27);
+            this.btnPictureLink.StyleController = this.layoutControl1;
+            this.btnPictureLink.TabIndex = 17;
+            this.btnPictureLink.Text = "사진등록";
+            this.btnPictureLink.Click += new System.EventHandler(this.btnPictureLink_Click);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.btnPictureLink;
+            this.layoutControlItem5.Location = new System.Drawing.Point(290, 142);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(131, 31);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
             // 
             // LossReportAdminForm
             // 
@@ -308,6 +333,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,5 +360,7 @@
         private System.Windows.Forms.ComboBox cbxSpecies;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraEditors.SimpleButton btnPictureLink;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }
