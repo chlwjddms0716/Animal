@@ -127,6 +127,8 @@
 #### 결과
 
 - C# 쿼리문으로 매핑 테이블에 접근, 조인해서 해결  
+　    
+![Query](query.png)
 
 　  
 
@@ -144,6 +146,8 @@
 
 
 ### 프리웨어 사용시 팝업광고가 발생하는 문제
+<img src="file.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
 ------------------------------
 #### 증상
  - 3rd party control 중 하나인 Devexpress를 사용하면 프로그램을 실행할 때 마다 devexpress 확장판 구매 독려 광고가 나타남
@@ -152,7 +156,10 @@
  - 프리버전의 Devexpress 사용
 
 #### 결과
- - 광고 제거 기능 소스코드를 응용하여 입양관리시스템에 devexpress 광고 제거 기능을 추가함
+ - 광고 제거 기능 소스코드를 응용하여 입양관리시스템에 devexpress 광고 제거 기능을 추가함  
+　  
+ ![Source](Source.png)
+
 
 
 

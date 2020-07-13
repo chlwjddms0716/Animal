@@ -137,6 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Documents\DB.PNG" />
+    <Content Include="Documents\file.png" />
+    <Content Include="Documents\query.png" />
+    <Content Include="Documents\Source.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
