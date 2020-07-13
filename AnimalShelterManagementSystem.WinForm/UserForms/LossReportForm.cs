@@ -1,5 +1,6 @@
 ﻿using AnimalShelterManagementSystem.Data;
 using AnimalShelterManagementSystem.Models;
+using AnimalShelterManagementSystem.WinForm.UserForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,11 +18,20 @@ namespace AnimalShelterManagementSystem.WinForm
     public partial class LossReportForm : DevExpress.XtraEditors.XtraForm
     {
         private int userId;
+        private LossReport _lossReport;
+        private bool split;
+
         public LossReportForm()
         {
             InitializeComponent();
-        }
 
+                _lossReport = new LossReport();
+        }
+        public LossReportForm(LossReport lossReport) : this()
+        {
+            _lossReport = lossReport;
+
+        }
         public LossReportForm(int UserId) : this()
         {
             userId = UserId;
@@ -55,7 +65,7 @@ namespace AnimalShelterManagementSystem.WinForm
             }
             if (String.Equals(txbPictureLink.Text, "사진링크를 입력해주세요.") == true)
             {
-                checkinput += "사진, ";
+                checkinput += "사진 링크, ";
             }
             return checkinput;
         }
@@ -73,17 +83,24 @@ namespace AnimalShelterManagementSystem.WinForm
                 lossReport.Date = dteDate.DateTime.Date;
                 lossReport.AnimalName = tbxName.Text;
                 lossReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
-                //lossReport.Picture = ConvertImageToBinary(Image.FromFile(txePictureLink.Text));
+                lossReport.Picture = ConvertImageToBinary(Image.FromFile(txbPictureLink.Text));
+                // lossReport.PictureLink = txbPictureLink.Text;
 
                 DataRepository.LossReport.Insert(lossReport);
                 if (String.Equals(txbPictureLink.Text, "") == true)
-                    MessageBox.Show("사진을 추가하지 않으셨습니다.\n");
+                    MessageBox.Show("사진 링크를 입력하지 않으셨습니다.\n");
                 MessageBox.Show("신고되었습니다.");
                 Close();
                 return;
             }
             MessageBox.Show($"{CheckInput().Remove(CheckInput().Length - 2)}을(를) 입력해주세요.");
         }
+
+        private void btnCancle_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
 
         private byte[] ConvertImageToBinary(Image image)
         {
@@ -106,11 +123,16 @@ namespace AnimalShelterManagementSystem.WinForm
                 return memoryStream.ToArray();
 
             }
+
+
         }
 
-            private void btnCancle_Click(object sender, EventArgs e)
+        private void btnPictureLink_Click_1(object sender, EventArgs e)
         {
-            Close();
+            PictureSaveForm pictureSaveForm = new PictureSaveForm(_lossReport, split);
+            pictureSaveForm.ShowDialog();
+            //MessageBox.Show(PictureSaveForm.Address);
+            txbPictureLink.Text = PictureSaveForm.Address;
         }
     }
 }

@@ -368,7 +368,7 @@
             this.Name = "LossReportListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "실종신고리스트";
-            this.Load += new System.EventHandler(this.LossReportListForm_Load);
+        //    this.Load += new System.EventHandler(this.LossReportListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grcLossList)).EndInit();

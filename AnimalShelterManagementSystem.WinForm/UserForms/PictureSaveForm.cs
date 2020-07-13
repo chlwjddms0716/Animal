@@ -19,22 +19,57 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
     public partial class PictureSaveForm : DevExpress.XtraEditors.XtraForm
     {
         private HomelessAnimal homelessAnimal;
+        private FindingReport findingReport;
+        private LossReport lossReport;
+
         public static string Address { get; set; }
-         public PictureSaveForm()
+        private int check;
+        private bool split = true;
+
+        public PictureSaveForm()
         {
             InitializeComponent();
         }
 
         public PictureSaveForm(HomelessAnimal _homelessAnimal) : this()
         {
+            check = 1;
             homelessAnimal = _homelessAnimal;
         }
+
+
+        public PictureSaveForm(FindingReport _findingReport) : this()
+        {
+            check = 2;
+            findingReport = _findingReport;
+        }
+
+        public PictureSaveForm(LossReport _lossReport) : this()
+        {
+            check =3;
+            lossReport = _lossReport;
+        }
+
+        public PictureSaveForm(LossReport _lossReport, bool split) : this()
+        {
+            check = 4;
+            split = false;
+            lossReport = _lossReport;
+        }
+
+        public PictureSaveForm(FindingReport _findingReport, bool split) : this()
+        {
+            check = 5;
+            findingReport = _findingReport;
+        }
+
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             if (xtraOpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 peBox.Image = Image.FromFile(xtraOpenFileDialog1.FileName);
+                peBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
                 Address = xtraOpenFileDialog1.FileName;
                 return;
             }
@@ -42,7 +77,17 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            homelessAnimal.Picture = ConvertImageToBinary(peBox.Image);
+            if(check==1 )
+                homelessAnimal.Picture = ConvertImageToBinary(peBox.Image);
+            else if(check==2)
+                findingReport.Picture = ConvertImageToBinary(peBox.Image);
+            else if (check == 3)
+                lossReport.Picture = ConvertImageToBinary(peBox.Image);
+            else if (check == 4)
+                lossReport.Picture = ConvertImageToBinary(peBox.Image);
+            else if (check == 5)
+                findingReport.Picture = ConvertImageToBinary(peBox.Image);
+
             MessageBox.Show("사진 등록이 완료되었습니다.");
             Close();
         }
@@ -79,8 +124,9 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
             return ms.ToArray();
         }
 
-       
-        
-        
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -41,7 +41,7 @@
             this.imageSlider1.Images.Add(((System.Drawing.Image)(resources.GetObject("imageSlider1.Images1"))));
             this.imageSlider1.Location = new System.Drawing.Point(0, 0);
             this.imageSlider1.Name = "imageSlider1";
-            this.imageSlider1.Size = new System.Drawing.Size(766, 510);
+            this.imageSlider1.Size = new System.Drawing.Size(748, 510);
             this.imageSlider1.TabIndex = 0;
             this.imageSlider1.Text = "imageSlider1";
             // 
@@ -49,7 +49,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 510);
+            this.ClientSize = new System.Drawing.Size(748, 510);
             this.Controls.Add(this.imageSlider1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Name = "AnimalImage";

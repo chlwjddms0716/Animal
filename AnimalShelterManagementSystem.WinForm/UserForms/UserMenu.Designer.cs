@@ -241,7 +241,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "사용자메뉴";
             this.ToolbarFormControl = this.toolbarFormControl1;
-            this.Load += new System.EventHandler(this.UserMenu_Load);
+           // this.Load += new System.EventHandler(this.UserMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).EndInit();

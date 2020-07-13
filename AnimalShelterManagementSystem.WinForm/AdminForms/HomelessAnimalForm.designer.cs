@@ -30,10 +30,8 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.pcePicture = new DevExpress.XtraEditors.PictureEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.cbbAnimalShelter = new System.Windows.Forms.ComboBox();
-            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbPSC = new System.Windows.Forms.ComboBox();
             this.cbbGender = new System.Windows.Forms.ComboBox();
             this.dteLatestFindingReport = new DevExpress.XtraEditors.DateEdit();
@@ -47,31 +45,29 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.txeName = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
+            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.physicalConditionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sexBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcePicture.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteLatestFindingReport.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteLatestFindingReport.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeHomelessAnimalId.Properties)).BeginInit();
@@ -81,22 +77,22 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.physicalConditionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
@@ -108,7 +104,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControl1.Appearance.ControlFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.layoutControl1.Appearance.ControlFocused.BackColor2 = System.Drawing.Color.Lime;
             this.layoutControl1.Appearance.ControlFocused.Options.UseBackColor = true;
-            this.layoutControl1.Controls.Add(this.pcePicture);
             this.layoutControl1.Controls.Add(this.simpleButton1);
             this.layoutControl1.Controls.Add(this.cbbAnimalShelter);
             this.layoutControl1.Controls.Add(this.cbbPSC);
@@ -132,20 +127,11 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // pcePicture
-            // 
-            this.pcePicture.Location = new System.Drawing.Point(558, 12);
-            this.pcePicture.Name = "pcePicture";
-            this.pcePicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pcePicture.Size = new System.Drawing.Size(230, 287);
-            this.pcePicture.StyleController = this.layoutControl1;
-            this.pcePicture.TabIndex = 22;
-            // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(459, 214);
+            this.simpleButton1.Location = new System.Drawing.Point(592, 214);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(95, 27);
+            this.simpleButton1.Size = new System.Drawing.Size(196, 27);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 21;
             this.simpleButton1.Text = "사진 등록";
@@ -159,13 +145,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.cbbAnimalShelter.Location = new System.Drawing.Point(121, 273);
             this.cbbAnimalShelter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbAnimalShelter.Name = "cbbAnimalShelter";
-            this.cbbAnimalShelter.Size = new System.Drawing.Size(433, 26);
+            this.cbbAnimalShelter.Size = new System.Drawing.Size(667, 26);
             this.cbbAnimalShelter.TabIndex = 20;
             this.cbbAnimalShelter.ValueMember = "AnimalShelterId";
-            // 
-            // animalShelterBindingSource
-            // 
-            this.animalShelterBindingSource.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
             // 
             // cbbPSC
             // 
@@ -173,7 +155,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.cbbPSC.Location = new System.Drawing.Point(121, 156);
             this.cbbPSC.Margin = new System.Windows.Forms.Padding(2);
             this.cbbPSC.Name = "cbbPSC";
-            this.cbbPSC.Size = new System.Drawing.Size(433, 26);
+            this.cbbPSC.Size = new System.Drawing.Size(667, 26);
             this.cbbPSC.TabIndex = 19;
             // 
             // cbbGender
@@ -182,7 +164,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.cbbGender.Location = new System.Drawing.Point(121, 126);
             this.cbbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cbbGender.Name = "cbbGender";
-            this.cbbGender.Size = new System.Drawing.Size(433, 26);
+            this.cbbGender.Size = new System.Drawing.Size(667, 26);
             this.cbbGender.TabIndex = 15;
             // 
             // dteLatestFindingReport
@@ -195,7 +177,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteLatestFindingReport.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteLatestFindingReport.Size = new System.Drawing.Size(433, 24);
+            this.dteLatestFindingReport.Size = new System.Drawing.Size(667, 24);
             this.dteLatestFindingReport.StyleController = this.layoutControl1;
             this.dteLatestFindingReport.TabIndex = 10;
             // 
@@ -205,7 +187,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.cbbSpecies.Location = new System.Drawing.Point(121, 96);
             this.cbbSpecies.Margin = new System.Windows.Forms.Padding(2);
             this.cbbSpecies.Name = "cbbSpecies";
-            this.cbbSpecies.Size = new System.Drawing.Size(433, 26);
+            this.cbbSpecies.Size = new System.Drawing.Size(667, 26);
             this.cbbSpecies.TabIndex = 14;
             // 
             // txeHomelessAnimalId
@@ -214,7 +196,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.txeHomelessAnimalId.Margin = new System.Windows.Forms.Padding(2);
             this.txeHomelessAnimalId.Name = "txeHomelessAnimalId";
             this.txeHomelessAnimalId.Properties.ReadOnly = true;
-            this.txeHomelessAnimalId.Size = new System.Drawing.Size(433, 24);
+            this.txeHomelessAnimalId.Size = new System.Drawing.Size(667, 24);
             this.txeHomelessAnimalId.StyleController = this.layoutControl1;
             this.txeHomelessAnimalId.TabIndex = 18;
             // 
@@ -224,19 +206,19 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.txeAge.Location = new System.Drawing.Point(121, 68);
             this.txeAge.Margin = new System.Windows.Forms.Padding(2);
             this.txeAge.Name = "txeAge";
-            this.txeAge.Size = new System.Drawing.Size(433, 24);
+            this.txeAge.Size = new System.Drawing.Size(667, 24);
             this.txeAge.StyleController = this.layoutControl1;
             this.txeAge.TabIndex = 15;
             this.txeAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txeAge_KeyPress);
             // 
             // btnSave
             // 
-            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(692, 351);
+            this.btnSave.Location = new System.Drawing.Point(592, 303);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(96, 32);
+            this.btnSave.Size = new System.Drawing.Size(196, 27);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "저장(&S)";
@@ -244,12 +226,12 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // btnClose
             // 
-            this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.Location = new System.Drawing.Point(592, 351);
+            this.btnClose.Location = new System.Drawing.Point(592, 334);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(96, 32);
+            this.btnClose.Size = new System.Drawing.Size(196, 27);
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "취소(&C)";
@@ -260,7 +242,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.txeFeature.Location = new System.Drawing.Point(121, 245);
             this.txeFeature.Margin = new System.Windows.Forms.Padding(2);
             this.txeFeature.Name = "txeFeature";
-            this.txeFeature.Size = new System.Drawing.Size(433, 24);
+            this.txeFeature.Size = new System.Drawing.Size(667, 24);
             this.txeFeature.StyleController = this.layoutControl1;
             this.txeFeature.TabIndex = 12;
             // 
@@ -269,7 +251,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.txePictureLink.Location = new System.Drawing.Point(121, 214);
             this.txePictureLink.Margin = new System.Windows.Forms.Padding(2);
             this.txePictureLink.Name = "txePictureLink";
-            this.txePictureLink.Size = new System.Drawing.Size(334, 24);
+            this.txePictureLink.Size = new System.Drawing.Size(467, 24);
             this.txePictureLink.StyleController = this.layoutControl1;
             this.txePictureLink.TabIndex = 11;
             // 
@@ -279,7 +261,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.txeName.Location = new System.Drawing.Point(121, 40);
             this.txeName.Margin = new System.Windows.Forms.Padding(2);
             this.txeName.Name = "txeName";
-            this.txeName.Size = new System.Drawing.Size(433, 24);
+            this.txeName.Size = new System.Drawing.Size(667, 24);
             this.txeName.StyleController = this.layoutControl1;
             this.txeName.TabIndex = 6;
             // 
@@ -288,22 +270,21 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.emptySpaceItem1,
+            this.layoutControlItem3,
             this.layoutControlItem9,
+            this.layoutControlItem10,
+            this.layoutControlItem11,
+            this.layoutControlItem12,
+            this.layoutControlItem8,
             this.layoutControlItem1,
             this.layoutControlItem4,
             this.layoutControlItem2,
             this.layoutControlItem5,
+            this.layoutControlItem6,
             this.layoutControlItem7,
             this.emptySpaceItem2,
-            this.layoutControlItem13,
-            this.layoutControlItem10,
-            this.layoutControlItem6,
-            this.layoutControlItem12,
-            this.layoutControlItem3,
-            this.layoutControlItem8,
-            this.layoutControlItem14,
-            this.layoutControlItem11,
-            this.emptySpaceItem1});
+            this.layoutControlItem13});
             this.Root.Name = "Root";
             this.Root.OptionsItemText.TextToControlDistance = 2;
             this.Root.Size = new System.Drawing.Size(800, 395);
@@ -312,10 +293,19 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 291);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 322);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(780, 48);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(580, 53);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.txeName;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(780, 28);
+            this.layoutControlItem3.Text = "이름 :";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(107, 18);
             // 
             // layoutControlItem9
             // 
@@ -323,18 +313,45 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem9.CustomizationFormText = "사진:";
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 202);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(447, 31);
+            this.layoutControlItem9.Size = new System.Drawing.Size(580, 31);
             this.layoutControlItem9.Text = "사진: ";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(107, 18);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.txeFeature;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 233);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(780, 28);
+            this.layoutControlItem10.Text = "특징 : ";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(107, 18);
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnSave;
-            this.layoutControlItem11.Location = new System.Drawing.Point(680, 339);
+            this.layoutControlItem11.Location = new System.Drawing.Point(580, 291);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(100, 36);
+            this.layoutControlItem11.Size = new System.Drawing.Size(200, 31);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.txeAge;
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(780, 28);
+            this.layoutControlItem12.Text = "나이 :";
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(107, 18);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.txeHomelessAnimalId;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(780, 28);
+            this.layoutControlItem8.Text = "유기유실동물Id : ";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(107, 18);
             // 
             // layoutControlItem1
             // 
@@ -342,7 +359,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem1.CustomizationFormText = "종 :";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(546, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(780, 30);
             this.layoutControlItem1.Text = "종 :";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(107, 18);
             // 
@@ -351,7 +368,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem4.Control = this.dteLatestFindingReport;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 174);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(546, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(780, 28);
             this.layoutControlItem4.Text = "최근발견날짜 :";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(107, 18);
             // 
@@ -362,7 +379,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem2.CustomizationFormText = "실종장소 :";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 114);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(546, 30);
+            this.layoutControlItem2.Size = new System.Drawing.Size(780, 30);
             this.layoutControlItem2.Text = "성별 :";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(107, 18);
             // 
@@ -371,93 +388,52 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem5.Control = this.cbbPSC;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(546, 30);
+            this.layoutControlItem5.Size = new System.Drawing.Size(780, 30);
             this.layoutControlItem5.Text = "건강상태 : ";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(107, 18);
-            // 
-            // layoutControlItem7
-            // 
-            this.layoutControlItem7.Control = this.btnClose;
-            this.layoutControlItem7.Location = new System.Drawing.Point(580, 339);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(100, 36);
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 339);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(580, 36);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.simpleButton1;
-            this.layoutControlItem13.Location = new System.Drawing.Point(447, 202);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(99, 31);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem13.TextVisible = false;
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.txeFeature;
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 233);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(546, 28);
-            this.layoutControlItem10.Text = "특징 : ";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(107, 18);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.cbbAnimalShelter;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 261);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(546, 30);
+            this.layoutControlItem6.Size = new System.Drawing.Size(780, 30);
             this.layoutControlItem6.Text = "보호센터 :";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(107, 18);
             // 
-            // layoutControlItem12
+            // layoutControlItem7
             // 
-            this.layoutControlItem12.Control = this.txeAge;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 56);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(546, 28);
-            this.layoutControlItem12.Text = "나이 :";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(107, 18);
+            this.layoutControlItem7.Control = this.btnClose;
+            this.layoutControlItem7.Location = new System.Drawing.Point(580, 322);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(200, 53);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
             // 
-            // layoutControlItem3
+            // emptySpaceItem2
             // 
-            this.layoutControlItem3.Control = this.txeName;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 28);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(546, 28);
-            this.layoutControlItem3.Text = "이름 :";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(107, 18);
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 291);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(580, 31);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem8
+            // layoutControlItem13
             // 
-            this.layoutControlItem8.Control = this.txeHomelessAnimalId;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(546, 28);
-            this.layoutControlItem8.Text = "유기유실동물Id : ";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(107, 18);
-            // 
-            // layoutControlItem14
-            // 
-            this.layoutControlItem14.Control = this.pcePicture;
-            this.layoutControlItem14.Location = new System.Drawing.Point(546, 0);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(234, 291);
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem14.TextVisible = false;
+            this.layoutControlItem13.Control = this.simpleButton1;
+            this.layoutControlItem13.Location = new System.Drawing.Point(580, 202);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(200, 31);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
             // 
             // xtraOpenFileDialog1
             // 
             this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
+            // 
+            // animalShelterBindingSource
+            // 
+            this.animalShelterBindingSource.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
             // 
             // homelessAnimalBindingSource
             // 
@@ -477,8 +453,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.Load += new System.EventHandler(this.HomelessAnimalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcePicture.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteLatestFindingReport.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteLatestFindingReport.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeHomelessAnimalId.Properties)).EndInit();
@@ -488,22 +462,22 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txeName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.physicalConditionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
@@ -551,7 +525,5 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraEditors.TextEdit txePictureLink;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-        private DevExpress.XtraEditors.PictureEdit pcePicture;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
     }
 }

@@ -16,6 +16,7 @@ namespace AnimalShelterManagementSystem.WinForm
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+        //안녕
         static void Main()
         {
 
@@ -27,7 +28,8 @@ namespace AnimalShelterManagementSystem.WinForm
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LossReportListForm());
+           Application.Run(new AdminMenu());
+           // Application.Run(new UserMenu());
         }
 
 

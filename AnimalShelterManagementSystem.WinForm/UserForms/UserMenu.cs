@@ -98,12 +98,12 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
             findingReportForm.Show();
         }
 
-        private void UserMenu_Load(object sender, EventArgs e)
-        {
-            AnimalImage form = new AnimalImage();
-            form.MdiParent = this;
-            form.WindowState = FormWindowState.Maximized;
-            form.Show();
-        }
+        //private void UserMenu_Load(object sender, EventArgs e)
+        //{
+        //    AnimalImage form = new AnimalImage();
+        //    form.MdiParent = this;
+        //    form.WindowState = FormWindowState.Maximized;
+        //    form.Show();
+        //}
     }
 }

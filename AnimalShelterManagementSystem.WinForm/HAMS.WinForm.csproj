@@ -82,7 +82,7 @@
     <Compile Include="AdminForms\AdminAnimalImage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\AdminAnimalImage.Designer.cs">
+    <Compile Include="AdminForms\AdminAnimalImage.designer.cs">
       <DependentUpon>AdminAnimalImage.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\AdoptionForm.cs">
@@ -200,6 +200,12 @@
     <Compile Include="UserForms\AnimalImage.Designer.cs">
       <DependentUpon>AnimalImage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForms\AnimalPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\AnimalPicture.Designer.cs">
+      <DependentUpon>AnimalPicture.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForms\EditUserInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,12 +255,6 @@
     </Compile>
     <Compile Include="UserForms\LossReportForm.designer.cs">
       <DependentUpon>LossReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserForms\AnimalPicture.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserForms\AnimalPicture.Designer.cs">
-      <DependentUpon>AnimalPicture.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminForms\AdminAnimalImage.resx">
       <DependentUpon>AdminAnimalImage.cs</DependentUpon>

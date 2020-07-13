@@ -27,14 +27,13 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         {
             InitializeComponent();
             _homelessAnimal = new HomelessAnimal();
-         
+
         }
 
         public HomelessAnimalForm(HomelessAnimal homelessAnimal) : this()
         {
             _homelessAnimal = homelessAnimal;
-            
-            
+
         }
 
         public HomelessAnimalForm(FindingReport findingReport) : this()
@@ -45,7 +44,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             _homelessAnimal.Species = findingReport.Species;
             _homelessAnimal.SpeciesName = findingReport.SpeciesName;
             IsProtected = true;
-        
+
         }
 
         //안녕
@@ -53,6 +52,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void WriteToEntity() //DB에 쓰는거
         {
+            //콤보박스에서 선택된 값이 _album.ArtistId로 보낸다.
             string checkinput = "";
             if (string.Equals(checkinput, "") == true)
             {
@@ -66,7 +66,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 _homelessAnimal.Picture = ConvertImageToBinary(Image.FromFile(txePictureLink.Text));
                 _homelessAnimal.AnimalShelterId = Convert.ToInt32(cbbAnimalShelter.SelectedValue);
 
-               
+
 
                 MessageBox.Show("저장되었습니다.");
 
@@ -76,27 +76,27 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private byte[] ConvertImageToBinary(Image image)
         {
-           
-                using (MemoryStream memoryStream = new MemoryStream())
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                if (ImageFormat.Jpeg.Equals(image.RawFormat))
                 {
-                    if (ImageFormat.Jpeg.Equals(image.RawFormat))
-                    {
-                        image.Save(memoryStream, ImageFormat.Jpeg);
-                    }
-                    else if (ImageFormat.Png.Equals(image.RawFormat))
-                    {
-                        image.Save(memoryStream, ImageFormat.Png);
-                    }
-                    else if (ImageFormat.Gif.Equals(image.RawFormat))
-                    {
-                        image.Save(memoryStream, ImageFormat.Gif);
-                    }
-
-                    return memoryStream.ToArray();
-
+                    image.Save(memoryStream, ImageFormat.Jpeg);
+                }
+                else if (ImageFormat.Png.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Png);
+                }
+                else if (ImageFormat.Gif.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Gif);
                 }
 
-           
+                return memoryStream.ToArray();
+
+            }
+
+
         }
 
         string CheckInput()
@@ -148,7 +148,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
             if (string.Equals(CheckInput(), "") == true)
             {
-               
+
 
                 try
                 {
@@ -166,7 +166,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                     if (_homelessAnimal.HomelessAnimalId == DataRepository.HomelessAnimal.GetMaxId() + 1) //Id의 디폴트가0이라 0이면 db에 insert함
                         DataRepository.HomelessAnimal.Insert(_homelessAnimal);
 
-                       
+
 
                     else
                         DataRepository.HomelessAnimal.Update(_homelessAnimal);
@@ -187,7 +187,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void HomelessAnimalForm_Load(object sender, EventArgs e)
         {
 
-           // txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId + 10);
+            // txeHomelessAnimalId.Text = Convert.ToString(_homelessAnimal.HomelessAnimalId + 10);
             homelessAnimalBindingSource.DataSource = DataRepository.HomelessAnimal.GetAll();
             cbbGender.DataSource = Enum.GetValues(typeof(Genders));
             cbbSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
@@ -205,22 +205,10 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             txeAge.Text = Convert.ToString(_homelessAnimal.Age);
             txeFeature.Text = _homelessAnimal.Feature;
             dteLatestFindingReport.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
-            if (_homelessAnimal.Picture != null && _homelessAnimal.Picture.Length > 0)
-            {
-                pcePicture.Image = byteArrayToImage(_homelessAnimal.Picture);
-            
-            }
-            pcePicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            //txePictureLink.Text = _homelessAnimal.PictureLink;
 
         }
-        public Image byteArrayToImage(byte[] bytesArr)
-        {
-            using (MemoryStream memstr = new MemoryStream(bytesArr))
-            {
-                Image img = Image.FromStream(memstr);
-                return img;
-            }
-        }
+
 
 
         private void txeAge_KeyPress(object sender, KeyPressEventArgs e)
@@ -231,7 +219,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             }
 
 
-          
+
         }
 
         //private void btnPictureBrowse_Click(object sender, EventArgs e)
@@ -246,7 +234,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         //{
         //    using(AnimalShelterManagementEntities db= new AnimalShelterManagementEntities())
         //    {
-              
+
         //    }
         //}
 
