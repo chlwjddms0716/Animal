@@ -115,10 +115,10 @@
             // grcShelterList
             // 
             this.grcShelterList.DataSource = this.animalShelterBindingSource;
-            this.grcShelterList.Location = new System.Drawing.Point(12, 144);
+            this.grcShelterList.Location = new System.Drawing.Point(12, 156);
             this.grcShelterList.MainView = this.gridView1;
             this.grcShelterList.Name = "grcShelterList";
-            this.grcShelterList.Size = new System.Drawing.Size(747, 333);
+            this.grcShelterList.Size = new System.Drawing.Size(747, 321);
             this.grcShelterList.TabIndex = 4;
             this.grcShelterList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -138,6 +138,7 @@
             this.담당자});
             this.gridView1.GridControl = this.grcShelterList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // 보호소Id
@@ -204,67 +205,67 @@
             this.btnHelp});
             this.toolStrip1.Location = new System.Drawing.Point(12, 108);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(747, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(747, 44);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // btnClose
             // 
             this.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnClose.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Close;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 29);
+            this.btnClose.Size = new System.Drawing.Size(29, 41);
             this.btnClose.Text = "종료";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnInsert
             // 
             this.btnInsert.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnInsert.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
+            this.btnInsert.Image = ((System.Drawing.Image)(resources.GetObject("btnInsert.Image")));
             this.btnInsert.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(29, 29);
+            this.btnInsert.Size = new System.Drawing.Size(29, 41);
             this.btnInsert.Text = "추가";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(29, 29);
+            this.btnEdit.Size = new System.Drawing.Size(29, 41);
             this.btnEdit.Text = "수정";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(29, 29);
+            this.btnDelete.Size = new System.Drawing.Size(29, 41);
             this.btnDelete.Text = "삭제";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnUpdate.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(29, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(29, 41);
             this.btnUpdate.Text = "업데이트";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnHelp
             // 
             this.btnHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
+            this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
             this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(29, 29);
+            this.btnHelp.Size = new System.Drawing.Size(29, 41);
             this.btnHelp.Text = "도움말";
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -320,7 +321,7 @@
             this.layoutControlItem5.Control = this.toolStrip1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(751, 36);
+            this.layoutControlItem5.Size = new System.Drawing.Size(751, 48);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -345,9 +346,9 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.grcShelterList;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 132);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(751, 337);
+            this.layoutControlItem2.Size = new System.Drawing.Size(751, 325);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -411,7 +412,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 489);
             this.Controls.Add(this.layoutControl1);
-            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("ShelterListForm.IconOptions.Image")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ShelterListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

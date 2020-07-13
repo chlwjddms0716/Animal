@@ -191,8 +191,10 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Controls.Add(this.toolbarFormControl1);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.IsMdiContainer = true;
             this.Name = "AdminMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "관리자메뉴";
             this.ToolbarFormControl = this.toolbarFormControl1;
             //this.Load += new System.EventHandler(this.AdminMenu_Load);

@@ -194,6 +194,7 @@
             this.입양날짜});
             this.gridView1.GridControl = this.grcAdoptionList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // 유저Id

@@ -131,6 +131,7 @@
             this.사진});
             this.gridView1.GridControl = this.grcLossList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // 유저Id
