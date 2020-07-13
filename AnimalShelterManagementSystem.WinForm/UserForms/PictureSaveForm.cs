@@ -124,8 +124,9 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
             return ms.ToArray();
         }
 
-       
-        
-        
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

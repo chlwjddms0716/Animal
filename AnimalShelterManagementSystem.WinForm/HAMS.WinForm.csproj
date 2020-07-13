@@ -200,6 +200,12 @@
     <Compile Include="UserForms\AnimalImage.Designer.cs">
       <DependentUpon>AnimalImage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForms\AnimalPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\AnimalPicture.Designer.cs">
+      <DependentUpon>AnimalPicture.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForms\EditUserInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,12 +255,6 @@
     </Compile>
     <Compile Include="UserForms\LossReportForm.designer.cs">
       <DependentUpon>LossReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserForms\UserMenu1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserForms\UserMenu1.Designer.cs">
-      <DependentUpon>UserMenu1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminForms\AdoptionForm.resx">
       <DependentUpon>AdoptionForm.cs</DependentUpon>
