@@ -145,10 +145,11 @@
 
 
 ### 프리웨어 사용시 팝업광고가 발생하는 문제
-![file](https://user-images.githubusercontent.com/63761486/87262451-f0d86800-c4f4-11ea-9219-714682b3b6fd.png)
+
 
 ------------------------------
-#### 증상
+#### 증상   
+![file](https://user-images.githubusercontent.com/63761486/87262451-f0d86800-c4f4-11ea-9219-714682b3b6fd.png)
  - 3rd party control 중 하나인 Devexpress를 사용하면 프로그램을 실행할 때 마다 devexpress 확장판 구매 독려 광고가 나타남
 
 #### 원인
