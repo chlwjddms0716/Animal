@@ -55,6 +55,38 @@ namespace AnimalShelterManagementSystem
             }
             return user;
         }
+
+        public List<User> Search(string name, string id, int adminCode, int blacklistCode)
+        {
+            var context = CreateContext();
+
+            var query = from x in context.Users
+                        select x;
+
+            if(string.IsNullOrEmpty(name) == false)
+                query = query.Where(x => x.Name.Contains(name) == true);
+           
+            if (string.IsNullOrEmpty(id) == false)
+                query = query.Where(x => x.Id.Contains(id) == true);
+
+            if (adminCode != 2)
+            {
+                bool IsAdmin = adminCode == 1 ? true: false;
+                query = query.Where(x => x.IsAdministrator == IsAdmin);
+            }
+
+
+            if (blacklistCode != 2)
+            {
+                bool IsBlack = blacklistCode == 1 ? true : false;
+                query = query.Where(x => x.IsBlacklist == IsBlack);
+            }
+              
+
+            var list = query.ToList();
+
+            return list;
+        }
     }
 }
 

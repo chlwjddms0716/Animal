@@ -84,16 +84,5 @@ namespace AnimalShelterManagementSystem
 
             return list.ConvertAll(x => x.Adopt);
         }
-
-        //public List<HomelessAnimal> GetAnimalsByUserName2(string userName)
-        //{
-        //    AnimalShelterManagementEntities context = CreateContext();
-
-        //    var query = from x in context.HomelessAnimals
-        //                where x.Adoptions.Any(a => a.User.Name.Contains(userName))
-        //                select x;
-
-        //    return query.ToList();
-        //}
     }
 }
