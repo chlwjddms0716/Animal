@@ -37,43 +37,22 @@ namespace AnimalShelterManagementSystem
             return query.FirstOrDefault();
         }
 
-
-        public int GetFirstId()
+        public List<AnimalShelter> Search(string address, int shelterId)
         {
-            AnimalShelterManagementEntities context = CreateContext();
+            var context = CreateContext();
 
             var query = from x in context.AnimalShelters
-                        orderby x.AnimalShelterId
-                        select x.AnimalShelterId;
+                        select x;
 
-            return query.FirstOrDefault();
+            if (string.IsNullOrEmpty(address) == false)
+                query = query.Where(x => x.Address.Contains(address) == true);
+
+            if (shelterId != 0)
+                query = query.Where(x => x.AnimalShelterId == shelterId);
+
+            var list = query.ToList();
+
+            return list;
         }
-
-        public List<AnimalShelter> GetbyShelterId(int shelterId)
-        {
-            AnimalShelterManagementEntities context = CreateContext();
-            List<AnimalShelter> animalShelters = new List<AnimalShelter>();
-
-            foreach (AnimalShelter animalShelter in context.AnimalShelters)
-            {
-                if (animalShelter.AnimalShelterId == shelterId)
-                    animalShelters.Add(animalShelter);
-            }
-            return animalShelters;
-        }
-        public List<AnimalShelter> SearchWithAddress(string address)
-        {
-            AnimalShelterManagementEntities context = CreateContext();
-            List<AnimalShelter> animalShelters = new List<AnimalShelter>();
-
-            foreach (AnimalShelter animalShelter in context.AnimalShelters)
-            {
-                if (animalShelter.Address.Contains(address) == true)
-                    animalShelters.Add(animalShelter);
-            }
-
-            return animalShelters;
-        }
-
     }
 }
