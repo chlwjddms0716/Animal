@@ -123,7 +123,7 @@
             this.btnSignup.Size = new System.Drawing.Size(129, 32);
             this.btnSignup.StyleController = this.layoutControl2;
             this.btnSignup.TabIndex = 5;
-            this.btnSignup.Text = "수정";
+            this.btnSignup.Text = "수정(&E)";
             this.btnSignup.Click += new System.EventHandler(this.btnEdit_Clicked);
             // 
             // boxId
