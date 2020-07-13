@@ -44,8 +44,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void AdoptionManagement_Load(object sender, EventArgs e)
         {
             adoptionList = DataRepository.Adoption.GetEvery();
-            //adoptionBindingSource.DataSource = adoptionList;
-            querybyAdoptionStatus();
+            adoptionBindingSource.DataSource = adoptionList;
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
