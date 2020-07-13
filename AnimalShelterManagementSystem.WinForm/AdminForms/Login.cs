@@ -35,7 +35,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                     {
                         if (user.IsAdministrator == true)
                         {
-                            AdminMenu1 adminMenu = new AdminMenu1();
+                            AdminMenu adminMenu = new AdminMenu();
                             adminMenu.ShowDialog();
                             Close();
                         }

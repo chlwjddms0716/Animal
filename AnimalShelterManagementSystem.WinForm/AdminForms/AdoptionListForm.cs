@@ -108,5 +108,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             currentStatus = (int)rdgAdoptionStatus.EditValue;
         }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
