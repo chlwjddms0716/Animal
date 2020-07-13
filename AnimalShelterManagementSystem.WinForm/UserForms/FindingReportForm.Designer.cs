@@ -123,7 +123,7 @@
             this.btnCancel.Size = new System.Drawing.Size(90, 28);
             this.btnCancel.StyleController = this.layoutControl1;
             this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "취소(&C)";
+            this.btnCancel.Text = "취소";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnFindingReport
@@ -136,7 +136,7 @@
             this.btnFindingReport.Size = new System.Drawing.Size(94, 28);
             this.btnFindingReport.StyleController = this.layoutControl1;
             this.btnFindingReport.TabIndex = 9;
-            this.btnFindingReport.Text = "확인(&S)";
+            this.btnFindingReport.Text = "확인";
             this.btnFindingReport.Click += new System.EventHandler(this.btnFindingReport_Click);
             // 
             // txbPlace

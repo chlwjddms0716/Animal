@@ -120,7 +120,7 @@
             this.btnCancle.Size = new System.Drawing.Size(122, 28);
             this.btnCancle.StyleController = this.layoutControl1;
             this.btnCancle.TabIndex = 17;
-            this.btnCancle.Text = "취소(&C)";
+            this.btnCancle.Text = "취소";
             this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // btnLossRequest
@@ -133,7 +133,7 @@
             this.btnLossRequest.Size = new System.Drawing.Size(128, 28);
             this.btnLossRequest.StyleController = this.layoutControl1;
             this.btnLossRequest.TabIndex = 16;
-            this.btnLossRequest.Text = "확인(&S)";
+            this.btnLossRequest.Text = "확인";
             this.btnLossRequest.Click += new System.EventHandler(this.btnLossRequest_Click);
             // 
             // txbPictureLink
