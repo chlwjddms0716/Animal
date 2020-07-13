@@ -386,7 +386,7 @@
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FindingManagementForm";
-            this.Text = "발견신고관리";
+            this.Text = "발견신고리스트";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
