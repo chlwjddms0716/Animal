@@ -51,10 +51,10 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -69,10 +69,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -111,10 +111,10 @@
             // 
             this.btnCancle.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancle.Appearance.Options.UseFont = true;
-            this.btnCancle.Location = new System.Drawing.Point(343, 189);
+            this.btnCancle.Location = new System.Drawing.Point(343, 188);
             this.btnCancle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(144, 28);
+            this.btnCancle.Size = new System.Drawing.Size(144, 27);
             this.btnCancle.StyleController = this.layoutControl1;
             this.btnCancle.TabIndex = 17;
             this.btnCancle.Text = "취소(&C)";
@@ -127,7 +127,7 @@
             this.btnLossRequest.Location = new System.Drawing.Point(343, 157);
             this.btnLossRequest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLossRequest.Name = "btnLossRequest";
-            this.btnLossRequest.Size = new System.Drawing.Size(144, 28);
+            this.btnLossRequest.Size = new System.Drawing.Size(144, 27);
             this.btnLossRequest.StyleController = this.layoutControl1;
             this.btnLossRequest.TabIndex = 16;
             this.btnLossRequest.Text = "확인(&S)";
@@ -321,18 +321,9 @@
             this.layoutControlItem3.Control = this.btnLossRequest;
             this.layoutControlItem3.Location = new System.Drawing.Point(331, 145);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(148, 32);
+            this.layoutControlItem3.Size = new System.Drawing.Size(148, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.btnCancle;
-            this.layoutControlItem11.Location = new System.Drawing.Point(331, 177);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(148, 62);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem12
             // 
@@ -342,6 +333,15 @@
             this.layoutControlItem12.Size = new System.Drawing.Size(479, 30);
             this.layoutControlItem12.Text = "종 :             ";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(88, 18);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.btnCancle;
+            this.layoutControlItem11.Location = new System.Drawing.Point(331, 176);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(148, 63);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
@@ -365,6 +365,7 @@
             this.Load += new System.EventHandler(this.LossRequest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -377,10 +378,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
