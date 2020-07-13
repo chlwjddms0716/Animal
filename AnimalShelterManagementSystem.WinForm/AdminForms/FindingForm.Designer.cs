@@ -80,11 +80,11 @@
             this.layoutControl1.Controls.Add(this.rdgIsInShelter);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(869, 0, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(560, 320);
+            this.layoutControl1.Size = new System.Drawing.Size(700, 391);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -93,10 +93,10 @@
             this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Appearance.Options.UseFont = true;
             this.btnEdit.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
-            this.btnEdit.Location = new System.Drawing.Point(377, 238);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnEdit.Location = new System.Drawing.Point(471, 305);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(171, 70);
+            this.btnEdit.Size = new System.Drawing.Size(215, 72);
             this.btnEdit.StyleController = this.layoutControl1;
             this.btnEdit.TabIndex = 19;
             this.btnEdit.Text = "수정";
@@ -107,10 +107,10 @@
             this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Appearance.Options.UseFont = true;
             this.btnAdd.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
-            this.btnAdd.Location = new System.Drawing.Point(200, 238);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnAdd.Location = new System.Drawing.Point(249, 305);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(151, 70);
+            this.btnAdd.Size = new System.Drawing.Size(190, 72);
             this.btnAdd.StyleController = this.layoutControl1;
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "추가";
@@ -121,10 +121,10 @@
             this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Appearance.Options.UseFont = true;
             this.btnDelete.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
-            this.btnDelete.Location = new System.Drawing.Point(12, 238);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnDelete.Location = new System.Drawing.Point(14, 305);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(156, 70);
+            this.btnDelete.Size = new System.Drawing.Size(196, 72);
             this.btnDelete.StyleController = this.layoutControl1;
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "삭제";
@@ -134,55 +134,55 @@
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(97, 12);
-            this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.cbxSpecies.Location = new System.Drawing.Point(106, 14);
+            this.cbxSpecies.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(451, 26);
+            this.cbxSpecies.Size = new System.Drawing.Size(580, 30);
             this.cbxSpecies.TabIndex = 16;
             // 
             // dteDate
             // 
             this.dteDate.EditValue = null;
             this.dteDate.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dteDate.Location = new System.Drawing.Point(98, 42);
-            this.dteDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.dteDate.Location = new System.Drawing.Point(106, 49);
+            this.dteDate.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.dteDate.Name = "dteDate";
             this.dteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteDate.Size = new System.Drawing.Size(450, 24);
+            this.dteDate.Size = new System.Drawing.Size(580, 28);
             this.dteDate.StyleController = this.layoutControl1;
             this.dteDate.TabIndex = 13;
             // 
             // lblDate
             // 
-            this.lblDate.Location = new System.Drawing.Point(12, 42);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.lblDate.Location = new System.Drawing.Point(14, 49);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(82, 18);
+            this.lblDate.Size = new System.Drawing.Size(88, 22);
             this.lblDate.StyleController = this.layoutControl1;
             this.lblDate.TabIndex = 12;
             this.lblDate.Text = " 발견 날짜 :  ";
             // 
             // txbPlace
             // 
-            this.txbPlace.Location = new System.Drawing.Point(97, 70);
-            this.txbPlace.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txbPlace.Location = new System.Drawing.Point(106, 81);
+            this.txbPlace.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txbPlace.Name = "txbPlace";
-            this.txbPlace.Size = new System.Drawing.Size(451, 25);
+            this.txbPlace.Size = new System.Drawing.Size(580, 30);
             this.txbPlace.TabIndex = 6;
             // 
             // rdgIsInShelter
             // 
             this.rdgIsInShelter.EditValue = 0;
-            this.rdgIsInShelter.Location = new System.Drawing.Point(97, 99);
-            this.rdgIsInShelter.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.rdgIsInShelter.Location = new System.Drawing.Point(106, 115);
+            this.rdgIsInShelter.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.rdgIsInShelter.Name = "rdgIsInShelter";
             this.rdgIsInShelter.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "보호됨"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "미보호")});
-            this.rdgIsInShelter.Size = new System.Drawing.Size(451, 65);
+            this.rdgIsInShelter.Size = new System.Drawing.Size(580, 82);
             this.rdgIsInShelter.StyleController = this.layoutControl1;
             this.rdgIsInShelter.TabIndex = 11;
             // 
@@ -203,115 +203,115 @@
             this.layoutControlItem4,
             this.layoutControlItem6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(560, 320);
+            this.Root.Size = new System.Drawing.Size(700, 391);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(343, 226);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(429, 291);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(22, 74);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(28, 76);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.lblDate;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 30);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 35);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(86, 28);
+            this.layoutControlItem5.Size = new System.Drawing.Size(92, 32);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.dteDate;
-            this.layoutControlItem7.Location = new System.Drawing.Point(86, 30);
+            this.layoutControlItem7.Location = new System.Drawing.Point(92, 35);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(454, 28);
+            this.layoutControlItem7.Size = new System.Drawing.Size(584, 32);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txbPlace;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 58);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 67);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(540, 29);
+            this.layoutControlItem3.Size = new System.Drawing.Size(676, 34);
             this.layoutControlItem3.Text = " 발견 장소:   ";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(82, 18);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(88, 22);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.cbxSpecies;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(540, 30);
+            this.layoutControlItem9.Size = new System.Drawing.Size(676, 35);
             this.layoutControlItem9.Text = " 종 : ";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(82, 18);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(88, 22);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.rdgIsInShelter;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem1.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 87);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 101);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(540, 69);
+            this.layoutControlItem1.Size = new System.Drawing.Size(676, 86);
             this.layoutControlItem1.Text = " 보호 여부 :";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(82, 18);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(88, 22);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 156);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 187);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(540, 70);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(676, 104);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(160, 226);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(200, 291);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(28, 74);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(35, 76);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnDelete;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 226);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 291);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(160, 74);
+            this.layoutControlItem2.Size = new System.Drawing.Size(200, 76);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnAdd;
-            this.layoutControlItem4.Location = new System.Drawing.Point(188, 226);
+            this.layoutControlItem4.Location = new System.Drawing.Point(235, 291);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(155, 74);
+            this.layoutControlItem4.Size = new System.Drawing.Size(194, 76);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnEdit;
-            this.layoutControlItem6.Location = new System.Drawing.Point(365, 226);
+            this.layoutControlItem6.Location = new System.Drawing.Point(457, 291);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(175, 74);
+            this.layoutControlItem6.Size = new System.Drawing.Size(219, 76);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // FindingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 320);
+            this.ClientSize = new System.Drawing.Size(700, 391);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FindingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "발견신고관리";

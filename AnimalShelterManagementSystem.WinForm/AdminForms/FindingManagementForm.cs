@@ -123,5 +123,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             findingReportBindingSource.DataSource = findingReports;
             querybyPlace();
         }
+
+        private void btnFindingReport_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
