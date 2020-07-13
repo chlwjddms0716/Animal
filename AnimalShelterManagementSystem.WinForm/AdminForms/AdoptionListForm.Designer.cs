@@ -99,9 +99,9 @@
             this.tsbDelete,
             this.tsbEdit,
             this.tsbRefresh});
-            this.toolStrip1.Location = new System.Drawing.Point(12, 92);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 75);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(615, 59);
+            this.toolStrip1.Size = new System.Drawing.Size(615, 26);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -111,7 +111,7 @@
             this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(29, 56);
+            this.tsbAdd.Size = new System.Drawing.Size(29, 23);
             this.tsbAdd.Text = "추가";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -121,7 +121,7 @@
             this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(29, 56);
+            this.tsbDelete.Size = new System.Drawing.Size(29, 23);
             this.tsbDelete.Text = "삭제";
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
@@ -131,7 +131,7 @@
             this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(29, 56);
+            this.tsbEdit.Size = new System.Drawing.Size(29, 23);
             this.tsbEdit.Text = "수정";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
@@ -141,7 +141,7 @@
             this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(29, 56);
+            this.tsbRefresh.Size = new System.Drawing.Size(29, 23);
             this.tsbRefresh.Text = "새로고침";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
@@ -177,7 +177,7 @@
             this.animalNameDataGridViewTextBoxColumn,
             this.adoptionStatusDataGridViewTextBoxColumn});
             this.grvAdoptionList.DataSource = this.adoptionBindingSource;
-            this.grvAdoptionList.Location = new System.Drawing.Point(82, 155);
+            this.grvAdoptionList.Location = new System.Drawing.Point(82, 105);
             this.grvAdoptionList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grvAdoptionList.Name = "grvAdoptionList";
             this.grvAdoptionList.ReadOnly = true;
@@ -185,7 +185,7 @@
             this.grvAdoptionList.RowHeadersWidth = 51;
             this.grvAdoptionList.RowTemplate.Height = 27;
             this.grvAdoptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvAdoptionList.Size = new System.Drawing.Size(545, 287);
+            this.grvAdoptionList.Size = new System.Drawing.Size(545, 337);
             this.grvAdoptionList.TabIndex = 5;
             // 
             // userLoginId
@@ -298,7 +298,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "전체", true, null, ""),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "처리중"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "입양됨")});
-            this.rdgAdoptionStatus.Size = new System.Drawing.Size(545, 48);
+            this.rdgAdoptionStatus.Size = new System.Drawing.Size(545, 31);
             this.rdgAdoptionStatus.StyleController = this.layoutControl1;
             this.rdgAdoptionStatus.TabIndex = 11;
             this.rdgAdoptionStatus.SelectedIndexChanged += new System.EventHandler(this.rdgAdoptionStatus_SelectedIndexChanged);
@@ -319,9 +319,9 @@
             // list
             // 
             this.list.Control = this.grvAdoptionList;
-            this.list.Location = new System.Drawing.Point(0, 143);
+            this.list.Location = new System.Drawing.Point(0, 93);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(619, 291);
+            this.list.Size = new System.Drawing.Size(619, 341);
             this.list.Text = "리스트";
             this.list.TextSize = new System.Drawing.Size(67, 18);
             // 
@@ -341,16 +341,16 @@
             this.layoutControlItem10.CustomizationFormText = "블랙리스트";
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(619, 52);
+            this.layoutControlItem10.Size = new System.Drawing.Size(619, 35);
             this.layoutControlItem10.Text = " 입양상태: ";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(67, 18);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.toolStrip1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 80);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 63);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(619, 63);
+            this.layoutControlItem2.Size = new System.Drawing.Size(619, 30);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
