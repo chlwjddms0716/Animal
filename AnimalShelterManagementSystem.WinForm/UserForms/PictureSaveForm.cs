@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.UserForms
 {
-    public partial class PictureSaveForm : Form
+    public partial class PictureSaveForm : DevExpress.XtraEditors.XtraForm
     {
         private HomelessAnimal homelessAnimal;
         public static string Address { get; set; }

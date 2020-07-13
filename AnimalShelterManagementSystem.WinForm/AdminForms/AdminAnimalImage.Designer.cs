@@ -51,6 +51,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 492);
             this.Controls.Add(this.imgAnimal);
+            this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Name = "AdminAnimalImage";
             this.Text = " ";
             this.Load += new System.EventHandler(this.XtraForm1_Load);

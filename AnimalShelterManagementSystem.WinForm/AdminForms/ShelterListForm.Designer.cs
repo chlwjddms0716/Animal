@@ -138,6 +138,7 @@
             this.담당자});
             this.gridView1.GridControl = this.grcShelterList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // 보호소Id

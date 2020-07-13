@@ -16,6 +16,7 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.ClipboardSource.SpreadsheetML;
 using System.Data.
     Entity.Core.Metadata.Edm;
+using AnimalShelterManagementSystem.WinForm.UserForms;
 
 namespace AnimalShelterManagementSystem.WinForm
 {
@@ -25,6 +26,7 @@ namespace AnimalShelterManagementSystem.WinForm
         Adoption adoption = new Adoption();
         private int SpeciesCode;
         private int GenderCode = 0;
+        AnimalPicture animalPicture;
         public AdoptionRequest()
         {
             InitializeComponent();
@@ -71,17 +73,6 @@ namespace AnimalShelterManagementSystem.WinForm
 
             Close();
         }
-
-        private void grvHomelessAnimalList_DoubleClick(object sender, EventArgs e)
-        {
-            HomelessAnimal homelessAnimal = homelessAnimalBindingSource.Current as HomelessAnimal;
-            if (homelessAnimal == null)
-                return;
-
-            adoption.HomelessAnimalId = homelessAnimal.HomelessAnimalId;
-            MessageBox.Show($"{homelessAnimal.Name}을 선택하셨습니다.");
-        }
-
         private void btnLoad_Click(object sender, EventArgs e)
         {
             GenderCode = (int)rdgSex.EditValue;
@@ -91,6 +82,25 @@ namespace AnimalShelterManagementSystem.WinForm
                 List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, GenderCode);
                 homelessAnimalBindingSource.DataSource = homelessAnimals;
             }
+        }
+
+        private void grcAnimalList_DoubleClick(object sender, EventArgs e)
+        {
+            HomelessAnimal homelessAnimal = homelessAnimalBindingSource.Current as HomelessAnimal;
+            if (homelessAnimal == null)
+                return;
+
+            adoption.HomelessAnimalId = homelessAnimal.HomelessAnimalId;
+            MessageBox.Show($"{homelessAnimal.Name}을 선택하셨습니다.");
+        }
+
+        private void grcAnimalList_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<AnimalPicture>().Count() > 0)
+                Application.OpenForms.OfType<AnimalPicture>().First().Close();
+
+            animalPicture = new AnimalPicture(homelessAnimalBindingSource.Current as HomelessAnimal);
+            animalPicture.ShowDialog();
         }
     }
 }
