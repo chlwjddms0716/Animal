@@ -28,7 +28,7 @@ namespace AnimalShelterManagementSystem.WinForm
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FindingManagementForm());
+            Application.Run(new AdminMenu());
         }
 
 
