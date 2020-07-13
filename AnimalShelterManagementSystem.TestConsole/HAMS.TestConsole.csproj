@@ -59,9 +59,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AnimalShelterManagementSystem\AnimalShelterManagementSystem.csproj">
+    <ProjectReference Include="..\AnimalShelterManagementSystem\HAMS.csproj">
       <Project>{269384CF-2EEC-4079-8E45-315C8BA07897}</Project>
-      <Name>AnimalShelterManagementSystem</Name>
+      <Name>HAMS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

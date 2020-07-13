@@ -43,7 +43,6 @@
             this.lblDate = new DevExpress.XtraEditors.LabelControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -55,13 +54,13 @@
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
@@ -73,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -109,24 +109,28 @@
             // 
             // btnCancle
             // 
-            this.btnCancle.Location = new System.Drawing.Point(12, 220);
+            this.btnCancle.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancle.Appearance.Options.UseFont = true;
+            this.btnCancle.Location = new System.Drawing.Point(343, 189);
             this.btnCancle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(235, 27);
+            this.btnCancle.Size = new System.Drawing.Size(144, 28);
             this.btnCancle.StyleController = this.layoutControl1;
             this.btnCancle.TabIndex = 17;
-            this.btnCancle.Text = "취소";
+            this.btnCancle.Text = "취소(&C)";
             this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // btnLossRequest
             // 
-            this.btnLossRequest.Location = new System.Drawing.Point(251, 220);
+            this.btnLossRequest.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLossRequest.Appearance.Options.UseFont = true;
+            this.btnLossRequest.Location = new System.Drawing.Point(343, 157);
             this.btnLossRequest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLossRequest.Name = "btnLossRequest";
-            this.btnLossRequest.Size = new System.Drawing.Size(236, 27);
+            this.btnLossRequest.Size = new System.Drawing.Size(144, 28);
             this.btnLossRequest.StyleController = this.layoutControl1;
             this.btnLossRequest.TabIndex = 16;
-            this.btnLossRequest.Text = "확인";
+            this.btnLossRequest.Text = "확인(&S)";
             this.btnLossRequest.Click += new System.EventHandler(this.btnLossRequest_Click);
             // 
             // txbPictureLink
@@ -216,7 +220,6 @@
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.emptySpaceItem1,
             this.layoutControlItem4,
             this.layoutControlItem9,
             this.layoutControlItem8,
@@ -225,8 +228,9 @@
             this.layoutControlItem6,
             this.layoutControlItem2,
             this.layoutControlItem3,
+            this.layoutControlItem12,
             this.layoutControlItem11,
-            this.layoutControlItem12});
+            this.emptySpaceItem1});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(499, 259);
             this.Root.TextVisible = false;
@@ -239,14 +243,6 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(96, 29);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 145);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(479, 63);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
             // 
@@ -323,18 +319,18 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnLossRequest;
-            this.layoutControlItem3.Location = new System.Drawing.Point(239, 208);
+            this.layoutControlItem3.Location = new System.Drawing.Point(331, 145);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(240, 31);
+            this.layoutControlItem3.Size = new System.Drawing.Size(148, 32);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnCancle;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 208);
+            this.layoutControlItem11.Location = new System.Drawing.Point(331, 177);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(239, 31);
+            this.layoutControlItem11.Size = new System.Drawing.Size(148, 62);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -346,6 +342,14 @@
             this.layoutControlItem12.Size = new System.Drawing.Size(479, 30);
             this.layoutControlItem12.Text = "종 :             ";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(88, 18);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 145);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(331, 94);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // LossReportForm
             // 
@@ -361,12 +365,10 @@
             this.Load += new System.EventHandler(this.LossRequest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
@@ -378,6 +380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,7 +391,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraEditors.LabelControl lblName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private System.Windows.Forms.TextBox tbxName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraEditors.LabelControl lbPictureLink;
@@ -410,5 +412,6 @@
         private System.Windows.Forms.BindingSource speciesBindingSource;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private System.Windows.Forms.ComboBox cbxSpecies;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
     }
 }
