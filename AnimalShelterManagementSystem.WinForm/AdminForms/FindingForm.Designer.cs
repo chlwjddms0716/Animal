@@ -93,7 +93,7 @@
             this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnEdit.Appearance.Options.UseFont = true;
             this.btnEdit.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
-            this.btnEdit.Location = new System.Drawing.Point(377, 236);
+            this.btnEdit.Location = new System.Drawing.Point(377, 238);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(171, 70);
@@ -107,7 +107,7 @@
             this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnAdd.Appearance.Options.UseFont = true;
             this.btnAdd.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
-            this.btnAdd.Location = new System.Drawing.Point(200, 236);
+            this.btnAdd.Location = new System.Drawing.Point(200, 238);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(151, 70);
@@ -121,7 +121,7 @@
             this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Appearance.Options.UseFont = true;
             this.btnDelete.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
-            this.btnDelete.Location = new System.Drawing.Point(12, 236);
+            this.btnDelete.Location = new System.Drawing.Point(12, 238);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(156, 70);
@@ -134,7 +134,7 @@
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(97, 14);
+            this.cbxSpecies.Location = new System.Drawing.Point(97, 12);
             this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cbxSpecies.Name = "cbxSpecies";
             this.cbxSpecies.Size = new System.Drawing.Size(451, 26);
@@ -144,7 +144,7 @@
             // 
             this.dteDate.EditValue = null;
             this.dteDate.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dteDate.Location = new System.Drawing.Point(98, 44);
+            this.dteDate.Location = new System.Drawing.Point(98, 42);
             this.dteDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dteDate.Name = "dteDate";
             this.dteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -157,7 +157,7 @@
             // 
             // lblDate
             // 
-            this.lblDate.Location = new System.Drawing.Point(12, 44);
+            this.lblDate.Location = new System.Drawing.Point(12, 42);
             this.lblDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(82, 18);
@@ -167,7 +167,7 @@
             // 
             // txbPlace
             // 
-            this.txbPlace.Location = new System.Drawing.Point(97, 72);
+            this.txbPlace.Location = new System.Drawing.Point(97, 70);
             this.txbPlace.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txbPlace.Name = "txbPlace";
             this.txbPlace.Size = new System.Drawing.Size(451, 25);
@@ -176,13 +176,13 @@
             // rdgIsInShelter
             // 
             this.rdgIsInShelter.EditValue = 0;
-            this.rdgIsInShelter.Location = new System.Drawing.Point(97, 101);
+            this.rdgIsInShelter.Location = new System.Drawing.Point(97, 99);
             this.rdgIsInShelter.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.rdgIsInShelter.Name = "rdgIsInShelter";
             this.rdgIsInShelter.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "보호됨"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "미보호")});
-            this.rdgIsInShelter.Size = new System.Drawing.Size(451, 64);
+            this.rdgIsInShelter.Size = new System.Drawing.Size(451, 65);
             this.rdgIsInShelter.StyleController = this.layoutControl1;
             this.rdgIsInShelter.TabIndex = 11;
             // 
@@ -209,7 +209,7 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(343, 222);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(343, 226);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(22, 74);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -257,22 +257,22 @@
             this.layoutControlItem1.CustomizationFormText = "블랙리스트";
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 87);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(540, 68);
-            this.layoutControlItem1.Text = "보호 여부 :";
+            this.layoutControlItem1.Size = new System.Drawing.Size(540, 69);
+            this.layoutControlItem1.Text = " 보호 여부 :";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(82, 18);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 155);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 156);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(540, 67);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(540, 70);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(160, 222);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(160, 226);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(28, 74);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -280,7 +280,7 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnDelete;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 222);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 226);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(160, 74);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -289,7 +289,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnAdd;
-            this.layoutControlItem4.Location = new System.Drawing.Point(188, 222);
+            this.layoutControlItem4.Location = new System.Drawing.Point(188, 226);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(155, 74);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
@@ -298,7 +298,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnEdit;
-            this.layoutControlItem6.Location = new System.Drawing.Point(365, 222);
+            this.layoutControlItem6.Location = new System.Drawing.Point(365, 226);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(175, 74);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
