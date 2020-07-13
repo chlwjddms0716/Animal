@@ -186,6 +186,7 @@
             this.tsbAdd.Name = "tsbAdd";
             this.tsbAdd.Size = new System.Drawing.Size(29, 39);
             this.tsbAdd.Text = "추가";
+            this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
             // tsbDelete
             // 
@@ -248,7 +249,7 @@
             this.txbPlace.Name = "txbPlace";
             this.txbPlace.Size = new System.Drawing.Size(686, 25);
             this.txbPlace.TabIndex = 6;
-            this.txbPlace.TextChanged += new System.EventHandler(this.txbPlace_TextChanged);
+            
             // 
             // dteFoundDateFrom
             // 
@@ -263,7 +264,7 @@
             this.dteFoundDateFrom.Size = new System.Drawing.Size(298, 24);
             this.dteFoundDateFrom.StyleController = this.layoutControl1;
             this.dteFoundDateFrom.TabIndex = 9;
-            this.dteFoundDateFrom.EditValueChanged += new System.EventHandler(this.dteFoundDateFrom_EditValueChanged);
+         
             // 
             // dteFoundDateTo
             // 
@@ -278,7 +279,7 @@
             this.dteFoundDateTo.Size = new System.Drawing.Size(294, 24);
             this.dteFoundDateTo.StyleController = this.layoutControl1;
             this.dteFoundDateTo.TabIndex = 10;
-            this.dteFoundDateTo.EditValueChanged += new System.EventHandler(this.dteFoundDateTo_EditValueChanged);
+          
             // 
             // Root
             // 

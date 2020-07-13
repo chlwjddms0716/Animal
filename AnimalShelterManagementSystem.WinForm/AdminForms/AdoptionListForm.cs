@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
     public partial class AdoptionListForm : DevExpress.XtraEditors.XtraForm
     {
-        private int currentStatus = 3;
+
         Adoption adoption = new Adoption();
 
         public AdoptionListForm()
@@ -32,20 +33,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void LoadAdoptions()
         {
-            List<Adoption> adoptions = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
-            adoptionBindingSource.DataSource = adoptions;
-
-            //if (String.Equals(txeId.Text, "") == false)
-            //    FilteredById = adoptionList.Where(x => x.userLoginId.Contains(txeId.Text) == true).ToList();
-            //else
-            //    FilteredById = adoptionList;
-
-            //if (currentStatus != 3) //전체
-            //    FilteredByAdoptionStatus = FilteredById.Where(x => x.AdoptionStatus == (AdoptionStatusType)currentStatus).ToList();
-            //else
-            //    FilteredByAdoptionStatus = FilteredById;
-            //adoptionBindingSource.DataSource = FilteredByAdoptionStatus.Where(x => x.AdoptionStatus != 0);
-
+            adoptionBindingSource.DataSource = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
@@ -98,20 +86,23 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
+            adoptionBindingSource.DataSource = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
         }
 
-        private void txeId_TextChanged(object sender, EventArgs e)
+
+        private void btnHelp_Click(object sender, EventArgs e)
         {
+            Process.Start("https://kimgwajang.tistory.com/guestbook");
         }
 
-        private void rdgAdoptionStatus_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnLoad_Click(object sender, EventArgs e)
         {
-            currentStatus = (int)rdgAdoptionStatus.EditValue;
+            adoptionBindingSource.DataSource = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
         }
 
-        private void gridControl1_Click(object sender, EventArgs e)
+        private void grcAdoptionList_DoubleClick(object sender, EventArgs e)
         {
-
+            ExecuteEdit();
         }
     }
 }

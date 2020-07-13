@@ -18,8 +18,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             InitializeComponent();
             
-            btnDelete.Enabled = false;
-            btnEdit.Enabled = false;
+
             user.UserId = DataRepository.User.GetMaxId() + 1;
             boxUserId.Text = user.UserId.ToString();
             boxUserId.Enabled = false;
@@ -29,7 +28,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             InitializeComponent();
             
-            btnAdd.Enabled = false;
+
             this.user = user;
             boxUserId.Text = user.UserId.ToString();
             boxUserId.Enabled = false;
@@ -60,7 +59,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void Edit()
         {  
 
             if (string.Equals(Checkinput(), "") == true)
@@ -89,17 +88,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (Helpers.Helpers.SureToDelete() == false)
-                return;
-            DataRepository.User.Delete(user.UserId);
 
-            Close();
-            return;
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void Add()
         {
             string checkinput = "";
             if (String.Equals(boxId.Text, "") == true)
@@ -140,6 +130,26 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 return;
             }
             MessageBox.Show($"{Checkinput().Remove(Checkinput().Length - 2)}을(를) 입력해주세요.");
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+                    if (user.UserId == DataRepository.User.GetMaxId() + 1)
+                    {
+                        Add();
+                    }
+                    else
+                    {
+                        Edit();
+                    }
+
+            Close();
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

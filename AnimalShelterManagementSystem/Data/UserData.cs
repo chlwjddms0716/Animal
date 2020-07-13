@@ -16,15 +16,6 @@ namespace AnimalShelterManagementSystem
             return context.Users.FirstOrDefault(a => a.UserId == userId);
         }
 
-        public void Delete(int userId)
-        {
-            User user = Get(userId);
-
-            if (user == null)
-                return;
-
-            Delete(user);
-        }
 
         public int GetMaxId()
         {

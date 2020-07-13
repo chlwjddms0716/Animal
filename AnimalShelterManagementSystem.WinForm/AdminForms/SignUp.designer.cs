@@ -34,6 +34,7 @@
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
             this.btnCheck = new DevExpress.XtraEditors.SimpleButton();
             this.txeId = new DevExpress.XtraEditors.TextEdit();
             this.txePassword = new DevExpress.XtraEditors.TextEdit();
@@ -48,8 +49,9 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.btnSignup = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -68,6 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
@@ -119,6 +123,18 @@
             this.layoutControl1.Size = new System.Drawing.Size(452, 242);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnSignup
+            // 
+            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnSignup.Appearance.Options.UseFont = true;
+            this.btnSignup.Location = new System.Drawing.Point(301, 198);
+            this.btnSignup.Name = "btnSignup";
+            this.btnSignup.Size = new System.Drawing.Size(139, 32);
+            this.btnSignup.StyleController = this.layoutControl1;
+            this.btnSignup.TabIndex = 7;
+            this.btnSignup.Text = "완료";
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // btnCheck
             // 
@@ -182,8 +198,9 @@
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem7,
+            this.layoutControlItem8,
             this.emptySpaceItem1,
-            this.layoutControlItem8});
+            this.emptySpaceItem2});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(452, 242);
             this.Root.TextVisible = false;
@@ -255,29 +272,30 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 143);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(294, 79);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(432, 43);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // btnSignup
-            // 
-            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.btnSignup.Appearance.Options.UseFont = true;
-            this.btnSignup.Location = new System.Drawing.Point(306, 155);
-            this.btnSignup.Name = "btnSignup";
-            this.btnSignup.Size = new System.Drawing.Size(134, 32);
-            this.btnSignup.StyleController = this.layoutControl1;
-            this.btnSignup.TabIndex = 7;
-            this.btnSignup.Text = "완료(&S)";
-            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnSignup;
-            this.layoutControlItem8.Location = new System.Drawing.Point(294, 143);
+            this.layoutControlItem8.Location = new System.Drawing.Point(289, 186);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(138, 79);
+            this.layoutControlItem8.Size = new System.Drawing.Size(143, 36);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 186);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(289, 36);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // SignUp
             // 
@@ -309,6 +327,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,5 +356,7 @@
         private DevExpress.XtraEditors.SimpleButton btnSignup;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }

@@ -29,7 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LossReportListForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
+            this.grcLossList = new DevExpress.XtraGrid.GridControl();
+            this.lossReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.유저Id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.동물이름 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.종 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.장소 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.날짜 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.사진 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
             this.btnInsert = new System.Windows.Forms.ToolStripButton();
@@ -37,50 +48,150 @@
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             this.btnHelp = new System.Windows.Forms.ToolStripButton();
-            this.lossReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txeAnimalName = new DevExpress.XtraEditors.TextEdit();
             this.txeUserId = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.종 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.유저Id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.장소 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.날짜 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.동물이름 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.사진 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grcLossList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lossReportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeAnimalName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeUserId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.gridControl1);
+            this.layoutControl1.Controls.Add(this.btnLoad);
+            this.layoutControl1.Controls.Add(this.grcLossList);
             this.layoutControl1.Controls.Add(this.toolStrip1);
             this.layoutControl1.Controls.Add(this.txeAnimalName);
             this.layoutControl1.Controls.Add(this.txeUserId);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 165, 812, 500);
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(746, 493);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.btnLoad.Appearance.Options.UseFont = true;
+            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
+            this.btnLoad.Location = new System.Drawing.Point(544, 68);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(190, 36);
+            this.btnLoad.StyleController = this.layoutControl1;
+            this.btnLoad.TabIndex = 17;
+            this.btnLoad.Text = "검색";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // grcLossList
+            // 
+            this.grcLossList.DataSource = this.lossReportBindingSource;
+            this.grcLossList.Location = new System.Drawing.Point(12, 155);
+            this.grcLossList.MainView = this.gridView1;
+            this.grcLossList.Name = "grcLossList";
+            this.grcLossList.Size = new System.Drawing.Size(722, 326);
+            this.grcLossList.TabIndex = 9;
+            this.grcLossList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.grcLossList.DoubleClick += new System.EventHandler(this.grcLossList_DoubleClick);
+            // 
+            // lossReportBindingSource
+            // 
+            this.lossReportBindingSource.DataSource = typeof(AnimalShelterManagementSystem.LossReport);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.유저Id,
+            this.동물이름,
+            this.종,
+            this.장소,
+            this.날짜,
+            this.사진});
+            this.gridView1.GridControl = this.grcLossList;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // 유저Id
+            // 
+            this.유저Id.Caption = "유저Id";
+            this.유저Id.FieldName = "userLoginId";
+            this.유저Id.MinWidth = 25;
+            this.유저Id.Name = "유저Id";
+            this.유저Id.Visible = true;
+            this.유저Id.VisibleIndex = 1;
+            this.유저Id.Width = 94;
+            // 
+            // 동물이름
+            // 
+            this.동물이름.Caption = "동물이름";
+            this.동물이름.FieldName = "AnimalName";
+            this.동물이름.MinWidth = 25;
+            this.동물이름.Name = "동물이름";
+            this.동물이름.Visible = true;
+            this.동물이름.VisibleIndex = 4;
+            this.동물이름.Width = 94;
+            // 
+            // 종
+            // 
+            this.종.Caption = "종";
+            this.종.FieldName = "SpeciesName";
+            this.종.MinWidth = 25;
+            this.종.Name = "종";
+            this.종.Visible = true;
+            this.종.VisibleIndex = 0;
+            this.종.Width = 94;
+            // 
+            // 장소
+            // 
+            this.장소.Caption = "장소";
+            this.장소.FieldName = "Place";
+            this.장소.MinWidth = 25;
+            this.장소.Name = "장소";
+            this.장소.Visible = true;
+            this.장소.VisibleIndex = 2;
+            this.장소.Width = 94;
+            // 
+            // 날짜
+            // 
+            this.날짜.Caption = "날짜";
+            this.날짜.FieldName = "Date";
+            this.날짜.MinWidth = 25;
+            this.날짜.Name = "날짜";
+            this.날짜.Visible = true;
+            this.날짜.VisibleIndex = 3;
+            this.날짜.Width = 94;
+            // 
+            // 사진
+            // 
+            this.사진.Caption = "사진";
+            this.사진.FieldName = "PictureLink";
+            this.사진.MinWidth = 25;
+            this.사진.Name = "사진";
+            this.사진.Visible = true;
+            this.사진.VisibleIndex = 5;
+            this.사진.Width = 94;
             // 
             // toolStrip1
             // 
@@ -94,9 +205,9 @@
             this.btnDelete,
             this.btnUpdate,
             this.btnHelp});
-            this.toolStrip1.Location = new System.Drawing.Point(12, 68);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 108);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(722, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(722, 43);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -106,7 +217,7 @@
             this.btnClose.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Close;
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 30);
+            this.btnClose.Size = new System.Drawing.Size(29, 40);
             this.btnClose.Text = "종료";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -116,7 +227,7 @@
             this.btnInsert.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.btnInsert.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(29, 30);
+            this.btnInsert.Size = new System.Drawing.Size(29, 40);
             this.btnInsert.Text = "추가";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -126,7 +237,7 @@
             this.btnEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(29, 30);
+            this.btnEdit.Size = new System.Drawing.Size(29, 40);
             this.btnEdit.Text = "수정";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -136,7 +247,7 @@
             this.btnDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(29, 30);
+            this.btnDelete.Size = new System.Drawing.Size(29, 40);
             this.btnDelete.Text = "삭제";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -146,7 +257,7 @@
             this.btnUpdate.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(29, 30);
+            this.btnUpdate.Size = new System.Drawing.Size(29, 40);
             this.btnUpdate.Text = "업데이트";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -156,13 +267,9 @@
             this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
             this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(29, 30);
+            this.btnHelp.Size = new System.Drawing.Size(29, 40);
             this.btnHelp.Text = "도움말";
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
-            // 
-            // lossReportBindingSource
-            // 
-            this.lossReportBindingSource.DataSource = typeof(AnimalShelterManagementSystem.LossReport);
             // 
             // txeAnimalName
             // 
@@ -190,7 +297,9 @@
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.emptySpaceItem1,
+            this.layoutControlItem6});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(746, 493);
             this.Root.TextVisible = false;
@@ -216,104 +325,37 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.toolStrip1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(726, 37);
+            this.layoutControlItem3.Size = new System.Drawing.Size(726, 47);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // gridControl1
-            // 
-            this.gridControl1.DataSource = this.lossReportBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 105);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(722, 376);
-            this.gridControl1.TabIndex = 9;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.유저Id,
-            this.동물이름,
-            this.종,
-            this.장소,
-            this.날짜,
-            this.사진});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.gridControl1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 93);
+            this.layoutControlItem5.Control = this.grcLossList;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 143);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(726, 380);
+            this.layoutControlItem5.Size = new System.Drawing.Size(726, 330);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // 종
+            // emptySpaceItem1
             // 
-            this.종.Caption = "종";
-            this.종.FieldName = "SpeciesName";
-            this.종.MinWidth = 25;
-            this.종.Name = "종";
-            this.종.Visible = true;
-            this.종.VisibleIndex = 0;
-            this.종.Width = 94;
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 56);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(532, 40);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // 유저Id
+            // layoutControlItem6
             // 
-            this.유저Id.Caption = "유저Id";
-            this.유저Id.FieldName = "userLoginId";
-            this.유저Id.MinWidth = 25;
-            this.유저Id.Name = "유저Id";
-            this.유저Id.Visible = true;
-            this.유저Id.VisibleIndex = 1;
-            this.유저Id.Width = 94;
-            // 
-            // 장소
-            // 
-            this.장소.Caption = "장소";
-            this.장소.FieldName = "Place";
-            this.장소.MinWidth = 25;
-            this.장소.Name = "장소";
-            this.장소.Visible = true;
-            this.장소.VisibleIndex = 2;
-            this.장소.Width = 94;
-            // 
-            // 날짜
-            // 
-            this.날짜.Caption = "날짜";
-            this.날짜.FieldName = "Date";
-            this.날짜.MinWidth = 25;
-            this.날짜.Name = "날짜";
-            this.날짜.Visible = true;
-            this.날짜.VisibleIndex = 3;
-            this.날짜.Width = 94;
-            // 
-            // 동물이름
-            // 
-            this.동물이름.Caption = "동물이름";
-            this.동물이름.FieldName = "AnimalName";
-            this.동물이름.MinWidth = 25;
-            this.동물이름.Name = "동물이름";
-            this.동물이름.Visible = true;
-            this.동물이름.VisibleIndex = 4;
-            this.동물이름.Width = 94;
-            // 
-            // 사진
-            // 
-            this.사진.Caption = "사진";
-            this.사진.FieldName = "PictureLink";
-            this.사진.MinWidth = 25;
-            this.사진.Name = "사진";
-            this.사진.Visible = true;
-            this.사진.VisibleIndex = 5;
-            this.사진.Width = 94;
+            this.layoutControlItem6.Control = this.btnLoad;
+            this.layoutControlItem6.Location = new System.Drawing.Point(532, 56);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(194, 40);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // LossReportListForm
             // 
@@ -328,18 +370,20 @@
             this.Load += new System.EventHandler(this.LossReportListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grcLossList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lossReportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lossReportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAnimalName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeUserId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,7 +405,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.TextEdit txeAnimalName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcLossList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraGrid.Columns.GridColumn 유저Id;
@@ -370,5 +414,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn 장소;
         private DevExpress.XtraGrid.Columns.GridColumn 날짜;
         private DevExpress.XtraGrid.Columns.GridColumn 사진;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.SimpleButton btnLoad;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }

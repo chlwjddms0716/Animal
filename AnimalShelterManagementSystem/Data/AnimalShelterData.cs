@@ -16,15 +16,15 @@ namespace AnimalShelterManagementSystem
             return context.AnimalShelters.FirstOrDefault(a => a.AnimalShelterId == animalShelterId);
         }
 
-        public void Delete(int animalShelterId)
-        {
-            AnimalShelter animalShelter = Get(animalShelterId);
+        //public void Delete(int animalShelterId)
+        //{
+        //    AnimalShelter animalShelter = Get(animalShelterId);
 
-            if (animalShelter == null)
-                return;
+        //    if (animalShelter == null)
+        //        return;
 
-            Delete(animalShelter);
-        }
+        //    Delete(animalShelter);
+        //}
 
         public int GetMaxId()
         {
