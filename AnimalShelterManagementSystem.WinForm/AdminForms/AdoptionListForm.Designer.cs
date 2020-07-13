@@ -36,6 +36,7 @@
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.tsbEdit = new System.Windows.Forms.ToolStripButton();
+            this.btnHelp = new System.Windows.Forms.ToolStripButton();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.adoptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -53,7 +54,6 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnHelp = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -100,6 +100,7 @@
             this.btnLoad.StyleController = this.layoutControl1;
             this.btnLoad.TabIndex = 16;
             this.btnLoad.Text = "검색";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // toolStrip1
             // 
@@ -147,6 +148,16 @@
             this.tsbEdit.Size = new System.Drawing.Size(29, 27);
             this.tsbEdit.Text = "수정";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
+            this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(29, 27);
+            this.btnHelp.Text = "도움말";
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // tsbRefresh
             // 
@@ -319,16 +330,6 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(183, 40);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
-            this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(29, 27);
-            this.btnHelp.Text = "도움말";
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // AdoptionListForm
             // 

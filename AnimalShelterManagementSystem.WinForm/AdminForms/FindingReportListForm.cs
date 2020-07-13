@@ -106,6 +106,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             Close();
         }
 
-      
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
+        }
     }
 }

@@ -14,39 +14,13 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
     public partial class UserListForm : DevExpress.XtraEditors.XtraForm
     {
-        private int AdminCode = 2;
-        private int BlacklistCode = 2;
-        List<User> UserList = new List<User>();
-        List<User> FilteredByName = new List<User>();
-        List<User> FilteredById = new List<User>();    
-        List<User> FilteredByAdmin = new List<User>();
-        List<User> FilteredByBlacklist = new List<User>();
-      
+
         public UserListForm()
         {
             InitializeComponent();
-
         }
-       
+
         private void UserManagement_Load(object sender, EventArgs e)
-        {
-            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
-
-        }
-        private void txbName_TextChanged(object sender, EventArgs e)
-        {
-            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
-        }
-        private void txbId_TextChanged(object sender, EventArgs e)
-        {
-            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
-        }
-        private void rdgAdmin_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
-        }
-
-        private void rdgBlacklist_SelectedIndexChanged(object sender, EventArgs e)
         {
             userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
         }
@@ -91,14 +65,19 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             Cursor = Cursors.Arrow;
         }
 
-        private void tsbRefresh_Click(object sender, EventArgs e)
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://kimgwajang.tistory.com/guestbook");
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
         {
             userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
         }
 
-        private void btnHelp_Click(object sender, EventArgs e)
+        private void tsbRefresh_Click(object sender, EventArgs e)
         {
-            Process.Start("https://kimgwajang.tistory.com/guestbook");
+            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
         }
     }
 }

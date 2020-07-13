@@ -48,6 +48,7 @@
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.tsbEdit = new System.Windows.Forms.ToolStripButton();
+            this.btnHelp = new System.Windows.Forms.ToolStripButton();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.rdgAdmin = new DevExpress.XtraEditors.RadioGroup();
             this.rdgBlacklist = new DevExpress.XtraEditors.RadioGroup();
@@ -62,7 +63,6 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.btnHelp = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -113,6 +113,7 @@
             this.btnLoad.StyleController = this.layoutControl1;
             this.btnLoad.TabIndex = 17;
             this.btnLoad.Text = "검색";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // gridControl1
             // 
@@ -282,6 +283,16 @@
             this.tsbEdit.Text = "수정";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
+            // btnHelp
+            // 
+            this.btnHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
+            this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(29, 29);
+            this.btnHelp.Text = "도움말";
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            // 
             // tsbRefresh
             // 
             this.tsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -305,7 +316,6 @@
             this.rdgAdmin.Size = new System.Drawing.Size(706, 30);
             this.rdgAdmin.StyleController = this.layoutControl1;
             this.rdgAdmin.TabIndex = 11;
-            this.rdgAdmin.SelectedIndexChanged += new System.EventHandler(this.rdgAdmin_SelectedIndexChanged);
             // 
             // rdgBlacklist
             // 
@@ -320,7 +330,6 @@
             this.rdgBlacklist.Size = new System.Drawing.Size(706, 30);
             this.rdgBlacklist.StyleController = this.layoutControl1;
             this.rdgBlacklist.TabIndex = 11;
-            this.rdgBlacklist.SelectedIndexChanged += new System.EventHandler(this.rdgBlacklist_SelectedIndexChanged);
             // 
             // txbName
             // 
@@ -329,7 +338,6 @@
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(706, 25);
             this.txbName.TabIndex = 6;
-            this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
             // txbId
             // 
@@ -338,7 +346,6 @@
             this.txbId.Name = "txbId";
             this.txbId.Size = new System.Drawing.Size(706, 25);
             this.txbId.TabIndex = 6;
-            this.txbId.TextChanged += new System.EventHandler(this.txbId_TextChanged);
             // 
             // Root
             // 
@@ -436,16 +443,6 @@
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(569, 40);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
-            this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(29, 29);
-            this.btnHelp.Text = "도움말";
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // UserListForm
             // 

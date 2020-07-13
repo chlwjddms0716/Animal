@@ -15,7 +15,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
     public partial class AdoptionListForm : DevExpress.XtraEditors.XtraForm
     {
-        private int currentStatus = 3;
+
         Adoption adoption = new Adoption();
 
         public AdoptionListForm()
@@ -35,18 +35,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             List<Adoption> adoptions = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
             adoptionBindingSource.DataSource = adoptions;
-
-            //if (String.Equals(txeId.Text, "") == false)
-            //    FilteredById = adoptionList.Where(x => x.userLoginId.Contains(txeId.Text) == true).ToList();
-            //else
-            //    FilteredById = adoptionList;
-
-            //if (currentStatus != 3) //전체
-            //    FilteredByAdoptionStatus = FilteredById.Where(x => x.AdoptionStatus == (AdoptionStatusType)currentStatus).ToList();
-            //else
-            //    FilteredByAdoptionStatus = FilteredById;
-            //adoptionBindingSource.DataSource = FilteredByAdoptionStatus.Where(x => x.AdoptionStatus != 0);
-
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
@@ -118,6 +106,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void btnHelp_Click(object sender, EventArgs e)
         {
             Process.Start("https://kimgwajang.tistory.com/guestbook");
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            adoptionBindingSource.DataSource = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
         }
     }
 }

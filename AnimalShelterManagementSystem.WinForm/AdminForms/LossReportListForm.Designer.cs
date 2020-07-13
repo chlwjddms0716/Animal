@@ -102,6 +102,7 @@
             this.btnLoad.StyleController = this.layoutControl1;
             this.btnLoad.TabIndex = 17;
             this.btnLoad.Text = "검색";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // gridControl1
             // 
