@@ -186,6 +186,7 @@
             this.tsbAdd.Name = "tsbAdd";
             this.tsbAdd.Size = new System.Drawing.Size(29, 39);
             this.tsbAdd.Text = "추가";
+            this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
             // tsbDelete
             // 
