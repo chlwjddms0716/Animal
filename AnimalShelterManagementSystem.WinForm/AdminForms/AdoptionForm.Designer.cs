@@ -96,7 +96,7 @@
             this.btnSave.Location = new System.Drawing.Point(165, 130);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(174, 34);
+            this.btnSave.Size = new System.Drawing.Size(174, 32);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "확인";
@@ -109,7 +109,7 @@
             this.btnClose.Location = new System.Drawing.Point(12, 130);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(149, 34);
+            this.btnClose.Size = new System.Drawing.Size(149, 32);
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "취소";
@@ -175,9 +175,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 156);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 154);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(331, 50);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(331, 52);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -194,7 +194,7 @@
             this.layoutControlItem7.Control = this.btnClose;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 118);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(153, 38);
+            this.layoutControlItem7.Size = new System.Drawing.Size(153, 36);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -203,7 +203,7 @@
             this.layoutControlItem11.Control = this.btnSave;
             this.layoutControlItem11.Location = new System.Drawing.Point(153, 118);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(178, 38);
+            this.layoutControlItem11.Size = new System.Drawing.Size(178, 36);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 

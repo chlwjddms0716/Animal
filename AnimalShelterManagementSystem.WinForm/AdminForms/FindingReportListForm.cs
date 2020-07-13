@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class FindingManagementForm : DevExpress.XtraEditors.XtraForm
+    public partial class FindingReportListForm : DevExpress.XtraEditors.XtraForm
     {
         List<FindingReport> findingReports;
         List<FindingReport> filterBySpecies;
         List<FindingReport> filterByDate;
         List<FindingReport> filterByPlace;
         private int SpeciesCode;
-        public FindingManagementForm()
+        public FindingReportListForm()
         {
             InitializeComponent();
             cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));

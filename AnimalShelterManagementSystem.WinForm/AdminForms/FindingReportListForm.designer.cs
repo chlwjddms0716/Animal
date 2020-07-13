@@ -1,6 +1,6 @@
 ﻿namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    partial class FindingManagementForm
+    partial class FindingReportListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.findingReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.종 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.장소 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.날짜 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.보호여부 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbAdd = new System.Windows.Forms.ToolStripButton();
+            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
+            this.tsbEdit = new System.Windows.Forms.ToolStripButton();
+            this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.cbxSpecies = new System.Windows.Forms.ComboBox();
             this.btnFindingReport = new DevExpress.XtraEditors.SimpleButton();
             this.txbPlace = new System.Windows.Forms.TextBox();
             this.dteFoundDateFrom = new DevExpress.XtraEditors.DateEdit();
             this.dteFoundDateTo = new DevExpress.XtraEditors.DateEdit();
-            this.grvAdoptionList = new System.Windows.Forms.DataGridView();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -44,26 +54,18 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.list = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tsbAdd = new System.Windows.Forms.ToolStripButton();
-            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
-            this.tsbEdit = new System.Windows.Forms.ToolStripButton();
-            this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
-            this.speciesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isInShelterDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.findingReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.findingReportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateTo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvAdoptionList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -71,21 +73,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.findingReportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.toolStrip1);
             this.layoutControl1.Controls.Add(this.cbxSpecies);
             this.layoutControl1.Controls.Add(this.btnFindingReport);
             this.layoutControl1.Controls.Add(this.txbPlace);
             this.layoutControl1.Controls.Add(this.dteFoundDateFrom);
             this.layoutControl1.Controls.Add(this.dteFoundDateTo);
-            this.layoutControl1.Controls.Add(this.grvAdoptionList);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -95,6 +95,68 @@
             this.layoutControl1.Size = new System.Drawing.Size(800, 540);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.findingReportBindingSource;
+            this.gridControl1.Location = new System.Drawing.Point(12, 145);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(776, 347);
+            this.gridControl1.TabIndex = 19;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // findingReportBindingSource
+            // 
+            this.findingReportBindingSource.DataSource = typeof(AnimalShelterManagementSystem.FindingReport);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.종,
+            this.장소,
+            this.날짜,
+            this.보호여부});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // 종
+            // 
+            this.종.FieldName = "SpeciesName";
+            this.종.MinWidth = 25;
+            this.종.Name = "종";
+            this.종.Visible = true;
+            this.종.VisibleIndex = 0;
+            this.종.Width = 94;
+            // 
+            // 장소
+            // 
+            this.장소.FieldName = "Place";
+            this.장소.MinWidth = 25;
+            this.장소.Name = "장소";
+            this.장소.Visible = true;
+            this.장소.VisibleIndex = 1;
+            this.장소.Width = 94;
+            // 
+            // 날짜
+            // 
+            this.날짜.FieldName = "Date";
+            this.날짜.MinWidth = 25;
+            this.날짜.Name = "날짜";
+            this.날짜.Visible = true;
+            this.날짜.VisibleIndex = 2;
+            this.날짜.Width = 94;
+            // 
+            // 보호여부
+            // 
+            this.보호여부.FieldName = "IsInShelter";
+            this.보호여부.MinWidth = 25;
+            this.보호여부.Name = "보호여부";
+            this.보호여부.Visible = true;
+            this.보호여부.VisibleIndex = 3;
+            this.보호여부.Width = 94;
             // 
             // toolStrip1
             // 
@@ -108,9 +170,48 @@
             this.tsbRefresh});
             this.toolStrip1.Location = new System.Drawing.Point(12, 99);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(776, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(776, 42);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tsbAdd
+            // 
+            this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
+            this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAdd.Name = "tsbAdd";
+            this.tsbAdd.Size = new System.Drawing.Size(29, 39);
+            this.tsbAdd.Text = "추가";
+            // 
+            // tsbDelete
+            // 
+            this.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
+            this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDelete.Name = "tsbDelete";
+            this.tsbDelete.Size = new System.Drawing.Size(29, 39);
+            this.tsbDelete.Text = "삭제";
+            this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
+            // 
+            // tsbEdit
+            // 
+            this.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
+            this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEdit.Name = "tsbEdit";
+            this.tsbEdit.Size = new System.Drawing.Size(29, 39);
+            this.tsbEdit.Text = "수정";
+            this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
+            // 
+            // tsbRefresh
+            // 
+            this.tsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
+            this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRefresh.Name = "tsbRefresh";
+            this.tsbRefresh.Size = new System.Drawing.Size(29, 39);
+            this.tsbRefresh.Text = "새로고침";
+            this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
             // cbxSpecies
             // 
@@ -127,10 +228,10 @@
             // 
             this.btnFindingReport.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnFindingReport.Appearance.Options.UseFont = true;
-            this.btnFindingReport.Location = new System.Drawing.Point(601, 494);
+            this.btnFindingReport.Location = new System.Drawing.Point(601, 496);
             this.btnFindingReport.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnFindingReport.Name = "btnFindingReport";
-            this.btnFindingReport.Size = new System.Drawing.Size(187, 34);
+            this.btnFindingReport.Size = new System.Drawing.Size(187, 32);
             this.btnFindingReport.StyleController = this.layoutControl1;
             this.btnFindingReport.TabIndex = 9;
             this.btnFindingReport.Text = "확인";
@@ -175,31 +276,6 @@
             this.dteFoundDateTo.TabIndex = 10;
             this.dteFoundDateTo.EditValueChanged += new System.EventHandler(this.dteFoundDateTo_EditValueChanged);
             // 
-            // grvAdoptionList
-            // 
-            this.grvAdoptionList.AllowUserToAddRows = false;
-            this.grvAdoptionList.AllowUserToDeleteRows = false;
-            this.grvAdoptionList.AllowUserToOrderColumns = true;
-            this.grvAdoptionList.AutoGenerateColumns = false;
-            this.grvAdoptionList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grvAdoptionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvAdoptionList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.speciesDataGridViewTextBoxColumn,
-            this.placeDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn,
-            this.isInShelterDataGridViewCheckBoxColumn});
-            this.grvAdoptionList.DataSource = this.findingReportBindingSource;
-            this.grvAdoptionList.Location = new System.Drawing.Point(102, 129);
-            this.grvAdoptionList.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.grvAdoptionList.Name = "grvAdoptionList";
-            this.grvAdoptionList.ReadOnly = true;
-            this.grvAdoptionList.RowHeadersVisible = false;
-            this.grvAdoptionList.RowHeadersWidth = 51;
-            this.grvAdoptionList.RowTemplate.Height = 27;
-            this.grvAdoptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvAdoptionList.Size = new System.Drawing.Size(686, 348);
-            this.grvAdoptionList.TabIndex = 5;
-            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -211,9 +287,8 @@
             this.layoutControlItem3,
             this.emptySpaceItem2,
             this.layoutControlItem4,
-            this.list,
-            this.emptySpaceItem1,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.layoutControlItem7});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(800, 540);
             this.Root.TextVisible = false;
@@ -262,125 +337,39 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 482);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 484);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(589, 38);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(589, 36);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnFindingReport;
-            this.layoutControlItem4.Location = new System.Drawing.Point(589, 482);
+            this.layoutControlItem4.Location = new System.Drawing.Point(589, 484);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(191, 38);
+            this.layoutControlItem4.Size = new System.Drawing.Size(191, 36);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // list
-            // 
-            this.list.Control = this.grvAdoptionList;
-            this.list.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.list.CustomizationFormText = "리스트";
-            this.list.Location = new System.Drawing.Point(0, 117);
-            this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(780, 352);
-            this.list.Text = "리스트";
-            this.list.TextSize = new System.Drawing.Size(87, 18);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 469);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(780, 13);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.toolStrip1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 87);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(780, 30);
+            this.layoutControlItem5.Size = new System.Drawing.Size(780, 46);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // tsbAdd
+            // layoutControlItem7
             // 
-            this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
-            this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(29, 23);
-            this.tsbAdd.Text = "추가";
-  //          this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
+            this.layoutControlItem7.Control = this.gridControl1;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 133);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(780, 351);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
             // 
-            // tsbDelete
-            // 
-            this.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
-            this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(29, 23);
-            this.tsbDelete.Text = "삭제";
-            this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
-            // 
-            // tsbEdit
-            // 
-            this.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
-            this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(29, 23);
-            this.tsbEdit.Text = "수정";
-            this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
-            // 
-            // tsbRefresh
-            // 
-            this.tsbRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
-            this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(29, 23);
-            this.tsbRefresh.Text = "새로고침";
-            this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
-            // 
-            // speciesDataGridViewTextBoxColumn
-            // 
-            this.speciesDataGridViewTextBoxColumn.DataPropertyName = "SpeciesName";
-            this.speciesDataGridViewTextBoxColumn.HeaderText = "종";
-            this.speciesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.speciesDataGridViewTextBoxColumn.Name = "speciesDataGridViewTextBoxColumn";
-            this.speciesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // placeDataGridViewTextBoxColumn
-            // 
-            this.placeDataGridViewTextBoxColumn.DataPropertyName = "Place";
-            this.placeDataGridViewTextBoxColumn.HeaderText = "장소";
-            this.placeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.placeDataGridViewTextBoxColumn.Name = "placeDataGridViewTextBoxColumn";
-            this.placeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "날짜";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // isInShelterDataGridViewCheckBoxColumn
-            // 
-            this.isInShelterDataGridViewCheckBoxColumn.DataPropertyName = "IsInShelter";
-            this.isInShelterDataGridViewCheckBoxColumn.HeaderText = "보호 여부";
-            this.isInShelterDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.isInShelterDataGridViewCheckBoxColumn.Name = "isInShelterDataGridViewCheckBoxColumn";
-            this.isInShelterDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // findingReportBindingSource
-            // 
-            this.findingReportBindingSource.DataSource = typeof(AnimalShelterManagementSystem.FindingReport);
-            // 
-            // FindingManagementForm
+            // FindingReportListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -388,17 +377,19 @@
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FindingManagementForm";
+            this.Name = "FindingReportListForm";
             this.Text = "발견신고리스트";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.findingReportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateTo.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteFoundDateTo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvAdoptionList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -406,10 +397,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.list)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.findingReportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,7 +410,6 @@
         private DevExpress.XtraEditors.SimpleButton btnFindingReport;
         private System.Windows.Forms.TextBox txbPlace;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
@@ -430,8 +418,6 @@
         private DevExpress.XtraEditors.DateEdit dteFoundDateTo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private System.Windows.Forms.DataGridView grvAdoptionList;
-        private DevExpress.XtraLayout.LayoutControlItem list;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbAdd;
         private System.Windows.Forms.ToolStripButton tsbDelete;
@@ -439,9 +425,12 @@
         private System.Windows.Forms.ToolStripButton tsbRefresh;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private System.Windows.Forms.BindingSource findingReportBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn speciesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn isInShelterDataGridViewCheckBoxColumn;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn 종;
+        private DevExpress.XtraGrid.Columns.GridColumn 장소;
+        private DevExpress.XtraGrid.Columns.GridColumn 날짜;
+        private DevExpress.XtraGrid.Columns.GridColumn 보호여부;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }
