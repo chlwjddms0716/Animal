@@ -128,8 +128,7 @@
 
 - C# 쿼리문으로 매핑 테이블에 접근, 조인해서 해결  
 　    
-![Query](query.png)
-
+![query](https://user-images.githubusercontent.com/63761486/87262464-fa61d000-c4f4-11ea-9ed9-dd45cf1e5ed9.png)
 　  
 
 ### 여러 곳에서 작업한 결과를 병합하는 중에 생기는 문제
@@ -146,10 +145,11 @@
 
 
 ### 프리웨어 사용시 팝업광고가 발생하는 문제
-<img src="file.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img>
+
 
 ------------------------------
-#### 증상
+#### 증상   
+![file](https://user-images.githubusercontent.com/63761486/87262451-f0d86800-c4f4-11ea-9219-714682b3b6fd.png)
  - 3rd party control 중 하나인 Devexpress를 사용하면 프로그램을 실행할 때 마다 devexpress 확장판 구매 독려 광고가 나타남
 
 #### 원인
@@ -158,8 +158,7 @@
 #### 결과
  - 광고 제거 기능 소스코드를 응용하여 입양관리시스템에 devexpress 광고 제거 기능을 추가함  
 　  
- ![Source](Source.png)
-
+![Source](https://user-images.githubusercontent.com/63761486/87262470-0057b100-c4f5-11ea-8216-6ec4b889f780.png)
 
 
 
