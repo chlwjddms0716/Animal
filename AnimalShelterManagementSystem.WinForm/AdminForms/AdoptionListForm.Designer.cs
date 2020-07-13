@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.dataGridViewEx1 = new AnimalShelterManagementSystem.WinForm.Controls.DataGridViewEx();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
@@ -48,10 +49,10 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dataGridViewEx1 = new AnimalShelterManagementSystem.WinForm.Controls.DataGridViewEx();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvAdoptionList)).BeginInit();
@@ -62,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,9 +78,24 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(639, 454);
+            this.layoutControl1.Size = new System.Drawing.Size(941, 563);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // dataGridViewEx1
+            // 
+            this.dataGridViewEx1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewEx1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEx1.Location = new System.Drawing.Point(139, 525);
+            this.dataGridViewEx1.MultiSelect = false;
+            this.dataGridViewEx1.Name = "dataGridViewEx1";
+            this.dataGridViewEx1.ReadOnly = true;
+            this.dataGridViewEx1.RowHeadersVisible = false;
+            this.dataGridViewEx1.RowHeadersWidth = 51;
+            this.dataGridViewEx1.RowTemplate.Height = 27;
+            this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewEx1.Size = new System.Drawing.Size(790, 26);
+            this.dataGridViewEx1.TabIndex = 13;
             // 
             // toolStrip1
             // 
@@ -92,9 +107,9 @@
             this.tsbDelete,
             this.tsbEdit,
             this.tsbRefresh});
-            this.toolStrip1.Location = new System.Drawing.Point(12, 74);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 83);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(615, 24);
+            this.toolStrip1.Size = new System.Drawing.Size(917, 32);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -104,7 +119,7 @@
             this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(29, 21);
+            this.tsbAdd.Size = new System.Drawing.Size(29, 29);
             this.tsbAdd.Text = "추가";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -114,7 +129,7 @@
             this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(29, 21);
+            this.tsbDelete.Size = new System.Drawing.Size(29, 29);
             this.tsbDelete.Text = "삭제";
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
@@ -124,7 +139,7 @@
             this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(29, 21);
+            this.tsbEdit.Size = new System.Drawing.Size(29, 29);
             this.tsbEdit.Text = "수정";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
@@ -134,7 +149,7 @@
             this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(29, 21);
+            this.tsbRefresh.Size = new System.Drawing.Size(29, 29);
             this.tsbRefresh.Text = "새로고침";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
@@ -143,7 +158,7 @@
             this.txeId.Location = new System.Drawing.Point(139, 12);
             this.txeId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeId.Name = "txeId";
-            this.txeId.Size = new System.Drawing.Size(488, 24);
+            this.txeId.Size = new System.Drawing.Size(790, 24);
             this.txeId.StyleController = this.layoutControl1;
             this.txeId.TabIndex = 8;
             this.txeId.TextChanged += new System.EventHandler(this.txeId_TextChanged);
@@ -162,7 +177,7 @@
             this.animalNameDataGridViewTextBoxColumn,
             this.adoptionStatusDataGridViewTextBoxColumn});
             this.grvAdoptionList.DataSource = this.adoptionBindingSource;
-            this.grvAdoptionList.Location = new System.Drawing.Point(139, 102);
+            this.grvAdoptionList.Location = new System.Drawing.Point(139, 119);
             this.grvAdoptionList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grvAdoptionList.Name = "grvAdoptionList";
             this.grvAdoptionList.ReadOnly = true;
@@ -170,7 +185,7 @@
             this.grvAdoptionList.RowHeadersWidth = 51;
             this.grvAdoptionList.RowTemplate.Height = 27;
             this.grvAdoptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvAdoptionList.Size = new System.Drawing.Size(488, 316);
+            this.grvAdoptionList.Size = new System.Drawing.Size(790, 402);
             this.grvAdoptionList.TabIndex = 5;
             // 
             // adoptionDateDataGridViewTextBoxColumn
@@ -219,7 +234,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "전체", true, null, ""),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "처리중"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "입양됨")});
-            this.rdgAdoptionStatus.Size = new System.Drawing.Size(488, 30);
+            this.rdgAdoptionStatus.Size = new System.Drawing.Size(790, 39);
             this.rdgAdoptionStatus.StyleController = this.layoutControl1;
             this.rdgAdoptionStatus.TabIndex = 11;
             this.rdgAdoptionStatus.SelectedIndexChanged += new System.EventHandler(this.rdgAdoptionStatus_SelectedIndexChanged);
@@ -235,15 +250,15 @@
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(639, 454);
+            this.Root.Size = new System.Drawing.Size(941, 563);
             this.Root.TextVisible = false;
             // 
             // list
             // 
             this.list.Control = this.grvAdoptionList;
-            this.list.Location = new System.Drawing.Point(0, 90);
+            this.list.Location = new System.Drawing.Point(0, 107);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(619, 320);
+            this.list.Size = new System.Drawing.Size(921, 406);
             this.list.Text = "리스트";
             this.list.TextSize = new System.Drawing.Size(124, 18);
             // 
@@ -252,7 +267,7 @@
             this.layoutControlItem1.Control = this.txeId;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(619, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(921, 28);
             this.layoutControlItem1.Text = " 유저이름:";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(124, 18);
             // 
@@ -263,47 +278,32 @@
             this.layoutControlItem10.CustomizationFormText = "블랙리스트";
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(619, 34);
+            this.layoutControlItem10.Size = new System.Drawing.Size(921, 43);
             this.layoutControlItem10.Text = " 입양상태: ";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(124, 18);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.toolStrip1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 62);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 71);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(619, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(921, 36);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
-            // 
-            // dataGridViewEx1
-            // 
-            this.dataGridViewEx1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewEx1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEx1.Location = new System.Drawing.Point(139, 422);
-            this.dataGridViewEx1.MultiSelect = false;
-            this.dataGridViewEx1.Name = "dataGridViewEx1";
-            this.dataGridViewEx1.ReadOnly = true;
-            this.dataGridViewEx1.RowHeadersVisible = false;
-            this.dataGridViewEx1.RowHeadersWidth = 51;
-            this.dataGridViewEx1.RowTemplate.Height = 27;
-            this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEx1.Size = new System.Drawing.Size(488, 20);
-            this.dataGridViewEx1.TabIndex = 13;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.dataGridViewEx1;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 410);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 513);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(619, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(921, 30);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(124, 18);
             // 
             // AdoptionListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 454);
+            this.ClientSize = new System.Drawing.Size(941, 563);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -313,6 +313,7 @@
             this.Load += new System.EventHandler(this.AdoptionManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).EndInit();
@@ -324,7 +325,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
