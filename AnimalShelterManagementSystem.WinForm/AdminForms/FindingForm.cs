@@ -1,5 +1,6 @@
 ﻿using AnimalShelterManagementSystem.Data;
 using AnimalShelterManagementSystem.Models;
+using AnimalShelterManagementSystem.WinForm.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
     public partial class FindingForm : DevExpress.XtraEditors.XtraForm
     {
         private FindingReport findingReport;
+        private bool WasInShelter;
         public FindingForm()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             dteDate.DateTime = findingReport.Date;
             txbPlace.Text = findingReport.Place;
             rdgIsInShelter.EditValue = findingReport.IsInShelter? 1 : 0;
+            WasInShelter = findingReport.IsInShelter;
             btnAdd.Enabled = false;
         }
 
@@ -45,12 +48,14 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            WasInShelter = true;
             findingReport.FindingReportId = DataRepository.FindingReport.GetMaxId() + 1;
             findingReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
             findingReport.Date = dteDate.DateTime;
             findingReport.Place = txbPlace.Text;
             findingReport.IsInShelter = Convert.ToBoolean(rdgIsInShelter.EditValue);
             DataRepository.FindingReport.Insert(findingReport);
+            LoadHomelessAnimal();
             Close();
             return;
 
@@ -64,6 +69,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             findingReport.Place = txbPlace.Text;
             findingReport.IsInShelter = Convert.ToBoolean(rdgIsInShelter.EditValue);
             DataRepository.FindingReport.Update(findingReport);
+            LoadHomelessAnimal();
             Close();
             return;
 
@@ -72,6 +78,15 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void FindingForm_Load(object sender, EventArgs e)
         {
             cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+        }
+
+        private void LoadHomelessAnimal()
+        {
+            if (findingReport.IsInShelter == true && WasInShelter == false)
+            {
+                HomelessAnimalForm homelessAnimalForm = new HomelessAnimalForm(findingReport);
+                homelessAnimalForm.ShowDialog();
+            }
         }
     }
 }
