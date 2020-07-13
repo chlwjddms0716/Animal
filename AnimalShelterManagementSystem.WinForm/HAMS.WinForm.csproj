@@ -79,6 +79,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForms\AdminAnimalImage.cs" />
+    <Compile Include="AdminForms\AdminAnimalImage.Designer.cs">
+      <DependentUpon>AdminAnimalImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\AdoptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +192,10 @@
     <Compile Include="UserControl\SearchControl.designer.cs">
       <DependentUpon>SearchControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserForms\AnimalImage.cs" />
+    <Compile Include="UserForms\AnimalImage.Designer.cs">
+      <DependentUpon>AnimalImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserForms\EditUserInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +246,9 @@
     <Compile Include="UserForms\LossReportForm.designer.cs">
       <DependentUpon>LossReportForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminForms\AdminAnimalImage.resx">
+      <DependentUpon>AdminAnimalImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdoptionForm.resx">
       <DependentUpon>AdoptionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\AnimalImage.resx">
+      <DependentUpon>AnimalImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserForms\EditUserInformation.resx">
       <DependentUpon>EditUserInformation.cs</DependentUpon>
