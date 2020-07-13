@@ -88,11 +88,11 @@
             this.layoutControl1.Controls.Add(this.grvAdoptionList);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(869, 123, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1000, 660);
+            this.layoutControl1.Size = new System.Drawing.Size(800, 540);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -106,9 +106,9 @@
             this.tsbDelete,
             this.tsbEdit,
             this.tsbRefresh});
-            this.toolStrip1.Location = new System.Drawing.Point(14, 115);
+            this.toolStrip1.Location = new System.Drawing.Point(10, 97);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(972, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(780, 26);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -118,7 +118,7 @@
             this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(34, 28);
+            this.tsbAdd.Size = new System.Drawing.Size(29, 23);
             this.tsbAdd.Text = "추가";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -128,7 +128,7 @@
             this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(34, 28);
+            this.tsbDelete.Size = new System.Drawing.Size(29, 23);
             this.tsbDelete.Text = "삭제";
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
@@ -138,7 +138,7 @@
             this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(34, 28);
+            this.tsbEdit.Size = new System.Drawing.Size(29, 23);
             this.tsbEdit.Text = "수정";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
@@ -148,7 +148,7 @@
             this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(34, 28);
+            this.tsbRefresh.Size = new System.Drawing.Size(29, 23);
             this.tsbRefresh.Text = "새로고침";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
@@ -156,19 +156,19 @@
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(112, 14);
-            this.cbxSpecies.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.cbxSpecies.Location = new System.Drawing.Point(99, 10);
+            this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(874, 30);
+            this.cbxSpecies.Size = new System.Drawing.Size(691, 26);
             this.cbxSpecies.TabIndex = 16;
             this.cbxSpecies.SelectedIndexChanged += new System.EventHandler(this.cbxSpecies_SelectedIndexChanged);
             // 
             // btnFindingReport
             // 
-            this.btnFindingReport.Location = new System.Drawing.Point(620, 614);
-            this.btnFindingReport.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnFindingReport.Location = new System.Drawing.Point(602, 503);
+            this.btnFindingReport.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnFindingReport.Name = "btnFindingReport";
-            this.btnFindingReport.Size = new System.Drawing.Size(366, 32);
+            this.btnFindingReport.Size = new System.Drawing.Size(188, 27);
             this.btnFindingReport.StyleController = this.layoutControl1;
             this.btnFindingReport.TabIndex = 9;
             this.btnFindingReport.Text = "확인";
@@ -176,24 +176,24 @@
             // 
             // txbPlace
             // 
-            this.txbPlace.Location = new System.Drawing.Point(112, 81);
-            this.txbPlace.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txbPlace.Location = new System.Drawing.Point(99, 68);
+            this.txbPlace.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txbPlace.Name = "txbPlace";
-            this.txbPlace.Size = new System.Drawing.Size(874, 30);
+            this.txbPlace.Size = new System.Drawing.Size(691, 25);
             this.txbPlace.TabIndex = 6;
             this.txbPlace.TextChanged += new System.EventHandler(this.txbPlace_TextChanged);
             // 
             // dteFoundDateFrom
             // 
             this.dteFoundDateFrom.EditValue = null;
-            this.dteFoundDateFrom.Location = new System.Drawing.Point(112, 49);
-            this.dteFoundDateFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dteFoundDateFrom.Location = new System.Drawing.Point(99, 40);
+            this.dteFoundDateFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dteFoundDateFrom.Name = "dteFoundDateFrom";
             this.dteFoundDateFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteFoundDateFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteFoundDateFrom.Size = new System.Drawing.Size(302, 28);
+            this.dteFoundDateFrom.Size = new System.Drawing.Size(301, 24);
             this.dteFoundDateFrom.StyleController = this.layoutControl1;
             this.dteFoundDateFrom.TabIndex = 9;
             this.dteFoundDateFrom.EditValueChanged += new System.EventHandler(this.dteFoundDateFrom_EditValueChanged);
@@ -201,14 +201,14 @@
             // dteFoundDateTo
             // 
             this.dteFoundDateTo.EditValue = "";
-            this.dteFoundDateTo.Location = new System.Drawing.Point(516, 49);
-            this.dteFoundDateTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dteFoundDateTo.Location = new System.Drawing.Point(493, 40);
+            this.dteFoundDateTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dteFoundDateTo.Name = "dteFoundDateTo";
             this.dteFoundDateTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dteFoundDateTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteFoundDateTo.Size = new System.Drawing.Size(470, 28);
+            this.dteFoundDateTo.Size = new System.Drawing.Size(297, 24);
             this.dteFoundDateTo.StyleController = this.layoutControl1;
             this.dteFoundDateTo.TabIndex = 10;
             this.dteFoundDateTo.EditValueChanged += new System.EventHandler(this.dteFoundDateTo_EditValueChanged);
@@ -227,15 +227,15 @@
             this.dateDataGridViewTextBoxColumn,
             this.isInShelterDataGridViewCheckBoxColumn});
             this.grvAdoptionList.DataSource = this.findingReportBindingSource;
-            this.grvAdoptionList.Location = new System.Drawing.Point(112, 152);
-            this.grvAdoptionList.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.grvAdoptionList.Location = new System.Drawing.Point(99, 127);
+            this.grvAdoptionList.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.grvAdoptionList.Name = "grvAdoptionList";
             this.grvAdoptionList.ReadOnly = true;
             this.grvAdoptionList.RowHeadersVisible = false;
             this.grvAdoptionList.RowHeadersWidth = 51;
             this.grvAdoptionList.RowTemplate.Height = 27;
             this.grvAdoptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvAdoptionList.Size = new System.Drawing.Size(874, 430);
+            this.grvAdoptionList.Size = new System.Drawing.Size(691, 351);
             this.grvAdoptionList.TabIndex = 5;
             // 
             // speciesDataGridViewTextBoxColumn
@@ -289,7 +289,7 @@
             this.emptySpaceItem1,
             this.layoutControlItem5});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1000, 660);
+            this.Root.Size = new System.Drawing.Size(800, 540);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem9
@@ -298,55 +298,55 @@
             this.layoutControlItem9.CustomizationFormText = " 종 :";
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(976, 35);
+            this.layoutControlItem9.Size = new System.Drawing.Size(784, 30);
             this.layoutControlItem9.Text = " 종 :";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(94, 22);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(87, 18);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.dteFoundDateFrom;
             this.layoutControlItem1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem1.CustomizationFormText = "신고일(부터)";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 35);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(404, 32);
+            this.layoutControlItem1.Size = new System.Drawing.Size(394, 28);
             this.layoutControlItem1.Text = " 찾는 기간 :";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(94, 22);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(87, 18);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.dteFoundDateTo;
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "신고일(까지)";
-            this.layoutControlItem2.Location = new System.Drawing.Point(404, 35);
+            this.layoutControlItem2.Location = new System.Drawing.Point(394, 30);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(572, 32);
+            this.layoutControlItem2.Size = new System.Drawing.Size(390, 28);
             this.layoutControlItem2.Text = " ~";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(94, 22);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(87, 18);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txbPlace;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 67);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 58);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(976, 34);
+            this.layoutControlItem3.Size = new System.Drawing.Size(784, 29);
             this.layoutControlItem3.Text = " 발견 장소 :   ";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(94, 22);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(87, 18);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 600);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 493);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(606, 36);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(592, 31);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnFindingReport;
-            this.layoutControlItem4.Location = new System.Drawing.Point(606, 600);
+            this.layoutControlItem4.Location = new System.Drawing.Point(592, 493);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(370, 36);
+            this.layoutControlItem4.Size = new System.Drawing.Size(192, 31);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -355,37 +355,37 @@
             this.list.Control = this.grvAdoptionList;
             this.list.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.list.CustomizationFormText = "리스트";
-            this.list.Location = new System.Drawing.Point(0, 138);
+            this.list.Location = new System.Drawing.Point(0, 117);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(976, 434);
+            this.list.Size = new System.Drawing.Size(784, 355);
             this.list.Text = "리스트";
-            this.list.TextSize = new System.Drawing.Size(94, 22);
+            this.list.TextSize = new System.Drawing.Size(87, 18);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 572);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 472);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(976, 28);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(784, 21);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.toolStrip1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 101);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 87);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(976, 37);
+            this.layoutControlItem5.Size = new System.Drawing.Size(784, 30);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // FindingManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 660);
+            this.ClientSize = new System.Drawing.Size(800, 540);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FindingManagementForm";
             this.Text = "발견신고리스트";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
