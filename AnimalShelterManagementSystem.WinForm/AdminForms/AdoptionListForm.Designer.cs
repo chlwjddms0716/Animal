@@ -108,6 +108,7 @@
             // 
             // 유저Id
             // 
+            this.유저Id.Caption = "유저Id";
             this.유저Id.FieldName = "userLoginId";
             this.유저Id.MinWidth = 25;
             this.유저Id.Name = "유저Id";
@@ -117,6 +118,7 @@
             // 
             // 동물이름
             // 
+            this.동물이름.Caption = "동물이름";
             this.동물이름.FieldName = "AnimalName";
             this.동물이름.MinWidth = 25;
             this.동물이름.Name = "동물이름";
@@ -126,7 +128,8 @@
             // 
             // 입양상태
             // 
-            this.입양상태.FieldName = "AdoptionStatus";
+            this.입양상태.Caption = "입양상태";
+            this.입양상태.FieldName = "userLoginId";
             this.입양상태.MinWidth = 25;
             this.입양상태.Name = "입양상태";
             this.입양상태.Visible = true;
@@ -135,6 +138,7 @@
             // 
             // 입양날짜
             // 
+            this.입양날짜.Caption = "입양날짜";
             this.입양날짜.FieldName = "AdoptionDate";
             this.입양날짜.MinWidth = 25;
             this.입양날짜.Name = "입양날짜";

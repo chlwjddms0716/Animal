@@ -124,6 +124,7 @@
             // 
             // 종
             // 
+            this.종.Caption = "종";
             this.종.FieldName = "SpeciesName";
             this.종.MinWidth = 25;
             this.종.Name = "종";
@@ -133,6 +134,7 @@
             // 
             // 장소
             // 
+            this.장소.Caption = "장소";
             this.장소.FieldName = "Place";
             this.장소.MinWidth = 25;
             this.장소.Name = "장소";
@@ -142,6 +144,7 @@
             // 
             // 날짜
             // 
+            this.날짜.Caption = "날짜";
             this.날짜.FieldName = "Date";
             this.날짜.MinWidth = 25;
             this.날짜.Name = "날짜";
@@ -151,6 +154,7 @@
             // 
             // 보호여부
             // 
+            this.보호여부.Caption = "보호여부";
             this.보호여부.FieldName = "IsInShelter";
             this.보호여부.MinWidth = 25;
             this.보호여부.Name = "보호여부";
