@@ -129,7 +129,7 @@
             // 입양상태
             // 
             this.입양상태.Caption = "입양상태";
-            this.입양상태.FieldName = "AdoptionStatus";
+            this.입양상태.FieldName = "userLoginId";
             this.입양상태.MinWidth = 25;
             this.입양상태.Name = "입양상태";
             this.입양상태.Visible = true;

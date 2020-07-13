@@ -46,7 +46,6 @@
     <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -73,12 +72,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForms\AdminMenu1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminForms\AdminMenu1.Designer.cs">
-      <DependentUpon>AdminMenu1.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminForms\AdoptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +84,17 @@
     <Compile Include="AdminForms\AdoptionListForm.Designer.cs">
       <DependentUpon>AdoptionListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\FindingReportListForm.cs">
+    <Compile Include="AdminForms\FindingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\FindingReportListForm.designer.cs">
-      <DependentUpon>FindingReportListForm.cs</DependentUpon>
+    <Compile Include="AdminForms\FindingForm.Designer.cs">
+      <DependentUpon>FindingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\FindingManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FindingManagementForm.designer.cs">
+      <DependentUpon>FindingManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\AdminMenu.cs">
       <SubType>Form</SubType>
@@ -232,17 +231,17 @@
     <Compile Include="UserForms\UserMenu1.Designer.cs">
       <DependentUpon>UserMenu1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminForms\AdminMenu1.resx">
-      <DependentUpon>AdminMenu1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdoptionForm.resx">
       <DependentUpon>AdoptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdoptionListForm.resx">
       <DependentUpon>AdoptionListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\FindingReportListForm.resx">
-      <DependentUpon>FindingReportListForm.cs</DependentUpon>
+    <EmbeddedResource Include="AdminForms\FindingForm.resx">
+      <DependentUpon>FindingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FindingManagementForm.resx">
+      <DependentUpon>FindingManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>

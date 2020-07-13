@@ -14,6 +14,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
     public partial class ShelterListForm : DevExpress.XtraEditors.XtraForm
     {
+
         public ShelterListForm()
         {
             InitializeComponent();
@@ -21,21 +22,17 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void Shelter_Load(object sender, EventArgs e)
         {
-            animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
             AnimalShelterName.DataSource = DataRepository.AnimalShelter.GetAll();
+            animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.Search(txeAddress.Text, 0);
         }
         private void lkuShelterName_EditValueChanged(object sender, EventArgs e)
         {
-            int shelterId = (int)(lkuShelterName.EditValue);
-            List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.GetbyShelterId(shelterId);
-            animalShelterBindingSource.DataSource = animalShelters;
+            animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.Search(txeAddress.Text, (int)(lkuShelterName.EditValue));
         }
 
         private void txeAddress_EditValueChanged(object sender, EventArgs e)
         {
-            string Address = txeAddress.Text;
-            List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.SearchWithAddress(Address);
-            animalShelterBindingSource.DataSource = animalShelters;
+            animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.Search(txeAddress.Text, (int)(lkuShelterName.EditValue));
         }
 
         private void ExcuteInsert()
@@ -82,17 +79,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-          
-            if (txeAddress.Text != string.Empty && string.Equals("주소를 입력해주세요.", txeAddress.Text) is false)
-            {
-                string Address = txeAddress.Text;
-                List<AnimalShelter> animalShelters = DataRepository.AnimalShelter.SearchWithAddress(Address);
-                animalShelterBindingSource.DataSource = animalShelters;
-            }
-            else
-            {
-                animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.GetAll();
-            }
+            animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.Search(txeAddress.Text, (int)(lkuShelterName.EditValue));
         }
 
         private void btnClose_Click(object sender, EventArgs e)
