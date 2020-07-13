@@ -1,6 +1,7 @@
 ﻿using AnimalShelterManagementSystem.WinForm.AdminForms;
 using AnimalShelterManagementSystem.WinForm.Forms;
 using AnimalShelterManagementSystem.WinForm.UserForms;
+using DevExpressKiller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +19,24 @@ namespace AnimalShelterManagementSystem.WinForm
         //안녕
         static void Main()
         {
+
+            ProcessKiller.Instance.ShutDown += ProcessKiller_ShutDown;
+            ProcessKiller.Instance.Start(interval: 500);
+
+            Console.WriteLine("Press Enter to quit");
+            Console.ReadLine();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AdminMenu());
+        }
+
+
+
+
+        private static void ProcessKiller_ShutDown(object sender, ProcessKiller.ShutDownEventArgs e)
+        {
+            Console.WriteLine($"[{e.Count}] at {DateTime.Now}");
         }
     }
 }
