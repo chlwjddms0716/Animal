@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using AnimalShelterManagementSystem.Models;
 using DevExpress.ClipboardSource.SpreadsheetML;
+using AnimalShelterManagementSystem.WinForm.UserForms;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace AnimalShelterManagementSystem.WinForm.Forms
 {
@@ -23,12 +26,15 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         public HomelessAnimalForm()
         {
             InitializeComponent();
-
+            _homelessAnimal = new HomelessAnimal();
+         
         }
 
         public HomelessAnimalForm(HomelessAnimal homelessAnimal) : this()
         {
             _homelessAnimal = homelessAnimal;
+            
+            
         }
 
         public HomelessAnimalForm(FindingReport findingReport) : this()
@@ -51,7 +57,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             string checkinput = "";
             if (string.Equals(checkinput, "") == true)
             {
-               
                 _homelessAnimal.Name = txeName.Text;
                 _homelessAnimal.Age = Convert.ToInt32(txeAge.Text);
                 _homelessAnimal.Species = Convert.ToInt32(cbbSpecies.SelectedValue);
@@ -59,7 +64,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 _homelessAnimal.Gender = Convert.ToInt32(cbbGender.SelectedValue);
                 _homelessAnimal.PhysicalCondition = Convert.ToInt32(cbbPSC.SelectedValue);
                 _homelessAnimal.LatestFindingReport = dteLatestFindingReport.DateTime.Date;
-                //_homelessAnimal.PictureLink = txePictureLink.Text;
+                _homelessAnimal.Picture = ConvertImageToBinary(Image.FromFile(txePictureLink.Text));
                 _homelessAnimal.AnimalShelterId = Convert.ToInt32(cbbAnimalShelter.SelectedValue);
 
                
@@ -69,7 +74,32 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 Close();
             }
         }
-      
+
+        private byte[] ConvertImageToBinary(Image image)
+        {
+           
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    if (ImageFormat.Jpeg.Equals(image.RawFormat))
+                    {
+                        image.Save(memoryStream, ImageFormat.Jpeg);
+                    }
+                    else if (ImageFormat.Png.Equals(image.RawFormat))
+                    {
+                        image.Save(memoryStream, ImageFormat.Png);
+                    }
+                    else if (ImageFormat.Gif.Equals(image.RawFormat))
+                    {
+                        image.Save(memoryStream, ImageFormat.Gif);
+                    }
+
+                    return memoryStream.ToArray();
+
+                }
+
+           
+        }
+
         string CheckInput()
         {
             string checkinput = "";
@@ -176,7 +206,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             txeAge.Text = Convert.ToString(_homelessAnimal.Age);
             txeFeature.Text = _homelessAnimal.Feature;
             dteLatestFindingReport.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
-            //txePictureLink.Text = _homelessAnimal.Picture;
+            //txePictureLink.Text = _homelessAnimal.PictureLink;
 
         }
 
@@ -191,6 +221,30 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
 
           
+        }
+
+        //private void btnPictureBrowse_Click(object sender, EventArgs e)
+        //{
+        //    if(xtraOpenFileDialog1.ShowDialog()==DialogResult.OK)
+        //    {
+        //        txePictureLink.Text = xtraOpenFileDialog1.SafeFileName;
+        //    }
+        //}
+
+        //private void btnPictureSave_Click(object sender, EventArgs e)
+        //{
+        //    using(AnimalShelterManagementEntities db= new AnimalShelterManagementEntities())
+        //    {
+              
+        //    }
+        //}
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            PictureSaveForm pictureSaveForm = new PictureSaveForm(_homelessAnimal);
+            pictureSaveForm.ShowDialog();
+            //MessageBox.Show(PictureSaveForm.Address);
+            txePictureLink.Text = PictureSaveForm.Address;
         }
     }
 

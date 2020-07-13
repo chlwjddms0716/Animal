@@ -227,10 +227,15 @@
           <EntitySet Name="FindingReports" EntityType="AnimalShelterManagement.FindingReport" />
           <EntitySet Name="FindingReportRecords" EntityType="AnimalShelterManagement.FindingReportRecord" />
           <EntitySet Name="FoundAnimalRecords" EntityType="AnimalShelterManagement.FoundAnimalRecord" />
+          <EntitySet Name="HomelessAnimals" EntityType="AnimalShelterManagement.HomelessAnimal" />
           <EntitySet Name="LossReports" EntityType="AnimalShelterManagement.LossReport" />
           <EntitySet Name="Users" EntityType="AnimalShelterManagement.User" />
           <AssociationSet Name="FK_Adoption_User" Association="AnimalShelterManagement.FK_Adoption_User">
             <End Role="User" EntitySet="Users" />
+            <End Role="Adoption" EntitySet="Adoptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_입양기록_유실유기_동물" Association="AnimalShelterManagement.FK_입양기록_유실유기_동물">
+            <End Role="HomelessAnimal" EntitySet="HomelessAnimals" />
             <End Role="Adoption" EntitySet="Adoptions" />
           </AssociationSet>
           <AssociationSet Name="FK_FindingReportRecord_AnimalShelter" Association="AnimalShelterManagement.FK_FindingReportRecord_AnimalShelter">
@@ -241,15 +246,6 @@
             <End Role="FindingReport" EntitySet="FindingReports" />
             <End Role="FindingReportRecord" EntitySet="FindingReportRecords" />
           </AssociationSet>
-          <AssociationSet Name="FK_LossReport_User" Association="AnimalShelterManagement.FK_LossReport_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="LossReport" EntitySet="LossReports" />
-          </AssociationSet>
-          <EntitySet Name="HomelessAnimals" EntityType="AnimalShelterManagement.HomelessAnimal" />
-          <AssociationSet Name="FK_입양기록_유실유기_동물" Association="AnimalShelterManagement.FK_입양기록_유실유기_동물">
-            <End Role="HomelessAnimal" EntitySet="HomelessAnimals" />
-            <End Role="Adoption" EntitySet="Adoptions" />
-          </AssociationSet>
           <AssociationSet Name="FK_FindingReportRecord_HomelessAnimal" Association="AnimalShelterManagement.FK_FindingReportRecord_HomelessAnimal">
             <End Role="HomelessAnimal" EntitySet="HomelessAnimals" />
             <End Role="FindingReportRecord" EntitySet="FindingReportRecords" />
@@ -257,6 +253,10 @@
           <AssociationSet Name="FK_찾은_분실_동물_기록_유실유기_동물" Association="AnimalShelterManagement.FK_찾은_분실_동물_기록_유실유기_동물">
             <End Role="HomelessAnimal" EntitySet="HomelessAnimals" />
             <End Role="FoundAnimalRecord" EntitySet="FoundAnimalRecords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LossReport_User" Association="AnimalShelterManagement.FK_LossReport_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="LossReport" EntitySet="LossReports" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Adoption">
@@ -315,6 +315,25 @@
           <Property Name="Detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="HomelessAnimal" Relationship="AnimalShelterManagement.FK_찾은_분실_동물_기록_유실유기_동물" FromRole="FoundAnimalRecord" ToRole="HomelessAnimal" />
         </EntityType>
+        <EntityType Name="HomelessAnimal">
+          <Key>
+            <PropertyRef Name="HomelessAnimalId" />
+          </Key>
+          <Property Name="HomelessAnimalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="Int32" Nullable="false" />
+          <Property Name="Feature" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LatestFindingReport" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PhysicalCondition" Type="Int32" Nullable="false" />
+          <Property Name="Species" Type="Int32" Nullable="false" />
+          <Property Name="AdoptionStatus" Type="Int32" Nullable="false" />
+          <Property Name="AnimalShelterId" Type="Int32" Nullable="false" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Adoptions" Relationship="AnimalShelterManagement.FK_입양기록_유실유기_동물" FromRole="HomelessAnimal" ToRole="Adoption" />
+          <NavigationProperty Name="FindingReportRecords" Relationship="AnimalShelterManagement.FK_FindingReportRecord_HomelessAnimal" FromRole="HomelessAnimal" ToRole="FindingReportRecord" />
+          <NavigationProperty Name="FoundAnimalRecords" Relationship="AnimalShelterManagement.FK_찾은_분실_동물_기록_유실유기_동물" FromRole="HomelessAnimal" ToRole="FoundAnimalRecord" />
+        </EntityType>
         <EntityType Name="LossReport">
           <Key>
             <PropertyRef Name="LossReportId" />
@@ -356,6 +375,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_입양기록_유실유기_동물">
+          <End Type="AnimalShelterManagement.HomelessAnimal" Role="HomelessAnimal" Multiplicity="1" />
+          <End Type="AnimalShelterManagement.Adoption" Role="Adoption" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HomelessAnimal">
+              <PropertyRef Name="HomelessAnimalId" />
+            </Principal>
+            <Dependent Role="Adoption">
+              <PropertyRef Name="HomelessAnimalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_FindingReportRecord_AnimalShelter">
           <End Type="AnimalShelterManagement.AnimalShelter" Role="AnimalShelter" Multiplicity="1" />
           <End Type="AnimalShelterManagement.FindingReportRecord" Role="FindingReportRecord" Multiplicity="*" />
@@ -380,49 +411,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LossReport_User">
-          <End Type="AnimalShelterManagement.User" Role="User" Multiplicity="1" />
-          <End Type="AnimalShelterManagement.LossReport" Role="LossReport" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="UserId" />
-            </Principal>
-            <Dependent Role="LossReport">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="HomelessAnimal">
-          <Key>
-            <PropertyRef Name="HomelessAnimalId" />
-          </Key>
-          <Property Name="HomelessAnimalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Age" Type="Int32" Nullable="false" />
-          <Property Name="Gender" Type="Int32" Nullable="false" />
-          <Property Name="Feature" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="LatestFindingReport" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="PhysicalCondition" Type="Int32" Nullable="false" />
-          <Property Name="Species" Type="Int32" Nullable="false" />
-          <Property Name="AdoptionStatus" Type="Int32" Nullable="false" />
-          <Property Name="AnimalShelterId" Type="Int32" Nullable="false" />
-          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="Adoptions" Relationship="AnimalShelterManagement.FK_입양기록_유실유기_동물" FromRole="HomelessAnimal" ToRole="Adoption" />
-          <NavigationProperty Name="FindingReportRecords" Relationship="AnimalShelterManagement.FK_FindingReportRecord_HomelessAnimal" FromRole="HomelessAnimal" ToRole="FindingReportRecord" />
-          <NavigationProperty Name="FoundAnimalRecords" Relationship="AnimalShelterManagement.FK_찾은_분실_동물_기록_유실유기_동물" FromRole="HomelessAnimal" ToRole="FoundAnimalRecord" />
-        </EntityType>
-        <Association Name="FK_입양기록_유실유기_동물">
-          <End Type="AnimalShelterManagement.HomelessAnimal" Role="HomelessAnimal" Multiplicity="1" />
-          <End Type="AnimalShelterManagement.Adoption" Role="Adoption" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HomelessAnimal">
-              <PropertyRef Name="HomelessAnimalId" />
-            </Principal>
-            <Dependent Role="Adoption">
-              <PropertyRef Name="HomelessAnimalId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_FindingReportRecord_HomelessAnimal">
           <End Type="AnimalShelterManagement.HomelessAnimal" Role="HomelessAnimal" Multiplicity="1" />
           <End Type="AnimalShelterManagement.FindingReportRecord" Role="FindingReportRecord" Multiplicity="*" />
@@ -444,6 +432,18 @@
             </Principal>
             <Dependent Role="FoundAnimalRecord">
               <PropertyRef Name="HomelessAnimalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LossReport_User">
+          <End Type="AnimalShelterManagement.User" Role="User" Multiplicity="1" />
+          <End Type="AnimalShelterManagement.LossReport" Role="LossReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="LossReport">
+              <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -503,6 +503,23 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="HomelessAnimals">
+            <EntityTypeMapping TypeName="AnimalShelterManagement.HomelessAnimal">
+              <MappingFragment StoreEntitySet="HomelessAnimal">
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="AnimalShelterId" ColumnName="AnimalShelterId" />
+                <ScalarProperty Name="AdoptionStatus" ColumnName="AdoptionStatus" />
+                <ScalarProperty Name="Species" ColumnName="Species" />
+                <ScalarProperty Name="PhysicalCondition" ColumnName="PhysicalCondition" />
+                <ScalarProperty Name="LatestFindingReport" ColumnName="LatestFindingReport" />
+                <ScalarProperty Name="Feature" ColumnName="Feature" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="HomelessAnimalId" ColumnName="HomelessAnimalId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="LossReports">
             <EntityTypeMapping TypeName="AnimalShelterManagement.LossReport">
               <MappingFragment StoreEntitySet="LossReport">
@@ -528,23 +545,6 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HomelessAnimals">
-            <EntityTypeMapping TypeName="AnimalShelterManagement.HomelessAnimal">
-              <MappingFragment StoreEntitySet="HomelessAnimal">
-                <ScalarProperty Name="Picture" ColumnName="Picture" />
-                <ScalarProperty Name="AnimalShelterId" ColumnName="AnimalShelterId" />
-                <ScalarProperty Name="AdoptionStatus" ColumnName="AdoptionStatus" />
-                <ScalarProperty Name="Species" ColumnName="Species" />
-                <ScalarProperty Name="PhysicalCondition" ColumnName="PhysicalCondition" />
-                <ScalarProperty Name="LatestFindingReport" ColumnName="LatestFindingReport" />
-                <ScalarProperty Name="Feature" ColumnName="Feature" />
-                <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="Age" ColumnName="Age" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="HomelessAnimalId" ColumnName="HomelessAnimalId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
