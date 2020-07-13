@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -93,6 +94,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
             userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://kimgwajang.tistory.com/guestbook");
         }
     }
 }

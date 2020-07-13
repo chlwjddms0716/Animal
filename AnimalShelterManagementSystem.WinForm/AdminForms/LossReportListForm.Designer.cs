@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LossReportListForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.lossReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -55,7 +56,6 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -90,13 +90,26 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // btnLoad
+            // 
+            this.btnLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.btnLoad.Appearance.Options.UseFont = true;
+            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
+            this.btnLoad.Location = new System.Drawing.Point(544, 68);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(190, 36);
+            this.btnLoad.StyleController = this.layoutControl1;
+            this.btnLoad.TabIndex = 17;
+            this.btnLoad.Text = "검색";
+            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.lossReportBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 132);
+            this.gridControl1.Location = new System.Drawing.Point(12, 155);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(722, 349);
+            this.gridControl1.Size = new System.Drawing.Size(722, 326);
             this.gridControl1.TabIndex = 9;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -192,7 +205,7 @@
             this.btnHelp});
             this.toolStrip1.Location = new System.Drawing.Point(12, 108);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(722, 20);
+            this.toolStrip1.Size = new System.Drawing.Size(722, 43);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -202,7 +215,7 @@
             this.btnClose.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Close;
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 17);
+            this.btnClose.Size = new System.Drawing.Size(29, 40);
             this.btnClose.Text = "종료";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -212,7 +225,7 @@
             this.btnInsert.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.btnInsert.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(29, 17);
+            this.btnInsert.Size = new System.Drawing.Size(29, 40);
             this.btnInsert.Text = "추가";
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
@@ -222,7 +235,7 @@
             this.btnEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(29, 17);
+            this.btnEdit.Size = new System.Drawing.Size(29, 40);
             this.btnEdit.Text = "수정";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -232,7 +245,7 @@
             this.btnDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(29, 17);
+            this.btnDelete.Size = new System.Drawing.Size(29, 40);
             this.btnDelete.Text = "삭제";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -242,7 +255,7 @@
             this.btnUpdate.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(29, 17);
+            this.btnUpdate.Size = new System.Drawing.Size(29, 40);
             this.btnUpdate.Text = "업데이트";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -252,7 +265,7 @@
             this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
             this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(29, 17);
+            this.btnHelp.Size = new System.Drawing.Size(29, 40);
             this.btnHelp.Text = "도움말";
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -312,16 +325,16 @@
             this.layoutControlItem3.Control = this.toolStrip1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(726, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(726, 47);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.gridControl1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 143);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(726, 353);
+            this.layoutControlItem5.Size = new System.Drawing.Size(726, 330);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -332,19 +345,6 @@
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(532, 40);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
-            this.btnLoad.Appearance.Options.UseFont = true;
-            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
-            this.btnLoad.Location = new System.Drawing.Point(544, 68);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(190, 36);
-            this.btnLoad.StyleController = this.layoutControl1;
-            this.btnLoad.TabIndex = 17;
-            this.btnLoad.Text = "검색";
             // 
             // layoutControlItem6
             // 

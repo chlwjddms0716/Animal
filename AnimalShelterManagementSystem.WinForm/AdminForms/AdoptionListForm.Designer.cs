@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdoptionListForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
@@ -51,8 +52,8 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.btnHelp = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -87,6 +88,19 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // btnLoad
+            // 
+            this.btnLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
+            this.btnLoad.Appearance.Options.UseFont = true;
+            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
+            this.btnLoad.Location = new System.Drawing.Point(448, 74);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(179, 36);
+            this.btnLoad.StyleController = this.layoutControl1;
+            this.btnLoad.TabIndex = 16;
+            this.btnLoad.Text = "검색";
+            // 
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
@@ -96,6 +110,7 @@
             this.tsbAdd,
             this.tsbDelete,
             this.tsbEdit,
+            this.btnHelp,
             this.tsbRefresh});
             this.toolStrip1.Location = new System.Drawing.Point(12, 114);
             this.toolStrip1.Name = "toolStrip1";
@@ -296,19 +311,6 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(436, 40);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // btnLoad
-            // 
-            this.btnLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
-            this.btnLoad.Appearance.Options.UseFont = true;
-            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnLoad.Location = new System.Drawing.Point(448, 74);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(179, 36);
-            this.btnLoad.StyleController = this.layoutControl1;
-            this.btnLoad.TabIndex = 16;
-            this.btnLoad.Text = "검색";
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnLoad;
@@ -317,6 +319,16 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(183, 40);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
+            this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(29, 27);
+            this.btnHelp.Text = "도움말";
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // AdoptionListForm
             // 
@@ -375,5 +387,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.SimpleButton btnLoad;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private System.Windows.Forms.ToolStripButton btnHelp;
     }
 }

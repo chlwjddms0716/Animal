@@ -107,11 +107,11 @@
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(314, 192);
+            this.btnSave.Location = new System.Drawing.Point(307, 192);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.ShowToolTips = false;
-            this.btnSave.Size = new System.Drawing.Size(79, 32);
+            this.btnSave.Size = new System.Drawing.Size(86, 32);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "확인";
@@ -188,9 +188,9 @@
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnSave;
-            this.layoutControlItem11.Location = new System.Drawing.Point(302, 180);
+            this.layoutControlItem11.Location = new System.Drawing.Point(295, 180);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(83, 36);
+            this.layoutControlItem11.Size = new System.Drawing.Size(90, 36);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -256,7 +256,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 180);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(302, 36);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(295, 36);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ShelterForm
