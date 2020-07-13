@@ -53,7 +53,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
         private void WriteToEntity() //DB에 쓰는거
         {
-            //콤보박스에서 선택된 값이 _album.ArtistId로 보낸다.
             string checkinput = "";
             if (string.Equals(checkinput, "") == true)
             {
@@ -206,11 +205,25 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             txeAge.Text = Convert.ToString(_homelessAnimal.Age);
             txeFeature.Text = _homelessAnimal.Feature;
             dteLatestFindingReport.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
+            if (_homelessAnimal.Picture != null && _homelessAnimal.Picture.Length > 0)
+            {
+                pcePicture.Image = byteArrayToImage(_homelessAnimal.Picture);
+            
+            }
+            pcePicture.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+
             //txePictureLink.Text = _homelessAnimal.PictureLink;
 
         }
+        public Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
+        }
 
-       
 
         private void txeAge_KeyPress(object sender, KeyPressEventArgs e)
         {
