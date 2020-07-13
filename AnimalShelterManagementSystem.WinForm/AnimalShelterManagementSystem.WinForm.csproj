@@ -336,6 +336,7 @@
     <Folder Include="Forms\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="readme.md" />
     <None Include="Resources\Female.png" />
   </ItemGroup>
   <ItemGroup>
