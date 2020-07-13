@@ -351,6 +351,7 @@
             this.btnClose.StyleController = this.layoutControl3;
             this.btnClose.TabIndex = 15;
             this.btnClose.Text = "취소";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // layoutControlItem7
             // 

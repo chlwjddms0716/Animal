@@ -88,15 +88,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (Helpers.Helpers.SureToDelete() == false)
-                return;
-            DataRepository.User.Delete(user.UserId);
-
-            Close();
-            return;
-        }
 
         private void Add()
         {
@@ -154,6 +145,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
             Close();
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

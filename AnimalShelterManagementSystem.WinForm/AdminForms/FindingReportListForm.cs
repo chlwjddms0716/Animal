@@ -75,10 +75,16 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void tsbDelete_Click(object sender, EventArgs e)
         {
-            if (findingReportBindingSource.Current is null)
-                MessageBox.Show("삭제할 유저를 선택해주세요");
-            else
-                LoadEditForm(findingReportBindingSource.Current as FindingReport);
+            FindingReport findingReport = findingReportBindingSource.Current as FindingReport;
+
+            if (Helpers.Helpers.SureToDelete() == false)
+                return;
+            if (findingReport == null)
+                return;
+
+            DataRepository.FindingReport.Delete(findingReport);
+
+            findingReportBindingSource.Remove(findingReport);
         }
 
         private void tsbEdit_Click(object sender, EventArgs e)

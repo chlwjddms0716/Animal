@@ -21,8 +21,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             InitializeComponent();
             findingReport = new FindingReport();
-            btnEdit.Enabled = false;
-            btnDelete.Enabled = false;
+
         }
         public FindingForm(FindingReport findingReport)
         {
@@ -33,18 +32,8 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             txbPlace.Text = findingReport.Place;
             rdgIsInShelter.EditValue = findingReport.IsInShelter? 1 : 0;
             WasInShelter = findingReport.IsInShelter;
-            btnAdd.Enabled = false;
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (Helpers.Helpers.SureToDelete() == false)
-                return;
-
-            DataRepository.FindingReport.Delete(findingReport);
-            Close();
-            return;
-        }
         private void InShelter()
         {
             HomelessAnimal homelessAnimal = new HomelessAnimal();
@@ -53,12 +42,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             HomelessAnimalForm homelessAnimalForm = new HomelessAnimalForm(homelessAnimal);
             homelessAnimalForm.ShowDialog();
 
-            FindingReportRecord findingReportRecord = new FindingReportRecord();
-
-          
+            FindingReportRecord findingReportRecord = new FindingReportRecord(); 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void Add()
         {
             WasInShelter = true;
             findingReport.FindingReportId = DataRepository.FindingReport.GetMaxId() + 1;
@@ -79,7 +66,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void Edit()
         {
             findingReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
             findingReport.Date = dteDate.DateTime;
@@ -104,6 +91,25 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 HomelessAnimalForm homelessAnimalForm = new HomelessAnimalForm(findingReport);
                 homelessAnimalForm.ShowDialog();
             }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (findingReport.FindingReportId == DataRepository.FindingReport.GetMaxId() + 1)
+            {
+                Add();
+            }
+            else
+            {
+                Edit();
+            }
+
+            Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
