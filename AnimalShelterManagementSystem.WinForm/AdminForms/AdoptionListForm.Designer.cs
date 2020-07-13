@@ -37,33 +37,38 @@
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.txeId = new DevExpress.XtraEditors.TextEdit();
             this.grvAdoptionList = new System.Windows.Forms.DataGridView();
+            this.adoptionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userLoginIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.animalNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adoptionStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adoptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rdgAdoptionStatus = new DevExpress.XtraEditors.RadioGroup();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.list = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.adoptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.adoptionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userLoginIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.animalNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adoptionStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewEx1 = new AnimalShelterManagementSystem.WinForm.Controls.DataGridViewEx();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvAdoptionList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdoptionStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.list)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.dataGridViewEx1);
             this.layoutControl1.Controls.Add(this.toolStrip1);
             this.layoutControl1.Controls.Add(this.txeId);
             this.layoutControl1.Controls.Add(this.grvAdoptionList);
@@ -87,9 +92,9 @@
             this.tsbDelete,
             this.tsbEdit,
             this.tsbRefresh});
-            this.toolStrip1.Location = new System.Drawing.Point(12, 75);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 74);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(615, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(615, 24);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -99,7 +104,7 @@
             this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(29, 23);
+            this.tsbAdd.Size = new System.Drawing.Size(29, 21);
             this.tsbAdd.Text = "추가";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -109,7 +114,7 @@
             this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(29, 23);
+            this.tsbDelete.Size = new System.Drawing.Size(29, 21);
             this.tsbDelete.Text = "삭제";
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
@@ -119,7 +124,7 @@
             this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(29, 23);
+            this.tsbEdit.Size = new System.Drawing.Size(29, 21);
             this.tsbEdit.Text = "수정";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
@@ -129,16 +134,16 @@
             this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(29, 23);
+            this.tsbRefresh.Size = new System.Drawing.Size(29, 21);
             this.tsbRefresh.Text = "새로고침";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
             // txeId
             // 
-            this.txeId.Location = new System.Drawing.Point(82, 12);
+            this.txeId.Location = new System.Drawing.Point(139, 12);
             this.txeId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeId.Name = "txeId";
-            this.txeId.Size = new System.Drawing.Size(545, 24);
+            this.txeId.Size = new System.Drawing.Size(488, 24);
             this.txeId.StyleController = this.layoutControl1;
             this.txeId.TabIndex = 8;
             this.txeId.TextChanged += new System.EventHandler(this.txeId_TextChanged);
@@ -157,7 +162,7 @@
             this.animalNameDataGridViewTextBoxColumn,
             this.adoptionStatusDataGridViewTextBoxColumn});
             this.grvAdoptionList.DataSource = this.adoptionBindingSource;
-            this.grvAdoptionList.Location = new System.Drawing.Point(82, 105);
+            this.grvAdoptionList.Location = new System.Drawing.Point(139, 102);
             this.grvAdoptionList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grvAdoptionList.Name = "grvAdoptionList";
             this.grvAdoptionList.ReadOnly = true;
@@ -165,78 +170,8 @@
             this.grvAdoptionList.RowHeadersWidth = 51;
             this.grvAdoptionList.RowTemplate.Height = 27;
             this.grvAdoptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvAdoptionList.Size = new System.Drawing.Size(545, 337);
+            this.grvAdoptionList.Size = new System.Drawing.Size(488, 316);
             this.grvAdoptionList.TabIndex = 5;
-            // 
-            // rdgAdoptionStatus
-            // 
-            this.rdgAdoptionStatus.EditValue = 0;
-            this.rdgAdoptionStatus.Location = new System.Drawing.Point(82, 40);
-            this.rdgAdoptionStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.rdgAdoptionStatus.Name = "rdgAdoptionStatus";
-            this.rdgAdoptionStatus.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "전체", true, null, ""),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "처리중"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "입양됨")});
-            this.rdgAdoptionStatus.Size = new System.Drawing.Size(545, 31);
-            this.rdgAdoptionStatus.StyleController = this.layoutControl1;
-            this.rdgAdoptionStatus.TabIndex = 11;
-            this.rdgAdoptionStatus.SelectedIndexChanged += new System.EventHandler(this.rdgAdoptionStatus_SelectedIndexChanged);
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.list,
-            this.layoutControlItem1,
-            this.layoutControlItem10,
-            this.layoutControlItem2});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(639, 454);
-            this.Root.TextVisible = false;
-            // 
-            // list
-            // 
-            this.list.Control = this.grvAdoptionList;
-            this.list.Location = new System.Drawing.Point(0, 93);
-            this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(619, 341);
-            this.list.Text = "리스트";
-            this.list.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.txeId;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(619, 28);
-            this.layoutControlItem1.Text = " 유저이름:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.rdgAdoptionStatus;
-            this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.layoutControlItem10.CustomizationFormText = "블랙리스트";
-            this.layoutControlItem10.Location = new System.Drawing.Point(0, 28);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(619, 35);
-            this.layoutControlItem10.Text = " 입양상태: ";
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(67, 18);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.toolStrip1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 63);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(619, 30);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
-            // 
-            // adoptionBindingSource
-            // 
-            this.adoptionBindingSource.DataSource = typeof(AnimalShelterManagementSystem.Adoption);
             // 
             // adoptionDateDataGridViewTextBoxColumn
             // 
@@ -270,6 +205,100 @@
             this.adoptionStatusDataGridViewTextBoxColumn.Name = "adoptionStatusDataGridViewTextBoxColumn";
             this.adoptionStatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // adoptionBindingSource
+            // 
+            this.adoptionBindingSource.DataSource = typeof(AnimalShelterManagementSystem.Adoption);
+            // 
+            // rdgAdoptionStatus
+            // 
+            this.rdgAdoptionStatus.EditValue = 0;
+            this.rdgAdoptionStatus.Location = new System.Drawing.Point(139, 40);
+            this.rdgAdoptionStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rdgAdoptionStatus.Name = "rdgAdoptionStatus";
+            this.rdgAdoptionStatus.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "전체", true, null, ""),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "처리중"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "입양됨")});
+            this.rdgAdoptionStatus.Size = new System.Drawing.Size(488, 30);
+            this.rdgAdoptionStatus.StyleController = this.layoutControl1;
+            this.rdgAdoptionStatus.TabIndex = 11;
+            this.rdgAdoptionStatus.SelectedIndexChanged += new System.EventHandler(this.rdgAdoptionStatus_SelectedIndexChanged);
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.list,
+            this.layoutControlItem1,
+            this.layoutControlItem10,
+            this.layoutControlItem2,
+            this.layoutControlItem3});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(639, 454);
+            this.Root.TextVisible = false;
+            // 
+            // list
+            // 
+            this.list.Control = this.grvAdoptionList;
+            this.list.Location = new System.Drawing.Point(0, 90);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(619, 320);
+            this.list.Text = "리스트";
+            this.list.TextSize = new System.Drawing.Size(124, 18);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.txeId;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(619, 28);
+            this.layoutControlItem1.Text = " 유저이름:";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(124, 18);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.rdgAdoptionStatus;
+            this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.layoutControlItem10.CustomizationFormText = "블랙리스트";
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(619, 34);
+            this.layoutControlItem10.Text = " 입양상태: ";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(124, 18);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.toolStrip1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 62);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(619, 28);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
+            // dataGridViewEx1
+            // 
+            this.dataGridViewEx1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewEx1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEx1.Location = new System.Drawing.Point(139, 422);
+            this.dataGridViewEx1.MultiSelect = false;
+            this.dataGridViewEx1.Name = "dataGridViewEx1";
+            this.dataGridViewEx1.ReadOnly = true;
+            this.dataGridViewEx1.RowHeadersVisible = false;
+            this.dataGridViewEx1.RowHeadersWidth = 51;
+            this.dataGridViewEx1.RowTemplate.Height = 27;
+            this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewEx1.Size = new System.Drawing.Size(488, 20);
+            this.dataGridViewEx1.TabIndex = 13;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.dataGridViewEx1;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 410);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(619, 24);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(124, 18);
+            // 
             // AdoptionListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -288,13 +317,15 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvAdoptionList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdoptionStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.list)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +351,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn animalNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adoptionStatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource adoptionBindingSource;
+        private Controls.DataGridViewEx dataGridViewEx1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

@@ -20,10 +20,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            Cursor = Cursors.WaitCursor;
+            
             UserListForm userManagement = new UserListForm();
-            userManagement.ShowDialog();
-            Cursor = Cursors.Arrow;
+            userManagement.MdiParent = this;
+            userManagement.Show();
         }
 
         private void btnAdoption_Click(object sender, EventArgs e)
