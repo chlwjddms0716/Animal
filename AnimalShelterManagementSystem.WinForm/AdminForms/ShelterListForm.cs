@@ -116,5 +116,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.Search(txeAddress.Text, (int)(lkuShelterName.EditValue));
         }
+
+        private void grcShelterList_DoubleClick(object sender, EventArgs e)
+        {
+            ExecuteEdit();
+        }
     }
 }

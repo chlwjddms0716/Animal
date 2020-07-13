@@ -137,6 +137,7 @@
             this.toolbarFormControl1.Size = new System.Drawing.Size(1026, 37);
             this.toolbarFormControl1.TabIndex = 2;
             this.toolbarFormControl1.TabStop = false;
+            this.toolbarFormControl1.Text = "관리자메뉴";
             this.toolbarFormControl1.ToolbarForm = this;
             // 
             // toolbarFormManager1

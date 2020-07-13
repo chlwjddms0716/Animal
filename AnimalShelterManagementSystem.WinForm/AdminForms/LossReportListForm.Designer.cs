@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LossReportListForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcLossList = new DevExpress.XtraGrid.GridControl();
             this.lossReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.유저Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,7 +59,7 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcLossList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lossReportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -77,7 +77,7 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.btnLoad);
-            this.layoutControl1.Controls.Add(this.gridControl1);
+            this.layoutControl1.Controls.Add(this.grcLossList);
             this.layoutControl1.Controls.Add(this.toolStrip1);
             this.layoutControl1.Controls.Add(this.txeAnimalName);
             this.layoutControl1.Controls.Add(this.txeUserId);
@@ -104,16 +104,17 @@
             this.btnLoad.Text = "검색";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // gridControl1
+            // grcLossList
             // 
-            this.gridControl1.DataSource = this.lossReportBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 155);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(722, 326);
-            this.gridControl1.TabIndex = 9;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcLossList.DataSource = this.lossReportBindingSource;
+            this.grcLossList.Location = new System.Drawing.Point(12, 155);
+            this.grcLossList.MainView = this.gridView1;
+            this.grcLossList.Name = "grcLossList";
+            this.grcLossList.Size = new System.Drawing.Size(722, 326);
+            this.grcLossList.TabIndex = 9;
+            this.grcLossList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grcLossList.DoubleClick += new System.EventHandler(this.grcLossList_DoubleClick);
             // 
             // lossReportBindingSource
             // 
@@ -128,7 +129,7 @@
             this.장소,
             this.날짜,
             this.사진});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grcLossList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -332,7 +333,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.gridControl1;
+            this.layoutControlItem5.Control = this.grcLossList;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 143);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(726, 330);
@@ -369,7 +370,7 @@
             this.Load += new System.EventHandler(this.LossReportListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcLossList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lossReportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -404,7 +405,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraEditors.TextEdit txeAnimalName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcLossList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraGrid.Columns.GridColumn 유저Id;

@@ -118,5 +118,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             lossReportBindingSource.DataSource = DataRepository.LossReport.Search(txeUserId.Text, txeAnimalName.Text);
         }
+
+        private void grcLossList_DoubleClick(object sender, EventArgs e)
+        {
+            ExecuteEdit();
+        }
     }
 }

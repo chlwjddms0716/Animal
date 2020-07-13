@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserListForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcUserList = new DevExpress.XtraGrid.GridControl();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.유저Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,7 +65,7 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcUserList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -85,7 +85,7 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.btnLoad);
-            this.layoutControl1.Controls.Add(this.gridControl1);
+            this.layoutControl1.Controls.Add(this.grcUserList);
             this.layoutControl1.Controls.Add(this.toolStrip1);
             this.layoutControl1.Controls.Add(this.rdgAdmin);
             this.layoutControl1.Controls.Add(this.rdgBlacklist);
@@ -115,16 +115,17 @@
             this.btnLoad.Text = "검색";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // gridControl1
+            // grcUserList
             // 
-            this.gridControl1.DataSource = this.userBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 214);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(776, 314);
-            this.gridControl1.TabIndex = 12;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcUserList.DataSource = this.userBindingSource;
+            this.grcUserList.Location = new System.Drawing.Point(12, 214);
+            this.grcUserList.MainView = this.gridView1;
+            this.grcUserList.Name = "grcUserList";
+            this.grcUserList.Size = new System.Drawing.Size(776, 314);
+            this.grcUserList.TabIndex = 12;
+            this.grcUserList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grcUserList.DoubleClick += new System.EventHandler(this.grcUserList_DoubleClick);
             // 
             // userBindingSource
             // 
@@ -142,7 +143,7 @@
             this.블랙리스트여부,
             this.블랙리스트사유,
             this.관리자여부});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grcUserList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -420,7 +421,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.gridControl1;
+            this.layoutControlItem5.Control = this.grcUserList;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 202);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(780, 318);
@@ -458,7 +459,7 @@
             this.Load += new System.EventHandler(this.UserManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcUserList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -497,7 +498,7 @@
         private System.Windows.Forms.ToolStripButton tsbEdit;
         private DevExpress.XtraEditors.RadioGroup rdgBlacklist;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcUserList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn 유저Id;
         private DevExpress.XtraGrid.Columns.GridColumn Id;

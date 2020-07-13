@@ -190,18 +190,18 @@
             this.lblSpecies.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lblSpecies.Location = new System.Drawing.Point(12, 12);
             this.lblSpecies.Name = "lblSpecies";
-            this.lblSpecies.Size = new System.Drawing.Size(36, 26);
+            this.lblSpecies.Size = new System.Drawing.Size(45, 26);
             this.lblSpecies.TabIndex = 15;
-            this.lblSpecies.Text = " 종 :    ";
+            this.lblSpecies.Text = " 종 :      ";
             // 
             // cbxSpecies
             // 
             this.cbxSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSpecies.FormattingEnabled = true;
-            this.cbxSpecies.Location = new System.Drawing.Point(52, 12);
+            this.cbxSpecies.Location = new System.Drawing.Point(61, 12);
             this.cbxSpecies.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxSpecies.Name = "cbxSpecies";
-            this.cbxSpecies.Size = new System.Drawing.Size(666, 26);
+            this.cbxSpecies.Size = new System.Drawing.Size(657, 26);
             this.cbxSpecies.TabIndex = 14;
             this.cbxSpecies.SelectedIndexChanged += new System.EventHandler(this.cbxSpecies_SelectedIndexChanged);
             // 
@@ -260,9 +260,9 @@
             // 종
             // 
             this.종.Control = this.cbxSpecies;
-            this.종.Location = new System.Drawing.Point(40, 0);
+            this.종.Location = new System.Drawing.Point(49, 0);
             this.종.Name = "종";
-            this.종.Size = new System.Drawing.Size(670, 30);
+            this.종.Size = new System.Drawing.Size(661, 30);
             this.종.TextSize = new System.Drawing.Size(0, 0);
             this.종.TextVisible = false;
             // 
@@ -271,7 +271,7 @@
             this.layoutControlItem1.Control = this.lblSpecies;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(40, 30);
+            this.layoutControlItem1.Size = new System.Drawing.Size(49, 30);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 

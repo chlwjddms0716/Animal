@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShelterListForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcShelterList = new DevExpress.XtraGrid.GridControl();
             this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.보호소Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,7 +65,7 @@
             this.도움말HToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcShelterList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -84,7 +84,7 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.btnLoad);
-            this.layoutControl1.Controls.Add(this.gridControl1);
+            this.layoutControl1.Controls.Add(this.grcShelterList);
             this.layoutControl1.Controls.Add(this.toolStrip1);
             this.layoutControl1.Controls.Add(this.lkuShelterName);
             this.layoutControl1.Controls.Add(this.txeAddress);
@@ -112,16 +112,17 @@
             this.btnLoad.Text = "검색";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // gridControl1
+            // grcShelterList
             // 
-            this.gridControl1.DataSource = this.animalShelterBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 144);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(747, 333);
-            this.gridControl1.TabIndex = 4;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcShelterList.DataSource = this.animalShelterBindingSource;
+            this.grcShelterList.Location = new System.Drawing.Point(12, 144);
+            this.grcShelterList.MainView = this.gridView1;
+            this.grcShelterList.Name = "grcShelterList";
+            this.grcShelterList.Size = new System.Drawing.Size(747, 333);
+            this.grcShelterList.TabIndex = 4;
+            this.grcShelterList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grcShelterList.DoubleClick += new System.EventHandler(this.grcShelterList_DoubleClick);
             // 
             // animalShelterBindingSource
             // 
@@ -135,7 +136,7 @@
             this.주소,
             this.전화번호,
             this.담당자});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grcShelterList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -269,7 +270,7 @@
             // 
             // lkuShelterName
             // 
-            this.lkuShelterName.Location = new System.Drawing.Point(100, 40);
+            this.lkuShelterName.Location = new System.Drawing.Point(95, 40);
             this.lkuShelterName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lkuShelterName.Name = "lkuShelterName";
             this.lkuShelterName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -280,7 +281,7 @@
             this.lkuShelterName.Properties.DisplayMember = "Name";
             this.lkuShelterName.Properties.NullText = "보호소를 선택해주세요.";
             this.lkuShelterName.Properties.ValueMember = "AnimalShelterId";
-            this.lkuShelterName.Size = new System.Drawing.Size(659, 24);
+            this.lkuShelterName.Size = new System.Drawing.Size(664, 24);
             this.lkuShelterName.StyleController = this.layoutControl1;
             this.lkuShelterName.TabIndex = 2;
             this.lkuShelterName.EditValueChanged += new System.EventHandler(this.lkuShelterName_EditValueChanged);
@@ -291,10 +292,10 @@
             // 
             // txeAddress
             // 
-            this.txeAddress.Location = new System.Drawing.Point(100, 12);
+            this.txeAddress.Location = new System.Drawing.Point(95, 12);
             this.txeAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txeAddress.Name = "txeAddress";
-            this.txeAddress.Size = new System.Drawing.Size(659, 24);
+            this.txeAddress.Size = new System.Drawing.Size(664, 24);
             this.txeAddress.StyleController = this.layoutControl1;
             this.txeAddress.TabIndex = 0;
             this.txeAddress.EditValueChanged += new System.EventHandler(this.txeAddress_EditValueChanged);
@@ -329,8 +330,8 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(751, 28);
-            this.layoutControlItem3.Text = " 주소 : ";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(85, 18);
+            this.layoutControlItem3.Text = "주소 : ";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(80, 18);
             // 
             // layoutControlItem4
             // 
@@ -338,12 +339,12 @@
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 28);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(751, 28);
-            this.layoutControlItem4.Text = " 보호소 이름 :";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(85, 18);
+            this.layoutControlItem4.Text = "보호소 이름 :";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(80, 18);
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.gridControl1;
+            this.layoutControlItem2.Control = this.grcShelterList;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 132);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(751, 337);
@@ -418,7 +419,7 @@
             this.Load += new System.EventHandler(this.Shelter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcShelterList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -460,7 +461,7 @@
         private System.Windows.Forms.BindingSource AnimalShelterName;
         private System.Windows.Forms.ToolStripButton btnEdit;
         private System.Windows.Forms.ToolStripButton btnUpdate;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcShelterList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn 보호소Id;
         private DevExpress.XtraGrid.Columns.GridColumn 이름;

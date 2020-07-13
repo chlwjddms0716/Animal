@@ -26,8 +26,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
             findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
     
-        }
-      
+        }      
         private void cbxSpecies_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxSpecies.SelectedItem != null)
@@ -35,27 +34,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
           
             else
                 SpeciesCode = 0;
-
-            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
-
-        }
-
-        private void dteFoundDateFrom_EditValueChanged(object sender, EventArgs e)
-        {
-            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
-
-        }
-
-        private void dteFoundDateTo_EditValueChanged(object sender, EventArgs e)
-        {
-            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
-
-        }
-
-        private void txbPlace_TextChanged(object sender, EventArgs e)
-        {
-            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
-
         }
 
         private void LoadEditForm(FindingReport findingReport)

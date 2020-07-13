@@ -57,6 +57,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             else
                 LoadEditForm(userBindingSource.Current as User);
         }
+
         private void LoadEditForm(User user)
         {
             Cursor = Cursors.WaitCursor;
@@ -78,6 +79,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
             userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
+        }
+
+        private void grcUserList_DoubleClick(object sender, EventArgs e)
+        {
+            LoadEditForm(userBindingSource.Current as User);
         }
     }
 }

@@ -38,7 +38,7 @@
             this.tsbEdit = new System.Windows.Forms.ToolStripButton();
             this.btnHelp = new System.Windows.Forms.ToolStripButton();
             this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcAdoptionList = new DevExpress.XtraGrid.GridControl();
             this.adoptionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.유저Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,7 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcAdoptionList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).BeginInit();
@@ -75,7 +75,7 @@
             // 
             this.layoutControl1.Controls.Add(this.btnLoad);
             this.layoutControl1.Controls.Add(this.toolStrip1);
-            this.layoutControl1.Controls.Add(this.gridControl1);
+            this.layoutControl1.Controls.Add(this.grcAdoptionList);
             this.layoutControl1.Controls.Add(this.txeId);
             this.layoutControl1.Controls.Add(this.rdgAdoptionStatus);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -169,17 +169,17 @@
             this.tsbRefresh.Text = "새로고침";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
-            // gridControl1
+            // grcAdoptionList
             // 
-            this.gridControl1.DataSource = this.adoptionBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 148);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(615, 294);
-            this.gridControl1.TabIndex = 14;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcAdoptionList.DataSource = this.adoptionBindingSource;
+            this.grcAdoptionList.Location = new System.Drawing.Point(12, 148);
+            this.grcAdoptionList.MainView = this.gridView1;
+            this.grcAdoptionList.Name = "grcAdoptionList";
+            this.grcAdoptionList.Size = new System.Drawing.Size(615, 294);
+            this.grcAdoptionList.TabIndex = 14;
+            this.grcAdoptionList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
+            this.grcAdoptionList.DoubleClick += new System.EventHandler(this.grcAdoptionList_DoubleClick);
             // 
             // adoptionBindingSource
             // 
@@ -192,7 +192,7 @@
             this.동물이름,
             this.입양상태,
             this.입양날짜});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grcAdoptionList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -244,7 +244,6 @@
             this.txeId.Size = new System.Drawing.Size(545, 24);
             this.txeId.StyleController = this.layoutControl1;
             this.txeId.TabIndex = 8;
-            this.txeId.TextChanged += new System.EventHandler(this.txeId_TextChanged);
             // 
             // rdgAdoptionStatus
             // 
@@ -259,7 +258,6 @@
             this.rdgAdoptionStatus.Size = new System.Drawing.Size(545, 30);
             this.rdgAdoptionStatus.StyleController = this.layoutControl1;
             this.rdgAdoptionStatus.TabIndex = 11;
-            this.rdgAdoptionStatus.SelectedIndexChanged += new System.EventHandler(this.rdgAdoptionStatus_SelectedIndexChanged);
             // 
             // Root
             // 
@@ -287,7 +285,7 @@
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.gridControl1;
+            this.layoutControlItem4.Control = this.grcAdoptionList;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 136);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(619, 298);
@@ -347,7 +345,7 @@
             this.layoutControl1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcAdoptionList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adoptionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeId.Properties)).EndInit();
@@ -378,7 +376,7 @@
         private System.Windows.Forms.ToolStripButton tsbRefresh;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private System.Windows.Forms.BindingSource adoptionBindingSource;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcAdoptionList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn 입양날짜;
         private DevExpress.XtraGrid.Columns.GridColumn 유저Id;

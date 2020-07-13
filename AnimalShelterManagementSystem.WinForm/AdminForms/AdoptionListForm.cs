@@ -33,8 +33,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void LoadAdoptions()
         {
-            List<Adoption> adoptions = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
-            adoptionBindingSource.DataSource = adoptions;
+            adoptionBindingSource.DataSource = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
@@ -87,21 +86,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
+            adoptionBindingSource.DataSource = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
         }
 
-        private void txeId_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void rdgAdoptionStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            currentStatus = (int)rdgAdoptionStatus.EditValue;
-        }
-
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
@@ -111,6 +98,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void btnLoad_Click(object sender, EventArgs e)
         {
             adoptionBindingSource.DataSource = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
+        }
+
+        private void grcAdoptionList_DoubleClick(object sender, EventArgs e)
+        {
+            ExecuteEdit();
         }
     }
 }
