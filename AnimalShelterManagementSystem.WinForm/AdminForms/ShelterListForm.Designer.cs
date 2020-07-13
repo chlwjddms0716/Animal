@@ -119,6 +119,7 @@
             // 
             // 보호소Id
             // 
+            this.보호소Id.Caption = "보호소Id";
             this.보호소Id.FieldName = "AnimalShelterId";
             this.보호소Id.MinWidth = 25;
             this.보호소Id.Name = "보호소Id";
@@ -128,6 +129,7 @@
             // 
             // 이름
             // 
+            this.이름.Caption = "이름";
             this.이름.FieldName = "Name";
             this.이름.MinWidth = 25;
             this.이름.Name = "이름";
@@ -137,6 +139,7 @@
             // 
             // 주소
             // 
+            this.주소.Caption = "주소";
             this.주소.FieldName = "Address";
             this.주소.MinWidth = 25;
             this.주소.Name = "주소";
@@ -146,6 +149,7 @@
             // 
             // 전화번호
             // 
+            this.전화번호.Caption = "전화번호";
             this.전화번호.FieldName = "PhoneNumber";
             this.전화번호.MinWidth = 25;
             this.전화번호.Name = "전화번호";
@@ -155,6 +159,7 @@
             // 
             // 담당자
             // 
+            this.담당자.Caption = "담당자";
             this.담당자.FieldName = "ManagerName";
             this.담당자.MinWidth = 25;
             this.담당자.Name = "담당자";

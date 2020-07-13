@@ -125,6 +125,7 @@
             // 
             // 유저Id
             // 
+            this.유저Id.Caption = "유저Id";
             this.유저Id.FieldName = "UserId";
             this.유저Id.MinWidth = 25;
             this.유저Id.Name = "유저Id";
@@ -134,6 +135,7 @@
             // 
             // Id
             // 
+            this.Id.Caption = "Id";
             this.Id.FieldName = "Id";
             this.Id.MinWidth = 25;
             this.Id.Name = "Id";
@@ -143,6 +145,7 @@
             // 
             // 비밀번호
             // 
+            this.비밀번호.Caption = "비밀번호";
             this.비밀번호.FieldName = "Password";
             this.비밀번호.MinWidth = 25;
             this.비밀번호.Name = "비밀번호";
@@ -152,6 +155,7 @@
             // 
             // 이름
             // 
+            this.이름.Caption = "이름";
             this.이름.FieldName = "Name";
             this.이름.MinWidth = 25;
             this.이름.Name = "이름";
@@ -161,6 +165,7 @@
             // 
             // 주소
             // 
+            this.주소.Caption = "주소";
             this.주소.FieldName = "Address";
             this.주소.MinWidth = 25;
             this.주소.Name = "주소";
@@ -170,6 +175,7 @@
             // 
             // 전화번호
             // 
+            this.전화번호.Caption = "전화번호";
             this.전화번호.FieldName = "PhoneNumber";
             this.전화번호.MinWidth = 25;
             this.전화번호.Name = "전화번호";
@@ -179,6 +185,7 @@
             // 
             // 블랙리스트여부
             // 
+            this.블랙리스트여부.Caption = "블랙리스트 여부";
             this.블랙리스트여부.FieldName = "IsBlacklist";
             this.블랙리스트여부.MinWidth = 25;
             this.블랙리스트여부.Name = "블랙리스트여부";
@@ -188,6 +195,7 @@
             // 
             // 블랙리스트사유
             // 
+            this.블랙리스트사유.Caption = "블랙리스트 사유";
             this.블랙리스트사유.FieldName = "BlacklistReason";
             this.블랙리스트사유.MinWidth = 25;
             this.블랙리스트사유.Name = "블랙리스트사유";
@@ -197,6 +205,7 @@
             // 
             // 관리자여부
             // 
+            this.관리자여부.Caption = "관리자 여부";
             this.관리자여부.FieldName = "IsAdministrator";
             this.관리자여부.MinWidth = 25;
             this.관리자여부.Name = "관리자여부";

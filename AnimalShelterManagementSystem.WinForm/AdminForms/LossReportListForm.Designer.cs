@@ -112,6 +112,7 @@
             // 
             // 유저Id
             // 
+            this.유저Id.Caption = "유저Id";
             this.유저Id.FieldName = "userLoginId";
             this.유저Id.MinWidth = 25;
             this.유저Id.Name = "유저Id";
@@ -121,6 +122,7 @@
             // 
             // 동물이름
             // 
+            this.동물이름.Caption = "동물이름";
             this.동물이름.FieldName = "AnimalName";
             this.동물이름.MinWidth = 25;
             this.동물이름.Name = "동물이름";
@@ -130,6 +132,7 @@
             // 
             // 종
             // 
+            this.종.Caption = "종";
             this.종.FieldName = "SpeciesName";
             this.종.MinWidth = 25;
             this.종.Name = "종";
@@ -139,6 +142,7 @@
             // 
             // 장소
             // 
+            this.장소.Caption = "장소";
             this.장소.FieldName = "Place";
             this.장소.MinWidth = 25;
             this.장소.Name = "장소";
@@ -148,6 +152,7 @@
             // 
             // 날짜
             // 
+            this.날짜.Caption = "날짜";
             this.날짜.FieldName = "Date";
             this.날짜.MinWidth = 25;
             this.날짜.Name = "날짜";
@@ -157,6 +162,7 @@
             // 
             // 사진
             // 
+            this.사진.Caption = "사진";
             this.사진.FieldName = "PictureLink";
             this.사진.MinWidth = 25;
             this.사진.Name = "사진";

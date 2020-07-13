@@ -268,6 +268,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 동물Id
             // 
+            this.동물Id.Caption = "동물Id";
             this.동물Id.FieldName = "HomelessAnimalId";
             this.동물Id.MinWidth = 25;
             this.동물Id.Name = "동물Id";
@@ -277,6 +278,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 종
             // 
+            this.종.Caption = "종";
             this.종.FieldName = "SpeciesName";
             this.종.MinWidth = 25;
             this.종.Name = "종";
@@ -286,6 +288,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 이름
             // 
+            this.이름.Caption = "이름";
             this.이름.FieldName = "Name";
             this.이름.MinWidth = 25;
             this.이름.Name = "이름";
@@ -295,6 +298,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 나이
             // 
+            this.나이.Caption = "나이";
             this.나이.FieldName = "Age";
             this.나이.MinWidth = 25;
             this.나이.Name = "나이";
@@ -304,6 +308,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 성별
             // 
+            this.성별.Caption = "성별";
             this.성별.FieldName = "GenderName";
             this.성별.MinWidth = 25;
             this.성별.Name = "성별";
@@ -313,6 +318,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 특징
             // 
+            this.특징.Caption = "특징";
             this.특징.FieldName = "Feature";
             this.특징.MinWidth = 25;
             this.특징.Name = "특징";
@@ -322,6 +328,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 건강상태
             // 
+            this.건강상태.Caption = "건강상태";
             this.건강상태.FieldName = "PhysicalConditionName";
             this.건강상태.MinWidth = 25;
             this.건강상태.Name = "건강상태";
@@ -331,6 +338,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 보호소Id
             // 
+            this.보호소Id.Caption = "보호소Id";
             this.보호소Id.FieldName = "AnimalShelterId";
             this.보호소Id.MinWidth = 25;
             this.보호소Id.Name = "보호소Id";
@@ -340,6 +348,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 최신발견날짜
             // 
+            this.최신발견날짜.Caption = "최신발견날짜";
             this.최신발견날짜.FieldName = "LatestFindingReportDate";
             this.최신발견날짜.MinWidth = 25;
             this.최신발견날짜.Name = "최신발견날짜";
@@ -349,6 +358,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // 사진
             // 
+            this.사진.Caption = "사진";
             this.사진.FieldName = "PictureLink";
             this.사진.MinWidth = 25;
             this.사진.Name = "사진";
