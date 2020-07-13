@@ -48,7 +48,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchControl1 = new AnimalShelterManagementSystem.WinForm.UserControls.SearchControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grcAnimalList = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.동물Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.종 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,11 +60,13 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.보호소Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.최신발견날짜 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.사진 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.pcePicture = new DevExpress.XtraEditors.PictureEdit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcAnimalList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcePicture.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -77,7 +79,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1028, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(939, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -169,7 +171,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1028, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(939, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -230,24 +232,24 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // 
             // searchControl1
             // 
-            this.searchControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchControl1.Location = new System.Drawing.Point(0, 55);
             this.searchControl1.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Size = new System.Drawing.Size(1028, 196);
+            this.searchControl1.Size = new System.Drawing.Size(701, 196);
             this.searchControl1.TabIndex = 4;
             this.searchControl1.LoadButtonClicked += new System.EventHandler<AnimalShelterManagementSystem.WinForm.UserControls.SearchControl.LoadButtonClickedEventArgs>(this.searchControl1_LoadButtonClicked_1);
             // 
-            // gridControl1
+            // grcAnimalList
             // 
-            this.gridControl1.DataSource = this.homelessAnimalBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(0, 247);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1028, 427);
-            this.gridControl1.TabIndex = 6;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grcAnimalList.DataSource = this.homelessAnimalBindingSource;
+            this.grcAnimalList.Location = new System.Drawing.Point(0, 249);
+            this.grcAnimalList.MainView = this.gridView1;
+            this.grcAnimalList.Name = "grcAnimalList";
+            this.grcAnimalList.Size = new System.Drawing.Size(937, 208);
+            this.grcAnimalList.TabIndex = 6;
+            this.grcAnimalList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grcAnimalList.Click += new System.EventHandler(this.grcAnimalList_Click);
             // 
             // gridView1
             // 
@@ -262,7 +264,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.보호소Id,
             this.최신발견날짜,
             this.사진});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.grcAnimalList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -366,12 +368,22 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.사진.VisibleIndex = 8;
             this.사진.Width = 94;
             // 
+            // pcePicture
+            // 
+            this.pcePicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcePicture.Location = new System.Drawing.Point(701, 55);
+            this.pcePicture.Name = "pcePicture";
+            this.pcePicture.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pcePicture.Size = new System.Drawing.Size(246, 196);
+            this.pcePicture.TabIndex = 22;
+            // 
             // HomelessAnimalListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 676);
-            this.Controls.Add(this.gridControl1);
+            this.ClientSize = new System.Drawing.Size(939, 463);
+            this.Controls.Add(this.pcePicture);
+            this.Controls.Add(this.grcAnimalList);
             this.Controls.Add(this.searchControl1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -387,8 +399,9 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcAnimalList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcePicture.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,7 +431,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private System.Windows.Forms.ToolStripMenuItem 수정UToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private UserControls.SearchControl searchControl1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grcAnimalList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn 동물Id;
         private DevExpress.XtraGrid.Columns.GridColumn 종;
@@ -430,5 +443,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private DevExpress.XtraGrid.Columns.GridColumn 보호소Id;
         private DevExpress.XtraGrid.Columns.GridColumn 최신발견날짜;
         private DevExpress.XtraGrid.Columns.GridColumn 사진;
+        private DevExpress.XtraEditors.PictureEdit pcePicture;
     }
 }

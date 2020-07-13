@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace AnimalShelterManagementSystem.WinForm.Forms
 {
@@ -105,7 +106,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             homelessAnimal.Age = 0;
             homelessAnimal.Feature = "";
             homelessAnimal.LatestFindingReport = System.DateTime.Today;
-            homelessAnimal.PictureLink = string.Empty;
+         //   homelessAnimal.PictureLink = string.Empty;
 
 
             HomelessAnimalForm form = new HomelessAnimalForm(homelessAnimal);
@@ -181,6 +182,21 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void grcAnimalList_Click(object sender, EventArgs e)
+        {
+            HomelessAnimal homelessanimal = homelessAnimalBindingSource.Current as HomelessAnimal;
+         //   if(homelessanimal.Picture.)
+            pcePicture.Image = byteArrayToImage(homelessanimal.Picture);
+        }
+        public Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
         }
     }
 }
