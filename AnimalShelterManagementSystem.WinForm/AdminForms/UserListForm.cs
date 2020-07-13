@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-
     public partial class UserListForm : DevExpress.XtraEditors.XtraForm
     {
         private int AdminCode = 2;
@@ -25,6 +24,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         public UserListForm()
         {
             InitializeComponent();
+
         }
        
         private void UserManagement_Load(object sender, EventArgs e)

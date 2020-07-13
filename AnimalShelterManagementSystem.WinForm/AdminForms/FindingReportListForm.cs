@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class FindingManagementForm : DevExpress.XtraEditors.XtraForm
+    public partial class FindingReportListForm : DevExpress.XtraEditors.XtraForm
     {
         private int SpeciesCode;
-        public FindingManagementForm()
+        public FindingReportListForm()
         {
             InitializeComponent();
         }
