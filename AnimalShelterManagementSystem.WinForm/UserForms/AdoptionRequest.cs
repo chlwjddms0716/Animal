@@ -44,6 +44,7 @@ namespace AnimalShelterManagementSystem.WinForm
             foreach (SpeciesType speciesType in (SpeciesType[])Enum.GetValues(typeof(SpeciesType)))
                 homelessAnimals.AddRange(DataRepository.HomelessAnimal.SearchWithAnimals((int)speciesType, 0));
             homelessAnimalBindingSource.DataSource = homelessAnimals;
+            cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
             cbxSpecies.SelectedItem = null;
 
         }
@@ -81,21 +82,15 @@ namespace AnimalShelterManagementSystem.WinForm
             MessageBox.Show($"{homelessAnimal.Name}을 선택하셨습니다.");
         }
 
-        private void cbxSpecies_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnLoad_Click(object sender, EventArgs e)
         {
+            GenderCode = (int)rdgSex.EditValue;
             if (cbxSpecies.SelectedItem != null)
             {
                 SpeciesCode = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
                 List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, GenderCode);
                 homelessAnimalBindingSource.DataSource = homelessAnimals;
             }
-        }
-
-        private void rdgSex_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            GenderCode = (int)rdgSex.EditValue;
-            List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, GenderCode);
-            homelessAnimalBindingSource.DataSource = homelessAnimals;
         }
     }
 }

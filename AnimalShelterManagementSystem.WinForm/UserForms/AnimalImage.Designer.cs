@@ -52,7 +52,7 @@
             this.ClientSize = new System.Drawing.Size(766, 510);
             this.Controls.Add(this.imageSlider1);
             this.Name = "AnimalImage";
-            this.Text = "AnimalImage";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).EndInit();
             this.ResumeLayout(false);
 

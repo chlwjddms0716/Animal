@@ -59,7 +59,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
                 _homelessAnimal.Gender = Convert.ToInt32(cbbGender.SelectedValue);
                 _homelessAnimal.PhysicalCondition = Convert.ToInt32(cbbPSC.SelectedValue);
                 _homelessAnimal.LatestFindingReport = dteLatestFindingReport.DateTime.Date;
-                _homelessAnimal.PictureLink = txePictureLink.Text;
+                //_homelessAnimal.PictureLink = txePictureLink.Text;
                 _homelessAnimal.AnimalShelterId = Convert.ToInt32(cbbAnimalShelter.SelectedValue);
 
                
@@ -176,7 +176,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             txeAge.Text = Convert.ToString(_homelessAnimal.Age);
             txeFeature.Text = _homelessAnimal.Feature;
             dteLatestFindingReport.Text = Convert.ToString(_homelessAnimal.LatestFindingReport);
-            txePictureLink.Text = _homelessAnimal.PictureLink;
+            //txePictureLink.Text = _homelessAnimal.Picture;
 
         }
 

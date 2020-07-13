@@ -118,10 +118,10 @@
             // grcUserList
             // 
             this.grcUserList.DataSource = this.userBindingSource;
-            this.grcUserList.Location = new System.Drawing.Point(12, 214);
+            this.grcUserList.Location = new System.Drawing.Point(12, 221);
             this.grcUserList.MainView = this.gridView1;
             this.grcUserList.Name = "grcUserList";
-            this.grcUserList.Size = new System.Drawing.Size(776, 314);
+            this.grcUserList.Size = new System.Drawing.Size(776, 307);
             this.grcUserList.TabIndex = 12;
             this.grcUserList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -250,7 +250,7 @@
             this.tsbRefresh});
             this.toolStrip1.Location = new System.Drawing.Point(12, 178);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(776, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(776, 39);
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -260,7 +260,7 @@
             this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(29, 29);
+            this.tsbAdd.Size = new System.Drawing.Size(29, 36);
             this.tsbAdd.Text = "추가";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -270,7 +270,7 @@
             this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(29, 29);
+            this.tsbDelete.Size = new System.Drawing.Size(29, 36);
             this.tsbDelete.Text = "삭제";
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
@@ -280,7 +280,7 @@
             this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(29, 29);
+            this.tsbEdit.Size = new System.Drawing.Size(29, 36);
             this.tsbEdit.Text = "수정";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
@@ -290,7 +290,7 @@
             this.btnHelp.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Help;
             this.btnHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(29, 29);
+            this.btnHelp.Size = new System.Drawing.Size(29, 36);
             this.btnHelp.Text = "도움말";
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -300,7 +300,7 @@
             this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(29, 29);
+            this.tsbRefresh.Size = new System.Drawing.Size(29, 36);
             this.tsbRefresh.Text = "새로고침";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
@@ -415,16 +415,16 @@
             this.layoutControlItem4.Control = this.toolStrip1;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 166);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(780, 36);
+            this.layoutControlItem4.Size = new System.Drawing.Size(780, 43);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.grcUserList;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 202);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 209);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(780, 318);
+            this.layoutControlItem5.Size = new System.Drawing.Size(780, 311);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 

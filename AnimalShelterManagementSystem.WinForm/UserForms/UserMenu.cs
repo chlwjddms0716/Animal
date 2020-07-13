@@ -1,4 +1,5 @@
 ﻿using System;
+using AnimalShelterManagementSystem.WinForm.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.UserForms
 {
-    public partial class UserMenu : DevExpress.XtraEditors.XtraForm
+    public partial class UserMenu : DevExpress.XtraBars.ToolbarForm.ToolbarForm
     {
         private int userId;
         public UserMenu()
@@ -37,7 +38,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 }
             }
 
-            EditUserInformation editUserInformation = new EditUserInformation();
+            EditUserInformation editUserInformation = new EditUserInformation(userId);
             editUserInformation.MdiParent = this;
             editUserInformation.WindowState = FormWindowState.Maximized;
             editUserInformation.Show();
@@ -55,7 +56,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 }
             }
 
-            LossReportForm lossReportForm = new LossReportForm();
+            LossReportForm lossReportForm = new LossReportForm(userId);
             lossReportForm.MdiParent = this;
             lossReportForm.WindowState = FormWindowState.Maximized;
             lossReportForm.Show();
@@ -73,7 +74,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 }
             }
 
-            AdoptionRequest adoptionRequest = new AdoptionRequest();
+            AdoptionRequest adoptionRequest = new AdoptionRequest(userId);
             adoptionRequest.MdiParent = this;
             adoptionRequest.WindowState = FormWindowState.Maximized;
             adoptionRequest.Show();

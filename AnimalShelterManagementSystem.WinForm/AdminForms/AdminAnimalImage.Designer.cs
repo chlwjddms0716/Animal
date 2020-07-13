@@ -45,14 +45,14 @@
             this.imgAnimal.TabIndex = 0;
             this.imgAnimal.Text = "imageSlider1";
             // 
-            // AnimalImage
+            // AdminAnimalImage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 492);
             this.Controls.Add(this.imgAnimal);
-            this.Name = "AnimalImage";
-            this.Text = "Animal";
+            this.Name = "AdminAnimalImage";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.XtraForm1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgAnimal)).EndInit();
             this.ResumeLayout(false);
