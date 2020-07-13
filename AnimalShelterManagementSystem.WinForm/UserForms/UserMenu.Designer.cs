@@ -105,6 +105,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserMenu";
             this.Text = "사용자메뉴";
+            this.Load += new System.EventHandler(this.UserMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             this.ResumeLayout(false);
 

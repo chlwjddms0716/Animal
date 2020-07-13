@@ -195,6 +195,7 @@
             this.Name = "AdminMenu";
             this.Text = "관리자메뉴";
             this.ToolbarFormControl = this.toolbarFormControl1;
+            this.Load += new System.EventHandler(this.AdminMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();

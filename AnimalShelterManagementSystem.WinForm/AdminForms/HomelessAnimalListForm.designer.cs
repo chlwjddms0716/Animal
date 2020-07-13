@@ -172,7 +172,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.toolStrip1.Size = new System.Drawing.Size(1028, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            
             // 
             // toolStripButton1
             // 
@@ -382,7 +382,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.Name = "HomelessAnimalListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "유기유실동물리스트";
-            this.Load += new System.EventHandler(this.HomelessAnimalListForm_Load);
+            
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

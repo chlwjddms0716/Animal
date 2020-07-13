@@ -33,7 +33,6 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -52,7 +51,6 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -71,7 +69,6 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -90,7 +87,6 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -99,6 +95,14 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
             findingReportForm.MdiParent = this;
             findingReportForm.WindowState = FormWindowState.Maximized;
             findingReportForm.Show();
+        }
+
+        private void UserMenu_Load(object sender, EventArgs e)
+        {
+            AnimalImage form = new AnimalImage();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
         }
     }
 }
