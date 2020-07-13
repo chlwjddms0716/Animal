@@ -35,7 +35,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             cbxSpecies.SelectedItem = _lossReport.SpeciesName;
             dteDate.EditValue = _lossReport.Date;
             txePlace.EditValue = _lossReport.Place;
-            txePictureLink.EditValue = _lossReport.PictureLink;
+            txePictureLink.EditValue = _lossReport.Picture;
         }
 
         private void WriteToEntity()
@@ -46,7 +46,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             _lossReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
             _lossReport.Date = dteDate.DateTime.Date;
             _lossReport.Place = txePlace.Text;
-            _lossReport.PictureLink = txePictureLink.Text;
+           // _lossReport.Picture = txePictureLink.Text;
             _lossReport.LossReportId = _lossReport.LossReportId;
             _lossReport.UserId = DataRepository.User.GetbyId(txeId.Text).UserId;
 

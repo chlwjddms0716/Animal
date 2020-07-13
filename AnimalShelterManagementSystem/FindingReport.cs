@@ -25,6 +25,7 @@ namespace AnimalShelterManagementSystem
         public System.DateTime Date { get; set; }
         public bool IsInShelter { get; set; }
         public int Species { get; set; }
+        public byte[] Picture { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FindingReportRecord> FindingReportRecords { get; set; }

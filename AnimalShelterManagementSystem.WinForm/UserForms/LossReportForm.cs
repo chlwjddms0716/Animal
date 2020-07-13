@@ -71,7 +71,7 @@ namespace AnimalShelterManagementSystem.WinForm
                 lossReport.Date = dteDate.DateTime.Date;
                 lossReport.AnimalName = tbxName.Text;
                 lossReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
-                lossReport.PictureLink = txbPictureLink.Text;
+               // lossReport.PictureLink = txbPictureLink.Text;
 
                 DataRepository.LossReport.Insert(lossReport);
                 if (String.Equals(txbPictureLink.Text, "") == true)

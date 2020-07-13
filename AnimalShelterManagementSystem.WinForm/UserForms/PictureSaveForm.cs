@@ -19,7 +19,10 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
     public partial class PictureSaveForm : Form
     {
         private HomelessAnimal homelessAnimal;
+        private FindingReport findingReport;
+        private LossReport
         public static string Address { get; set; }
+        private int check;
          public PictureSaveForm()
         {
             InitializeComponent();
@@ -27,14 +30,25 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
 
         public PictureSaveForm(HomelessAnimal _homelessAnimal) : this()
         {
+            check = 1;
             homelessAnimal = _homelessAnimal;
         }
+
+
+        public PictureSaveForm(FindingReport _findingReport) : this()
+        {
+            check = 2;
+            findingReport = _findingReport;
+        }
+
+
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             if (xtraOpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 peBox.Image = Image.FromFile(xtraOpenFileDialog1.FileName);
+                peBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
                 Address = xtraOpenFileDialog1.FileName;
                 return;
             }
@@ -42,7 +56,11 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            homelessAnimal.Picture = ConvertImageToBinary(peBox.Image);
+            if(check==1 )
+                homelessAnimal.Picture = ConvertImageToBinary(peBox.Image);
+            else if(check==2)
+                findingReport.Picture = ConvertImageToBinary(peBox.Image);
+
             MessageBox.Show("사진 등록이 완료되었습니다.");
             Close();
         }

@@ -19,8 +19,8 @@ namespace AnimalShelterManagementSystem
         public System.DateTime Date { get; set; }
         public string AnimalName { get; set; }
         public int UserId { get; set; }
-        public string PictureLink { get; set; }
-        public Nullable<int> Species { get; set; }
+        public int Species { get; set; }
+        public byte[] Picture { get; set; }
     
         public virtual User User { get; set; }
     }

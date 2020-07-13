@@ -33,8 +33,7 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
         public HomelessAnimalForm(HomelessAnimal homelessAnimal) : this()
         {
             _homelessAnimal = homelessAnimal;
-            
-            
+
         }
 
         public HomelessAnimalForm(FindingReport findingReport) : this()
