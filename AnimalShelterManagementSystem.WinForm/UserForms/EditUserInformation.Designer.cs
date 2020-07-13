@@ -113,12 +113,12 @@
             // 
             // btnSignup
             // 
-            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignup.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSignup.Appearance.Options.UseFont = true;
             this.btnSignup.Location = new System.Drawing.Point(407, 180);
             this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSignup.Name = "btnSignup";
-            this.btnSignup.Size = new System.Drawing.Size(139, 28);
+            this.btnSignup.Size = new System.Drawing.Size(139, 32);
             this.btnSignup.StyleController = this.layoutControl2;
             this.btnSignup.TabIndex = 5;
             this.btnSignup.Text = "수정(&S)";

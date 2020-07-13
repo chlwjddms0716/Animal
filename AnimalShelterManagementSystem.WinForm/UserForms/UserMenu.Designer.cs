@@ -104,7 +104,7 @@
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserMenu";
-            this.Text = "UserMenu12cs";
+            this.Text = "사용자메뉴";
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             this.ResumeLayout(false);
 

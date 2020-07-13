@@ -106,12 +106,12 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(576, 476);
+            this.simpleButton1.Location = new System.Drawing.Point(576, 471);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(142, 27);
+            this.simpleButton1.Size = new System.Drawing.Size(142, 32);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 11;
             this.simpleButton1.Text = "입양 신청";
@@ -145,7 +145,7 @@
             this.grvHomelessAnimalList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grvHomelessAnimalList.RowTemplate.Height = 27;
             this.grvHomelessAnimalList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvHomelessAnimalList.Size = new System.Drawing.Size(664, 368);
+            this.grvHomelessAnimalList.Size = new System.Drawing.Size(664, 363);
             this.grvHomelessAnimalList.TabIndex = 10;
             this.grvHomelessAnimalList.Click += new System.EventHandler(this.grvHomelessAnimalList_DoubleClick);
             // 
@@ -221,16 +221,16 @@
             this.layoutControlItem2.CustomizationFormText = "l";
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 92);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(710, 372);
+            this.layoutControlItem2.Size = new System.Drawing.Size(710, 367);
             this.layoutControlItem2.Text = "리스트";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(39, 18);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.simpleButton1;
-            this.layoutControlItem6.Location = new System.Drawing.Point(564, 464);
+            this.layoutControlItem6.Location = new System.Drawing.Point(564, 459);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(146, 31);
+            this.layoutControlItem6.Size = new System.Drawing.Size(146, 36);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
