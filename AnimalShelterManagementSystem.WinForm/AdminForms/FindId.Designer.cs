@@ -69,6 +69,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(741, 0, 812, 500);
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(362, 176);
             this.layoutControl1.TabIndex = 0;
@@ -80,12 +81,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(12, 14);
+            this.splitContainerControl1.Location = new System.Drawing.Point(12, 12);
             this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.layoutControl2);
             this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Size = new System.Drawing.Size(338, 148);
+            this.splitContainerControl1.Size = new System.Drawing.Size(338, 152);
             this.splitContainerControl1.SplitterPosition = 140;
             this.splitContainerControl1.TabIndex = 4;
             // 
@@ -106,14 +107,14 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(12, 83);
+            this.splitContainer1.Location = new System.Drawing.Point(12, 82);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btnFindId);
-            this.splitContainer1.Size = new System.Drawing.Size(314, 43);
+            this.splitContainer1.Size = new System.Drawing.Size(314, 46);
             this.splitContainer1.SplitterDistance = 104;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -123,14 +124,14 @@
             this.btnFindId.Location = new System.Drawing.Point(0, 0);
             this.btnFindId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFindId.Name = "btnFindId";
-            this.btnFindId.Size = new System.Drawing.Size(206, 43);
+            this.btnFindId.Size = new System.Drawing.Size(206, 46);
             this.btnFindId.TabIndex = 0;
             this.btnFindId.Text = "아이디 찾기";
             this.btnFindId.Click += new System.EventHandler(this.btnFindId_Click);
             // 
             // txePhoneNumber
             // 
-            this.txePhoneNumber.Location = new System.Drawing.Point(95, 42);
+            this.txePhoneNumber.Location = new System.Drawing.Point(95, 40);
             this.txePhoneNumber.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txePhoneNumber.Name = "txePhoneNumber";
             this.txePhoneNumber.Size = new System.Drawing.Size(231, 24);
@@ -139,7 +140,7 @@
             // 
             // txeName
             // 
-            this.txeName.Location = new System.Drawing.Point(95, 14);
+            this.txeName.Location = new System.Drawing.Point(95, 12);
             this.txeName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txeName.Name = "txeName";
             this.txeName.Size = new System.Drawing.Size(231, 24);
@@ -173,7 +174,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 56);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(318, 13);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(318, 14);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -188,9 +189,9 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.splitContainer1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 69);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 70);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(318, 47);
+            this.layoutControlItem4.Size = new System.Drawing.Size(318, 50);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -209,7 +210,7 @@
             this.layoutControlItem7.Control = this.splitContainerControl1;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(342, 152);
+            this.layoutControlItem7.Size = new System.Drawing.Size(342, 156);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
