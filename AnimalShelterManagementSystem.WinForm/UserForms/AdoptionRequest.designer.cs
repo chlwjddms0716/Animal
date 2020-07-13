@@ -266,9 +266,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 464);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 459);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(564, 31);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(564, 36);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // dataGridViewTextBoxColumn1

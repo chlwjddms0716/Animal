@@ -63,11 +63,18 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         }
         private void tsbDelete_Click(object sender, EventArgs e)
         {
-            if (userBindingSource.Current is null)
-                MessageBox.Show("삭제할 유저를 선택해주세요");
-            else
-                LoadEditForm(userBindingSource.Current as User);
+            User user = userBindingSource.Current as User;
+
+            if (Helpers.Helpers.SureToDelete() == false)
+                return;
+            if (user == null)
+                return;
+
+            DataRepository.User.Delete(user);
+
+            userBindingSource.Remove(user);
         }
+
         private void tsbEdit_Click(object sender, EventArgs e)
         {
             if (userBindingSource.Current is null)
