@@ -63,11 +63,11 @@
           <Property Name="Gender" Type="int" Nullable="false" />
           <Property Name="Feature" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LatestFindingReport" Type="smalldatetime" Nullable="false" />
-          <Property Name="PictureLink" Type="nvarchar(max)" Nullable="false" />
           <Property Name="PhysicalCondition" Type="int" Nullable="false" />
           <Property Name="Species" Type="int" Nullable="false" />
           <Property Name="AdoptionStatus" Type="int" Nullable="false" />
           <Property Name="AnimalShelterId" Type="int" Nullable="false" />
+          <Property Name="Picture" Type="image" />
         </EntityType>
         <EntityType Name="LossReport">
           <Key>
@@ -325,11 +325,11 @@
           <Property Name="Gender" Type="Int32" Nullable="false" />
           <Property Name="Feature" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LatestFindingReport" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="PictureLink" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="PhysicalCondition" Type="Int32" Nullable="false" />
           <Property Name="Species" Type="Int32" Nullable="false" />
           <Property Name="AdoptionStatus" Type="Int32" Nullable="false" />
           <Property Name="AnimalShelterId" Type="Int32" Nullable="false" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Adoptions" Relationship="AnimalShelterManagement.FK_입양기록_유실유기_동물" FromRole="HomelessAnimal" ToRole="Adoption" />
           <NavigationProperty Name="FindingReportRecords" Relationship="AnimalShelterManagement.FK_FindingReportRecord_HomelessAnimal" FromRole="HomelessAnimal" ToRole="FindingReportRecord" />
           <NavigationProperty Name="FoundAnimalRecords" Relationship="AnimalShelterManagement.FK_찾은_분실_동물_기록_유실유기_동물" FromRole="HomelessAnimal" ToRole="FoundAnimalRecord" />
@@ -506,11 +506,11 @@
           <EntitySetMapping Name="HomelessAnimals">
             <EntityTypeMapping TypeName="AnimalShelterManagement.HomelessAnimal">
               <MappingFragment StoreEntitySet="HomelessAnimal">
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
                 <ScalarProperty Name="AnimalShelterId" ColumnName="AnimalShelterId" />
                 <ScalarProperty Name="AdoptionStatus" ColumnName="AdoptionStatus" />
                 <ScalarProperty Name="Species" ColumnName="Species" />
                 <ScalarProperty Name="PhysicalCondition" ColumnName="PhysicalCondition" />
-                <ScalarProperty Name="PictureLink" ColumnName="PictureLink" />
                 <ScalarProperty Name="LatestFindingReport" ColumnName="LatestFindingReport" />
                 <ScalarProperty Name="Feature" ColumnName="Feature" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />

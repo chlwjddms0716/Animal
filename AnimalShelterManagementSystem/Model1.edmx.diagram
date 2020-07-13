@@ -6,8 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="ad251d2d354744d8b9a5a2f40d3d6153" Name="Diagram1" ZoomLevel="97">
         <EntityTypeShape EntityType="AnimalShelterManagement.Adoption" Width="1.5" PointX="3" PointY="6.375" />
-        <EntityTypeShape EntityType="AnimalShelterManagement.AnimalShelter" Width="1.5" PointX="0.75" PointY="13.125" />
-        <EntityTypeShape EntityType="AnimalShelterManagement.FindingReport" Width="1.5" PointX="0.75" PointY="10.25" />
+        <EntityTypeShape EntityType="AnimalShelterManagement.AnimalShelter" Width="1.5" PointX="0.75" PointY="10.25" />
+        <EntityTypeShape EntityType="AnimalShelterManagement.FindingReport" Width="1.5" PointX="0.75" PointY="13.125" />
         <EntityTypeShape EntityType="AnimalShelterManagement.FindingReportRecord" Width="1.5" PointX="3" PointY="3.125" />
         <EntityTypeShape EntityType="AnimalShelterManagement.FoundAnimalRecord" Width="1.5" PointX="3" PointY="12.25" />
         <EntityTypeShape EntityType="AnimalShelterManagement.HomelessAnimal" Width="1.5" PointX="0.75" PointY="5.5" />
