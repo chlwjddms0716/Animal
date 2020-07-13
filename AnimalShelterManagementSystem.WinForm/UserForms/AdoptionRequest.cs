@@ -81,6 +81,7 @@ namespace AnimalShelterManagementSystem.WinForm
                 SpeciesCode = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
                 List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, GenderCode);
                 homelessAnimalBindingSource.DataSource = homelessAnimals;
+                MessageBox.Show("사진을 크게 보려면 동물을 클릭해주세요.");
             }
         }
 

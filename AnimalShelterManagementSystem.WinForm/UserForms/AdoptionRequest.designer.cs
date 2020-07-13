@@ -431,8 +431,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn 특징;
         private DevExpress.XtraGrid.Columns.GridColumn 사진;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraEditors.SimpleButton btnLoad;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }
