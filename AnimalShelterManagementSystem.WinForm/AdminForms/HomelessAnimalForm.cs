@@ -17,7 +17,8 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
     public partial class HomelessAnimalForm : DevExpress.XtraEditors.XtraForm
     {
         private HomelessAnimal _homelessAnimal;
-
+        private bool IsProtected = false;
+        private FindingReport findingReport;
 
         public HomelessAnimalForm()
         {
@@ -30,6 +31,16 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             _homelessAnimal = homelessAnimal;
         }
 
+        public HomelessAnimalForm(FindingReport findingReport) : this()
+        {
+            _homelessAnimal = new HomelessAnimal();
+            this.findingReport = findingReport;
+            _homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
+            _homelessAnimal.Species = findingReport.Species;
+            _homelessAnimal.SpeciesName = findingReport.SpeciesName;
+            IsProtected = true;
+        
+        }
 
         //안녕
 
@@ -112,9 +123,21 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
 
                 try
                 {
-                   
+                    if (IsProtected == true)
+                    {
+                        DataRepository.HomelessAnimal.Insert(_homelessAnimal);
+                        FindingReportRecord findingReportRecord = new FindingReportRecord();
+                        findingReportRecord.AnimalShelterId = _homelessAnimal.AnimalShelterId;
+                        findingReportRecord.HomelessAnimalId = _homelessAnimal.HomelessAnimalId;
+                        findingReportRecord.FindingReportId = findingReport.FindingReportId;
+                        findingReportRecord.ProtectionStartDate = DateTime.Today;
+                        DataRepository.FindingReportRecord.Insert(findingReportRecord);
+                        IsProtected = false;
+                    }
                     if (_homelessAnimal.HomelessAnimalId == DataRepository.HomelessAnimal.GetMaxId() + 1) //Id의 디폴트가0이라 0이면 db에 insert함
                         DataRepository.HomelessAnimal.Insert(_homelessAnimal);
+
+                       
 
                     else
                         DataRepository.HomelessAnimal.Update(_homelessAnimal);
