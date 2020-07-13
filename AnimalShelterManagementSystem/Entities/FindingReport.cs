@@ -8,5 +8,6 @@ namespace AnimalShelterManagementSystem
 {
     partial class FindingReport
     {
+        public string SpeciesName { get; set; }
     }
 }

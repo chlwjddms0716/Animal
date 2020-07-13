@@ -65,7 +65,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         private void btnSave_Click(object sender, EventArgs e)
         {
             WriteToEntity();
-            CheckInput();
 
             if (string.Equals(CheckInput(), "") == true)
             {

@@ -90,6 +90,30 @@
     <Compile Include="AdminForms\AdoptionListForm.Designer.cs">
       <DependentUpon>AdoptionListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\FindingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FindingForm.Designer.cs">
+      <DependentUpon>FindingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\FindingManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\FindingManagementForm.designer.cs">
+      <DependentUpon>FindingManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\LossReportAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\LossReportAdminForm.Designer.cs">
+      <DependentUpon>LossReportAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\LossReportListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\LossReportListForm.Designer.cs">
+      <DependentUpon>LossReportListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +234,18 @@
     <EmbeddedResource Include="AdminForms\AdoptionListForm.resx">
       <DependentUpon>AdoptionListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FindingForm.resx">
+      <DependentUpon>FindingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FindingManagementForm.resx">
+      <DependentUpon>FindingManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\LossReportAdminForm.resx">
+      <DependentUpon>LossReportAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\LossReportListForm.resx">
+      <DependentUpon>LossReportListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +310,7 @@
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.Adoption.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.AnimalShelter.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.HomelessAnimal2.datasource" />
+    <None Include="Properties\DataSources\AnimalShelterManagementSystem.LossReport.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.Models.Species.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.User.datasource" />
     <None Include="Properties\Settings.settings">
