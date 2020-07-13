@@ -35,6 +35,7 @@
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.txeUserId = new DevExpress.XtraEditors.TextEdit();
             this.lkuAnimalId = new DevExpress.XtraEditors.LookUpEdit();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rdgAdoptionStatus = new DevExpress.XtraEditors.RadioGroup();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -44,12 +45,13 @@
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txeAnimalName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeUserId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkuAnimalId.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdoptionStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -59,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -74,8 +76,9 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(732, 0, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(351, 226);
+            this.layoutControl1.Size = new System.Drawing.Size(351, 220);
             this.layoutControl1.TabIndex = 3;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -93,10 +96,10 @@
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(165, 130);
+            this.btnSave.Location = new System.Drawing.Point(266, 130);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(174, 32);
+            this.btnSave.Size = new System.Drawing.Size(73, 32);
             this.btnSave.StyleController = this.layoutControl1;
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "확인";
@@ -106,10 +109,10 @@
             // 
             this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.Location = new System.Drawing.Point(12, 130);
+            this.btnClose.Location = new System.Drawing.Point(188, 130);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(149, 32);
+            this.btnClose.Size = new System.Drawing.Size(74, 32);
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "취소";
@@ -142,6 +145,10 @@
             this.lkuAnimalId.StyleController = this.layoutControl1;
             this.lkuAnimalId.TabIndex = 2;
             // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            // 
             // rdgAdoptionStatus
             // 
             this.rdgAdoptionStatus.EditValue = 0;
@@ -166,10 +173,11 @@
             this.layoutControlItem11,
             this.layoutControlItem12,
             this.layoutControlItem4,
-            this.layoutControlItem10});
+            this.layoutControlItem10,
+            this.emptySpaceItem2});
             this.Root.Name = "Root";
             this.Root.OptionsItemText.TextToControlDistance = 2;
-            this.Root.Size = new System.Drawing.Size(351, 226);
+            this.Root.Size = new System.Drawing.Size(351, 220);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -177,7 +185,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 154);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(331, 52);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(331, 46);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -192,18 +200,18 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnClose;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 118);
+            this.layoutControlItem7.Location = new System.Drawing.Point(176, 118);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(153, 36);
+            this.layoutControlItem7.Size = new System.Drawing.Size(78, 36);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnSave;
-            this.layoutControlItem11.Location = new System.Drawing.Point(153, 118);
+            this.layoutControlItem11.Location = new System.Drawing.Point(254, 118);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(178, 36);
+            this.layoutControlItem11.Size = new System.Drawing.Size(77, 36);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -239,15 +247,19 @@
             this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(62, 18);
             // 
-            // homelessAnimalBindingSource
+            // emptySpaceItem2
             // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 118);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(176, 36);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // AdoptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 226);
+            this.ClientSize = new System.Drawing.Size(351, 220);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -260,6 +272,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txeAnimalName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeUserId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkuAnimalId.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgAdoptionStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -269,7 +282,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,5 +305,6 @@
         private DevExpress.XtraEditors.RadioGroup rdgAdoptionStatus;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private System.Windows.Forms.BindingSource homelessAnimalBindingSource;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }
