@@ -14,9 +14,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
     public partial class AdoptionListForm : DevExpress.XtraEditors.XtraForm
     {
-        List<Adoption> adoptionList = new List<Adoption>();
-        List<Adoption> FilteredById;
-        List<Adoption> FilteredByAdoptionStatus;
         private int currentStatus = 3;
         Adoption adoption = new Adoption();
 
@@ -24,28 +21,31 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             InitializeComponent();
         }
-        private void querybyId()
-        {
-            if (String.Equals(txeId.Text, "") == false)
-                FilteredById = adoptionList.Where(x => x.userLoginId.Contains(txeId.Text) == true).ToList();
-            else
-                FilteredById = adoptionList;
-        }
-        private void querybyAdoptionStatus()
-        {
-            querybyId();
-            if (currentStatus != 3) //전체
-                FilteredByAdoptionStatus = FilteredById.Where(x => x.AdoptionStatus == (AdoptionStatusType)currentStatus).ToList();
-            else
-                FilteredByAdoptionStatus = FilteredById;
-            adoptionBindingSource.DataSource = FilteredByAdoptionStatus.Where(x=>x.AdoptionStatus != 0);
-        }
 
         private void AdoptionManagement_Load(object sender, EventArgs e)
         {
-            adoptionList = DataRepository.Adoption.GetEvery();
-            //adoptionBindingSource.DataSource = adoptionList;
-            querybyAdoptionStatus();
+            if (DesignMode)
+                return;
+
+            LoadAdoptions();
+        }
+
+        private void LoadAdoptions()
+        {
+            List<Adoption> adoptions = DataRepository.Adoption.Search(txeId.Text, (int)rdgAdoptionStatus.EditValue);
+            adoptionBindingSource.DataSource = adoptions;
+
+            //if (String.Equals(txeId.Text, "") == false)
+            //    FilteredById = adoptionList.Where(x => x.userLoginId.Contains(txeId.Text) == true).ToList();
+            //else
+            //    FilteredById = adoptionList;
+
+            //if (currentStatus != 3) //전체
+            //    FilteredByAdoptionStatus = FilteredById.Where(x => x.AdoptionStatus == (AdoptionStatusType)currentStatus).ToList();
+            //else
+            //    FilteredByAdoptionStatus = FilteredById;
+            //adoptionBindingSource.DataSource = FilteredByAdoptionStatus.Where(x => x.AdoptionStatus != 0);
+
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
@@ -98,23 +98,20 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
-            adoptionList = DataRepository.Adoption.GetEvery();
-            querybyAdoptionStatus();
         }
 
         private void txeId_TextChanged(object sender, EventArgs e)
         {
-            querybyAdoptionStatus();
         }
 
         private void rdgAdoptionStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             currentStatus = (int)rdgAdoptionStatus.EditValue;
-            querybyAdoptionStatus();
         }
 
- 
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
 
-     
+        }
     }
 }

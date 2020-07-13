@@ -1,4 +1,4 @@
-﻿using AnimalShelterManagementSystem.Data;
+﻿       using AnimalShelterManagementSystem.Data;
 using AnimalShelterManagementSystem.Models;
 using AnimalShelterManagementSystem.WinForm.Forms;
 using System;
@@ -45,6 +45,18 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             Close();
             return;
         }
+        private void InShelter()
+        {
+            HomelessAnimal homelessAnimal = new HomelessAnimal();
+            homelessAnimal.Species = findingReport.Species;
+            homelessAnimal.HomelessAnimalId = DataRepository.HomelessAnimal.GetMaxId() + 1;
+            HomelessAnimalForm homelessAnimalForm = new HomelessAnimalForm(homelessAnimal);
+            homelessAnimalForm.ShowDialog();
+
+            FindingReportRecord findingReportRecord = new FindingReportRecord();
+
+          
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -54,6 +66,11 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             findingReport.Date = dteDate.DateTime;
             findingReport.Place = txbPlace.Text;
             findingReport.IsInShelter = Convert.ToBoolean(rdgIsInShelter.EditValue);
+            if (findingReport.IsInShelter == true)
+            {
+                //InShelter();
+            
+            }
             DataRepository.FindingReport.Insert(findingReport);
             LoadHomelessAnimal();
             Close();

@@ -12,76 +12,50 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-    public partial class FindingManagementForm : DevExpress.XtraEditors.XtraForm
+    public partial class FindingReportListForm : DevExpress.XtraEditors.XtraForm
     {
-        List<FindingReport> findingReports;
-        List<FindingReport> filterBySpecies;
-        List<FindingReport> filterByDate;
-        List<FindingReport> filterByPlace;
         private int SpeciesCode;
-        public FindingManagementForm()
+        public FindingReportListForm()
         {
             InitializeComponent();
-            cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
-            findingReports = DataRepository.FindingReport.GetAll();
-            foreach (FindingReport findingReport in findingReports)
-                    findingReport.SpeciesName = ((SpeciesType)findingReport.Species).ToString();
-            findingReportBindingSource.DataSource = findingReports;
+        }
+        private void FindingManagementForm_Load(object sender, EventArgs e)
+        {
             dteFoundDateTo.DateTime = DateTime.Today;
             dteFoundDateFrom.DateTime = DateTime.MinValue;
+            cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
+            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
+    
         }
-
-        private void querybySpecies()
-        {
-            if (SpeciesCode == 0)
-                filterBySpecies = findingReports;
-            else
-                filterBySpecies = findingReports.Where(x => x.Species == SpeciesCode).ToList();
-        }
-        private void querybyDate()
-        {
-            querybySpecies();
-            if (dteFoundDateTo.DateTime < dteFoundDateFrom.DateTime)
-            {
-                MessageBox.Show("날짜를 다시 골라주세요.");
-                filterByDate = filterBySpecies;
-                return;
-            }
-            else
-                filterByDate = filterBySpecies.Where(x => x.Date >= dteFoundDateFrom.DateTime && x.Date <= dteFoundDateTo.DateTime).ToList();
-        }
-        private void querybyPlace()
-        {
-            querybyDate();
-            if (String.Equals(txbPlace.Text, "") == false)
-                filterByPlace = findingReports.Where(x => x.Place.Contains(txbPlace.Text) == true).ToList();
-            else
-                filterByPlace = filterByDate;
-            findingReportBindingSource.DataSource = filterByPlace;
-        }
-
+      
         private void cbxSpecies_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxSpecies.SelectedItem != null)
                 SpeciesCode = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
+          
             else
                 SpeciesCode = 0;
-            querybyPlace();
+
+            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
+
         }
 
         private void dteFoundDateFrom_EditValueChanged(object sender, EventArgs e)
         {
-            querybyPlace();
+            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
+
         }
 
         private void dteFoundDateTo_EditValueChanged(object sender, EventArgs e)
         {
-            querybyPlace();
+            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
+
         }
 
         private void txbPlace_TextChanged(object sender, EventArgs e)
         {
-            querybyPlace();
+            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
+
         }
 
         private void LoadEditForm(FindingReport findingReport)
@@ -103,7 +77,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             if (findingReportBindingSource.Current is null)
                 MessageBox.Show("삭제할 유저를 선택해주세요");
-            else 
+            else
                 LoadEditForm(findingReportBindingSource.Current as FindingReport);
         }
 
@@ -117,16 +91,15 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
-            findingReports = DataRepository.FindingReport.GetAll();
-            foreach (FindingReport findingReport in findingReports)
-                findingReport.SpeciesName = ((SpeciesType)findingReport.Species).ToString();
-            findingReportBindingSource.DataSource = findingReports;
-            querybyPlace();
+            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
+
         }
 
         private void btnFindingReport_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+      
     }
 }

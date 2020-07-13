@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
-
     public partial class UserListForm : DevExpress.XtraEditors.XtraForm
     {
         private int AdminCode = 2;
@@ -25,64 +24,30 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         public UserListForm()
         {
             InitializeComponent();
-        }
-        private void querybyName()
-        {
-            if (String.Equals(txbName.Text, "") == false)
-                FilteredByName = UserList.Where(x => x.Name.Contains(txbName.Text) == true).ToList();
-            else
-                FilteredByName = UserList;
-        }
-        private void querybyId()
-        {
-            querybyName();
-            if (String.Equals(txbId.Text, "") == false)
-                FilteredById = FilteredByName.Where(x => x.Id.Contains(txbId.Text) == true).ToList();
 
-            else
-                FilteredById = FilteredByName;
         }
-        private void querybyAdmin()
-        {
-            querybyId();
-            if (AdminCode != 2)
-                FilteredByAdmin = FilteredById.Where(x => x.IsAdministrator == Convert.ToBoolean(AdminCode)).ToList();
-            else
-                FilteredByAdmin = FilteredById;
-        }
-        private void querybyBlacklist()
-        {
-            querybyAdmin();
-            if (BlacklistCode != 2)
-                FilteredByBlacklist = FilteredByAdmin.Where(x => x.IsBlacklist == Convert.ToBoolean(BlacklistCode)).ToList();
-            else
-                FilteredByBlacklist = FilteredByAdmin;
-            userBindingSource.DataSource = FilteredByBlacklist;
-        }
+       
         private void UserManagement_Load(object sender, EventArgs e)
         {
-            UserList = DataRepository.User.GetAll();
-            userBindingSource.DataSource = UserList;
-            
+            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
+
         }
         private void txbName_TextChanged(object sender, EventArgs e)
         {
-            querybyBlacklist();
+            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
         }
         private void txbId_TextChanged(object sender, EventArgs e)
         {
-            querybyBlacklist();
+            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
         }
         private void rdgAdmin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AdminCode = (int)rdgAdmin.EditValue;
-            querybyBlacklist();
+            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
         }
 
         private void rdgBlacklist_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BlacklistCode = (int)rdgBlacklist.EditValue;
-            querybyBlacklist();
+            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
         }
 
         private void grvUserList_DoubleClick(object sender, EventArgs e)
@@ -120,8 +85,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
-            UserList = DataRepository.User.GetAll();
-            querybyBlacklist();
+            userBindingSource.DataSource = DataRepository.User.Search(txbName.Text, txbId.Text, (int)rdgAdmin.EditValue, (int)rdgBlacklist.EditValue);
         }
     }
 }

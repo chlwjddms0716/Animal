@@ -16,10 +16,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
     public partial class LossReportListForm : DevExpress.XtraEditors.XtraForm
     {
-        List<LossReport> lossReports;
-        List<LossReport> FilteredById;
-        List<LossReport> FilteredByName;
-
         public LossReportListForm()
         {
             InitializeComponent();
@@ -27,35 +23,17 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void LossReportListForm_Load(object sender, EventArgs e)
         {
-            lossReports = DataRepository.LossReport.GetEvery();
-            lossReportBindingSource.DataSource = lossReports;
+            lossReportBindingSource.DataSource = DataRepository.LossReport.Search(txeUserId.Text, txeAnimalName.Text);
         }
 
-        private void querybyId()
-        {
-            if (String.Equals(txeUserId.Text, "") == false)
-                FilteredById = lossReports.Where(x => x.userLoginId.Contains(txeUserId.Text) == true).ToList();
-            else
-                FilteredById = lossReports;
-        }
-        private void querybyName()
-        {
-            querybyId();
-            if (String.Equals(txeAnimalName.Text, "") == false)
-                FilteredByName = FilteredById.Where(x => x.AnimalName.Contains(txeAnimalName.Text) == true).ToList();
-            else
-                FilteredByName = FilteredById;
-            lossReportBindingSource.DataSource = FilteredByName;
-        }
-        
         private void txeAnimalName_EditValueChanged(object sender, EventArgs e)
         {
-            querybyName();
+            lossReportBindingSource.DataSource = DataRepository.LossReport.Search(txeUserId.Text, txeAnimalName.Text);
         }
 
         private void txeUserId_EditValueChanged(object sender, EventArgs e)
         {
-            querybyName();
+            lossReportBindingSource.DataSource = DataRepository.LossReport.Search(txeUserId.Text, txeAnimalName.Text);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -106,8 +84,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             }
             else
             {
-                lossReports = DataRepository.LossReport.GetEvery();
-                lossReportBindingSource.DataSource = lossReports;
+                lossReportBindingSource.DataSource = DataRepository.LossReport.Search(txeUserId.Text, txeAnimalName.Text);
             }
         }
 

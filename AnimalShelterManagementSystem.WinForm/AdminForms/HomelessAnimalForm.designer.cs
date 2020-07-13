@@ -57,12 +57,12 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
+            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.physicalConditionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sexBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.speciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.animalShelterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteLatestFindingReport.Properties.CalendarTimeProperties)).BeginInit();
@@ -87,12 +87,12 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.physicalConditionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -393,14 +393,6 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             this.layoutControlItem6.Text = "보호센터 :";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(107, 18);
             // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 288);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(580, 32);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // animalShelterBindingSource
             // 
             this.animalShelterBindingSource.DataSource = typeof(AnimalShelterManagementSystem.AnimalShelter);
@@ -408,6 +400,14 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             // homelessAnimalBindingSource
             // 
             this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 288);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(580, 32);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // HomelessAnimalForm
             // 
@@ -445,12 +445,12 @@ namespace AnimalShelterManagementSystem.WinForm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.physicalConditionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sexBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speciesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.animalShelterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }

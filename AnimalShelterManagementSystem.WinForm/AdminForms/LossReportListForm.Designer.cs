@@ -38,10 +38,7 @@
             this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             this.btnHelp = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.userLoginId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AnimalName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PictureLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lossReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txeAnimalName = new DevExpress.XtraEditors.TextEdit();
             this.txeUserId = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -49,13 +46,17 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.userLoginId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimalName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lossReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PictureLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lossReportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAnimalName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeUserId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -63,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lossReportBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -180,37 +180,9 @@
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick_1);
             // 
-            // userLoginId
+            // lossReportBindingSource
             // 
-            this.userLoginId.DataPropertyName = "userLoginId";
-            this.userLoginId.HeaderText = "유저Id";
-            this.userLoginId.MinimumWidth = 6;
-            this.userLoginId.Name = "userLoginId";
-            this.userLoginId.Width = 125;
-            // 
-            // AnimalName
-            // 
-            this.AnimalName.DataPropertyName = "AnimalName";
-            this.AnimalName.HeaderText = "동물이름";
-            this.AnimalName.MinimumWidth = 6;
-            this.AnimalName.Name = "AnimalName";
-            this.AnimalName.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "SpeciesName";
-            this.Column1.HeaderText = "종";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // PictureLink
-            // 
-            this.PictureLink.DataPropertyName = "PictureLink";
-            this.PictureLink.HeaderText = "사진링크";
-            this.PictureLink.MinimumWidth = 6;
-            this.PictureLink.Name = "PictureLink";
-            this.PictureLink.Width = 125;
+            this.lossReportBindingSource.DataSource = typeof(AnimalShelterManagementSystem.LossReport);
             // 
             // txeAnimalName
             // 
@@ -279,6 +251,30 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
+            // userLoginId
+            // 
+            this.userLoginId.DataPropertyName = "userLoginId";
+            this.userLoginId.HeaderText = "유저Id";
+            this.userLoginId.MinimumWidth = 6;
+            this.userLoginId.Name = "userLoginId";
+            this.userLoginId.Width = 125;
+            // 
+            // AnimalName
+            // 
+            this.AnimalName.DataPropertyName = "AnimalName";
+            this.AnimalName.HeaderText = "동물이름";
+            this.AnimalName.MinimumWidth = 6;
+            this.AnimalName.Name = "AnimalName";
+            this.AnimalName.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "SpeciesName";
+            this.Column1.HeaderText = "종";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
             // placeDataGridViewTextBoxColumn
             // 
             this.placeDataGridViewTextBoxColumn.DataPropertyName = "Place";
@@ -295,9 +291,13 @@
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             this.dateDataGridViewTextBoxColumn.Width = 125;
             // 
-            // lossReportBindingSource
+            // PictureLink
             // 
-            this.lossReportBindingSource.DataSource = typeof(AnimalShelterManagementSystem.LossReport);
+            this.PictureLink.DataPropertyName = "PictureLink";
+            this.PictureLink.HeaderText = "사진링크";
+            this.PictureLink.MinimumWidth = 6;
+            this.PictureLink.Name = "PictureLink";
+            this.PictureLink.Width = 125;
             // 
             // LossReportListForm
             // 
@@ -315,6 +315,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lossReportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeAnimalName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txeUserId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -322,7 +323,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lossReportBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
