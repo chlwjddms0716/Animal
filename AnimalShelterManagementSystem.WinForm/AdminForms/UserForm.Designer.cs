@@ -118,7 +118,7 @@
             this.btnSave.Size = new System.Drawing.Size(105, 28);
             this.btnSave.StyleController = this.layoutControl3;
             this.btnSave.TabIndex = 16;
-            this.btnSave.Text = "확인";
+            this.btnSave.Text = "확인(&S)";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
@@ -131,7 +131,7 @@
             this.btnClose.Size = new System.Drawing.Size(109, 28);
             this.btnClose.StyleController = this.layoutControl3;
             this.btnClose.TabIndex = 15;
-            this.btnClose.Text = "취소";
+            this.btnClose.Text = "취소(&C)";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // boxId

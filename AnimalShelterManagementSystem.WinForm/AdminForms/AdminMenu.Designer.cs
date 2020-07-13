@@ -193,6 +193,7 @@
             this.Controls.Add(this.toolbarFormControl1);
             this.IsMdiContainer = true;
             this.Name = "AdminMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "관리자메뉴";
             this.ToolbarFormControl = this.toolbarFormControl1;
             this.Load += new System.EventHandler(this.AdminMenu_Load);
