@@ -94,17 +94,15 @@
     <Compile Include="AdminForms\FindingForm.Designer.cs">
       <DependentUpon>FindingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\FindingManagementForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminForms\FindingManagementForm.designer.cs">
-      <DependentUpon>FindingManagementForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminForms\AdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForms\AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\FindingReportListForm.cs" />
+    <Compile Include="AdminForms\FindingReportListForm.designer.cs">
+      <DependentUpon>FindingReportListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\LossReportAdminForm.cs">
       <SubType>Form</SubType>
@@ -244,11 +242,11 @@
     <EmbeddedResource Include="AdminForms\FindingForm.resx">
       <DependentUpon>FindingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\FindingManagementForm.resx">
-      <DependentUpon>FindingManagementForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\FindingReportListForm.resx">
+      <DependentUpon>FindingReportListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\LossReportAdminForm.resx">
       <DependentUpon>LossReportAdminForm.cs</DependentUpon>
