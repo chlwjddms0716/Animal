@@ -111,7 +111,7 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 0, 812, 500);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(364, 187);
+            this.layoutControl2.Size = new System.Drawing.Size(364, 178);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -119,12 +119,14 @@
             // 
             this.label1.Location = new System.Drawing.Point(12, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 48);
+            this.label1.Size = new System.Drawing.Size(167, 39);
             this.label1.TabIndex = 8;
             this.label1.Text = " ";
             // 
             // btnFindPassword
             // 
+            this.btnFindPassword.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnFindPassword.Appearance.Options.UseFont = true;
             this.btnFindPassword.Location = new System.Drawing.Point(183, 127);
             this.btnFindPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFindPassword.Name = "btnFindPassword";
@@ -136,6 +138,8 @@
             // 
             // btnSendNumber
             // 
+            this.btnSendNumber.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnSendNumber.Appearance.Options.UseFont = true;
             this.btnSendNumber.Location = new System.Drawing.Point(183, 68);
             this.btnSendNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSendNumber.Name = "btnSendNumber";
@@ -185,7 +189,7 @@
             this.layoutControlItem6,
             this.layoutControlItem8});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(364, 187);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(364, 178);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -239,7 +243,7 @@
             this.layoutControlItem6.Control = this.btnFindPassword;
             this.layoutControlItem6.Location = new System.Drawing.Point(171, 115);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(173, 52);
+            this.layoutControlItem6.Size = new System.Drawing.Size(173, 43);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -248,7 +252,7 @@
             this.layoutControlItem8.Control = this.label1;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 115);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(171, 52);
+            this.layoutControlItem8.Size = new System.Drawing.Size(171, 43);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 

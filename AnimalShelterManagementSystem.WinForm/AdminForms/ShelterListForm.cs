@@ -111,5 +111,15 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         {
             ExecuteEdit();
         }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            animalShelterBindingSource.DataSource = DataRepository.AnimalShelter.Search(txeAddress.Text, (int)(lkuShelterName.EditValue));
+        }
+
+        private void grcShelterList_DoubleClick(object sender, EventArgs e)
+        {
+            ExecuteEdit();
+        }
     }
 }

@@ -26,7 +26,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -46,7 +45,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -65,7 +63,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -84,7 +81,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -103,7 +99,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -123,7 +118,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
                 {
                     frm.Activate();
                     frm.BringToFront();
-                    //frm.Focus();
                     return;
                 }
             }
@@ -134,8 +128,13 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             lossReportListForm.Show();
         }
 
-
-
+        private void AdminMenu_Load(object sender, EventArgs e)
+        {
+            AdminAnimalImage form = new AdminAnimalImage();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
     }
 }
     

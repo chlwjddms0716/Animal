@@ -26,8 +26,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
             findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
     
-        }
-      
+        }      
         private void cbxSpecies_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxSpecies.SelectedItem != null)
@@ -35,27 +34,6 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
           
             else
                 SpeciesCode = 0;
-
-            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
-
-        }
-
-        private void dteFoundDateFrom_EditValueChanged(object sender, EventArgs e)
-        {
-            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
-
-        }
-
-        private void dteFoundDateTo_EditValueChanged(object sender, EventArgs e)
-        {
-            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
-
-        }
-
-        private void txbPlace_TextChanged(object sender, EventArgs e)
-        {
-            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
-
         }
 
         private void LoadEditForm(FindingReport findingReport)
@@ -75,10 +53,16 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void tsbDelete_Click(object sender, EventArgs e)
         {
-            if (findingReportBindingSource.Current is null)
-                MessageBox.Show("삭제할 유저를 선택해주세요");
-            else
-                LoadEditForm(findingReportBindingSource.Current as FindingReport);
+            FindingReport findingReport = findingReportBindingSource.Current as FindingReport;
+
+            if (Helpers.Helpers.SureToDelete() == false)
+                return;
+            if (findingReport == null)
+                return;
+
+            DataRepository.FindingReport.Delete(findingReport);
+
+            findingReportBindingSource.Remove(findingReport);
         }
 
         private void tsbEdit_Click(object sender, EventArgs e)
@@ -100,6 +84,9 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             Close();
         }
 
-      
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            findingReportBindingSource.DataSource = DataRepository.FindingReport.Search(SpeciesCode, dteFoundDateFrom.DateTime, dteFoundDateTo.DateTime, txbPlace.Text);
+        }
     }
 }

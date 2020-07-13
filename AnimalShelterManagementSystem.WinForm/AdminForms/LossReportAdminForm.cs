@@ -116,5 +116,15 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             ReadFromEntity();
         }
 
+        private void btnPictureUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                txePictureLink.Text = open.FileName;
+                pcePicture.Image = new Bitmap(open.FileName);
+            
+            }
+        }
     }
 }
