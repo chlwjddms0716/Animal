@@ -107,7 +107,7 @@
 
 # 데이터베이스 스키마
 
-![DB](C:\git\AnimalShelterManagementSystem\AnimalShelterManagementSystem\Documents\DB.PNG)
+![DB](https://user-images.githubusercontent.com/63761486/87262420-dbfbd480-c4f4-11ea-93f4-336eb24318e9.PNG)
 * 유기유실동물과 유저는 다:다 관계이다   
 * 유기유실동물과 발견신고는 다:다 관계이다   
 * 유기유실동물과 동물보호센터는 다:다 관계이다
