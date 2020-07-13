@@ -224,7 +224,7 @@
             this.rdgBlacklist.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "블랙 유저"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "일반 유저")});
-            this.rdgBlacklist.Size = new System.Drawing.Size(344, 48);
+            this.rdgBlacklist.Size = new System.Drawing.Size(344, 30);
             this.rdgBlacklist.StyleController = this.layoutControl3;
             this.rdgBlacklist.TabIndex = 11;
             // 
@@ -241,7 +241,7 @@
             // 
             // boxBlacklistReason
             // 
-            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 266);
+            this.boxBlacklistReason.Location = new System.Drawing.Point(152, 248);
             this.boxBlacklistReason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.boxBlacklistReason.Name = "boxBlacklistReason";
             this.boxBlacklistReason.Size = new System.Drawing.Size(344, 24);
@@ -342,7 +342,7 @@
             this.layoutControlItem8.Control = this.boxBlacklistReason;
             this.layoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 254);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 236);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(488, 28);
             this.layoutControlItem8.Text = "블랙리스트 등록 이유 :";
@@ -375,7 +375,7 @@
             this.layoutControlItem10.CustomizationFormText = "블랙리스트";
             this.layoutControlItem10.Location = new System.Drawing.Point(0, 202);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(488, 52);
+            this.layoutControlItem10.Size = new System.Drawing.Size(488, 34);
             this.layoutControlItem10.Text = "블랙리스트";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(137, 18);
             // 
@@ -423,9 +423,9 @@
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 282);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 264);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(488, 104);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(488, 122);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // UserForm

@@ -102,7 +102,7 @@
             this.tsbRefresh});
             this.toolStrip1.Location = new System.Drawing.Point(12, 138);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(776, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(776, 25);
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -112,7 +112,7 @@
             this.tsbAdd.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Insert;
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(29, 28);
+            this.tsbAdd.Size = new System.Drawing.Size(29, 22);
             this.tsbAdd.Text = "추가";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -122,7 +122,7 @@
             this.tsbDelete.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Delete;
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(29, 28);
+            this.tsbDelete.Size = new System.Drawing.Size(29, 22);
             this.tsbDelete.Text = "삭제";
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
@@ -132,7 +132,7 @@
             this.tsbEdit.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Edit;
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(29, 28);
+            this.tsbEdit.Size = new System.Drawing.Size(29, 22);
             this.tsbEdit.Text = "수정";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
@@ -142,7 +142,7 @@
             this.tsbRefresh.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.Update;
             this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRefresh.Name = "tsbRefresh";
-            this.tsbRefresh.Size = new System.Drawing.Size(29, 28);
+            this.tsbRefresh.Size = new System.Drawing.Size(29, 22);
             this.tsbRefresh.Text = "새로고침";
             this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
@@ -165,7 +165,7 @@
             this.blacklistReasonDataGridViewTextBoxColumn,
             this.isAdministratorDataGridViewCheckBoxColumn});
             this.grvUserList.DataSource = this.userBindingSource;
-            this.grvUserList.Location = new System.Drawing.Point(82, 173);
+            this.grvUserList.Location = new System.Drawing.Point(82, 167);
             this.grvUserList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grvUserList.Name = "grvUserList";
             this.grvUserList.ReadOnly = true;
@@ -173,7 +173,7 @@
             this.grvUserList.RowHeadersWidth = 51;
             this.grvUserList.RowTemplate.Height = 27;
             this.grvUserList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvUserList.Size = new System.Drawing.Size(706, 355);
+            this.grvUserList.Size = new System.Drawing.Size(706, 361);
             this.grvUserList.TabIndex = 10;
             this.grvUserList.DoubleClick += new System.EventHandler(this.grvUserList_DoubleClick);
             // 
@@ -330,9 +330,9 @@
             this.layoutControlItem2.Control = this.grvUserList;
             this.layoutControlItem2.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem2.CustomizationFormText = "l";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 161);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 155);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(780, 359);
+            this.layoutControlItem2.Size = new System.Drawing.Size(780, 365);
             this.layoutControlItem2.Text = "리스트";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(67, 18);
             // 
@@ -386,7 +386,7 @@
             this.layoutControlItem4.Control = this.toolStrip1;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 126);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(780, 35);
+            this.layoutControlItem4.Size = new System.Drawing.Size(780, 29);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
