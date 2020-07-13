@@ -62,7 +62,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {  
-            string test = Checkinput();
+
             if (string.Equals(Checkinput(), "") == true)
             {
                 user.Name = boxName.Text;

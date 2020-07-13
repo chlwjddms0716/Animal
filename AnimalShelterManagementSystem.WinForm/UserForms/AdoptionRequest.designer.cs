@@ -33,20 +33,14 @@
             this.lblSpecies = new System.Windows.Forms.Label();
             this.cbxSpecies = new System.Windows.Forms.ComboBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.grvHomelessAnimalList = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SpeciesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhysicalConditionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PictureLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rdgSex = new DevExpress.XtraEditors.RadioGroup();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.종 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -54,18 +48,24 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.homelessAnimalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvHomelessAnimalList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgSex.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.종)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -117,18 +117,6 @@
             this.labelControl2.Text = "                                                                                 " +
     "                             ";
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.dogg;
-            this.simpleButton1.Location = new System.Drawing.Point(566, 433);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(152, 70);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 11;
-            this.simpleButton1.Text = "입양 신청";
-            this.simpleButton1.Click += new System.EventHandler(this.btnAdoptionRequest_Click);
-            // 
             // grvHomelessAnimalList
             // 
             this.grvHomelessAnimalList.AllowUserToAddRows = false;
@@ -161,15 +149,6 @@
             this.grvHomelessAnimalList.TabIndex = 10;
             this.grvHomelessAnimalList.Click += new System.EventHandler(this.grvHomelessAnimalList_DoubleClick);
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn4.HeaderText = "이름";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 120;
-            // 
             // SpeciesName
             // 
             this.SpeciesName.DataPropertyName = "SpeciesName";
@@ -188,15 +167,6 @@
             this.GenderName.ReadOnly = true;
             this.GenderName.Width = 120;
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Age";
-            this.dataGridViewTextBoxColumn5.HeaderText = "나이";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 120;
-            // 
             // PhysicalConditionName
             // 
             this.PhysicalConditionName.DataPropertyName = "PhysicalConditionName";
@@ -206,15 +176,6 @@
             this.PhysicalConditionName.ReadOnly = true;
             this.PhysicalConditionName.Width = 120;
             // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Feature";
-            this.dataGridViewTextBoxColumn6.HeaderText = "특징";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 250;
-            // 
             // PictureLink
             // 
             this.PictureLink.DataPropertyName = "PictureLink";
@@ -223,10 +184,6 @@
             this.PictureLink.Name = "PictureLink";
             this.PictureLink.ReadOnly = true;
             this.PictureLink.Width = 120;
-            // 
-            // homelessAnimalBindingSource
-            // 
-            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
             // 
             // rdgSex
             // 
@@ -267,15 +224,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(710, 329);
             this.layoutControlItem2.Text = "리스트";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(39, 18);
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.simpleButton1;
-            this.layoutControlItem6.Location = new System.Drawing.Point(554, 421);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(156, 74);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem7
             // 
@@ -339,6 +287,58 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 125;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.dogg;
+            this.simpleButton1.Location = new System.Drawing.Point(566, 433);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(152, 70);
+            this.simpleButton1.StyleController = this.layoutControl1;
+            this.simpleButton1.TabIndex = 11;
+            this.simpleButton1.Text = "입양 신청";
+            this.simpleButton1.Click += new System.EventHandler(this.btnAdoptionRequest_Click);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn4.HeaderText = "이름";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Age";
+            this.dataGridViewTextBoxColumn5.HeaderText = "나이";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Feature";
+            this.dataGridViewTextBoxColumn6.HeaderText = "특징";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 250;
+            // 
+            // homelessAnimalBindingSource
+            // 
+            this.homelessAnimalBindingSource.DataSource = typeof(AnimalShelterManagementSystem.HomelessAnimal);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.simpleButton1;
+            this.layoutControlItem6.Location = new System.Drawing.Point(554, 421);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(156, 74);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
             // AdoptionRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -354,16 +354,17 @@
             this.Load += new System.EventHandler(this.AdoptionRequest_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvHomelessAnimalList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdgSex.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.종)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homelessAnimalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }

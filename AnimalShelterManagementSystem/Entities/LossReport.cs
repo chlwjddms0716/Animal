@@ -10,5 +10,6 @@ namespace AnimalShelterManagementSystem
     {
 
         public string SpeciesName { get; set; }
+        public string userLoginId { get; set; }
     }
 }

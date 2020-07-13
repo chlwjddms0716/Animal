@@ -53,7 +53,7 @@ namespace AnimalShelterManagementSystem.WinForm
             }
             if (String.Equals(txbPictureLink.Text, "사진링크를 입력해주세요.") == true)
             {
-                checkinput += "사진 링크";
+                checkinput += "사진 링크, ";
             }
             return checkinput;
         }

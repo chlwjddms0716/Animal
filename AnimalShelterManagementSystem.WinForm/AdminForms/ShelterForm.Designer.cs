@@ -77,7 +77,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(494, 248);
+            this.layoutControl1.Size = new System.Drawing.Size(494, 236);
             this.layoutControl1.TabIndex = 2;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -159,17 +159,17 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.emptySpaceItem1,
             this.layoutControlItem3,
             this.layoutControlItem7,
             this.layoutControlItem11,
             this.layoutControlItem12,
             this.layoutControlItem8,
             this.layoutControlItem2,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.emptySpaceItem1});
             this.Root.Name = "Root";
             this.Root.OptionsItemText.TextToControlDistance = 2;
-            this.Root.Size = new System.Drawing.Size(494, 248);
+            this.Root.Size = new System.Drawing.Size(494, 236);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -177,7 +177,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 178);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(474, 50);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(237, 38);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
@@ -203,7 +203,7 @@
             this.layoutControlItem11.Control = this.btnSave;
             this.layoutControlItem11.Location = new System.Drawing.Point(237, 140);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(237, 38);
+            this.layoutControlItem11.Size = new System.Drawing.Size(237, 76);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -251,7 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 248);
+            this.ClientSize = new System.Drawing.Size(494, 236);
             this.Controls.Add(this.layoutControl1);
             this.IconOptions.Image = global::AnimalShelterManagementSystem.WinForm.Properties.Resources.BlackPuppy;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

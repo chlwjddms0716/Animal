@@ -96,11 +96,15 @@
     <Compile Include="AdminForms\FindingForm.Designer.cs">
       <DependentUpon>FindingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\FindingManagementForm.cs">
+    <Compile Include="AdminForms\FindingManagementForm.cs" />
+    <Compile Include="AdminForms\FindingManagementForm.designer.cs">
+      <DependentUpon>FindingManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\LossReportAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\FindingManagementForm.Designer.cs">
-      <DependentUpon>FindingManagementForm.cs</DependentUpon>
+    <Compile Include="AdminForms\LossReportAdminForm.Designer.cs">
+      <DependentUpon>LossReportAdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\LossReportListForm.cs">
       <SubType>Form</SubType>
@@ -234,6 +238,12 @@
     <EmbeddedResource Include="AdminForms\FindingManagementForm.resx">
       <DependentUpon>FindingManagementForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\LossReportAdminForm.resx">
+      <DependentUpon>LossReportAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\LossReportListForm.resx">
+      <DependentUpon>LossReportListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,7 +307,6 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.Adoption.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.AnimalShelter.datasource" />
-    <None Include="Properties\DataSources\AnimalShelterManagementSystem.FindingReport.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.HomelessAnimal2.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.LossReport.datasource" />
     <None Include="Properties\DataSources\AnimalShelterManagementSystem.Models.Species.datasource" />
@@ -359,12 +368,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\time.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dog.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cat.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

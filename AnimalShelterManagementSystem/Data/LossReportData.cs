@@ -1,4 +1,5 @@
-﻿using AnimalShelterManagementSystem.Models;
+﻿using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,24 +38,45 @@ namespace AnimalShelterManagementSystem
             return query.FirstOrDefault();
         }
 
-        public IEnumerable<LossReport> GetbyAnimalName(string AnimalName)
+        public List<LossReport> GetEvery()
         {
-                AnimalShelterManagementEntities context = CreateContext();
-
-
-                var query = from x in context.LossReports
-                            select x;
-
-                
-                var list = query.ToList();
-
-                foreach (var x in list)
-                {
-                    x.SpeciesName = ((SpeciesType)x.Species).ToString();
-                }
-
-                return list;
-            
+            List<LossReport> lossReports = DataRepository.LossReport.GetAll();
+            User user;
+            foreach (LossReport lossReport in lossReports)
+            {
+                lossReport.SpeciesName = ((SpeciesType)lossReport.Species).ToString();
+                user = DataRepository.User.Get(lossReport.UserId);
+                lossReport.userLoginId = user.Id;
+            }
+            return lossReports;
         }
+
+        //public List<LossReport> GetbyUserId(string userId)
+        //{
+        //    AnimalShelterManagementEntities context = CreateContext();
+        //    List<LossReport> lossReports = DataRepository.LossReport.GetEvery();// new List<LossReport>();
+        //    lossReports = lossReports.Where(x => x.UserLoginId == animalName).ToList();
+        //    foreach (LossReport lossReport in context.LossReports)
+        //    {
+        //        if (lossReport.userLoginId.Contains(userId) == true)
+        //            lossReports.Add(lossReport);
+        //    }
+        //    return lossReports;
+        //}
+
+        //public List<LossReport> GetbyAnimalName(string animalName)
+        //{
+        //    AnimalShelterManagementEntities context = CreateContext();
+        //    List<LossReport> lossReports = DataRepository.LossReport.GetEvery();// new List<LossReport>();
+        //    lossReports = lossReports.Where(x => x.AnimalName == animalName).ToList();
+        //    foreach (LossReport lossReport in context.LossReports)
+        //    {
+        //        if (lossReport.AnimalName.Contains(animalName) == true)
+        //            lossReports.Add(lossReport);
+        //    }
+        //    return lossReports;
+        //}
+
     }
 }
+
