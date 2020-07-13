@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagementSystem", "AnimalShelterManagementSystem\AnimalShelterManagementSystem.csproj", "{269384CF-2EEC-4079-8E45-315C8BA07897}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAMS", "AnimalShelterManagementSystem\HAMS.csproj", "{269384CF-2EEC-4079-8E45-315C8BA07897}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagementSystem.WinForm", "AnimalShelterManagementSystem.WinForm\AnimalShelterManagementSystem.WinForm.csproj", "{B3867634-E4BF-49F0-8BAA-2477BB3A75E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAMS.WinForm", "AnimalShelterManagementSystem.WinForm\HAMS.WinForm.csproj", "{B3867634-E4BF-49F0-8BAA-2477BB3A75E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagementSystem.TestConsole", "AnimalShelterManagementSystem.TestConsole\AnimalShelterManagementSystem.TestConsole.csproj", "{A204F9A4-78D4-4237-A780-95A69F0617C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAMS.TestConsole", "AnimalShelterManagementSystem.TestConsole\HAMS.TestConsole.csproj", "{A204F9A4-78D4-4237-A780-95A69F0617C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -327,9 +327,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AnimalShelterManagementSystem\AnimalShelterManagementSystem.csproj">
+    <ProjectReference Include="..\AnimalShelterManagementSystem\HAMS.csproj">
       <Project>{269384cf-2eec-4079-8e45-315c8ba07897}</Project>
-      <Name>AnimalShelterManagementSystem</Name>
+      <Name>HAMS</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
