@@ -54,9 +54,9 @@ namespace AnimalShelterManagementSystem
 
         }
 
-        public List<Adoption> GetEvery()
+        public List<Adoption> Search(string userId, int statusCode)
         {
-            AnimalShelterManagementEntities context = CreateContext();
+            var context = CreateContext();
 
             var query = from x in context.Adoptions
                         select new
@@ -66,6 +66,12 @@ namespace AnimalShelterManagementSystem
                             userLoginId = x.User.Id,
                             AdoptionStatus = x.HomelessAnimal.AdoptionStatus
                         };
+
+            if (string.IsNullOrEmpty(userId) == false)
+                query = query.Where(x => x.userLoginId.Contains(userId));
+
+            if (statusCode != 3)
+                query = query.Where(x => x.AdoptionStatus == statusCode);
 
             var list = query.ToList();
 
@@ -77,9 +83,7 @@ namespace AnimalShelterManagementSystem
             }
 
             return list.ConvertAll(x => x.Adopt);
-
         }
-
 
         //public List<HomelessAnimal> GetAnimalsByUserName2(string userName)
         //{

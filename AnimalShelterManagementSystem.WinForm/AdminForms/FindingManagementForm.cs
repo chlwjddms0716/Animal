@@ -84,35 +84,35 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             querybyPlace();
         }
 
-        private void LoadEditForm(FindingReport findingReport)
-        {
-            Cursor = Cursors.WaitCursor;
-            FindingForm findingForm = new FindingForm(findingReport);
-            findingForm.ShowDialog();
-            Cursor = Cursors.Arrow;
-        }
-        private void tsbAdd_Click(object sender, EventArgs e)
-        {
-            Cursor = Cursors.WaitCursor;
-            FindingForm findingForm = new FindingForm();
-            findingForm.ShowDialog();
-            Cursor = Cursors.Arrow;
-        }
+        //private void LoadEditForm(FindingReport findingReport)
+        //{
+        //    Cursor = Cursors.WaitCursor;
+        //    FindingForm findingForm = new FindingForm(findingReport);
+        //    findingForm.ShowDialog();
+        //    Cursor = Cursors.Arrow;
+        //}
+        //private void tsbAdd_Click(object sender, EventArgs e)
+        //{
+        //    Cursor = Cursors.WaitCursor;
+        //    FindingForm findingForm = new FindingForm();
+        //    findingForm.ShowDialog();
+        //    Cursor = Cursors.Arrow;
+        //}
 
         private void tsbDelete_Click(object sender, EventArgs e)
         {
             if (findingReportBindingSource.Current is null)
                 MessageBox.Show("삭제할 유저를 선택해주세요");
-            else 
-                LoadEditForm(findingReportBindingSource.Current as FindingReport);
+            //else 
+            //    LoadEditForm(findingReportBindingSource.Current as FindingReport);
         }
 
         private void tsbEdit_Click(object sender, EventArgs e)
         {
             if (findingReportBindingSource.Current is null)
                 MessageBox.Show("수정할 유저를 선택해주세요");
-            else
-                LoadEditForm(findingReportBindingSource.Current as FindingReport);
+            //else
+            //    LoadEditForm(findingReportBindingSource.Current as FindingReport);
         }
 
         private void tsbRefresh_Click(object sender, EventArgs e)

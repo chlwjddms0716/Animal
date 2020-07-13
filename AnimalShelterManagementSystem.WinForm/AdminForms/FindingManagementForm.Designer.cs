@@ -125,10 +125,12 @@
             // 
             // btnFindingReport
             // 
-            this.btnFindingReport.Location = new System.Drawing.Point(601, 501);
+            this.btnFindingReport.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnFindingReport.Appearance.Options.UseFont = true;
+            this.btnFindingReport.Location = new System.Drawing.Point(601, 494);
             this.btnFindingReport.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnFindingReport.Name = "btnFindingReport";
-            this.btnFindingReport.Size = new System.Drawing.Size(187, 27);
+            this.btnFindingReport.Size = new System.Drawing.Size(187, 34);
             this.btnFindingReport.StyleController = this.layoutControl1;
             this.btnFindingReport.TabIndex = 9;
             this.btnFindingReport.Text = "확인";
@@ -260,17 +262,17 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 489);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 482);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(589, 31);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(589, 38);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnFindingReport;
-            this.layoutControlItem4.Location = new System.Drawing.Point(589, 489);
+            this.layoutControlItem4.Location = new System.Drawing.Point(589, 482);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(191, 31);
+            this.layoutControlItem4.Size = new System.Drawing.Size(191, 38);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -290,7 +292,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 469);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(780, 20);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(780, 13);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
@@ -310,7 +312,7 @@
             this.tsbAdd.Name = "tsbAdd";
             this.tsbAdd.Size = new System.Drawing.Size(29, 23);
             this.tsbAdd.Text = "추가";
-            this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
+  //          this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
             // tsbDelete
             // 
