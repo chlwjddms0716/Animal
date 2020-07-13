@@ -34,7 +34,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             userManagement.MdiParent = this;
             userManagement.WindowState = FormWindowState.Maximized;
             userManagement.Show();
-            
+
         }
 
         private void btnAdoption_Click(object sender, EventArgs e)
@@ -135,6 +135,13 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
         //    form.WindowState = FormWindowState.Maximized;
         //    form.Show();
         //}
+
+        private void AdminMenu_Load_1(object sender, EventArgs e)
+        {
+            AdminAnimalImage form = new AdminAnimalImage();
+            form.MdiParent = this;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
     }
 }
-    

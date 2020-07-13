@@ -82,7 +82,7 @@
     <Compile Include="AdminForms\AdminAnimalImage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\AdminAnimalImage.Designer.cs">
+    <Compile Include="AdminForms\AdminAnimalImage.designer.cs">
       <DependentUpon>AdminAnimalImage.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\AdoptionForm.cs">
@@ -256,6 +256,9 @@
     <Compile Include="UserForms\LossReportForm.designer.cs">
       <DependentUpon>LossReportForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminForms\AdminAnimalImage.resx">
+      <DependentUpon>AdminAnimalImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\AdoptionForm.resx">
       <DependentUpon>AdoptionForm.cs</DependentUpon>
     </EmbeddedResource>
