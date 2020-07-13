@@ -211,23 +211,17 @@
     <Compile Include="UserForms\FindingReportForm.Designer.cs">
       <DependentUpon>FindingReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForms\UserMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserForms\UserMenu.Designer.cs">
-      <DependentUpon>UserMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserForms\LossReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserForms\LossReportForm.designer.cs">
       <DependentUpon>LossReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserForms\UserMenu1.cs">
+    <Compile Include="UserForms\UserMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserForms\UserMenu1.Designer.cs">
-      <DependentUpon>UserMenu1.cs</DependentUpon>
+    <Compile Include="UserForms\UserMenu.Designer.cs">
+      <DependentUpon>UserMenu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminForms\AdoptionForm.resx">
       <DependentUpon>AdoptionForm.cs</DependentUpon>
@@ -303,14 +297,11 @@
     <EmbeddedResource Include="UserForms\FindingReportForm.resx">
       <DependentUpon>FindingReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForms\UserMenu.resx">
-      <DependentUpon>UserMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserForms\LossReportForm.resx">
       <DependentUpon>LossReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserForms\UserMenu1.resx">
-      <DependentUpon>UserMenu1.cs</DependentUpon>
+    <EmbeddedResource Include="UserForms\UserMenu.resx">
+      <DependentUpon>UserMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
