@@ -11,7 +11,7 @@
 ----------------------
 ##### 1. 유기 동물 관리  
 보호소에서 새로 보호하기 시작한 동물 추가 및 기존 동물의 정보를 수정 및 삭제할 수 있다. 전체 동물 혹은 원하는 조건에 부합하는 동물을 검색해서 확인할 수 있다.  
-<img src="https://user-images.githubusercontent.com/63761322/87367144-2ba1d500-c5b5-11ea-963f-e4a33d510231.JPG" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761322/87367144-2ba1d500-c5b5-11ea-963f-e4a33d510231.JPG" width="80%"></img>
 - 검색 기능 :
 필요한 유기유실동물의 정보만 가져올 수 있도록 보호센터, 성별, 축종, 신고일 별로 필터하여 검색할 수 있다.
 
@@ -40,11 +40,11 @@
 - 입양 기능 : 리스트에서 선택한 유기유실동물에 대한 입양 희망을 입양관리시스템의 관리자에게 전달한다.  
 관리자가 입양 신청 건을 수락한 후 입양 절차를 진행한다.  
 
-<img src="https://user-images.githubusercontent.com/63761322/87367390-cac6cc80-c5b5-11ea-9063-e50f3304d2d3.JPG" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761322/87367390-cac6cc80-c5b5-11ea-9063-e50f3304d2d3.JPG" width="80%"></img>
 ##### 2. 유저 정보수정  
 자신의 회원 정보(이름, 비밀번호, 핸드폰번호, 주소)를 수정 할 수 있다.  
 
-<img src="https://user-images.githubusercontent.com/63761322/87368072-9bb15a80-c5b7-11ea-9d7e-30b9827e5b0a.JPG" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761322/87368072-9bb15a80-c5b7-11ea-9d7e-30b9827e5b0a.JPG" width="80%"></img>
 
 
 ##### 3. 실종 신고  
@@ -127,7 +127,7 @@
 
 - 여러개의 검색조건을 하나의 query문으로 작성하였음  
 
-![마지막코드](https://user-images.githubusercontent.com/63761322/87369565-c9000780-c5bb-11ea-9fce-3ce86bae6862.JPG)
+<img src="https://user-images.githubusercontent.com/63761322/87369565-c9000780-c5bb-11ea-9fce-3ce86bae6862.JPG" width="80%"></img>
 
 　   
 
@@ -147,7 +147,7 @@
 　  
    
 　    
-<img src="https://user-images.githubusercontent.com/63761486/87262464-fa61d000-c4f4-11ea-9ed9-dd45cf1e5ed9.png" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761486/87262464-fa61d000-c4f4-11ea-9ed9-dd45cf1e5ed9.png" width="80%"></img>
 　  
 
 ### 여러 곳에서 작업한 결과를 병합하는 중에 생기는 문제
@@ -168,7 +168,7 @@
 
 ------------------------------
 #### 증상   
-<img src="https://user-images.githubusercontent.com/63761486/87262451-f0d86800-c4f4-11ea-9219-714682b3b6fd.png" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761486/87262451-f0d86800-c4f4-11ea-9219-714682b3b6fd.png" width="80%"></img>
  - 3rd party control 중 하나인 Devexpress를 사용하면 프로그램을 실행할 때 마다 devexpress 확장판 구매 독려 광고가 나타남
 
 #### 원인
