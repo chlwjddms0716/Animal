@@ -39,11 +39,10 @@
 - 검색 기능 : 전체 입양가능한 유기유실동물을 대상으로 축종, 성별 별로 필터하여 검색 할 수 있다.
 - 입양 기능 : 리스트에서 선택한 유기유실동물에 대한 입양 희망을 입양관리시스템의 관리자에게 전달한다.  
 관리자가 입양 신청 건을 수락한 후 입양 절차를 진행한다.
-![사용자메뉴-입양신청]  　
-<img src="https://user-images.githubusercontent.com/63761322/87367390-cac6cc80-c5b5-11ea-9063-e50f3304d2d3.JPG" width="700" height="370" ) </img>
+<img src="https://user-images.githubusercontent.com/63761322/87367390-cac6cc80-c5b5-11ea-9063-e50f3304d2d3.JPG" width="60%"></img>
 ##### 2. 유저 정보수정  
 자신의 회원 정보(이름, 비밀번호, 핸드폰번호, 주소)를 수정 할 수 있다.
-![유저정보수정-](https://user-images.githubusercontent.com/63761322/87368072-9bb15a80-c5b7-11ea-9d7e-30b9827e5b0a.JPG)
+<img src="https://user-images.githubusercontent.com/63761322/87368072-9bb15a80-c5b7-11ea-9d7e-30b9827e5b0a.JPG" width="60%"></img>
 
 
 ##### 3. 실종 신고  
@@ -106,7 +105,7 @@
 
 # 데이터베이스 스키마
 
-![DB](https://user-images.githubusercontent.com/63761486/87262420-dbfbd480-c4f4-11ea-93f4-336eb24318e9.PNG)
+<img src="https://user-images.githubusercontent.com/63761486/87262420-dbfbd480-c4f4-11ea-93f4-336eb24318e9.PNG" width="60%"></img>
 
 
 # Point of Interest
@@ -125,7 +124,8 @@
 #### 결과
 
 - 여러개의 검색조건을 하나의 query문으로 작성하였음
-![코드^](https://user-images.githubusercontent.com/63761322/87369196-de286680-c5ba-11ea-8c43-23223c2084a1.JPG)
+<img src="https://user-images.githubusercontent.com/63761322/87369196-de286680-c5ba-11ea-8c43-23223c2084a1.JPG" width="60%"></img>
+
 　   
 
 ### 바인딩한 테이블에 다른 테이블의 멤버를 추가했을 때 생기는 문제 
@@ -142,7 +142,7 @@
 
 - 부분 클래스를 이용해서 원하는 멤버를 기존 테이블에 추가함. C# 쿼리문으로 매핑 테이블에 접근, 조인해서 해결함  
 　    
-![query](https://user-images.githubusercontent.com/63761486/87262464-fa61d000-c4f4-11ea-9ed9-dd45cf1e5ed9.png)
+<img src="https://user-images.githubusercontent.com/63761486/87262464-fa61d000-c4f4-11ea-9ed9-dd45cf1e5ed9.png" width="60%"></img>
 　  
 
 ### 여러 곳에서 작업한 결과를 병합하는 중에 생기는 문제
@@ -163,7 +163,7 @@
 
 ------------------------------
 #### 증상   
-<img src="https://user-images.githubusercontent.com/63761486/87262451-f0d86800-c4f4-11ea-9219-714682b3b6fd.png" width="40%"></img>
+<img src="https://user-images.githubusercontent.com/63761486/87262451-f0d86800-c4f4-11ea-9219-714682b3b6fd.png" width="60%"></img>
  - 3rd party control 중 하나인 Devexpress를 사용하면 프로그램을 실행할 때 마다 devexpress 확장판 구매 독려 광고가 나타남
 
 #### 원인
