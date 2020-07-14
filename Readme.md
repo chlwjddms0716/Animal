@@ -115,7 +115,7 @@
 #### 증상
  
  - 메모리 낭비가 심각함
-![코드ㅡㅡㅡㅡㅡ](https://user-images.githubusercontent.com/63761322/87368780-96eda600-c5b9-11ea-98cd-4c840088c39b.JPG = 200x200)
+![코드ㅡㅡㅡㅡㅡ](https://user-images.githubusercontent.com/63761322/87368780-96eda600-c5b9-11ea-98cd-4c840088c39b.JPG)
 
 
 #### 원인
