@@ -244,14 +244,14 @@
             // rdgSex
             // 
             this.rdgSex.EditValue = 0;
-            this.rdgSex.Location = new System.Drawing.Point(56, 42);
+            this.rdgSex.Location = new System.Drawing.Point(61, 42);
             this.rdgSex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdgSex.Name = "rdgSex";
             this.rdgSex.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "전체"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "수컷"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "암컷")});
-            this.rdgSex.Size = new System.Drawing.Size(662, 34);
+            this.rdgSex.Size = new System.Drawing.Size(657, 34);
             this.rdgSex.StyleController = this.layoutControl1;
             this.rdgSex.TabIndex = 11;
             // 
@@ -307,8 +307,8 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(710, 38);
-            this.layoutControlItem3.Text = " 성별: ";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(41, 18);
+            this.layoutControlItem3.Text = " 성별:  ";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(46, 18);
             // 
             // emptySpaceItem1
             // 
