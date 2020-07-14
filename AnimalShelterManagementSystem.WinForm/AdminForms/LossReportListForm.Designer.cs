@@ -187,7 +187,7 @@
             // 사진
             // 
             this.사진.Caption = "사진";
-            this.사진.FieldName = "PictureLink";
+            this.사진.FieldName = "Picture";
             this.사진.MinWidth = 25;
             this.사진.Name = "사진";
             this.사진.Visible = true;
@@ -368,7 +368,6 @@
             this.Name = "LossReportListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "실종신고리스트";
-        //    this.Load += new System.EventHandler(this.LossReportListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grcLossList)).EndInit();
