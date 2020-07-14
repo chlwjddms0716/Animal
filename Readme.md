@@ -115,7 +115,6 @@
 #### 증상
  
  - 메모리 낭비가 심각함
-![코드ㅡㅡㅡㅡㅡ](https://user-images.githubusercontent.com/63761322/87368780-96eda600-c5b9-11ea-98cd-4c840088c39b.JPG)
 
 
 #### 원인
@@ -125,6 +124,7 @@
 #### 결과
 
 - 여러개의 검색조건을 하나의 query문으로 작성하였음
+![수정전코드](https://user-images.githubusercontent.com/63761322/87368931-298e4500-c5ba-11ea-9c2a-db0a53bfc024.png)
 
 ![코드](https://user-images.githubusercontent.com/63761322/87366479-be417480-c5b3-11ea-8aab-705010c928f2.JPG)
 　   
