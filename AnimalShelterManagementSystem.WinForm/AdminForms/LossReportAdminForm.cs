@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using AnimalShelterManagementSystem.Models;
 using AnimalShelterManagementSystem.Data;
+using AnimalShelterManagementSystem.WinForm.UserForms;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace AnimalShelterManagementSystem.WinForm.AdminForms
 {
@@ -35,7 +38,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             cbxSpecies.SelectedItem = _lossReport.SpeciesName;
             dteDate.EditValue = _lossReport.Date;
             txePlace.EditValue = _lossReport.Place;
-            txePictureLink.EditValue = _lossReport.PictureLink;
+            txePictureLink.EditValue = _lossReport.Picture;
         }
 
         private void WriteToEntity()
@@ -46,9 +49,10 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             _lossReport.Species = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
             _lossReport.Date = dteDate.DateTime.Date;
             _lossReport.Place = txePlace.Text;
-            _lossReport.PictureLink = txePictureLink.Text;
+           // _lossReport.Picture = txePictureLink.Text;
             _lossReport.LossReportId = _lossReport.LossReportId;
             _lossReport.UserId = DataRepository.User.GetbyId(txeId.Text).UserId;
+            _lossReport.Picture = ConvertImageToBinary(Image.FromFile(txePictureLink.Text));
 
         }
 
@@ -116,15 +120,38 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             ReadFromEntity();
         }
 
-        private void btnPictureUpload_Click(object sender, EventArgs e)
+        private void btnPictureLink_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            if (open.ShowDialog() == DialogResult.OK)
-            {
-                txePictureLink.Text = open.FileName;
-                pcePicture.Image = new Bitmap(open.FileName);
-            
-            }
+            PictureSaveForm pictureSaveForm = new PictureSaveForm(_lossReport);
+            pictureSaveForm.ShowDialog();
+            //MessageBox.Show(PictureSaveForm.Address);
+            txePictureLink.Text = PictureSaveForm.Address;
         }
+
+        private byte[] ConvertImageToBinary(Image image)
+        {
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                if (ImageFormat.Jpeg.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Jpeg);
+                }
+                else if (ImageFormat.Png.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Png);
+                }
+                else if (ImageFormat.Gif.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Gif);
+                }
+
+                return memoryStream.ToArray();
+
+            }
+
+
+        }
+
     }
 }

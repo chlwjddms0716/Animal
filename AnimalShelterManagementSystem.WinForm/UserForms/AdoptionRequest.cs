@@ -16,6 +16,7 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.ClipboardSource.SpreadsheetML;
 using System.Data.
     Entity.Core.Metadata.Edm;
+using AnimalShelterManagementSystem.WinForm.UserForms;
 
 namespace AnimalShelterManagementSystem.WinForm
 {
@@ -25,6 +26,7 @@ namespace AnimalShelterManagementSystem.WinForm
         Adoption adoption = new Adoption();
         private int SpeciesCode;
         private int GenderCode = 0;
+        AnimalPicture animalPicture;
         public AdoptionRequest()
         {
             InitializeComponent();
@@ -71,8 +73,19 @@ namespace AnimalShelterManagementSystem.WinForm
 
             Close();
         }
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            GenderCode = (int)rdgSex.EditValue;
+            if (cbxSpecies.SelectedItem != null)
+            {
+                SpeciesCode = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
+                List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, GenderCode);
+                homelessAnimalBindingSource.DataSource = homelessAnimals;
+                MessageBox.Show("사진을 크게 보려면 동물을 클릭해주세요.");
+            }
+        }
 
-        private void grvHomelessAnimalList_DoubleClick(object sender, EventArgs e)
+        private void grcAnimalList_DoubleClick(object sender, EventArgs e)
         {
             HomelessAnimal homelessAnimal = homelessAnimalBindingSource.Current as HomelessAnimal;
             if (homelessAnimal == null)
@@ -82,15 +95,13 @@ namespace AnimalShelterManagementSystem.WinForm
             MessageBox.Show($"{homelessAnimal.Name}을 선택하셨습니다.");
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void grcAnimalList_Click(object sender, EventArgs e)
         {
-            GenderCode = (int)rdgSex.EditValue;
-            if (cbxSpecies.SelectedItem != null)
-            {
-                SpeciesCode = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
-                List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, GenderCode);
-                homelessAnimalBindingSource.DataSource = homelessAnimals;
-            }
+            if (Application.OpenForms.OfType<AnimalPicture>().Count() > 0)
+                Application.OpenForms.OfType<AnimalPicture>().First().Close();
+
+            animalPicture = new AnimalPicture(homelessAnimalBindingSource.Current as HomelessAnimal);
+            animalPicture.ShowDialog();
         }
     }
 }

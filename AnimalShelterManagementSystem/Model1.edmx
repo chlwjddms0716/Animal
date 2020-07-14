@@ -33,6 +33,7 @@
           <Property Name="Date" Type="smalldatetime" Nullable="false" />
           <Property Name="IsInShelter" Type="bit" Nullable="false" />
           <Property Name="Species" Type="int" Nullable="false" />
+          <Property Name="Picture" Type="image" />
         </EntityType>
         <EntityType Name="FindingReportRecord">
           <Key>
@@ -78,8 +79,8 @@
           <Property Name="Date" Type="smalldatetime" Nullable="false" />
           <Property Name="AnimalName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
-          <Property Name="PictureLink" Type="nvarchar(max)" />
-          <Property Name="Species" Type="int" />
+          <Property Name="Species" Type="int" Nullable="false" />
+          <Property Name="Picture" Type="image" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -290,6 +291,7 @@
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IsInShelter" Type="Boolean" Nullable="false" />
           <Property Name="Species" Type="Int32" Nullable="false" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="FindingReportRecords" Relationship="AnimalShelterManagement.FK_FindingReportRecord_FindingReport" FromRole="FindingReport" ToRole="FindingReportRecord" />
         </EntityType>
         <EntityType Name="FindingReportRecord">
@@ -343,8 +345,8 @@
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="AnimalName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
-          <Property Name="PictureLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Species" Type="Int32" />
+          <Property Name="Species" Type="Int32" Nullable="false" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="User" Relationship="AnimalShelterManagement.FK_LossReport_User" FromRole="LossReport" ToRole="User" />
         </EntityType>
         <EntityType Name="User">
@@ -476,6 +478,7 @@
           <EntitySetMapping Name="FindingReports">
             <EntityTypeMapping TypeName="AnimalShelterManagement.FindingReport">
               <MappingFragment StoreEntitySet="FindingReport">
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
                 <ScalarProperty Name="Species" ColumnName="Species" />
                 <ScalarProperty Name="IsInShelter" ColumnName="IsInShelter" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
@@ -523,8 +526,8 @@
           <EntitySetMapping Name="LossReports">
             <EntityTypeMapping TypeName="AnimalShelterManagement.LossReport">
               <MappingFragment StoreEntitySet="LossReport">
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
                 <ScalarProperty Name="Species" ColumnName="Species" />
-                <ScalarProperty Name="PictureLink" ColumnName="PictureLink" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="AnimalName" ColumnName="AnimalName" />
                 <ScalarProperty Name="Date" ColumnName="Date" />

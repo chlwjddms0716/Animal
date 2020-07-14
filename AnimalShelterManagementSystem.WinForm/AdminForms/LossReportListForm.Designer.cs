@@ -131,6 +131,7 @@
             this.사진});
             this.gridView1.GridControl = this.grcLossList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // 유저Id
@@ -367,7 +368,7 @@
             this.Name = "LossReportListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "실종신고리스트";
-            this.Load += new System.EventHandler(this.LossReportListForm_Load);
+        //    this.Load += new System.EventHandler(this.LossReportListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grcLossList)).EndInit();

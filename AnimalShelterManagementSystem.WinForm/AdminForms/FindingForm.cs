@@ -1,11 +1,14 @@
 ﻿       using AnimalShelterManagementSystem.Data;
 using AnimalShelterManagementSystem.Models;
 using AnimalShelterManagementSystem.WinForm.Forms;
+using AnimalShelterManagementSystem.WinForm.UserForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +20,15 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
     {
         private FindingReport findingReport;
         private bool WasInShelter;
+        private bool split;
+
         public FindingForm()
         {
             InitializeComponent();
             findingReport = new FindingReport();
 
         }
+
         public FindingForm(FindingReport findingReport)
         {
             InitializeComponent();
@@ -53,6 +59,7 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             findingReport.Date = dteDate.DateTime;
             findingReport.Place = txbPlace.Text;
             findingReport.IsInShelter = Convert.ToBoolean(rdgIsInShelter.EditValue);
+            findingReport.Picture = ConvertImageToBinary(Image.FromFile(txePictureLink.Text));
             if (findingReport.IsInShelter == true)
             {
                 //InShelter();
@@ -93,8 +100,39 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+     
+
+        
+    
+
+        private byte[] ConvertImageToBinary(Image image)
         {
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                if (ImageFormat.Jpeg.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Jpeg);
+                }
+                else if (ImageFormat.Png.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Png);
+                }
+                else if (ImageFormat.Gif.Equals(image.RawFormat))
+                {
+                    image.Save(memoryStream, ImageFormat.Gif);
+                }
+
+                return memoryStream.ToArray();
+
+            }
+
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
             if (findingReport.FindingReportId == DataRepository.FindingReport.GetMaxId() + 1)
             {
                 Add();
@@ -107,9 +145,17 @@ namespace AnimalShelterManagementSystem.WinForm.AdminForms
             Close();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            PictureSaveForm pictureSaveForm = new PictureSaveForm(findingReport, split);
+            pictureSaveForm.ShowDialog();
+            //MessageBox.Show(PictureSaveForm.Address);
+            txePictureLink.Text = PictureSaveForm.Address;
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
         {
             Close();
-        }
+        } 
     }
 }

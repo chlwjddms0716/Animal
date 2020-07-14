@@ -138,6 +138,7 @@
             this.담당자});
             this.gridView1.GridControl = this.grcShelterList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // 보호소Id
@@ -416,7 +417,7 @@
             this.Name = "ShelterListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "보호소리스트";
-            this.Load += new System.EventHandler(this.Shelter_Load);
+        //    this.Load += new System.EventHandler(this.Shelter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grcShelterList)).EndInit();
