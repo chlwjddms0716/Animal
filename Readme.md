@@ -105,7 +105,7 @@
 
 # 데이터베이스 스키마
 
-<img src="https://user-images.githubusercontent.com/63761486/87262420-dbfbd480-c4f4-11ea-93f4-336eb24318e9.PNG" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/63761486/87262420-dbfbd480-c4f4-11ea-93f4-336eb24318e9.PNG" width="100%"></img>
 
 
 # Point of Interest
@@ -123,7 +123,8 @@
 
 #### 결과
 
-- 여러개의 검색조건을 하나의 query문으로 작성하였음
+- 여러개의 검색조건을 하나의 query문으로 작성하였음  
+
 <img src="https://user-images.githubusercontent.com/63761322/87369196-de286680-c5ba-11ea-8c43-23223c2084a1.JPG" width="60%"></img>
 
 　   
@@ -141,6 +142,8 @@
 #### 결과
 
 - 부분 클래스를 이용해서 원하는 멤버를 기존 테이블에 추가함. C# 쿼리문으로 매핑 테이블에 접근, 조인해서 해결함  
+　  
+   
 　    
 <img src="https://user-images.githubusercontent.com/63761486/87262464-fa61d000-c4f4-11ea-9ed9-dd45cf1e5ed9.png" width="60%"></img>
 　  
