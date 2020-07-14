@@ -40,7 +40,7 @@
 - 입양 기능 : 리스트에서 선택한 유기유실동물에 대한 입양 희망을 입양관리시스템의 관리자에게 전달한다.  
 관리자가 입양 신청 건을 수락한 후 입양 절차를 진행한다.
 ![사용자메뉴-입양신청]  　
-<img src="https://user-images.githubusercontent.com/63761322/87367390-cac6cc80-c5b5-11ea-9063-e50f3304d2d3.JPG" width="90%" ) </img>
+<img src="https://user-images.githubusercontent.com/63761322/87367390-cac6cc80-c5b5-11ea-9063-e50f3304d2d3.JPG" width="700" height="370" ) </img>
 ##### 2. 유저 정보수정  
 자신의 회원 정보(이름, 비밀번호, 핸드폰번호, 주소)를 수정 할 수 있다.
 ![유저정보수정-](https://user-images.githubusercontent.com/63761322/87368072-9bb15a80-c5b7-11ea-9d7e-30b9827e5b0a.JPG)
@@ -165,7 +165,7 @@
 
 ------------------------------
 #### 증상   
-![file](https://user-images.githubusercontent.com/63761486/87262451-f0d86800-c4f4-11ea-9219-714682b3b6fd.png)
+<img src="https://user-images.githubusercontent.com/63761486/87262451-f0d86800-c4f4-11ea-9219-714682b3b6fd.png" width="90%"></img>
  - 3rd party control 중 하나인 Devexpress를 사용하면 프로그램을 실행할 때 마다 devexpress 확장판 구매 독려 광고가 나타남
 
 #### 원인
