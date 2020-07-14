@@ -106,9 +106,9 @@
             // 
             // btnPictureLink
             // 
-            this.btnPictureLink.Location = new System.Drawing.Point(348, 128);
+            this.btnPictureLink.Location = new System.Drawing.Point(358, 128);
             this.btnPictureLink.Name = "btnPictureLink";
-            this.btnPictureLink.Size = new System.Drawing.Size(139, 27);
+            this.btnPictureLink.Size = new System.Drawing.Size(129, 27);
             this.btnPictureLink.StyleController = this.layoutControl1;
             this.btnPictureLink.TabIndex = 19;
             this.btnPictureLink.Text = "사진 등록";
@@ -153,10 +153,10 @@
             // txbPictureLink
             // 
             this.txbPictureLink.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.txbPictureLink.Location = new System.Drawing.Point(82, 128);
+            this.txbPictureLink.Location = new System.Drawing.Point(112, 128);
             this.txbPictureLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPictureLink.Name = "txbPictureLink";
-            this.txbPictureLink.Size = new System.Drawing.Size(262, 25);
+            this.txbPictureLink.Size = new System.Drawing.Size(242, 25);
             this.txbPictureLink.TabIndex = 15;
             this.txbPictureLink.Text = "사진링크를 입력해주세요.";
             // 
@@ -206,10 +206,10 @@
             this.lbPictureLink.Location = new System.Drawing.Point(12, 128);
             this.lbPictureLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbPictureLink.Name = "lbPictureLink";
-            this.lbPictureLink.Size = new System.Drawing.Size(66, 18);
+            this.lbPictureLink.Size = new System.Drawing.Size(96, 18);
             this.lbPictureLink.StyleController = this.layoutControl1;
             this.lbPictureLink.TabIndex = 10;
-            this.lbPictureLink.Text = " 사진 :     ";
+            this.lbPictureLink.Text = " 사진 :           ";
             // 
             // lblPlace
             // 
@@ -303,7 +303,7 @@
             this.layoutControlItem7.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 116);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(70, 31);
+            this.layoutControlItem7.Size = new System.Drawing.Size(100, 31);
             this.layoutControlItem7.Text = "layoutControlItem1";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
@@ -329,9 +329,9 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txbPictureLink;
-            this.layoutControlItem2.Location = new System.Drawing.Point(70, 116);
+            this.layoutControlItem2.Location = new System.Drawing.Point(100, 116);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(266, 31);
+            this.layoutControlItem2.Size = new System.Drawing.Size(246, 31);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -381,9 +381,9 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnPictureLink;
-            this.layoutControlItem10.Location = new System.Drawing.Point(336, 116);
+            this.layoutControlItem10.Location = new System.Drawing.Point(346, 116);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(143, 31);
+            this.layoutControlItem10.Size = new System.Drawing.Size(133, 31);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
@@ -401,7 +401,6 @@
             this.Load += new System.EventHandler(this.LossRequest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            this.layoutControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();

@@ -65,7 +65,7 @@ namespace AnimalShelterManagementSystem
                             AnimalName = x.HomelessAnimal.Name,
                             userLoginId = x.User.Id,
                             AdoptionStatus = x.HomelessAnimal.AdoptionStatus
-                        };
+                        }; 
 
             if (string.IsNullOrEmpty(userId) == false)
                 query = query.Where(x => x.userLoginId.Contains(userId));
