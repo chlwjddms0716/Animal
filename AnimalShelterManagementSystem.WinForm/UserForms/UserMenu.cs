@@ -42,7 +42,7 @@ namespace AnimalShelterManagementSystem.WinForm.UserForms
             editUserInformation.MdiParent = this;
             editUserInformation.WindowState = FormWindowState.Maximized;
             editUserInformation.Show();
-        }
+        } 
 
         private void btnLoss_Click(object sender, EventArgs e)
         {
