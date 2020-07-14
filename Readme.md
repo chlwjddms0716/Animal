@@ -125,7 +125,7 @@
 
 - 여러개의 검색조건을 하나의 query문으로 작성하였음  
 
-<img src="https://user-images.githubusercontent.com/63761322/87369196-de286680-c5ba-11ea-8c43-23223c2084a1.JPG" width="60%"></img>
+![마지막코드](https://user-images.githubusercontent.com/63761322/87369565-c9000780-c5bb-11ea-9fce-3ce86bae6862.JPG)
 
 　   
 
