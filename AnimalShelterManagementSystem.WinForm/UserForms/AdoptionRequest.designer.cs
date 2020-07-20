@@ -202,7 +202,7 @@
             // 사진
             // 
             this.사진.Caption = "사진";
-            this.사진.FieldName = "PictureLink";
+            this.사진.FieldName = "Picture";
             this.사진.MinWidth = 25;
             this.사진.Name = "사진";
             this.사진.Visible = true;

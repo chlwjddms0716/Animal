@@ -42,10 +42,7 @@ namespace AnimalShelterManagementSystem.WinForm
         private void AdoptionRequest_Load_1(object sender, EventArgs e)
         {
 
-            List<HomelessAnimal> homelessAnimals = new List<HomelessAnimal>();
-            foreach (SpeciesType speciesType in (SpeciesType[])Enum.GetValues(typeof(SpeciesType)))
-                homelessAnimals.AddRange(DataRepository.HomelessAnimal.SearchWithAnimals((int)speciesType, 0));
-            homelessAnimalBindingSource.DataSource = homelessAnimals;
+    
             cbxSpecies.DataSource = Enum.GetValues(typeof(SpeciesType));
             cbxSpecies.SelectedItem = null;
 
@@ -81,7 +78,7 @@ namespace AnimalShelterManagementSystem.WinForm
                 SpeciesCode = (int)((SpeciesType)Enum.Parse(typeof(SpeciesType), cbxSpecies.Text));
                 List<HomelessAnimal> homelessAnimals = DataRepository.HomelessAnimal.SearchWithAnimals(SpeciesCode, GenderCode);
                 homelessAnimalBindingSource.DataSource = homelessAnimals;
-                MessageBox.Show("사진을 크게 보려면 동물을 클릭해주세요.");
+                MessageBox.Show("사진을 보려면 동물을 클릭해주세요.");
             }
         }
 
